@@ -44,7 +44,6 @@ namespace UnityStandardAssets._2D
                 if (colliders[i].gameObject != gameObject)
                     m_Grounded = true;
                     m_DoubleJump = true;
-                Debug.Log("met a true");
             }
             m_Anim.SetBool("Ground", m_Grounded);
 
@@ -103,7 +102,6 @@ namespace UnityStandardAssets._2D
             }
             else if (m_DoubleJump && jump)
             {
-                Debug.Log("met a false");
                 m_DoubleJump = false;
                 m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, 0);
                 m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
