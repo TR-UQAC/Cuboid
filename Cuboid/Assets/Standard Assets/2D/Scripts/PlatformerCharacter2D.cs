@@ -1,10 +1,13 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace UnityStandardAssets._2D
 {
     public class PlatformerCharacter2D : MonoBehaviour
     {
+        Dictionary<string, bool> activeUpgradeTable { get; set; }
+
         [SerializeField] private float m_MaxSpeed = 10f;                    // The fastest the player can travel in the x axis.
         [SerializeField] private float m_JumpForce = 400f;                  // Amount of force added when the player jumps.
         [Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;  // Amount of maxSpeed applied to crouching movement. 1 = 100%
@@ -29,6 +32,8 @@ namespace UnityStandardAssets._2D
             m_CeilingCheck = transform.Find("CeilingCheck");
             m_Anim = GetComponent<Animator>();
             m_Rigidbody2D = GetComponent<Rigidbody2D>();
+
+            activeUpgradeTable = new Dictionary<string, bool>();
         }
 
 
@@ -51,6 +56,14 @@ namespace UnityStandardAssets._2D
             m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
         }
 
+        public void PrintAllUpgrade()
+        {
+            //Debug.Log("Bonjour");
+            foreach (KeyValuePair<string, bool> item in activeUpgradeTable)
+            {
+                Debug.Log(item.ToString());
+            }
+        }
 
         public void Move(float move, bool crouch, bool jump)
         {
@@ -119,5 +132,19 @@ namespace UnityStandardAssets._2D
             theScale.x *= -1;
             transform.localScale = theScale;
         }
+
+
+        public void ToggleUpgrade(string name)
+        {
+            if (activeUpgradeTable.ContainsKey(name))
+            {
+                activeUpgradeTable[name] = !activeUpgradeTable[name];
+            }
+            else
+            {
+                activeUpgradeTable.Add(name, true);
+            }
+        }
+
     }
 }
