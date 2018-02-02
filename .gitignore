@@ -1,4 +1,4 @@
-[Ll]ibrary/
+Library/
 [Tt]emp/
 [Oo]bj/
 [Bb]uild/
@@ -32,3 +32,8 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+*.ide
+*.ide-shm
+*.ide-wal
+*.info
+*.log
