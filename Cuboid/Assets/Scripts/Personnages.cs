@@ -6,8 +6,8 @@ abstract public class Personnages : MonoBehaviour {
 
     [System.Serializable]
     public class PersoStats {
-        //[Header("Vie")]
-        public int vie    = 100;
+        [Header("Vie")]
+        public int vie = 100;
         public int vieMax = 100;
 
         [Space]
@@ -15,7 +15,7 @@ abstract public class Personnages : MonoBehaviour {
         [Header("Mouvement")]
         //La vitesse
         public float hauteurSaut = 100;
-        public float speed = 300f;
+        public float speed = 600f;
         public ForceMode2D fMode;
 
         [Space]

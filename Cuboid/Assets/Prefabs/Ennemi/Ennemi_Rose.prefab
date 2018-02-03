@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 50438125626287090}
   - component: {fileID: 114553822365292442}
   - component: {fileID: 61904881881171692}
+  - component: {fileID: 114423212518679096}
   m_Layer: 0
   m_Name: Ennemi_Rose
   m_TagString: Ennemi
@@ -89,6 +90,35 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.64, y: 0.64}
   m_EdgeRadius: 0
+--- !u!114 &114423212518679096
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1121619541646682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8577aa4a7e2f2548867055835ff8ab2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ennemiStats:
+    vie: 100
+    vieMax: 100
+    hauteurSaut: 0
+    speed: 600
+    fMode: 0
+    resitGlace: 0
+    resitPoison: 0
+    resitFoudre: 0
+    glace: 0
+    poison: 0
+    foudre: 0
+  comp:
+    contact: 0
+    dmgContact: 10
+    attaque: 1
+    dmgAttaque: 0
+    deplacement: 2
 --- !u!114 &114553822365292442
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -102,8 +132,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   updateRate: 2
-  speed: 600
-  fMode: 0
   pathIsEnded: 0
   nextWaypointDistance: 3
 --- !u!114 &114598886800425420

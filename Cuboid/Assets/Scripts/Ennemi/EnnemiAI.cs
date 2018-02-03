@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
 
-[RequireComponent (typeof (Rigidbody2D))]
+[DisallowMultipleComponent]
+[RequireComponent(typeof(Ennemis))]
 [RequireComponent(typeof(Seeker))]
 public class EnnemiAI : MonoBehaviour {
 
@@ -14,14 +15,9 @@ public class EnnemiAI : MonoBehaviour {
     public float updateRate = 2f;
 
     private Seeker seeker;
-    private Rigidbody2D rb;
 
     //Le chemin
     public Path path;
-
-    //La vitesse
-    public float speed = 300f;
-    public ForceMode2D fMode;
 
     [HideInInspector]
     public bool pathIsEnded = false;
@@ -34,9 +30,10 @@ public class EnnemiAI : MonoBehaviour {
 
     private bool searchingForPlayer = false;
 
+    //private Ennemis ennemis;
     private void Start(){
         seeker = GetComponent<Seeker>();
-        rb = GetComponent<Rigidbody2D>();
+        //rb = GetComponent<Rigidbody2D>();
 
         if(target == null){
             if (!searchingForPlayer) {
@@ -50,6 +47,8 @@ public class EnnemiAI : MonoBehaviour {
         seeker.StartPath(transform.position, target.position, OnPathComplete);
 
         StartCoroutine(UpdatePath());
+ 
+        //ennemis = this.GetComponent<Ennemis>();
     }
 
     IEnumerator SearchForPlayer() {
@@ -114,10 +113,7 @@ public class EnnemiAI : MonoBehaviour {
         pathIsEnded = false;
         //Dirrection vers le prochain waypoint
         Vector3 dir = (path.vectorPath[currentWaypoint] - transform.position).normalized;
-        dir *= speed * Time.fixedDeltaTime;
-
-        //Move the AI
-        rb.AddForce(dir, fMode);
+        this.GetComponent<Ennemis>().Deplacement(dir);
 
         float dist = Vector3.Distance(transform.position, path.vectorPath[currentWaypoint]);
         if(dist < nextWaypointDistance) {
