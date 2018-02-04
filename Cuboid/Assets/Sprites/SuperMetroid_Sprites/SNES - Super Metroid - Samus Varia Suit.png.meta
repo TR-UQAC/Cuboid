@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 1c2469a1284c2604fa79538e8c76fddd
-timeCreated: 1517586535
+timeCreated: 1517774460
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -84,7 +84,7 @@ TextureImporter:
     21300154: SNES - Super Metroid - Samus Varia Suit_77
     21300156: SNES - Super Metroid - Samus Varia Suit_78
     21300158: SNES - Super Metroid - Samus Varia Suit_79
-    21300160: SNES - Super Metroid - Samus Varia Suit_80
+    21300160: SamusJumping01
     21300162: SNES - Super Metroid - Samus Varia Suit_81
     21300164: SNES - Super Metroid - Samus Varia Suit_82
     21300166: SNES - Super Metroid - Samus Varia Suit_83
@@ -110,7 +110,7 @@ TextureImporter:
     21300206: SNES - Super Metroid - Samus Varia Suit_103
     21300208: SNES - Super Metroid - Samus Varia Suit_104
     21300210: SNES - Super Metroid - Samus Varia Suit_105
-    21300212: SamusRun01
+    21300212: SNES - Super Metroid - Samus Varia Suit_106
     21300214: SNES - Super Metroid - Samus Varia Suit_107
     21300216: SNES - Super Metroid - Samus Varia Suit_108
     21300218: SNES - Super Metroid - Samus Varia Suit_109
@@ -1396,7 +1396,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: SNES - Super Metroid - Samus Varia Suit_80
+      name: SamusJumping01
       rect:
         serializedVersion: 2
         x: 403
@@ -1760,7 +1760,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: SamusRun01
+      name: SNES - Super Metroid - Samus Varia Suit_106
       rect:
         serializedVersion: 2
         x: 245
