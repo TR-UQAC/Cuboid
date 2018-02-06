@@ -7,7 +7,9 @@ public class Bullet : MonoBehaviour {
     public float speed = 25f;
     public float maxTimeToLive = 2f;
     public bool facingRight;
-    
+    public LayerMask NoHit;
+
+
     private float direction;
     private Rigidbody2D m_Rigidbody2D;
 
@@ -31,8 +33,12 @@ public class Bullet : MonoBehaviour {
         
     }
 
-    void OnCollisionEnter2D(Collision2D colider)
+    void OnCollisionEnter2D(Collision2D other)
     {
-        Destroy(gameObject);
+        if (!other.gameObject.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+        }
+        
     }
 }
