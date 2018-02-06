@@ -22,6 +22,12 @@ public class Bullet : MonoBehaviour {
         {
             speed = speed * (-1);
         }
+        else
+        {
+            Vector3 theScale = transform.localScale;
+            theScale.x *= -1;
+            transform.localScale = theScale;
+        }
 
         m_Rigidbody2D.velocity = new Vector2(speed, m_Rigidbody2D.velocity.y);
 
@@ -37,6 +43,13 @@ public class Bullet : MonoBehaviour {
     {
         if (!other.gameObject.CompareTag("Player"))
         {
+            if (other.gameObject.CompareTag("Ennemi"))
+            {
+                Ennemis en = (Ennemis) other.gameObject.GetComponent(typeof(Ennemis));
+                en.DommagePerso(100);
+            }
+
+
             Destroy(gameObject);
         }
         
