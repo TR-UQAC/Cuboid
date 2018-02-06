@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 0cdd19d70ef73904f8ce4f2dbf49774b
-timeCreated: 1517797767
+timeCreated: 1517954306
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
@@ -66,10 +66,39 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites: []
-    outline: []
+    outline:
+    - - {x: -45, y: 61.5}
+      - {x: -82, y: 46.5}
+      - {x: -82, y: -23.5}
+      - {x: -58, y: -46.5}
+      - {x: -39, y: -60.5}
+      - {x: 42, y: -60.5}
+      - {x: 83, y: -27.5}
+      - {x: 83, y: 23.5}
+      - {x: 65, y: 61.5}
     physicsShape: []
   spritePackingTag: 
   userData: 

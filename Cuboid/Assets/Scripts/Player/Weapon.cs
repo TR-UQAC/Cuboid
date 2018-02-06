@@ -29,6 +29,8 @@ public class Weapon : MonoBehaviour
     {
         Bullet bul = Instantiate(bulletPref, firePoint.position, firePoint.rotation).GetComponent<Bullet>();
         bul.facingRight = facingRight;
+
+        FindObjectOfType<AudioManager>().Play("Shoot");
     }
 }
 

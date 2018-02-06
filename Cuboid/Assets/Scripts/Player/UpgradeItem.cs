@@ -4,7 +4,9 @@ using UnityEngine;
 using UnityStandardAssets._2D;
 
 public class UpgradeItem : MonoBehaviour {
-    
+
+    public string UpgradeName;
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
