@@ -4,7 +4,12 @@ using System.Collections;
 
 [CustomEditor(typeof(Ennemis)), CanEditMultipleObjects]
 public class EnnemisEditor : Editor {
-    
+
+    private static bool showVie;
+    private static bool showDommage;
+    private static bool showMouvement;
+    private static bool showElements;
+
     private SerializedProperty
         vie, vieMax,
 
@@ -20,6 +25,7 @@ public class EnnemisEditor : Editor {
         glace, poison, foudre;
 
     private void OnEnable() {
+
         vie     = serializedObject.FindProperty("ennemiStats.vie");
         vieMax  = serializedObject.FindProperty("ennemiStats.vieMax");
         
@@ -43,29 +49,35 @@ public class EnnemisEditor : Editor {
         foudre = serializedObject.FindProperty("ennemiStats.foudre");
     }
 
-
     public override void OnInspectorGUI() {
 
         serializedObject.Update();
 
         //***** Vie *****//
-        EditorGUILayout.LabelField("Vie", EditorStyles.boldLabel);
-        EditorGUI.indentLevel++;
-            EditorGUILayout.IntSlider(vie, 0, vieMax.intValue, "Vie courente");
-
-            EditorGUI.indentLevel++;
-            EditorGUILayout.PropertyField(vieMax, new GUIContent("Vie Max"));
-            EditorGUI.indentLevel--;
-        EditorGUI.indentLevel--;
-
-        //***** Contact *****//
         EditorGUILayout.Space();
-        EditorGUILayout.LabelField("Les Dommages", EditorStyles.boldLabel);
-        EditorGUI.indentLevel++;
+        showVie = EditorGUILayout.Foldout(showVie, "Vie", true);
+        if (showVie) {
+            EditorGUI.indentLevel++;
+                EditorGUILayout.IntSlider(vie, 0, vieMax.intValue, "Vie courante");
+                ProgressBar((float)vie.intValue / (float)vieMax.intValue, "Vie");
+
+                EditorGUI.indentLevel++;
+                    EditorGUILayout.PropertyField(vieMax, new GUIContent("Vie Max"));
+                EditorGUI.indentLevel--;
+            EditorGUI.indentLevel--;
+        }
+       
+        //****** Les dommages ******//
+        EditorGUILayout.Space();
+        showDommage = EditorGUILayout.Foldout(showDommage, "Dommages", true);
+        if (showDommage) {
+            //***** Contact *****//
+            EditorGUI.indentLevel++;
             EditorGUILayout.PropertyField(contact, new GUIContent("Contact"));
             if (contact.boolValue) {
                 EditorGUI.indentLevel++;
                 EditorGUILayout.IntSlider(dmgContact, 0, 100, "Dommage Contact");
+                ProgressBar(dmgContact.intValue / 100f, "Dommage");
                 EditorGUI.indentLevel--;
             }
 
@@ -79,15 +91,18 @@ public class EnnemisEditor : Editor {
                 default:
                     EditorGUI.indentLevel++;
                     EditorGUILayout.IntSlider(dmgAttaque, 0, 100, "Dommage Attaque");
+                    ProgressBar(dmgAttaque.intValue / 100f, "Dommage");
                     EditorGUI.indentLevel--;
                     break;
             }
-        EditorGUI.indentLevel--;
-
+            EditorGUI.indentLevel--;
+        }
+        
         //***** Deplacement *****//
         EditorGUILayout.Space();
-        EditorGUILayout.LabelField("Les Mouvements", EditorStyles.boldLabel);
-        EditorGUI.indentLevel++;
+        showMouvement = EditorGUILayout.Foldout(showMouvement, "Mouvement", true);
+        if (showMouvement) {
+            EditorGUI.indentLevel++;
             EditorGUILayout.PropertyField(deplacement, new GUIContent("Deplacement"));
             Ennemis.typeDeplac tDeplacement = (Ennemis.typeDeplac)deplacement.enumValueIndex;
             switch (tDeplacement) {
@@ -98,23 +113,38 @@ public class EnnemisEditor : Editor {
                 default:
                     EditorGUI.indentLevel++;
                     EditorGUILayout.Slider(hauteurSaut, 0, 100, "Hauteur saut");
+                    ProgressBar(hauteurSaut.floatValue / 100f, "Hauteur saut");
                     EditorGUI.indentLevel--;
                     break;
             }
 
-        EditorGUILayout.PropertyField(speed, new GUIContent("Vitesse"));
-        EditorGUILayout.PropertyField(fMode, new GUIContent("FMode"));
-        EditorGUI.indentLevel--;
-        
-        EditorGUILayout.PropertyField(resitGlace, new GUIContent("Resite Glace"));
-        EditorGUILayout.PropertyField(resitPoison, new GUIContent("Resite Poison"));
-        EditorGUILayout.PropertyField(resitFoudre, new GUIContent("Resite Foudre"));
-        
-        EditorGUILayout.PropertyField(glace, new GUIContent("Ralentit"));
-        EditorGUILayout.PropertyField(poison, new GUIContent("Empoisoné"));
-        EditorGUILayout.PropertyField(foudre, new GUIContent("Paralysé"));
+            EditorGUILayout.PropertyField(speed, new GUIContent("Vitesse"));
+            EditorGUILayout.PropertyField(fMode, new GUIContent("FMode"));
+            EditorGUI.indentLevel--;
+        }
 
+        EditorGUILayout.Space();
+        showElements = EditorGUILayout.Foldout(showElements, "Éléments", true);
+        if (showElements) {
+            EditorGUILayout.PropertyField(resitGlace, new GUIContent("Resite Glace"));
+            EditorGUILayout.PropertyField(resitPoison, new GUIContent("Resite Poison"));
+            EditorGUILayout.PropertyField(resitFoudre, new GUIContent("Resite Foudre"));
+
+            EditorGUILayout.PropertyField(glace, new GUIContent("Ralentit"));
+            EditorGUILayout.PropertyField(poison, new GUIContent("Empoisoné"));
+            EditorGUILayout.PropertyField(foudre, new GUIContent("Paralysé"));
+        }
         serializedObject.ApplyModifiedProperties();
+    }
+
+    // Custom GUILayout progress bar.
+    void ProgressBar(float value, string label) {
+        // Get a rect for the progress bar using the same margins as a textfield:
+        Rect rect = GUILayoutUtility.GetRect(18, 18, "TextField");
+        rect.xMin = 30f;
+        rect.xMax = 300f;
+        EditorGUI.ProgressBar(rect, value, label);
+        EditorGUILayout.Space();
     }
 
 }

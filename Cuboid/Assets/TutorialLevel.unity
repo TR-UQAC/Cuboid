@@ -3489,7 +3489,12 @@ Prefab:
     - target: {fileID: 114063563877076672, guid: eac9f8d03bf3acd499269d38fa55c931,
         type: 2}
       propertyPath: ennemiStats.hauteurSaut
-      value: 0
+      value: 35.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114063563877076672, guid: eac9f8d03bf3acd499269d38fa55c931,
+        type: 2}
+      propertyPath: comp.attaque
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eac9f8d03bf3acd499269d38fa55c931, type: 2}
@@ -4104,6 +4109,11 @@ Prefab:
     - target: {fileID: 4009021712880410, guid: 85ee787e8fae0bf47a4ab1aaca41a6de, type: 2}
       propertyPath: m_RootOrder
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114423212518679096, guid: 85ee787e8fae0bf47a4ab1aaca41a6de,
+        type: 2}
+      propertyPath: comp.deplacement
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 85ee787e8fae0bf47a4ab1aaca41a6de, type: 2}

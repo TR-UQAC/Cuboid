@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameMaster : MonoBehaviour {
 
-	public static void KillEnnemi(Personnages perso) {
+    public static void KillEnnemi(Ennemis perso) {
         Destroy(perso.gameObject);
     }
 }
