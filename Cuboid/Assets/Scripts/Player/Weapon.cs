@@ -8,6 +8,7 @@ public class Weapon : MonoBehaviour
     public int fireRate = 0;
     public LayerMask noHit;
 
+    public GameObject bulletPref;
     private Transform firePoint;
 
     void Awake()
@@ -24,9 +25,10 @@ public class Weapon : MonoBehaviour
     {
     }
 
-    public void Shoot()
+    public void Shoot(bool facingRight)
     {
-        Debug.Log("Pew");
+        Bullet bul = Instantiate(bulletPref, firePoint.position, firePoint.rotation).GetComponent<Bullet>();
+        bul.facingRight = facingRight;
     }
 }
 

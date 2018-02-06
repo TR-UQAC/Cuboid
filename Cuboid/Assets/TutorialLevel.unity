@@ -3510,7 +3510,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 427209463}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.52, y: 0, z: 0}
+  m_LocalPosition: {x: 0.85, y: 0.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1995802748}
@@ -4271,6 +4271,8 @@ MonoBehaviour:
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 1024
+  fallMultiplier: 2.5
+  lowJumpMultiplier: 2
 --- !u!114 &1319645854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4737,6 +4739,7 @@ MonoBehaviour:
   noHit:
     serializedVersion: 2
     m_Bits: 0
+  bulletPref: {fileID: 1670978521406608, guid: e4a60708d73f3c045a81e69e97ad689e, type: 2}
 --- !u!1001 &2136211912
 Prefab:
   m_ObjectHideFlags: 0

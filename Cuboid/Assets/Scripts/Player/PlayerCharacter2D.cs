@@ -21,7 +21,11 @@ public class PlayerCharacter2D : MonoBehaviour {
     private Rigidbody2D m_Rigidbody2D;
     private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 
+    public float fallMultiplier = 2.5f;
+    public float lowJumpMultiplier = 2f;
+
     private bool m_DoubleJump = true;
+
 
     private void Awake()
     {
@@ -52,11 +56,12 @@ public class PlayerCharacter2D : MonoBehaviour {
 
         // Set the vertical animation
         m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
+
+        BetterJumpPhysic();
     }
 
     public void PrintAllUpgrade()
     {
-        //Debug.Log("Bonjour");
         foreach (KeyValuePair<string, bool> item in activeUpgradeTable)
         {
             Debug.Log(item.ToString());
@@ -71,9 +76,8 @@ public class PlayerCharacter2D : MonoBehaviour {
             Debug.LogError("Failed to find active weapon!");
         }
         else
-        {
-            
-            currentWeapon.Shoot();
+        {        
+            currentWeapon.Shoot(m_FacingRight);
         }
     }
 
@@ -117,6 +121,7 @@ public class PlayerCharacter2D : MonoBehaviour {
                 Flip();
             }
         }
+
         // If the player should jump...
         if (m_Grounded && jump && m_Anim.GetBool("Ground"))
         {
@@ -133,6 +138,17 @@ public class PlayerCharacter2D : MonoBehaviour {
         }
     }
 
+    private void BetterJumpPhysic()
+    {
+        if (m_Rigidbody2D.velocity.y < 0)
+        {
+            m_Rigidbody2D.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+        }
+        else if (m_Rigidbody2D.velocity.y > 0 && !Input.GetButton("Jump"))
+        {
+            m_Rigidbody2D.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+        }
+    }
 
     private void Flip()
     {
