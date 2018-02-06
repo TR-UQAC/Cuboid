@@ -3477,18 +3477,29 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114063563877076672, guid: eac9f8d03bf3acd499269d38fa55c931,
         type: 2}
-      propertyPath: comp.deplacement
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114063563877076672, guid: eac9f8d03bf3acd499269d38fa55c931,
-        type: 2}
-      propertyPath: ennemiStats.hauteurSaut
-      value: 35.5
+      propertyPath: comp.contact
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114063563877076672, guid: eac9f8d03bf3acd499269d38fa55c931,
         type: 2}
       propertyPath: comp.attaque
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114063563877076672, guid: eac9f8d03bf3acd499269d38fa55c931,
+        type: 2}
+      propertyPath: comp.dmgAttaque
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114063563877076672, guid: eac9f8d03bf3acd499269d38fa55c931,
+        type: 2}
+      propertyPath: weaponPrefab
+      value: 
+      objectReference: {fileID: 1850172229093428, guid: ec219f9af451e2a4b97369c89a34e8db,
+        type: 2}
+    - target: {fileID: 114063563877076672, guid: eac9f8d03bf3acd499269d38fa55c931,
+        type: 2}
+      propertyPath: fireRate
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eac9f8d03bf3acd499269d38fa55c931, type: 2}
@@ -4162,6 +4173,11 @@ Prefab:
         type: 2}
       propertyPath: comp.deplacement
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114423212518679096, guid: 85ee787e8fae0bf47a4ab1aaca41a6de,
+        type: 2}
+      propertyPath: comp.attaque
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 85ee787e8fae0bf47a4ab1aaca41a6de, type: 2}

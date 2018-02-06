@@ -10,12 +10,14 @@ public class EnnemisEditor : Editor {
     private static bool showMouvement;
     private static bool showElements;
 
+    //GameObject weaponPrefab;
+
     private SerializedProperty
         vie, vieMax,
 
         contact, dmgContact,
 
-        attaque, dmgAttaque,
+        attaque, dmgAttaque, fireRate,
 
         deplacement,
         speed, hauteurSaut, fMode,
@@ -34,6 +36,7 @@ public class EnnemisEditor : Editor {
 
         attaque    = serializedObject.FindProperty("comp.attaque");
         dmgAttaque = serializedObject.FindProperty("comp.dmgAttaque");
+        fireRate   = serializedObject.FindProperty("fireRate");
 
         speed = serializedObject.FindProperty("ennemiStats.speed");
         fMode = serializedObject.FindProperty("ennemiStats.fMode");
@@ -87,7 +90,15 @@ public class EnnemisEditor : Editor {
             switch (tAttaque) {
                 case Ennemis.typeAttaque.Rien:
                     break;
-
+                    
+                case Ennemis.typeAttaque.Tirer:
+                    EditorGUI.indentLevel++;
+                    EditorGUILayout.IntSlider(fireRate, 0, 10, "Fire Rate");
+                    EditorGUILayout.IntSlider(dmgAttaque, 0, 100, "Dommage Attaque");
+                    ProgressBar(dmgAttaque.intValue / 100f, "Dommage");
+                    EditorGUI.indentLevel--;
+                    break;
+                    
                 default:
                     EditorGUI.indentLevel++;
                     EditorGUILayout.IntSlider(dmgAttaque, 0, 100, "Dommage Attaque");
