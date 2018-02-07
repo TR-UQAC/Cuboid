@@ -6,7 +6,7 @@ using UnityEditor;
 
 
 [DisallowMultipleComponent]
-[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Rigidbody2D), typeof(WeaponEnnemi))]
 public class Ennemis : Personnages {
     
     public enum typeAttaque { Rien = 0, Tirer = 1, Kamikaze = 2}
@@ -24,8 +24,11 @@ public class Ennemis : Personnages {
 
 
     private void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.gameObject.tag == "Player")
-            DommagePerso(100);
+        GameObject go = collision.gameObject;
+        if (go.tag == "Player" && comp.contact) {
+            PlayerCharacter2D en = (PlayerCharacter2D)go.GetComponent(typeof(PlayerCharacter2D));
+            en.DommagePerso(comp.dmgContact);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
@@ -66,7 +69,7 @@ public class Ennemis : Personnages {
                 break;
 
             case typeAttaque.Tirer:
-                weapon.Tirer(facingRight);
+                weapon.Tirer(facingRight, comp.dmgAttaque);
                 break;
 
             default:
@@ -110,17 +113,10 @@ public class Ennemis : Personnages {
     public class Comportement {
 
         public bool contact;
-        public int dmgContact;
+        public int dmgContact = 0;
 
         public typeAttaque attaque;
         public int dmgAttaque;
         public typeDeplac deplacement;
     }
-
-    /*
-    #if UNITY_EDITOR
-        //Put gui elements for custom inspector here
-        public bool showVie = true;
-    #endif
-   */
 }

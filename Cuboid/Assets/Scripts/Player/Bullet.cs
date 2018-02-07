@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour {
     public float speed = 25f;
     public float maxTimeToLive = 2f;
     public bool facingRight;
+    public int dmg;
 
     //[HideInInspector]
     public LayerMask noHit;
@@ -51,8 +52,9 @@ public class Bullet : MonoBehaviour {
             if (dommageHit == (dommageHit | (1 << go.layer)))
             {
                 Personnages en = (Personnages)go.GetComponent(typeof(Personnages));
-                en.DommagePerso(100);
+                en.DommagePerso(dmg);
             }
+            //TODO: Effet particule de contact
             Destroy(gameObject);
         }
         

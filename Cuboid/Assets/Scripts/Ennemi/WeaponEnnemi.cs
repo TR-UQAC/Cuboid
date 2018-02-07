@@ -33,7 +33,7 @@ public class WeaponEnnemi : MonoBehaviour {
         }
     }
 
-    public void Tirer(bool facingRight) {
+    public void Tirer(bool facingRight, int dmg) {
         if (CanAttack) {
             attaqueCooldown = attaqueingRate;
             Vector3 newPosition = firePoint.position;
@@ -46,6 +46,7 @@ public class WeaponEnnemi : MonoBehaviour {
             bul.noHit = noHit;
             bul.dommageHit = dommageHit;
             bul.facingRight = facingRight;
+            bul.dmg = dmg;
 
             FindObjectOfType<AudioManager>().Play("Shoot");
         }

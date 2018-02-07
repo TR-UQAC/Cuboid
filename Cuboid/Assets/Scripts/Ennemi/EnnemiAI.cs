@@ -112,6 +112,7 @@ public class EnnemiAI : MonoBehaviour {
 
         pathIsEnded = false;
         //Dirrection vers le prochain waypoint
+        //TODO : Faire en sorte que l'ennemi ne ralentit pas proche du joueur
         Vector3 dir = (path.vectorPath[currentWaypoint] - transform.position).normalized;
         this.GetComponent<Ennemis>().Deplacement(dir);
 

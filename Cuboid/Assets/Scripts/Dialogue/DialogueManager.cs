@@ -20,7 +20,7 @@ public class DialogueManager : MonoBehaviour {
 	}
 
     public void StartDialogue(Dialogue dialogue) {
-
+        //TODO: arrêter le temps au début du dialogue
         animator.SetBool("IsOpen", true);
         nameText.text = dialogue.name;
 
@@ -56,6 +56,7 @@ public class DialogueManager : MonoBehaviour {
     }
 
     void EndDialogue() {
+        //TODO: Reprendre le temps quand le dialogue est terminer
         animator.SetBool("IsOpen", false);
     }
 }

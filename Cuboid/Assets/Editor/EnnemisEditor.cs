@@ -41,7 +41,7 @@ public class EnnemisEditor : Editor {
         speed = serializedObject.FindProperty("ennemiStats.speed");
         fMode = serializedObject.FindProperty("ennemiStats.fMode");
         deplacement = serializedObject.FindProperty("comp.deplacement");
-        hauteurSaut = serializedObject.FindProperty("ennemiStats.hauteurSaut");
+        hauteurSaut = serializedObject.FindProperty("ennemiStats.m_JumpForce");
 
         resitGlace  = serializedObject.FindProperty("ennemiStats.resitGlace");
         resitPoison = serializedObject.FindProperty("ennemiStats.resitPoison");
@@ -123,7 +123,7 @@ public class EnnemisEditor : Editor {
 
                 default:
                     EditorGUI.indentLevel++;
-                    EditorGUILayout.Slider(hauteurSaut, 0, 100, "Hauteur saut");
+                    EditorGUILayout.PropertyField(hauteurSaut, new GUIContent("Force du Saut"));
                     ProgressBar(hauteurSaut.floatValue / 100f, "Hauteur saut");
                     EditorGUI.indentLevel--;
                     break;

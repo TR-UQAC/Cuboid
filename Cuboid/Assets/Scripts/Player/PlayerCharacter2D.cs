@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerCharacter2D : MonoBehaviour {
+public class PlayerCharacter2D : Personnages {
+
+    public PersoStats joueurStats = new PersoStats();
 
     Dictionary<string, bool> activeUpgradeTable { get; set; }
 
@@ -171,6 +173,13 @@ public class PlayerCharacter2D : MonoBehaviour {
         else
         {
             activeUpgradeTable.Add(name, true);
+        }
+    }
+
+    public override void DommagePerso(int dommage) {
+        joueurStats.vie -= dommage;
+        if (joueurStats.vie <= 0) {
+            GameMaster.KillJoueur(this);
         }
     }
 }

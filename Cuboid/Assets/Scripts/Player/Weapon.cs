@@ -6,6 +6,7 @@ public class Weapon : MonoBehaviour
 {
 
     public int fireRate = 0;
+    public int dmg = 100;
     public LayerMask noHit;
     public LayerMask dommageHit;
 
@@ -28,10 +29,12 @@ public class Weapon : MonoBehaviour
 
     public void Shoot(bool facingRight)
     {
+        //TODO: Effet particule de tir
         Bullet bul = Instantiate(bulletPref, firePoint.position, firePoint.rotation).GetComponent<Bullet>();
         bul.noHit = noHit;
         bul.dommageHit = dommageHit;
         bul.facingRight = facingRight;
+        bul.dmg = dmg;
 
         FindObjectOfType<AudioManager>().Play("Shoot");
     }
