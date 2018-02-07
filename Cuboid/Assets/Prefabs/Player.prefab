@@ -294,7 +294,10 @@ MonoBehaviour:
   fireRate: 0
   noHit:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 768
+  dommageHit:
+    serializedVersion: 2
+    m_Bits: 2048
   bulletPref: {fileID: 1670978521406608, guid: e4a60708d73f3c045a81e69e97ad689e, type: 2}
 --- !u!114 &114656499653277982
 MonoBehaviour:

@@ -110,7 +110,10 @@ MonoBehaviour:
   speed: 25
   maxTimeToLive: 2
   facingRight: 0
-  NoHit:
+  noHit:
+    serializedVersion: 2
+    m_Bits: 4096
+  dommageHit:
     serializedVersion: 2
     m_Bits: 0
 --- !u!212 &212074767135830764

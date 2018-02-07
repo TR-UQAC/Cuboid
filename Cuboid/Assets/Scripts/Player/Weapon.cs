@@ -7,6 +7,7 @@ public class Weapon : MonoBehaviour
 
     public int fireRate = 0;
     public LayerMask noHit;
+    public LayerMask dommageHit;
 
     public GameObject bulletPref;
     private Transform firePoint;
@@ -28,6 +29,8 @@ public class Weapon : MonoBehaviour
     public void Shoot(bool facingRight)
     {
         Bullet bul = Instantiate(bulletPref, firePoint.position, firePoint.rotation).GetComponent<Bullet>();
+        bul.noHit = noHit;
+        bul.dommageHit = dommageHit;
         bul.facingRight = facingRight;
 
         FindObjectOfType<AudioManager>().Play("Shoot");

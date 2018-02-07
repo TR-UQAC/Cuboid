@@ -15,19 +15,22 @@ public class Ennemis : Personnages {
     public PersoStats ennemiStats = new PersoStats();
 
     private Rigidbody2D rb;
+    private WeaponEnnemi weapon;
     public Comportement comp;
 
-    public int fireRate;
-    public LayerMask noHit;
-
-    public GameObject bulletPref;
-    private Transform firePoint;
+    public bool facingRight;
 
     private bool ia = false;
+
 
     private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.tag == "Player")
             DommagePerso(100);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.gameObject.tag == "KillZone")
+            GameMaster.KillEnnemi(this);
     }
 
     public override void DommagePerso(int dommage) {
@@ -42,40 +45,9 @@ public class Ennemis : Personnages {
         rb = GetComponent<Rigidbody2D>();
         if (this.GetComponent<EnnemiAI>() != null)
             ia = true;
-        /*
-        switch (comp.attaque) {
-            case typeAttaque.Rien:
-                Debug.Log("Rien");
-                break;
-                
-            case typeAttaque.Tirer:
-                var go = Instantiate(weaponPrefab) as GameObject;
-                go.transform.parent = this.transform;
-                break;
-                
-            default:
-                break;
-        }
-    */
-    }
 
-    void Awake() {
-        switch (comp.attaque) {
-            case typeAttaque.Rien:
-                Debug.Log("Rien");
-                break;
-
-            case typeAttaque.Tirer:
-                firePoint = transform.Find("FirePoint");
-                if (firePoint == null) {
-                    Debug.LogWarning("FirePoint not found!");
-                }
-                break;
-
-            default:
-                break;
-        }
-    
+        if (this.GetComponent<WeaponEnnemi>() != null)
+            weapon = GetComponent<WeaponEnnemi>();
     }
 
     private void FixedUpdate() {
@@ -84,10 +56,9 @@ public class Ennemis : Personnages {
             Deplacement(new Vector3(-1,0,0));
         }
 
-        if(comp.attaque == typeAttaque.Tirer) {
-            
-        }
+        Attaque();
     }
+
     public void Attaque() {
         switch (comp.attaque) {
             case typeAttaque.Rien:
@@ -95,7 +66,7 @@ public class Ennemis : Personnages {
                 break;
 
             case typeAttaque.Tirer:
-                Debug.Log("Tirer");
+                weapon.Tirer(facingRight);
                 break;
 
             default:
@@ -125,6 +96,14 @@ public class Ennemis : Personnages {
             default:
                 break;
         }
+        
+        if (comp.deplacement != typeDeplac.Immobile) {
+            if (dir.x > 0)
+                facingRight = true;
+            else
+                facingRight = false;
+        }
+        
     }
 
     [System.Serializable]

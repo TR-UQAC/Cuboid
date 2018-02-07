@@ -7,7 +7,11 @@ public class Bullet : MonoBehaviour {
     public float speed = 25f;
     public float maxTimeToLive = 2f;
     public bool facingRight;
-    public LayerMask NoHit;
+
+    //[HideInInspector]
+    public LayerMask noHit;
+    //[HideInInspector]
+    public LayerMask dommageHit;
 
 
     private float direction;
@@ -41,15 +45,14 @@ public class Bullet : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (!other.gameObject.CompareTag("Player"))
+        GameObject go = other.gameObject;
+        if(noHit != (noHit | (1 << go.layer)))
         {
-            if (other.gameObject.CompareTag("Ennemi"))
+            if (dommageHit == (dommageHit | (1 << go.layer)))
             {
-                Ennemis en = (Ennemis) other.gameObject.GetComponent(typeof(Ennemis));
+                Personnages en = (Personnages)go.GetComponent(typeof(Personnages));
                 en.DommagePerso(100);
             }
-
-
             Destroy(gameObject);
         }
         

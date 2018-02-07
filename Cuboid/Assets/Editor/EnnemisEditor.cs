@@ -17,7 +17,7 @@ public class EnnemisEditor : Editor {
 
         contact, dmgContact,
 
-        attaque, dmgAttaque, fireRate,
+        attaque, dmgAttaque, //fireRate,
 
         deplacement,
         speed, hauteurSaut, fMode,
@@ -36,7 +36,7 @@ public class EnnemisEditor : Editor {
 
         attaque    = serializedObject.FindProperty("comp.attaque");
         dmgAttaque = serializedObject.FindProperty("comp.dmgAttaque");
-        fireRate   = serializedObject.FindProperty("fireRate");
+        //fireRate   = serializedObject.FindProperty("fireRate");
 
         speed = serializedObject.FindProperty("ennemiStats.speed");
         fMode = serializedObject.FindProperty("ennemiStats.fMode");
@@ -93,7 +93,7 @@ public class EnnemisEditor : Editor {
                     
                 case Ennemis.typeAttaque.Tirer:
                     EditorGUI.indentLevel++;
-                    EditorGUILayout.IntSlider(fireRate, 0, 10, "Fire Rate");
+                    //EditorGUILayout.IntSlider(fireRate, 0, 10, "Fire Rate");
                     EditorGUILayout.IntSlider(dmgAttaque, 0, 100, "Dommage Attaque");
                     ProgressBar(dmgAttaque.intValue / 100f, "Dommage");
                     EditorGUI.indentLevel--;
