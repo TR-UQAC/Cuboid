@@ -25,9 +25,17 @@ public class Ennemis : Personnages {
 
     private void OnCollisionEnter2D(Collision2D collision) {
         GameObject go = collision.gameObject;
-        if (go.tag == "Player" && comp.contact) {
+        if (go.tag == "Player") {
+
             PlayerCharacter2D en = (PlayerCharacter2D)go.GetComponent(typeof(PlayerCharacter2D));
-            en.DommagePerso(comp.dmgContact);
+
+            if(comp.contact)
+                en.DommagePerso(comp.dmgContact);
+
+            if (comp.attaque == typeAttaque.Kamikaze) {
+                weapon.Kamikaze(comp.dmgAttaque, en);
+                GameMaster.KillEnnemi(this);
+            }
         }
     }
 
@@ -64,10 +72,6 @@ public class Ennemis : Personnages {
 
     public void Attaque() {
         switch (comp.attaque) {
-            case typeAttaque.Rien:
-                //Debug.Log("Rien");
-                break;
-
             case typeAttaque.Tirer:
                 weapon.Tirer(facingRight, comp.dmgAttaque);
                 break;
@@ -80,19 +84,15 @@ public class Ennemis : Personnages {
     public void Deplacement(Vector3 dir) {
         switch (comp.deplacement) {
             case typeDeplac.Immobile:
-                //Debug.Log("Immobile");
                 break;
 
             case typeDeplac.Glisser:
-                //Debug.Log("Glisser");
                 dir *= ennemiStats.speed * Time.fixedDeltaTime;
                 rb.AddForce(dir, ennemiStats.fMode);
                 break;
 
             case typeDeplac.Voler:
-                //Debug.Log("Voler");
                 dir *= ennemiStats.speed * Time.fixedDeltaTime;
-
                 rb.AddForce(dir, ennemiStats.fMode);
                 break;
 

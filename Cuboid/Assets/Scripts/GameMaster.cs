@@ -46,6 +46,7 @@ public class GameMaster : MonoBehaviour {
     }
 
     public static void KillEnnemi(Ennemis perso) {
+        //TODO: particule à la mort des ennemis
         Destroy(perso.gameObject);
     }
 }
