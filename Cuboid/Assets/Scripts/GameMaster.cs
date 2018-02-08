@@ -5,9 +5,14 @@ using UnityEngine;
 public class GameMaster : MonoBehaviour {
 
     public static GameMaster instance;
-    public Transform playerPrefab;
-    public Transform spawnPoint;
+
     public int spawnDelay = 2;
+
+    public Transform spawnPoint;
+    public Transform spawnPrefab;
+    public Transform playerPrefab;
+
+
     void Awake() {
         if (instance == null)
             instance = this;
@@ -22,9 +27,13 @@ public class GameMaster : MonoBehaviour {
     public IEnumerator RespawnPlayer() {
         //TODO: Ajout d'un son pour l'attente
         yield return new WaitForSeconds(spawnDelay);
-
-        Instantiate(playerPrefab, spawnPoint.position, spawnPoint.rotation);
-        //TODO: Effet particule de spawn
+       
+        if(playerPrefab != null)
+            Instantiate(playerPrefab, spawnPoint.position, spawnPoint.rotation);
+        if (spawnPrefab != null) {
+            Transform clone = Instantiate(spawnPrefab, spawnPoint.position, spawnPoint.rotation) as Transform;
+            Destroy(clone.gameObject, 3f);
+        }
     }
 
     public static void KillJoueur(PlayerCharacter2D perso) {

@@ -43,7 +43,7 @@ public class Bullet : MonoBehaviour {
 	void Update () {
         
     }
-
+    //TODO: Vérifier pour ne pas que les balle repousse ce qu'il touche
     void OnCollisionEnter2D(Collision2D other)
     {
         GameObject go = other.gameObject;

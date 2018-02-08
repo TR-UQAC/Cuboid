@@ -30,10 +30,8 @@ public class EnnemiAI : MonoBehaviour {
 
     private bool searchingForPlayer = false;
 
-    //private Ennemis ennemis;
     private void Start(){
         seeker = GetComponent<Seeker>();
-        //rb = GetComponent<Rigidbody2D>();
 
         if(target == null){
             if (!searchingForPlayer) {
@@ -47,8 +45,6 @@ public class EnnemiAI : MonoBehaviour {
         seeker.StartPath(transform.position, target.position, OnPathComplete);
 
         StartCoroutine(UpdatePath());
- 
-        //ennemis = this.GetComponent<Ennemis>();
     }
 
     IEnumerator SearchForPlayer() {
@@ -105,7 +101,7 @@ public class EnnemiAI : MonoBehaviour {
             if (pathIsEnded)
                 return;
 
-            Debug.Log("Fin du chemin atteint");
+            //Debug.Log("Fin du chemin atteint");
             pathIsEnded = true;
             return;
         }

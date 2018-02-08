@@ -65,7 +65,7 @@ public class Ennemis : Personnages {
     public void Attaque() {
         switch (comp.attaque) {
             case typeAttaque.Rien:
-                Debug.Log("Rien");
+                //Debug.Log("Rien");
                 break;
 
             case typeAttaque.Tirer:
@@ -80,17 +80,17 @@ public class Ennemis : Personnages {
     public void Deplacement(Vector3 dir) {
         switch (comp.deplacement) {
             case typeDeplac.Immobile:
-                Debug.Log("Immobile");
+                //Debug.Log("Immobile");
                 break;
 
             case typeDeplac.Glisser:
-                Debug.Log("Glisser");
+                //Debug.Log("Glisser");
                 dir *= ennemiStats.speed * Time.fixedDeltaTime;
                 rb.AddForce(dir, ennemiStats.fMode);
                 break;
 
             case typeDeplac.Voler:
-                Debug.Log("Voler");
+                //Debug.Log("Voler");
                 dir *= ennemiStats.speed * Time.fixedDeltaTime;
 
                 rb.AddForce(dir, ennemiStats.fMode);
