@@ -22,7 +22,6 @@ public class Ennemis : Personnages {
 
     private bool ia = false;
 
-
     private void OnCollisionEnter2D(Collision2D collision) {
         GameObject go = collision.gameObject;
         if (go.tag == "Player") {
@@ -40,8 +39,18 @@ public class Ennemis : Personnages {
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.gameObject.tag == "KillZone")
+        string _tag = collision.gameObject.tag;
+        if (_tag == "KillZone")
             GameMaster.KillEnnemi(this);
+
+        if (collision.CompareTag("Player"))
+            enabled = true;
+    }
+
+    void OnTriggerExit(Collider c) {
+        Debug.Log("TriggerExit");
+        if (c.CompareTag("Player"))
+            enabled = false;
     }
 
     public override void DommagePerso(int dommage) {
@@ -59,6 +68,8 @@ public class Ennemis : Personnages {
 
         if (this.GetComponent<WeaponEnnemi>() != null)
             weapon = GetComponent<WeaponEnnemi>();
+
+        //enabled = false;
     }
 
     private void FixedUpdate() {
@@ -74,6 +85,7 @@ public class Ennemis : Personnages {
         switch (comp.attaque) {
             case typeAttaque.Tirer:
                 weapon.Tirer(facingRight, comp.dmgAttaque);
+
                 break;
 
             default:
@@ -100,14 +112,21 @@ public class Ennemis : Personnages {
             default:
                 break;
         }
-        
-        if (comp.deplacement != typeDeplac.Immobile) {
-            if (dir.x > 0)
-                facingRight = true;
-            else
+
+        if (!ia) {
+            if (comp.deplacement != typeDeplac.Immobile) {
+                if (dir.x > 0)
+                    facingRight = true;
+                else
+                    facingRight = false;
+            }
+        } else {
+            if (GetComponent<EnnemiAI>().target.transform.position.x < this.transform.position.x)
                 facingRight = false;
-        }
-        
+            else
+                facingRight = true;
+            }
+
     }
 
     [System.Serializable]
