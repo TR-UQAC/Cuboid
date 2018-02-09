@@ -93,8 +93,15 @@ public class EnnemiAI : MonoBehaviour {
             return;
         }
 
-        //TODO: Always look at player?
-        if(path == null)
+        //TODO: !Ne suivre le joueur que quand il est à une certaine distance
+        /****
+        if ((player.transform.position-this.transform.position).sqrMagnitude<3*3) {
+         the player is within a radius of 3 units to this game object
+        }
+        */
+        //TODO: vérifier s'il est possible d'activer les ennemi que l'orsque le joueur est à proximité
+        //https://docs.unity3d.com/410/Documentation/ScriptReference/index.Performance_Optimization.html
+        if (path == null)
             return;
 
         if(currentWaypoint >= path.vectorPath.Count) {
@@ -108,7 +115,7 @@ public class EnnemiAI : MonoBehaviour {
 
         pathIsEnded = false;
         //Dirrection vers le prochain waypoint
-        //TODO : Faire en sorte que l'ennemi ne ralentit pas proche du joueur
+        //TODO: !Faire en sorte que l'ennemi ne ralentit pas proche du joueur
         Vector3 dir = (path.vectorPath[currentWaypoint] - transform.position).normalized;
         this.GetComponent<Ennemis>().Deplacement(dir);
 
