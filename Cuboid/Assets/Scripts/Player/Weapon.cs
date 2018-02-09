@@ -36,7 +36,10 @@ public class Weapon : MonoBehaviour
         bul.facingRight = facingRight;
         bul.dmg = dmg;
 
-        FindObjectOfType<AudioManager>().Play("Shoot");
+        if (FindObjectOfType<AudioManager>() != null)
+        {
+            FindObjectOfType<AudioManager>().Play("Shoot");
+        }   
     }
 }
 

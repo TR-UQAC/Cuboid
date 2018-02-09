@@ -23,6 +23,8 @@ public class PlayerCharacter2D : Personnages {
     private Rigidbody2D m_Rigidbody2D;
     private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 
+    public bool IsRunning = false;
+
     public float fallMultiplier = 2.5f;
     public float lowJumpMultiplier = 2f;
 
@@ -60,6 +62,17 @@ public class PlayerCharacter2D : Personnages {
         m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
 
         BetterJumpPhysic();
+
+        if (IsRunning)
+        {
+            Debug.Log("Je cours !");
+            m_Anim.Play("RunFast");
+            m_MaxSpeed = 20f;
+        }
+        else
+        {
+            m_MaxSpeed = 10f;
+        }
     }
 
     public void PrintAllUpgrade()

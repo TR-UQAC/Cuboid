@@ -46,6 +46,15 @@ public class Platformer2DControls : MonoBehaviour
         {
             //m_Character.PrintAllUpgrade();
         }
+
+        if (CrossPlatformInputManager.GetButton("Run"))
+        {
+            m_Character.IsRunning = true;
+        }
+        else
+        {
+            m_Character.IsRunning = false;
+        }
     }
 
 }

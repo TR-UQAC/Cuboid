@@ -11,6 +11,11 @@ public class UpgradeItem : MonoBehaviour {
     {
         if (other.CompareTag("Player"))
         {
+            if (FindObjectOfType<AudioManager>() != null)
+            {
+                FindObjectOfType<AudioManager>().Play("ItemPickup");
+            }
+
             Pickup(other);
         }
     }
@@ -29,7 +34,9 @@ public class UpgradeItem : MonoBehaviour {
 
         player.gameObject.AddComponent(typeof(TestUpgradeBehavior));
 
-        Destroy(gameObject);
-    }
+        gameObject.GetComponent<Animator>().Play("Disapear");
 
+
+        Destroy(gameObject, 0.25f);
+    }
 }
