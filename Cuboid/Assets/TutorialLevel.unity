@@ -3425,11 +3425,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4034927907181318, guid: c0d7da662f82bc74d9da1b1f12493042, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.63
+      value: 0.47
       objectReference: {fileID: 0}
     - target: {fileID: 4034927907181318, guid: c0d7da662f82bc74d9da1b1f12493042, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -4.6
+      value: -4.59
       objectReference: {fileID: 0}
     - target: {fileID: 4034927907181318, guid: c0d7da662f82bc74d9da1b1f12493042, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3467,22 +3467,42 @@ Prefab:
     - target: {fileID: 114543104448875954, guid: c0d7da662f82bc74d9da1b1f12493042,
         type: 2}
       propertyPath: comp.dmgAttaque
-      value: 100
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114543104448875954, guid: c0d7da662f82bc74d9da1b1f12493042,
         type: 2}
       propertyPath: comp.contact
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114543104448875954, guid: c0d7da662f82bc74d9da1b1f12493042,
         type: 2}
       propertyPath: comp.dmgContact
-      value: 50
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 114543104448875954, guid: c0d7da662f82bc74d9da1b1f12493042,
         type: 2}
       propertyPath: comp.attaque
-      value: 2
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50703467948834346, guid: c0d7da662f82bc74d9da1b1f12493042,
+        type: 2}
+      propertyPath: m_GravityScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114543104448875954, guid: c0d7da662f82bc74d9da1b1f12493042,
+        type: 2}
+      propertyPath: comp.deplacement
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114255591608085970, guid: c0d7da662f82bc74d9da1b1f12493042,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114543104448875954, guid: c0d7da662f82bc74d9da1b1f12493042,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c0d7da662f82bc74d9da1b1f12493042, type: 2}
@@ -3975,6 +3995,26 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1739368031}
   m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+--- !u!1 &1159058458 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1171337023374186, guid: c0d7da662f82bc74d9da1b1f12493042,
+    type: 2}
+  m_PrefabInternal: {fileID: 399992206}
+--- !u!58 &1159058465
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1159058458}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 5
 --- !u!1001 &1236829320
 Prefab:
   m_ObjectHideFlags: 0
@@ -4053,6 +4093,11 @@ Prefab:
         type: 2}
       propertyPath: comp.dmgAttaque
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114423212518679096, guid: 85ee787e8fae0bf47a4ab1aaca41a6de,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 85ee787e8fae0bf47a4ab1aaca41a6de, type: 2}

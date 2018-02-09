@@ -128,9 +128,10 @@ public class EnnemisEditor : Editor {
                     EditorGUI.indentLevel--;
                     break;
             }
-
-            EditorGUILayout.PropertyField(speed, new GUIContent("Vitesse"));
-            EditorGUILayout.PropertyField(fMode, new GUIContent("FMode"));
+            if (tDeplacement != Ennemis.typeDeplac.Immobile) {
+                EditorGUILayout.PropertyField(speed, new GUIContent("Vitesse"));
+                EditorGUILayout.PropertyField(fMode, new GUIContent("FMode"));
+            }
             EditorGUI.indentLevel--;
         }
 
