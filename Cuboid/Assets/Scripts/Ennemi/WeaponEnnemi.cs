@@ -60,6 +60,7 @@ public class WeaponEnnemi : MonoBehaviour {
     }
 
     public void Kamikaze(int dmg, PlayerCharacter2D pl) {
+        //TODO: Répultion du joueur
         //TODO: Création d'un effet EXPLOSION
         if (attackPrefab != null) {
             Transform clone = Instantiate(attackPrefab, firePoint.position, firePoint.rotation) as Transform;

@@ -87,6 +87,7 @@ public class Ennemis : Personnages {
                 break;
 
             case typeDeplac.Glisser:
+                //TODO: !Améliorer Glisser pour que l'ennemi change de direction quand il rencontre un obstacle ou du vide.
                 dir *= ennemiStats.speed * Time.fixedDeltaTime;
                 rb.AddForce(dir, ennemiStats.fMode);
                 break;
