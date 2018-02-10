@@ -117,7 +117,7 @@ public class EnnemiAI : MonoBehaviour {
         //Dirrection vers le prochain waypoint
         //TODO: !Faire en sorte que l'ennemi ne ralentit pas proche du joueur
         Vector3 dir = (path.vectorPath[currentWaypoint] - transform.position).normalized;
-        this.GetComponent<Ennemis>().Deplacement(dir);
+        this.GetComponent<Ennemis>().direction = dir;
 
         float dist = Vector3.Distance(transform.position, path.vectorPath[currentWaypoint]);
         if(dist < nextWaypointDistance) {

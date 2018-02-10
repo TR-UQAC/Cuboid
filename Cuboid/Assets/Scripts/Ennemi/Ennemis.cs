@@ -18,6 +18,7 @@ public class Ennemis : Personnages {
     private WeaponEnnemi weapon;
     public Comportement comp;
 
+    public Vector3 direction;
     public bool facingRight;
 
     private bool ia = false;
@@ -54,24 +55,21 @@ public class Ennemis : Personnages {
     }
 
     private void Start() {
-        rb = GetComponent<Rigidbody2D>();
-        if (GetComponent<EnnemiAI>() != null) {
+        rb = this.GetComponent<Rigidbody2D>();
+        if (this.GetComponent<EnnemiAI>() != null) {
             ia = true;
-            GetComponent<EnnemiAI>().enabled = false;
-        }
+        } else
+            direction = new Vector3(-1, 0, 0);
 
         if (this.GetComponent<WeaponEnnemi>() != null)
-            weapon = GetComponent<WeaponEnnemi>();
+            weapon = this.GetComponent<WeaponEnnemi>();
 
         enabled = false;
     }
 
     private void FixedUpdate() {
-        if(!ia)
-        if (comp.deplacement == typeDeplac.Glisser) {
-            Deplacement(new Vector3(-1,0,0));
-        }
 
+        Deplacement(direction);
         Attaque();
     }
 
@@ -106,7 +104,6 @@ public class Ennemis : Personnages {
                 dir *= ennemiStats.speed;
                 rb.AddForce(dir, ennemiStats.fMode);
 
-
                 break;
 
             case typeDeplac.Voler:
@@ -126,7 +123,7 @@ public class Ennemis : Personnages {
                     facingRight = false;
             }
         } else {
-            if (GetComponent<EnnemiAI>().target.transform.position.x < this.transform.position.x)
+            if (this.GetComponent<EnnemiAI>().target.transform.position.x < this.transform.position.x)
                 facingRight = false;
             else
                 facingRight = true;
@@ -150,14 +147,11 @@ public class Ennemis : Personnages {
     
     void OnBecameVisible() {
         enabled = true;
-        if (ia)
-            GetComponent<EnnemiAI>().enabled = true;
+
     }
     /*
     void OnBecameInvisible() {
         enabled = false;
-        if (ia)
-            GetComponent<EnnemiAI>().enabled = false;
     }
     */
 }
