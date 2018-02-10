@@ -91,8 +91,8 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
+  m_Interpolate: 1
+  m_SleepingMode: 2
   m_CollisionDetection: 0
   m_Constraints: 4
 --- !u!61 &61904881881171692
@@ -134,7 +134,7 @@ MonoBehaviour:
   ennemiStats:
     vie: 100
     vieMax: 100
-    hauteurSaut: 0
+    m_JumpForce: 1000
     speed: 600
     fMode: 0
     resitGlace: 0
@@ -144,10 +144,10 @@ MonoBehaviour:
     poison: 0
     foudre: 0
   comp:
-    contact: 1
+    contact: 0
     dmgContact: 57
-    attaque: 0
-    dmgAttaque: 70
+    attaque: 1
+    dmgAttaque: 0
     deplacement: 1
   facingRight: 0
 --- !u!114 &114553822365292442
@@ -209,6 +209,7 @@ MonoBehaviour:
   dommageHit:
     serializedVersion: 2
     m_Bits: 0
+  attackPrefab: {fileID: 0}
   attaqueingRate: 0.5
 --- !u!212 &212558551910071826
 SpriteRenderer:

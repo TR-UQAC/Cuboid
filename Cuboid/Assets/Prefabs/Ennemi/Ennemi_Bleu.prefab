@@ -52,8 +52,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1171337023374186}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 84, y: -20.38, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4434892804643306}
@@ -85,12 +85,12 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 2
+  m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
+  m_Interpolate: 2
+  m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 4
 --- !u!61 &61644879474841838
@@ -137,6 +137,7 @@ MonoBehaviour:
   dommageHit:
     serializedVersion: 2
     m_Bits: 0
+  attackPrefab: {fileID: 0}
   attaqueingRate: 0.25
 --- !u!114 &114543104448875954
 MonoBehaviour:
@@ -152,9 +153,9 @@ MonoBehaviour:
   ennemiStats:
     vie: 100
     vieMax: 100
-    hauteurSaut: 0
-    speed: 10
-    fMode: 1
+    m_JumpForce: 1000
+    speed: 5
+    fMode: 0
     resitGlace: 0
     resitPoison: 0
     resitFoudre: 0
@@ -164,8 +165,8 @@ MonoBehaviour:
   comp:
     contact: 0
     dmgContact: 10
-    attaque: 1
-    dmgAttaque: 50
+    attaque: 0
+    dmgAttaque: 0
     deplacement: 2
   facingRight: 0
 --- !u!212 &212210370922209052

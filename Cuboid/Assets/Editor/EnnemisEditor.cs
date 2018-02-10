@@ -122,10 +122,9 @@ public class EnnemisEditor : Editor {
                     break;
 
                 default:
-                    EditorGUI.indentLevel++;
+                    //EditorGUI.indentLevel++;
                     EditorGUILayout.PropertyField(hauteurSaut, new GUIContent("Force du Saut"));
-                    ProgressBar(hauteurSaut.floatValue / 100f, "Hauteur saut");
-                    EditorGUI.indentLevel--;
+                    //EditorGUI.indentLevel--;
                     break;
             }
             if (tDeplacement != Ennemis.typeDeplac.Immobile) {

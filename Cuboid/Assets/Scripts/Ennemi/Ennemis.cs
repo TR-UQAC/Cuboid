@@ -22,6 +22,7 @@ public class Ennemis : Personnages {
 
     private bool ia = false;
 
+
     private void OnCollisionEnter2D(Collision2D collision) {
         GameObject go = collision.gameObject;
         if (go.tag == "Player") {
@@ -42,15 +43,6 @@ public class Ennemis : Personnages {
         string _tag = collision.gameObject.tag;
         if (_tag == "KillZone")
             GameMaster.KillEnnemi(this);
-
-        if (collision.CompareTag("Player"))
-            enabled = true;
-    }
-
-    void OnTriggerExit(Collider c) {
-        Debug.Log("TriggerExit");
-        if (c.CompareTag("Player"))
-            enabled = false;
     }
 
     public override void DommagePerso(int dommage) {
@@ -63,13 +55,15 @@ public class Ennemis : Personnages {
 
     private void Start() {
         rb = GetComponent<Rigidbody2D>();
-        if (this.GetComponent<EnnemiAI>() != null)
+        if (GetComponent<EnnemiAI>() != null) {
             ia = true;
+            GetComponent<EnnemiAI>().enabled = false;
+        }
 
         if (this.GetComponent<WeaponEnnemi>() != null)
             weapon = GetComponent<WeaponEnnemi>();
 
-        //enabled = false;
+        enabled = false;
     }
 
     private void FixedUpdate() {
@@ -93,15 +87,26 @@ public class Ennemis : Personnages {
         }
     }
 
-    public void Deplacement(Vector3 dir) {
+    public void Deplacement(Vector2 dir) {
         switch (comp.deplacement) {
             case typeDeplac.Immobile:
                 break;
 
             case typeDeplac.Glisser:
                 //TODO: !Améliorer Glisser pour que l'ennemi change de direction quand il rencontre un obstacle ou du vide.
-                dir *= ennemiStats.speed * Time.fixedDeltaTime;
+                /*
+                //dir = (dir + transform.position).normalized;
+                //dir *=  ennemiStats.speed * Time.fixedDeltaTime;
+                //dir -= transform.position;
+                dir *= ennemiStats.speed;
+                Debug.Log(-transform.right * ennemiStats.speed);
+                //rb.AddForce(dir, ennemiStats.fMode);
+                rb.velocity = -transform.right * ennemiStats.speed;
+                */
+                dir *= ennemiStats.speed;
                 rb.AddForce(dir, ennemiStats.fMode);
+
+
                 break;
 
             case typeDeplac.Voler:
@@ -139,4 +144,20 @@ public class Ennemis : Personnages {
         public int dmgAttaque;
         public typeDeplac deplacement;
     }
+
+    
+    //**** Désactivation des ennemis quand il ne sont pas vu ****//
+    
+    void OnBecameVisible() {
+        enabled = true;
+        if (ia)
+            GetComponent<EnnemiAI>().enabled = true;
+    }
+    /*
+    void OnBecameInvisible() {
+        enabled = false;
+        if (ia)
+            GetComponent<EnnemiAI>().enabled = false;
+    }
+    */
 }

@@ -10,9 +10,9 @@ abstract public class Personnages : MonoBehaviour {
         public int vie = 100;
         public int vieMax = 100;
 
-        [Space]
+        //[Space]
 
-        [Header("Mouvement")]
+        [Header("Mouvement Force")]
         //La vitesse
         public float m_JumpForce = 1000;
         public float speed = 600f;
