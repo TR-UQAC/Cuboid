@@ -22,7 +22,7 @@ GameObject:
   m_Layer: 11
   m_Name: FirePoint
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 6926474624037801865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 61904881881171692}
   - component: {fileID: 114423212518679096}
   - component: {fileID: 114947482930623302}
+  - component: {fileID: 58927031059299032}
   m_Layer: 11
   m_Name: Ennemi_Rose
   m_TagString: Ennemi
@@ -69,7 +70,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1092139371414626}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4009021712880410}
@@ -95,6 +96,21 @@ Rigidbody2D:
   m_SleepingMode: 2
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!58 &58927031059299032
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1121619541646682}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.32
 --- !u!61 &61904881881171692
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -107,7 +123,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.052672297}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -118,7 +134,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.64, y: 0.64}
+  m_Size: {x: 0.64, y: 0.5346554}
   m_EdgeRadius: 0
 --- !u!114 &114423212518679096
 MonoBehaviour:
@@ -135,7 +151,7 @@ MonoBehaviour:
     vie: 100
     vieMax: 100
     m_JumpForce: 1000
-    speed: 600
+    speed: 1000
     fMode: 0
     resitGlace: 0
     resitPoison: 0
@@ -148,8 +164,14 @@ MonoBehaviour:
     dmgContact: 57
     attaque: 1
     dmgAttaque: 0
+    firegRate: 0.5
+    ePower: 0
+    eRadius: 0
+    upwardsModifier: 0
     deplacement: 1
+  direction: {x: 0, y: 0}
   facingRight: 0
+  maxSpeed: 10
 --- !u!114 &114553822365292442
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -165,6 +187,7 @@ MonoBehaviour:
   updateRate: 2
   pathIsEnded: 0
   nextWaypointDistance: 3
+  distFollow: 20
 --- !u!114 &114598886800425420
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -208,9 +231,8 @@ MonoBehaviour:
     m_Bits: 6656
   dommageHit:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   attackPrefab: {fileID: 0}
-  attaqueingRate: 0.5
 --- !u!212 &212558551910071826
 SpriteRenderer:
   m_ObjectHideFlags: 1

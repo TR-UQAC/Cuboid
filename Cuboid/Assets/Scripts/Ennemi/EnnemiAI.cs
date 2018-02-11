@@ -23,6 +23,7 @@ public class EnnemiAI : MonoBehaviour {
 
     //La distance maxime de l'IA d'un waypoint pour continuer au prochain waypoint
     public float nextWaypointDistance = 3;
+    public float distFollow = 3f;
 
     //Le waypoint ver lequel il se déplace
     private int currentWaypoint = 0;
@@ -92,13 +93,6 @@ public class EnnemiAI : MonoBehaviour {
             return;
         }
 
-        //TODO: !Ne suivre le joueur que quand il est à une certaine distance
-        /****
-        if ((player.transform.position-this.transform.position).sqrMagnitude<3*3) {
-         the player is within a radius of 3 units to this game object
-        }
-        */
-        //TODO: vérifier s'il est possible d'activer les ennemi que l'orsque le joueur est à proximité
         //https://docs.unity3d.com/410/Documentation/ScriptReference/index.Performance_Optimization.html
         if (path == null)
             return;
@@ -106,16 +100,18 @@ public class EnnemiAI : MonoBehaviour {
         if(currentWaypoint >= path.vectorPath.Count) {
             if (pathIsEnded)
                 return;
-
-            //Debug.Log("Fin du chemin atteint");
             pathIsEnded = true;
             return;
         }
 
         pathIsEnded = false;
         //Dirrection vers le prochain waypoint
-        //TODO: !Faire en sorte que l'ennemi ne ralentit pas proche du joueur
-        Vector3 dir = (path.vectorPath[currentWaypoint] - transform.position).normalized;
+        Vector3 dir;
+        if ((target.transform.position - this.transform.position).sqrMagnitude < distFollow * distFollow)
+            dir = (path.vectorPath[currentWaypoint] - transform.position).normalized;
+          else
+            dir = new Vector3(0, 0, 0);
+
         this.GetComponent<Ennemis>().direction = dir;
 
         float dist = Vector3.Distance(transform.position, path.vectorPath[currentWaypoint]);

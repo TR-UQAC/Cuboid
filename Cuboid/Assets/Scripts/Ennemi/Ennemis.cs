@@ -9,8 +9,11 @@ using UnityEditor;
 [RequireComponent(typeof(Rigidbody2D), typeof(WeaponEnnemi))]
 public class Ennemis : Personnages {
     
-    public enum typeAttaque { Rien = 0, Tirer = 1, Kamikaze = 2}
+    public enum typeAttaque { Rien = 0, Tirer = 1, Kamikaze = 2, Explosion = 3}
     public enum typeDeplac { Immobile = 0, Voler = 1, Glisser = 2 }
+
+    private PlayerCharacter2D en;
+    private bool searchingForPlayer = false;
 
     public PersoStats ennemiStats = new PersoStats();
 
@@ -20,31 +23,28 @@ public class Ennemis : Personnages {
     public Comportement comp;
 
     public Vector2 direction;
-    public bool facingRight;
+    public bool facingRight = false;
 
     private bool ia = false;
-
-    public float maxSpeed = 10f;
 
     private void OnCollisionEnter2D(Collision2D collision) {
         GameObject go = collision.gameObject;
         if (go.tag == "Player") {
 
-            PlayerCharacter2D en = (PlayerCharacter2D)go.GetComponent(typeof(PlayerCharacter2D));
-
             if(comp.contact)
                 en.DommagePerso(comp.dmgContact);
-
+            
             if (comp.attaque == typeAttaque.Kamikaze) {
-                weapon.Kamikaze(comp.dmgAttaque, en);
+                weapon.Explosion(comp.dmgAttaque, en);
                 GameMaster.KillEnnemi(this);
             }
+            
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        string _tag = collision.gameObject.tag;
-        if (_tag == "KillZone")
+        GameObject go = collision.gameObject;
+        if (go.tag == "KillZone")
             GameMaster.KillEnnemi(this);
     }
 
@@ -57,9 +57,6 @@ public class Ennemis : Personnages {
     }
 
     private void Start() {
-        //rWC = transform.Find("rightWallCheck");
-        //lWC = transform.Find("leftWallCheck");
-
         rb = this.GetComponent<Rigidbody2D>();
         if (this.GetComponent<EnnemiAI>() != null) {
             ia = true;
@@ -72,6 +69,16 @@ public class Ennemis : Personnages {
         if (this.GetComponent<PatrolControl>() != null)
             control = this.GetComponent<PatrolControl>();
 
+        rb.gravityScale = (comp.deplacement == typeDeplac.Voler) ? 0 : rb.gravityScale;
+
+        if (en == null) {
+            if (!searchingForPlayer) {
+                searchingForPlayer = true;
+                StartCoroutine(SearchForPlayer());
+            }
+            return;
+        }
+
         enabled = false;
     }
 
@@ -82,8 +89,18 @@ public class Ennemis : Personnages {
         } else
             GetComponent<EnnemiAI>().iaUpdate();
 
-        Deplacement(direction);
-        Attaque();
+        if (en == null) {
+            if (!searchingForPlayer) {
+                searchingForPlayer = true;
+                StartCoroutine(SearchForPlayer());
+            }
+            return;
+        }
+
+        if (comp.deplacement != typeDeplac.Immobile)
+            Deplacement(direction);
+
+            Attaque();
     }
 
     public void Attaque() {
@@ -92,24 +109,24 @@ public class Ennemis : Personnages {
                 weapon.Tirer(facingRight, comp.dmgAttaque);
                 break;
 
+            case typeAttaque.Explosion:
+                weapon.Explosion(comp.dmgAttaque, en);
+                break;
+
             default:
                 break;
         }
     }
 
     public void Deplacement(Vector2 dir) {
+
         switch (comp.deplacement) {
-            case typeDeplac.Immobile:
-                break;
-
             case typeDeplac.Glisser:
-                //TODO: !Améliorer Glisser pour que l'ennemi change de direction quand il rencontre un obstacle ou du vide.
-
                 dir *= ennemiStats.speed * Time.fixedDeltaTime;
                 rb.AddRelativeForce(dir, ennemiStats.fMode);
 
-                if (rb.velocity.magnitude > maxSpeed)
-                    rb.velocity = rb.velocity.normalized * maxSpeed;
+                if (rb.velocity.magnitude > ennemiStats.maxSpeed)
+                    rb.velocity = rb.velocity.normalized * ennemiStats.maxSpeed;
                 break;
 
             case typeDeplac.Voler:
@@ -120,14 +137,10 @@ public class Ennemis : Personnages {
             default:
                 break;
         }
-        if (!ia) {
-            if (comp.deplacement != typeDeplac.Immobile) {
-                if (dir.x > 0)
-                    facingRight = true;
-                else
-                    facingRight = false;
-            }
-        } else {
+
+        if (!ia)
+            facingRight = (dir.x > 0) ? true : false;
+        else {
             if (this.GetComponent<EnnemiAI>().target.transform.position.x < this.transform.position.x)
                 facingRight = false;
             else
@@ -143,7 +156,14 @@ public class Ennemis : Personnages {
         public int dmgContact = 0;
 
         public typeAttaque attaque;
+
         public int dmgAttaque;
+        public float fireRate = 0.5f;
+
+        public float ePower;
+        public float eRadius;
+        public float upwardsModifier;
+
         public typeDeplac deplacement;
     }
 
@@ -157,4 +177,15 @@ public class Ennemis : Personnages {
         enabled = false;
     }
     */
+    IEnumerator SearchForPlayer() {
+        GameObject sResult = GameObject.FindGameObjectWithTag("Player");
+        if (sResult == null) {
+            yield return new WaitForSeconds(0.5f);
+            StartCoroutine(SearchForPlayer());
+        } else {
+            en = (PlayerCharacter2D)sResult.GetComponent(typeof(PlayerCharacter2D));
+            searchingForPlayer = false;
+            yield break;
+        }
+    }
 }

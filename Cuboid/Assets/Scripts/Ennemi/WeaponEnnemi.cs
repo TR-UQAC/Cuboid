@@ -9,16 +9,27 @@ public class WeaponEnnemi : MonoBehaviour {
     public LayerMask noHit;
     public LayerMask dommageHit;
 
-    public Transform attackPrefab;
     private Transform firePoint;
+    public  Transform attackPrefab;
 
-    public float attaqueingRate = 0.25f;
+    private float fireRate;
     private float attaqueCooldown;
 
+    //Les parametres pour les explosion
+    private float ePower;
+    private float eRadius;
+    private float upwardsModifier;
 
     // Use this for initialization
     void Start () {
+        Ennemis.Comportement comp = GetComponent<Ennemis>().comp;
         attaqueCooldown = 0f;
+
+        ePower          = comp.ePower;
+        eRadius         = comp.eRadius;
+        fireRate       = comp.fireRate;
+        upwardsModifier = comp.upwardsModifier;
+
     }
 
     void Awake() {
@@ -42,14 +53,9 @@ public class WeaponEnnemi : MonoBehaviour {
                 Destroy(clone.gameObject, 3f);
             }
 
-            attaqueCooldown = attaqueingRate;
-            Vector3 newPosition = firePoint.position ;
-            if(facingRight)
-                newPosition.x += this.transform.localScale.x;
-            else
-                newPosition.x -= this.transform.localScale.x;
+            attaqueCooldown = fireRate;
 
-            Bullet bul = Instantiate(attaquePrefab, newPosition, firePoint.rotation).GetComponent<Bullet>();
+            Bullet bul = Instantiate(attaquePrefab, firePoint.position, firePoint.rotation).GetComponent<Bullet>();
             bul.noHit = noHit;
             bul.dommageHit = dommageHit;
             bul.facingRight = facingRight;
@@ -59,15 +65,25 @@ public class WeaponEnnemi : MonoBehaviour {
         }
     }
 
-    public void Kamikaze(int dmg, PlayerCharacter2D pl) {
-        //TODO: Répultion du joueur
-        //TODO: Création d'un effet EXPLOSION
-        if (attackPrefab != null) {
-            Transform clone = Instantiate(attackPrefab, firePoint.position, firePoint.rotation) as Transform;
-            Destroy(clone.gameObject, 3f);
+    public void Explosion(int dmg, PlayerCharacter2D pl) {
+        if (CanAttack) {
+            //TODO: Répultion du joueur
+            //TODO: Création d'un effet EXPLOSION
+            if (attackPrefab != null) {
+                Transform clone = Instantiate(attackPrefab, firePoint.position, firePoint.rotation) as Transform;
+                Destroy(clone.gameObject, 3f);
+            }
+
+            attaqueCooldown = fireRate;
+
+            if (pl.GetComponent<Rigidbody2D>().AddExplosionForce(ePower, firePoint.position, eRadius, upwardsModifier))
+                pl.DommagePerso(dmg);
+
+            Debug.Log("EXPLOSION");
+
+
+            //TODO: ajouter un caméra shake
         }
-        pl.DommagePerso(dmg);
-        //TODO: ajouter un caméra shake
     }
 
 
