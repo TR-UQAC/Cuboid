@@ -15,7 +15,7 @@ public class TiledBackground : MonoBehaviour
 		DrawTiledBackground();
 	}
 
-	void DrawTiledBackground()
+    void DrawTiledBackground()
 	{
 		tileObject = tileObjectHazard[0];
 		Vector2 canvasSize = canvasCollider.bounds.size;

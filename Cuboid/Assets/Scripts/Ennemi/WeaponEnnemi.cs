@@ -43,7 +43,7 @@ public class WeaponEnnemi : MonoBehaviour {
             }
 
             attaqueCooldown = attaqueingRate;
-            Vector3 newPosition = firePoint.position;
+            Vector3 newPosition = firePoint.position ;
             if(facingRight)
                 newPosition.x += this.transform.localScale.x;
             else

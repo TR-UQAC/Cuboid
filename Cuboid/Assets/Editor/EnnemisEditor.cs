@@ -10,7 +10,7 @@ public class EnnemisEditor : Editor {
     private static bool showMouvement;
     private static bool showElements;
 
-    //GameObject weaponPrefab;
+    //TODO: Ajouter les paramètre de AddExplosionForce, maxSpeed et facingRight
 
     private SerializedProperty
         vie, vieMax,

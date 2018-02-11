@@ -16,13 +16,15 @@ public class Ennemis : Personnages {
 
     private Rigidbody2D rb;
     private WeaponEnnemi weapon;
+    private PatrolControl control;
     public Comportement comp;
 
-    public Vector3 direction;
+    public Vector2 direction;
     public bool facingRight;
 
     private bool ia = false;
 
+    public float maxSpeed = 10f;
 
     private void OnCollisionEnter2D(Collision2D collision) {
         GameObject go = collision.gameObject;
@@ -50,24 +52,35 @@ public class Ennemis : Personnages {
         ennemiStats.vie -= dommage;
         if (ennemiStats.vie <= 0) {
             GameMaster.KillEnnemi(this);
-            TimeManager.DoSlowMotion();
+            //TimeManager.DoSlowMotion();
         }
     }
 
     private void Start() {
+        //rWC = transform.Find("rightWallCheck");
+        //lWC = transform.Find("leftWallCheck");
+
         rb = this.GetComponent<Rigidbody2D>();
         if (this.GetComponent<EnnemiAI>() != null) {
             ia = true;
         } else
-            direction = new Vector3(-1, 0, 0);
+            direction = new Vector3(-1f, 0f, 0f);
 
         if (this.GetComponent<WeaponEnnemi>() != null)
             weapon = this.GetComponent<WeaponEnnemi>();
+
+        if (this.GetComponent<PatrolControl>() != null)
+            control = this.GetComponent<PatrolControl>();
 
         enabled = false;
     }
 
     private void FixedUpdate() {
+
+        if (!ia) {
+            direction = control.checkDirection();
+        } else
+            GetComponent<EnnemiAI>().iaUpdate();
 
         Deplacement(direction);
         Attaque();
@@ -77,7 +90,6 @@ public class Ennemis : Personnages {
         switch (comp.attaque) {
             case typeAttaque.Tirer:
                 weapon.Tirer(facingRight, comp.dmgAttaque);
-
                 break;
 
             default:
@@ -92,18 +104,12 @@ public class Ennemis : Personnages {
 
             case typeDeplac.Glisser:
                 //TODO: !Améliorer Glisser pour que l'ennemi change de direction quand il rencontre un obstacle ou du vide.
-                /*
-                //dir = (dir + transform.position).normalized;
-                //dir *=  ennemiStats.speed * Time.fixedDeltaTime;
-                //dir -= transform.position;
-                dir *= ennemiStats.speed;
-                Debug.Log(-transform.right * ennemiStats.speed);
-                //rb.AddForce(dir, ennemiStats.fMode);
-                rb.velocity = -transform.right * ennemiStats.speed;
-                */
-                dir *= ennemiStats.speed;
-                rb.AddForce(dir, ennemiStats.fMode);
 
+                dir *= ennemiStats.speed * Time.fixedDeltaTime;
+                rb.AddRelativeForce(dir, ennemiStats.fMode);
+
+                if (rb.velocity.magnitude > maxSpeed)
+                    rb.velocity = rb.velocity.normalized * maxSpeed;
                 break;
 
             case typeDeplac.Voler:
@@ -114,7 +120,6 @@ public class Ennemis : Personnages {
             default:
                 break;
         }
-
         if (!ia) {
             if (comp.deplacement != typeDeplac.Immobile) {
                 if (dir.x > 0)
@@ -128,7 +133,7 @@ public class Ennemis : Personnages {
             else
                 facingRight = true;
             }
-
+            
     }
 
     [System.Serializable]
@@ -142,12 +147,10 @@ public class Ennemis : Personnages {
         public typeDeplac deplacement;
     }
 
-    
     //**** Désactivation des ennemis quand il ne sont pas vu ****//
     
     void OnBecameVisible() {
         enabled = true;
-
     }
     /*
     void OnBecameInvisible() {

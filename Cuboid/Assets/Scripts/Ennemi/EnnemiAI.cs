@@ -4,8 +4,7 @@ using UnityEngine;
 using Pathfinding;
 
 [DisallowMultipleComponent]
-[RequireComponent(typeof(Ennemis))]
-[RequireComponent(typeof(Seeker))]
+[RequireComponent(typeof(Ennemis), typeof(Seeker))]
 public class EnnemiAI : MonoBehaviour {
 
     //La cible
@@ -84,7 +83,7 @@ public class EnnemiAI : MonoBehaviour {
         }
     }
 
-    private void FixedUpdate() {
+    public void iaUpdate() {
         if (target == null) {
             if (!searchingForPlayer) {
                 searchingForPlayer = true;
