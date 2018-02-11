@@ -16,6 +16,7 @@ abstract public class Personnages : MonoBehaviour {
         //La vitesse
         public float m_JumpForce = 1000;
         public float speed = 600f;
+        public float maxSpeed = 10f;
         public ForceMode2D fMode;
 
         [Header("Resitance")]

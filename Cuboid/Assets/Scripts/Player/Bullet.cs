@@ -9,9 +9,7 @@ public class Bullet : MonoBehaviour {
     public bool facingRight;
     public int dmg;
 
-    //[HideInInspector]
     public LayerMask noHit;
-    //[HideInInspector]
     public LayerMask dommageHit;
 
 
@@ -38,25 +36,16 @@ public class Bullet : MonoBehaviour {
 
         Destroy(gameObject, maxTimeToLive);
     }
-	
-	// Update is called once per frame
-	void Update () {
-        
-    }
-    //TODO: Vérifier pour ne pas que les balle repousse ce qu'il touche
-    void OnCollisionEnter2D(Collision2D other)
-    {
+
+    private void OnTriggerEnter2D(Collider2D other) {
         GameObject go = other.gameObject;
-        if(noHit != (noHit | (1 << go.layer)))
-        {
-            if (dommageHit == (dommageHit | (1 << go.layer)))
-            {
+        if (noHit != (noHit | (1 << go.layer))) {
+            if (dommageHit == (dommageHit | (1 << go.layer))) {
                 Personnages en = (Personnages)go.GetComponent(typeof(Personnages));
                 en.DommagePerso(dmg);
             }
             //TODO: Effet particule de contact
             Destroy(gameObject);
         }
-        
     }
 }

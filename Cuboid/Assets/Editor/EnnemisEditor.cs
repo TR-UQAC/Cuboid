@@ -5,22 +5,25 @@ using System.Collections;
 [CustomEditor(typeof(Ennemis)), CanEditMultipleObjects]
 public class EnnemisEditor : Editor {
 
-    private static bool showVie;
-    private static bool showDommage;
-    private static bool showMouvement;
-    private static bool showElements;
+    private static bool showVie = true;
+    private static bool showDommage = true;
+    private static bool showMouvement = true;
+    private static bool showElements = true;
 
-    //TODO: Ajouter les paramètre de AddExplosionForce, maxSpeed et facingRight
+    //TODO: Ajouter les paramètre de AddExplosionForce, maxSpeed, firegRate et facingRight
 
     private SerializedProperty
         vie, vieMax,
 
         contact, dmgContact,
 
-        attaque, dmgAttaque, //fireRate,
+        attaque, dmgAttaque, fireRate,
+
+        ePower, eRadius, upwardsModifier,
 
         deplacement,
-        speed, hauteurSaut, fMode,
+        speed, maxSpeed, hauteurSaut, fMode,
+        facingRight,
 
         resitGlace, resitPoison, resitFoudre,
 
@@ -36,12 +39,19 @@ public class EnnemisEditor : Editor {
 
         attaque    = serializedObject.FindProperty("comp.attaque");
         dmgAttaque = serializedObject.FindProperty("comp.dmgAttaque");
-        //fireRate   = serializedObject.FindProperty("fireRate");
+        fireRate   = serializedObject.FindProperty("comp.fireRate");
 
-        speed = serializedObject.FindProperty("ennemiStats.speed");
-        fMode = serializedObject.FindProperty("ennemiStats.fMode");
+        ePower          = serializedObject.FindProperty("comp.ePower");
+        eRadius         = serializedObject.FindProperty("comp.eRadius");
+        upwardsModifier = serializedObject.FindProperty("comp.upwardsModifier");
+
         deplacement = serializedObject.FindProperty("comp.deplacement");
+        speed       = serializedObject.FindProperty("ennemiStats.speed");
+        fMode       = serializedObject.FindProperty("ennemiStats.fMode");
+        maxSpeed    = serializedObject.FindProperty("ennemiStats.maxSpeed");
         hauteurSaut = serializedObject.FindProperty("ennemiStats.m_JumpForce");
+
+        facingRight = serializedObject.FindProperty("facingRight");
 
         resitGlace  = serializedObject.FindProperty("ennemiStats.resitGlace");
         resitPoison = serializedObject.FindProperty("ennemiStats.resitPoison");
@@ -87,25 +97,44 @@ public class EnnemisEditor : Editor {
             //***** Attaque *****//
             EditorGUILayout.PropertyField(attaque, new GUIContent("Attaque"));
             Ennemis.typeAttaque tAttaque = (Ennemis.typeAttaque)attaque.enumValueIndex;
+
+            if (tAttaque != Ennemis.typeAttaque.Rien) {
+                EditorGUI.indentLevel++;
+                EditorGUILayout.IntSlider(dmgAttaque, 0, 100, "Dommage Attaque");
+                ProgressBar(dmgAttaque.intValue / 100f, "Dommage");
+                EditorGUI.indentLevel--;
+            }
+
             switch (tAttaque) {
                 case Ennemis.typeAttaque.Rien:
                     break;
                     
                 case Ennemis.typeAttaque.Tirer:
                     EditorGUI.indentLevel++;
-                    //EditorGUILayout.IntSlider(fireRate, 0, 10, "Fire Rate");
-                    EditorGUILayout.IntSlider(dmgAttaque, 0, 100, "Dommage Attaque");
-                    ProgressBar(dmgAttaque.intValue / 100f, "Dommage");
+                    EditorGUILayout.PropertyField(fireRate, new GUIContent("Fire Rate"));
                     EditorGUI.indentLevel--;
                     break;
-                    
-                default:
+
+                case Ennemis.typeAttaque.Kamikaze:
                     EditorGUI.indentLevel++;
-                    EditorGUILayout.IntSlider(dmgAttaque, 0, 100, "Dommage Attaque");
-                    ProgressBar(dmgAttaque.intValue / 100f, "Dommage");
+                    EditorGUILayout.PropertyField(ePower, new GUIContent("Explosion Power"));
+                    EditorGUILayout.PropertyField(eRadius, new GUIContent("Rayon d'explosion"));
+                    EditorGUILayout.PropertyField(upwardsModifier, new GUIContent("Upwards Modifier"));
                     EditorGUI.indentLevel--;
+                    break;
+
+                case Ennemis.typeAttaque.Explosion:
+                    EditorGUI.indentLevel++;
+                    EditorGUILayout.PropertyField(fireRate, new GUIContent("Fire Rate"));
+                    EditorGUILayout.PropertyField(ePower, new GUIContent("Explosion Power"));
+                    EditorGUILayout.PropertyField(eRadius, new GUIContent("Rayon d'explosion"));
+                    EditorGUILayout.PropertyField(upwardsModifier, new GUIContent("Upwards Modifier"));
+                    EditorGUI.indentLevel--;
+                    break;
+                default:
                     break;
             }
+
             EditorGUI.indentLevel--;
         }
         
@@ -127,10 +156,13 @@ public class EnnemisEditor : Editor {
                     //EditorGUI.indentLevel--;
                     break;
             }
+
             if (tDeplacement != Ennemis.typeDeplac.Immobile) {
                 EditorGUILayout.PropertyField(speed, new GUIContent("Vitesse"));
+                EditorGUILayout.PropertyField(maxSpeed, new GUIContent("maxSpeed"));
                 EditorGUILayout.PropertyField(fMode, new GUIContent("FMode"));
             }
+            EditorGUILayout.PropertyField(facingRight, new GUIContent("facingRight"));
             EditorGUI.indentLevel--;
         }
 
