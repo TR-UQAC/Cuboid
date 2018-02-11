@@ -266,14 +266,15 @@ MonoBehaviour:
     poison: 0
     foudre: 0
   m_MaxSpeed: 10
-  m_JumpForce: 1000
+  m_JumpForce: 1400
   m_CrouchSpeed: 0.36
   m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 1024
+  IsRunning: 0
   fallMultiplier: 2.5
-  lowJumpMultiplier: 2
+  lowJumpMultiplier: 4.5
 --- !u!114 &114410728604093512
 MonoBehaviour:
   m_ObjectHideFlags: 1

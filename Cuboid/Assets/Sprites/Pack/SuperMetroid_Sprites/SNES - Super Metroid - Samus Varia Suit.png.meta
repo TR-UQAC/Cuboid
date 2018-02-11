@@ -1,0 +1,6272 @@
+fileFormatVersion: 2
+guid: 1c2469a1284c2604fa79538e8c76fddd
+timeCreated: 1517774460
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: SNES - Super Metroid - Samus Varia Suit_0
+    21300002: SNES - Super Metroid - Samus Varia Suit_1
+    21300004: Stand_Left
+    21300006: SNES - Super Metroid - Samus Varia Suit_3
+    21300008: SNES - Super Metroid - Samus Varia Suit_4
+    21300010: Stand_Right
+    21300012: SNES - Super Metroid - Samus Varia Suit_6
+    21300014: SNES - Super Metroid - Samus Varia Suit_7
+    21300016: SNES - Super Metroid - Samus Varia Suit_8
+    21300018: SNES - Super Metroid - Samus Varia Suit_9
+    21300020: SNES - Super Metroid - Samus Varia Suit_10
+    21300022: SNES - Super Metroid - Samus Varia Suit_11
+    21300024: SNES - Super Metroid - Samus Varia Suit_12
+    21300026: SNES - Super Metroid - Samus Varia Suit_13
+    21300028: SNES - Super Metroid - Samus Varia Suit_14
+    21300030: SNES - Super Metroid - Samus Varia Suit_15
+    21300032: SNES - Super Metroid - Samus Varia Suit_16
+    21300034: SNES - Super Metroid - Samus Varia Suit_17
+    21300036: SNES - Super Metroid - Samus Varia Suit_18
+    21300038: SNES - Super Metroid - Samus Varia Suit_19
+    21300040: SNES - Super Metroid - Samus Varia Suit_20
+    21300042: SNES - Super Metroid - Samus Varia Suit_21
+    21300044: SNES - Super Metroid - Samus Varia Suit_22
+    21300046: SNES - Super Metroid - Samus Varia Suit_23
+    21300048: SNES - Super Metroid - Samus Varia Suit_24
+    21300050: SNES - Super Metroid - Samus Varia Suit_25
+    21300052: SNES - Super Metroid - Samus Varia Suit_26
+    21300054: SNES - Super Metroid - Samus Varia Suit_27
+    21300056: SNES - Super Metroid - Samus Varia Suit_28
+    21300058: SNES - Super Metroid - Samus Varia Suit_29
+    21300060: SNES - Super Metroid - Samus Varia Suit_30
+    21300062: SNES - Super Metroid - Samus Varia Suit_31
+    21300064: SNES - Super Metroid - Samus Varia Suit_32
+    21300066: SNES - Super Metroid - Samus Varia Suit_33
+    21300068: SNES - Super Metroid - Samus Varia Suit_34
+    21300070: SNES - Super Metroid - Samus Varia Suit_35
+    21300072: SNES - Super Metroid - Samus Varia Suit_36
+    21300074: SNES - Super Metroid - Samus Varia Suit_37
+    21300076: SNES - Super Metroid - Samus Varia Suit_38
+    21300078: SNES - Super Metroid - Samus Varia Suit_39
+    21300080: SNES - Super Metroid - Samus Varia Suit_40
+    21300082: SNES - Super Metroid - Samus Varia Suit_41
+    21300084: SNES - Super Metroid - Samus Varia Suit_42
+    21300086: SNES - Super Metroid - Samus Varia Suit_43
+    21300088: SNES - Super Metroid - Samus Varia Suit_44
+    21300090: SNES - Super Metroid - Samus Varia Suit_45
+    21300092: SNES - Super Metroid - Samus Varia Suit_46
+    21300094: SNES - Super Metroid - Samus Varia Suit_47
+    21300096: SNES - Super Metroid - Samus Varia Suit_48
+    21300098: SNES - Super Metroid - Samus Varia Suit_49
+    21300100: SNES - Super Metroid - Samus Varia Suit_50
+    21300102: SNES - Super Metroid - Samus Varia Suit_51
+    21300104: SNES - Super Metroid - Samus Varia Suit_52
+    21300106: SNES - Super Metroid - Samus Varia Suit_53
+    21300108: SNES - Super Metroid - Samus Varia Suit_54
+    21300110: SNES - Super Metroid - Samus Varia Suit_55
+    21300112: SNES - Super Metroid - Samus Varia Suit_56
+    21300114: SNES - Super Metroid - Samus Varia Suit_57
+    21300116: SNES - Super Metroid - Samus Varia Suit_58
+    21300118: SNES - Super Metroid - Samus Varia Suit_59
+    21300120: SNES - Super Metroid - Samus Varia Suit_60
+    21300122: SNES - Super Metroid - Samus Varia Suit_61
+    21300124: SNES - Super Metroid - Samus Varia Suit_62
+    21300126: SNES - Super Metroid - Samus Varia Suit_63
+    21300128: SNES - Super Metroid - Samus Varia Suit_64
+    21300130: SNES - Super Metroid - Samus Varia Suit_65
+    21300132: SNES - Super Metroid - Samus Varia Suit_66
+    21300134: SNES - Super Metroid - Samus Varia Suit_67
+    21300136: SNES - Super Metroid - Samus Varia Suit_68
+    21300138: SNES - Super Metroid - Samus Varia Suit_69
+    21300140: SNES - Super Metroid - Samus Varia Suit_70
+    21300142: SNES - Super Metroid - Samus Varia Suit_71
+    21300144: SNES - Super Metroid - Samus Varia Suit_72
+    21300146: SNES - Super Metroid - Samus Varia Suit_73
+    21300148: SNES - Super Metroid - Samus Varia Suit_74
+    21300150: SNES - Super Metroid - Samus Varia Suit_75
+    21300152: SNES - Super Metroid - Samus Varia Suit_76
+    21300154: SNES - Super Metroid - Samus Varia Suit_77
+    21300156: SNES - Super Metroid - Samus Varia Suit_78
+    21300158: SNES - Super Metroid - Samus Varia Suit_79
+    21300160: SamusJumping01
+    21300162: SNES - Super Metroid - Samus Varia Suit_81
+    21300164: SNES - Super Metroid - Samus Varia Suit_82
+    21300166: SNES - Super Metroid - Samus Varia Suit_83
+    21300168: SNES - Super Metroid - Samus Varia Suit_84
+    21300170: SNES - Super Metroid - Samus Varia Suit_85
+    21300172: SNES - Super Metroid - Samus Varia Suit_86
+    21300174: SNES - Super Metroid - Samus Varia Suit_87
+    21300176: SNES - Super Metroid - Samus Varia Suit_88
+    21300178: SNES - Super Metroid - Samus Varia Suit_89
+    21300180: SNES - Super Metroid - Samus Varia Suit_90
+    21300182: SNES - Super Metroid - Samus Varia Suit_91
+    21300184: SNES - Super Metroid - Samus Varia Suit_92
+    21300186: SNES - Super Metroid - Samus Varia Suit_93
+    21300188: SNES - Super Metroid - Samus Varia Suit_94
+    21300190: SNES - Super Metroid - Samus Varia Suit_95
+    21300192: SNES - Super Metroid - Samus Varia Suit_96
+    21300194: SNES - Super Metroid - Samus Varia Suit_97
+    21300196: SNES - Super Metroid - Samus Varia Suit_98
+    21300198: SNES - Super Metroid - Samus Varia Suit_99
+    21300200: SNES - Super Metroid - Samus Varia Suit_100
+    21300202: SNES - Super Metroid - Samus Varia Suit_101
+    21300204: SNES - Super Metroid - Samus Varia Suit_102
+    21300206: SNES - Super Metroid - Samus Varia Suit_103
+    21300208: SNES - Super Metroid - Samus Varia Suit_104
+    21300210: SNES - Super Metroid - Samus Varia Suit_105
+    21300212: SNES - Super Metroid - Samus Varia Suit_106
+    21300214: SNES - Super Metroid - Samus Varia Suit_107
+    21300216: SNES - Super Metroid - Samus Varia Suit_108
+    21300218: SNES - Super Metroid - Samus Varia Suit_109
+    21300220: SNES - Super Metroid - Samus Varia Suit_110
+    21300222: SNES - Super Metroid - Samus Varia Suit_111
+    21300224: SNES - Super Metroid - Samus Varia Suit_112
+    21300226: SNES - Super Metroid - Samus Varia Suit_113
+    21300228: SNES - Super Metroid - Samus Varia Suit_114
+    21300230: SNES - Super Metroid - Samus Varia Suit_115
+    21300232: SNES - Super Metroid - Samus Varia Suit_116
+    21300234: SNES - Super Metroid - Samus Varia Suit_117
+    21300236: SNES - Super Metroid - Samus Varia Suit_118
+    21300238: SNES - Super Metroid - Samus Varia Suit_119
+    21300240: SNES - Super Metroid - Samus Varia Suit_120
+    21300242: SNES - Super Metroid - Samus Varia Suit_121
+    21300244: SNES - Super Metroid - Samus Varia Suit_122
+    21300246: SNES - Super Metroid - Samus Varia Suit_123
+    21300248: SNES - Super Metroid - Samus Varia Suit_124
+    21300250: SNES - Super Metroid - Samus Varia Suit_125
+    21300252: SNES - Super Metroid - Samus Varia Suit_126
+    21300254: SNES - Super Metroid - Samus Varia Suit_127
+    21300256: SNES - Super Metroid - Samus Varia Suit_128
+    21300258: SNES - Super Metroid - Samus Varia Suit_129
+    21300260: SNES - Super Metroid - Samus Varia Suit_130
+    21300262: SNES - Super Metroid - Samus Varia Suit_131
+    21300264: SNES - Super Metroid - Samus Varia Suit_132
+    21300266: SNES - Super Metroid - Samus Varia Suit_133
+    21300268: SNES - Super Metroid - Samus Varia Suit_134
+    21300270: SNES - Super Metroid - Samus Varia Suit_135
+    21300272: SNES - Super Metroid - Samus Varia Suit_136
+    21300274: SNES - Super Metroid - Samus Varia Suit_137
+    21300276: SNES - Super Metroid - Samus Varia Suit_138
+    21300278: SNES - Super Metroid - Samus Varia Suit_139
+    21300280: SNES - Super Metroid - Samus Varia Suit_140
+    21300282: SNES - Super Metroid - Samus Varia Suit_141
+    21300284: SNES - Super Metroid - Samus Varia Suit_142
+    21300286: SNES - Super Metroid - Samus Varia Suit_143
+    21300288: SNES - Super Metroid - Samus Varia Suit_144
+    21300290: SNES - Super Metroid - Samus Varia Suit_145
+    21300292: SNES - Super Metroid - Samus Varia Suit_146
+    21300294: SNES - Super Metroid - Samus Varia Suit_147
+    21300296: SNES - Super Metroid - Samus Varia Suit_148
+    21300298: SNES - Super Metroid - Samus Varia Suit_149
+    21300300: SNES - Super Metroid - Samus Varia Suit_150
+    21300302: SNES - Super Metroid - Samus Varia Suit_151
+    21300304: SNES - Super Metroid - Samus Varia Suit_152
+    21300306: SNES - Super Metroid - Samus Varia Suit_153
+    21300308: SNES - Super Metroid - Samus Varia Suit_154
+    21300310: SNES - Super Metroid - Samus Varia Suit_155
+    21300312: SNES - Super Metroid - Samus Varia Suit_156
+    21300314: SNES - Super Metroid - Samus Varia Suit_157
+    21300316: SNES - Super Metroid - Samus Varia Suit_158
+    21300318: SNES - Super Metroid - Samus Varia Suit_159
+    21300320: SNES - Super Metroid - Samus Varia Suit_160
+    21300322: SNES - Super Metroid - Samus Varia Suit_161
+    21300324: SNES - Super Metroid - Samus Varia Suit_162
+    21300326: SNES - Super Metroid - Samus Varia Suit_163
+    21300328: SNES - Super Metroid - Samus Varia Suit_164
+    21300330: SNES - Super Metroid - Samus Varia Suit_165
+    21300332: SNES - Super Metroid - Samus Varia Suit_166
+    21300334: SNES - Super Metroid - Samus Varia Suit_167
+    21300336: SNES - Super Metroid - Samus Varia Suit_168
+    21300338: SNES - Super Metroid - Samus Varia Suit_169
+    21300340: SNES - Super Metroid - Samus Varia Suit_170
+    21300342: SNES - Super Metroid - Samus Varia Suit_171
+    21300344: SNES - Super Metroid - Samus Varia Suit_172
+    21300346: SNES - Super Metroid - Samus Varia Suit_173
+    21300348: SNES - Super Metroid - Samus Varia Suit_174
+    21300350: SNES - Super Metroid - Samus Varia Suit_175
+    21300352: SNES - Super Metroid - Samus Varia Suit_176
+    21300354: SNES - Super Metroid - Samus Varia Suit_177
+    21300356: SNES - Super Metroid - Samus Varia Suit_178
+    21300358: SNES - Super Metroid - Samus Varia Suit_179
+    21300360: SNES - Super Metroid - Samus Varia Suit_180
+    21300362: SNES - Super Metroid - Samus Varia Suit_181
+    21300364: SNES - Super Metroid - Samus Varia Suit_182
+    21300366: SNES - Super Metroid - Samus Varia Suit_183
+    21300368: SNES - Super Metroid - Samus Varia Suit_184
+    21300370: SNES - Super Metroid - Samus Varia Suit_185
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1234
+        width: 25
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_1
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 1235
+        width: 21
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Stand_Left
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 1237
+        width: 26
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_3
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 1237
+        width: 26
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_4
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1237
+        width: 26
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Stand_Right
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 1237
+        width: 26
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_6
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1237
+        width: 26
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_7
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 1237
+        width: 26
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_8
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 1235
+        width: 20
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_9
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 1184
+        width: 32
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_10
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 1187
+        width: 26
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_11
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 1187
+        width: 26
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_12
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1187
+        width: 26
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_13
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 1187
+        width: 26
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_14
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1187
+        width: 26
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_15
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 1187
+        width: 26
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_16
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 1184
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_17
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 1131
+        width: 32
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_18
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 1129
+        width: 20
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_19
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 1129
+        width: 20
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_20
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 1138
+        width: 23
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_21
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 1138
+        width: 23
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_22
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 1129
+        width: 20
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_23
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 1129
+        width: 20
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_24
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 1132
+        width: 32
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_25
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 1086
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_26
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 1085
+        width: 27
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_27
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 1077
+        width: 32
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_28
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 1081
+        width: 31
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_29
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 1081
+        width: 31
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_30
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 1077
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_31
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 1085
+        width: 27
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_32
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1086
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_33
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 1039
+        width: 28
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_34
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 1042
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_35
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 1042
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_36
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 1042
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_37
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 1042
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_38
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 1042
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_39
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 1042
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_40
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 1040
+        width: 28
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_41
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 988
+        width: 29
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_42
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 992
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_43
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 992
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_44
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 992
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_45
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 992
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_46
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 992
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_47
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 992
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_48
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 989
+        width: 29
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_49
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 937
+        width: 18
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_50
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 937
+        width: 18
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_51
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 937
+        width: 18
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_52
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 937
+        width: 18
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_53
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 887
+        width: 35
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_54
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 887
+        width: 29
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_55
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 887
+        width: 23
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_56
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 887
+        width: 18
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_57
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 887
+        width: 18
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_58
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 887
+        width: 23
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_59
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 887
+        width: 35
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_60
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 887
+        width: 32
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_61
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 837
+        width: 29
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_62
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 837
+        width: 22
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_63
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 837
+        width: 19
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_64
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 837
+        width: 32
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_65
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 837
+        width: 29
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_66
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 837
+        width: 22
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_67
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 837
+        width: 19
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_68
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 837
+        width: 29
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_69
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 787
+        width: 32
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_70
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 787
+        width: 35
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_71
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 787
+        width: 35
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_72
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 787
+        width: 32
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_73
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 740
+        width: 19
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_74
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 736
+        width: 23
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_75
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 737
+        width: 18
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_76
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 738
+        width: 19
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_77
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 738
+        width: 19
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_78
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 737
+        width: 18
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_79
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 736
+        width: 23
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SamusJumping01
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 740
+        width: 19
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_81
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 686
+        width: 22
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_82
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 688
+        width: 18
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_83
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 690
+        width: 19
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_84
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 689
+        width: 19
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_85
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 688
+        width: 18
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_86
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 689
+        width: 19
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_87
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 690
+        width: 20
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_88
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 686
+        width: 22
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_89
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 641
+        width: 22
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_90
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 637
+        width: 21
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_91
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 637
+        width: 21
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_92
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 641
+        width: 22
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_93
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 586
+        width: 32
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_94
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 587
+        width: 30
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_95
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 587
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_96
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 587
+        width: 38
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_97
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 587
+        width: 38
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_98
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 587
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_99
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 587
+        width: 30
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_100
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 613
+        width: 27
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_101
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 586
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_102
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 537
+        width: 29
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_103
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 537
+        width: 38
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_104
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 537
+        width: 39
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_105
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 536
+        width: 36
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_106
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 537
+        width: 36
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_107
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 537
+        width: 39
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_108
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 537
+        width: 38
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_109
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 537
+        width: 29
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_110
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 486
+        width: 36
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_111
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 487
+        width: 33
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_112
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 487
+        width: 33
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_113
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 487
+        width: 36
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_114
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 437
+        width: 33
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_115
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 437
+        width: 29
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_116
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 437
+        width: 27
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_117
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 437
+        width: 34
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_118
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 437
+        width: 33
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_119
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 437
+        width: 35
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_120
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 437
+        width: 34
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_121
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 437
+        width: 27
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_122
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 387
+        width: 33
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_123
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 387
+        width: 30
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_124
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 387
+        width: 26
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_125
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 387
+        width: 36
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_126
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 387
+        width: 29
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_127
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 387
+        width: 33
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_128
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 387
+        width: 36
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_129
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 387
+        width: 35
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_130
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 337
+        width: 34
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_131
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 337
+        width: 35
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_132
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 337
+        width: 26
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_133
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 337
+        width: 30
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_134
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 284
+        width: 34
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_135
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 284
+        width: 30
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_136
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 284
+        width: 28
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_137
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 284
+        width: 36
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_138
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 284
+        width: 35
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_139
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 284
+        width: 28
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_140
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 284
+        width: 30
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_141
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 284
+        width: 34
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_142
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 234
+        width: 31
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_143
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 234
+        width: 27
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_144
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 234
+        width: 36
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_145
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 234
+        width: 37
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_146
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 234
+        width: 37
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_147
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 234
+        width: 36
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_148
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 234
+        width: 27
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_149
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 234
+        width: 31
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_150
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 184
+        width: 35
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_151
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 184
+        width: 34
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_152
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 184
+        width: 34
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_153
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 184
+        width: 36
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_154
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 144
+        width: 25
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_155
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 143
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_156
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 146
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_157
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 150
+        width: 31
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_158
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 150
+        width: 31
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_159
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 146
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_160
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 143
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_161
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 144
+        width: 25
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_162
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 94
+        width: 25
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_163
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 93
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_164
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 96
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_165
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 100
+        width: 31
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_166
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 100
+        width: 31
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_167
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 96
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_168
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 93
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_169
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 94
+        width: 25
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_170
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 50
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_171
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 50
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_172
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 50
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_173
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 50
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_174
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 50
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_175
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 50
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_176
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 50
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_177
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 50
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_178
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_179
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_180
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_181
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_182
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_183
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_184
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SNES - Super Metroid - Samus Varia Suit_185
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline:
+    - - {x: -157, y: -623}
+      - {x: -162, y: -625}
+      - {x: -162, y: -641}
+      - {x: -143, y: -641}
+      - {x: -142, y: -640}
+      - {x: -142, y: -625}
+      - {x: -144, y: -623}
+    - - {x: -96, y: -623}
+      - {x: -109, y: -623}
+      - {x: -112, y: -624}
+      - {x: -112, y: -641}
+      - {x: -94, y: -641}
+      - {x: -92, y: -638}
+      - {x: -92, y: -627}
+    - - {x: -57, y: -623}
+      - {x: -61, y: -627}
+      - {x: -62, y: -630}
+      - {x: -62, y: -638}
+      - {x: -59, y: -641}
+      - {x: -44, y: -641}
+      - {x: -42, y: -639}
+      - {x: -42, y: -629}
+      - {x: -44, y: -623}
+    - - {x: -7, y: -623}
+      - {x: -11, y: -627}
+      - {x: -12, y: -630}
+      - {x: -12, y: -638}
+      - {x: -9, y: -641}
+      - {x: 6, y: -641}
+      - {x: 8, y: -639}
+      - {x: 8, y: -629}
+      - {x: 6, y: -623}
+    - - {x: 40, y: -623}
+      - {x: 38, y: -627}
+      - {x: 38, y: -640}
+      - {x: 39, y: -641}
+      - {x: 57, y: -641}
+      - {x: 58, y: -638}
+      - {x: 58, y: -626}
+      - {x: 55, y: -623}
+    - - {x: 91, y: -623}
+      - {x: 88, y: -625}
+      - {x: 88, y: -640}
+      - {x: 89, y: -641}
+      - {x: 108, y: -641}
+      - {x: 108, y: -624}
+      - {x: 104, y: -623}
+    - - {x: 141, y: -623}
+      - {x: 138, y: -625}
+      - {x: 138, y: -640}
+      - {x: 139, y: -641}
+      - {x: 158, y: -641}
+      - {x: 158, y: -624}
+      - {x: 154, y: -623}
+    - - {x: 191, y: -623}
+      - {x: 188, y: -625}
+      - {x: 188, y: -640}
+      - {x: 189, y: -641}
+      - {x: 208, y: -641}
+      - {x: 208, y: -624}
+      - {x: 204, y: -623}
+    - - {x: -144, y: -573}
+      - {x: -161, y: -573}
+      - {x: -162, y: -579}
+      - {x: -162, y: -589}
+      - {x: -158, y: -593}
+      - {x: -147, y: -593}
+      - {x: -142, y: -589}
+      - {x: -142, y: -578}
+    - - {x: -108, y: -573}
+      - {x: -112, y: -578}
+      - {x: -112, y: -591}
+      - {x: -106, y: -593}
+      - {x: -94, y: -593}
+      - {x: -92, y: -592}
+      - {x: -92, y: -575}
+      - {x: -97, y: -573}
+    - - {x: -58, y: -573}
+      - {x: -62, y: -578}
+      - {x: -62, y: -589}
+      - {x: -57, y: -593}
+      - {x: -43, y: -593}
+      - {x: -42, y: -590}
+      - {x: -42, y: -574}
+      - {x: -46, y: -573}
+    - - {x: -8, y: -573}
+      - {x: -12, y: -578}
+      - {x: -12, y: -589}
+      - {x: -7, y: -593}
+      - {x: 7, y: -593}
+      - {x: 8, y: -590}
+      - {x: 8, y: -574}
+      - {x: 4, y: -573}
+    - - {x: 43, y: -573}
+      - {x: 38, y: -576}
+      - {x: 38, y: -590}
+      - {x: 41, y: -593}
+      - {x: 53, y: -593}
+      - {x: 58, y: -591}
+      - {x: 58, y: -578}
+      - {x: 53, y: -573}
+    - - {x: 103, y: -573}
+      - {x: 93, y: -573}
+      - {x: 88, y: -578}
+      - {x: 88, y: -591}
+      - {x: 93, y: -593}
+      - {x: 105, y: -593}
+      - {x: 108, y: -589}
+      - {x: 108, y: -578}
+    - - {x: 153, y: -573}
+      - {x: 143, y: -573}
+      - {x: 138, y: -578}
+      - {x: 138, y: -591}
+      - {x: 143, y: -593}
+      - {x: 155, y: -593}
+      - {x: 158, y: -589}
+      - {x: 158, y: -578}
+    - - {x: 203, y: -573}
+      - {x: 193, y: -573}
+      - {x: 188, y: -578}
+      - {x: 188, y: -591}
+      - {x: 193, y: -593}
+      - {x: 205, y: -593}
+      - {x: 208, y: -589}
+      - {x: 208, y: -578}
+    - - {x: -112, y: -515}
+      - {x: -112, y: -550}
+      - {x: -98, y: -550}
+      - {x: -92, y: -547}
+      - {x: -92, y: -515}
+    - - {x: 138, y: -515}
+      - {x: 138, y: -546}
+      - {x: 147, y: -550}
+      - {x: 157, y: -550}
+      - {x: 158, y: -548}
+      - {x: 158, y: -515}
+    - - {x: -167, y: -535}
+      - {x: -154, y: -549}
+      - {x: -142, y: -549}
+      - {x: -138, y: -546}
+      - {x: -138, y: -531}
+      - {x: -141, y: -519}
+      - {x: -143, y: -517}
+      - {x: -167, y: -517}
+    - - {x: 205, y: -517}
+      - {x: 187, y: -517}
+      - {x: 183, y: -528}
+      - {x: 183, y: -549}
+      - {x: 197, y: -549}
+      - {x: 202, y: -547}
+      - {x: 212, y: -533}
+      - {x: 212, y: -522}
+    - - {x: -56, y: -518}
+      - {x: -68, y: -533}
+      - {x: -68, y: -543}
+      - {x: -67, y: -545}
+      - {x: -61, y: -547}
+      - {x: -46, y: -547}
+      - {x: -36, y: -539}
+      - {x: -36, y: -521}
+      - {x: -42, y: -518}
+    - - {x: 83, y: -518}
+      - {x: 82, y: -521}
+      - {x: 82, y: -543}
+      - {x: 88, y: -547}
+      - {x: 107, y: -547}
+      - {x: 114, y: -545}
+      - {x: 114, y: -535}
+      - {x: 100, y: -518}
+    - - {x: -18, y: -523}
+      - {x: -20, y: -524}
+      - {x: -20, y: -533}
+      - {x: -14, y: -543}
+      - {x: 10, y: -543}
+      - {x: 15, y: -539}
+      - {x: 15, y: -529}
+      - {x: 13, y: -523}
+    - - {x: 31, y: -523}
+      - {x: 30, y: -524}
+      - {x: 30, y: -538}
+      - {x: 32, y: -543}
+      - {x: 59, y: -543}
+      - {x: 65, y: -533}
+      - {x: 65, y: -523}
+    - - {x: -102, y: -465}
+      - {x: -112, y: -471}
+      - {x: -112, y: -495}
+      - {x: -108, y: -500}
+      - {x: -98, y: -500}
+      - {x: -92, y: -498}
+      - {x: -92, y: -467}
+      - {x: -93, y: -465}
+    - - {x: 153, y: -465}
+      - {x: 138, y: -465}
+      - {x: 138, y: -497}
+      - {x: 140, y: -500}
+      - {x: 153, y: -500}
+      - {x: 158, y: -498}
+      - {x: 158, y: -469}
+      - {x: 157, y: -466}
+    - - {x: -163, y: -467}
+      - {x: -167, y: -469}
+      - {x: -167, y: -496}
+      - {x: -166, y: -499}
+      - {x: -139, y: -499}
+      - {x: -138, y: -498}
+      - {x: -138, y: -480}
+      - {x: -145, y: -467}
+    - - {x: 190, y: -467}
+      - {x: 183, y: -479}
+      - {x: 183, y: -499}
+      - {x: 206, y: -499}
+      - {x: 212, y: -491}
+      - {x: 212, y: -474}
+      - {x: 210, y: -467}
+    - - {x: -40, y: -468}
+      - {x: -53, y: -468}
+      - {x: -66, y: -471}
+      - {x: -68, y: -473}
+      - {x: -68, y: -491}
+      - {x: -65, y: -497}
+      - {x: -51, y: -497}
+      - {x: -49, y: -495}
+      - {x: -36, y: -477}
+      - {x: -36, y: -472}
+    - - {x: 89, y: -468}
+      - {x: 82, y: -470}
+      - {x: 82, y: -486}
+      - {x: 97, y: -497}
+      - {x: 112, y: -497}
+      - {x: 114, y: -493}
+      - {x: 114, y: -476}
+      - {x: 105, y: -468}
+    - - {x: -16, y: -473}
+      - {x: -20, y: -478}
+      - {x: -20, y: -493}
+      - {x: 15, y: -493}
+      - {x: 15, y: -481}
+      - {x: 9, y: -473}
+    - - {x: 63, y: -473}
+      - {x: 36, y: -473}
+      - {x: 30, y: -483}
+      - {x: 30, y: -492}
+      - {x: 32, y: -493}
+      - {x: 62, y: -493}
+      - {x: 65, y: -490}
+      - {x: 65, y: -479}
+    - - {x: -62, y: -407}
+      - {x: -68, y: -407}
+      - {x: -72, y: -408}
+      - {x: -72, y: -458}
+      - {x: -67, y: -459}
+      - {x: -52, y: -459}
+      - {x: -33, y: -448}
+      - {x: -33, y: -428}
+      - {x: -41, y: -411}
+    - - {x: -23, y: -307}
+      - {x: -23, y: -459}
+      - {x: 18, y: -459}
+      - {x: 18, y: -318}
+      - {x: 12, y: -307}
+    - - {x: 53, y: -357}
+      - {x: 34, y: -369}
+      - {x: 27, y: -379}
+      - {x: 27, y: -455}
+      - {x: 29, y: -459}
+      - {x: 68, y: -459}
+      - {x: 68, y: -357}
+    - - {x: 95, y: -407}
+      - {x: 78, y: -424}
+      - {x: 78, y: -459}
+      - {x: 118, y: -459}
+      - {x: 118, y: -407}
+    - - {x: -148, y: -360}
+      - {x: -156, y: -357}
+      - {x: -166, y: -357}
+      - {x: -170, y: -358}
+      - {x: -170, y: -372}
+      - {x: -157, y: -408}
+      - {x: -152, y: -409}
+      - {x: -138, y: -409}
+      - {x: -135, y: -404}
+      - {x: -135, y: -390}
+      - {x: -143, y: -365}
+    - - {x: -118, y: -357}
+      - {x: -118, y: -370}
+      - {x: -102, y: -409}
+      - {x: -92, y: -409}
+      - {x: -87, y: -406}
+      - {x: -87, y: -373}
+      - {x: -91, y: -357}
+    - - {x: -72, y: -357}
+      - {x: -72, y: -408}
+      - {x: -70, y: -409}
+      - {x: -42, y: -409}
+      - {x: -32, y: -405}
+      - {x: -32, y: -383}
+      - {x: -41, y: -360}
+      - {x: -58, y: -357}
+    - - {x: 98, y: -357}
+      - {x: 78, y: -374}
+      - {x: 78, y: -397}
+      - {x: 98, y: -409}
+      - {x: 115, y: -409}
+      - {x: 117, y: -402}
+      - {x: 118, y: -383}
+      - {x: 118, y: -357}
+    - - {x: 149, y: -357}
+      - {x: 132, y: -361}
+      - {x: 132, y: -409}
+      - {x: 155, y: -409}
+      - {x: 163, y: -388}
+      - {x: 163, y: -357}
+    - - {x: 211, y: -357}
+      - {x: 204, y: -357}
+      - {x: 187, y: -364}
+      - {x: 180, y: -392}
+      - {x: 180, y: -407}
+      - {x: 185, y: -409}
+      - {x: 208, y: -409}
+      - {x: 215, y: -391}
+      - {x: 215, y: -359}
+    - - {x: -170, y: -307}
+      - {x: -171, y: -308}
+      - {x: -171, y: -321}
+      - {x: -167, y: -358}
+      - {x: -165, y: -359}
+      - {x: -133, y: -359}
+      - {x: -133, y: -312}
+      - {x: -153, y: -307}
+    - - {x: -112, y: -307}
+      - {x: -119, y: -307}
+      - {x: -119, y: -346}
+      - {x: -97, y: -359}
+      - {x: -87, y: -359}
+      - {x: -85, y: -356}
+      - {x: -85, y: -344}
+      - {x: -91, y: -314}
+    - - {x: -46, y: -307}
+      - {x: -68, y: -307}
+      - {x: -68, y: -352}
+      - {x: -54, y: -359}
+      - {x: -38, y: -359}
+      - {x: -36, y: -354}
+      - {x: -36, y: -334}
+      - {x: -40, y: -314}
+    - - {x: 54, y: -307}
+      - {x: 33, y: -317}
+      - {x: 28, y: -332}
+      - {x: 28, y: -346}
+      - {x: 49, y: -359}
+      - {x: 59, y: -359}
+      - {x: 66, y: -357}
+      - {x: 67, y: -345}
+      - {x: 67, y: -308}
+      - {x: 65, y: -307}
+    - - {x: 103, y: -307}
+      - {x: 86, y: -313}
+      - {x: 82, y: -336}
+      - {x: 82, y: -351}
+      - {x: 88, y: -359}
+      - {x: 100, y: -359}
+      - {x: 114, y: -316}
+      - {x: 114, y: -309}
+      - {x: 110, y: -307}
+    - - {x: 152, y: -307}
+      - {x: 131, y: -314}
+      - {x: 131, y: -359}
+      - {x: 154, y: -359}
+      - {x: 165, y: -337}
+      - {x: 165, y: -309}
+      - {x: 162, y: -307}
+    - - {x: 196, y: -343}
+      - {x: 196, y: -342}
+      - {x: 197, y: -342}
+      - {x: 194, y: -346}
+      - {x: 194, y: -347}
+      - {x: 200, y: -355}
+      - {x: 209, y: -353}
+      - {x: 215, y: -324}
+      - {x: 215, y: -307}
+      - {x: 192, y: -307}
+      - {x: 179, y: -334}
+      - {x: 179, y: -357}
+      - {x: 182, y: -359}
+      - {x: 191, y: -359}
+      - {x: 193, y: -354}
+      - {x: 191, y: -349}
+      - {x: 190, y: -348}
+    - - {x: -71, y: -259}
+      - {x: -71, y: -306}
+      - {x: -53, y: -306}
+      - {x: -33, y: -298}
+      - {x: -33, y: -271}
+      - {x: -35, y: -259}
+    - - {x: -9, y: -259}
+      - {x: -22, y: -279}
+      - {x: -22, y: -306}
+      - {x: -2, y: -306}
+      - {x: 17, y: -304}
+      - {x: 17, y: -284}
+      - {x: 2, y: -259}
+    - - {x: 37, y: -259}
+      - {x: 33, y: -269}
+      - {x: 33, y: -305}
+      - {x: 35, y: -306}
+      - {x: 53, y: -306}
+      - {x: 63, y: -294}
+      - {x: 63, y: -276}
+      - {x: 51, y: -259}
+    - - {x: 87, y: -259}
+      - {x: 81, y: -295}
+      - {x: 81, y: -306}
+      - {x: 108, y: -306}
+      - {x: 115, y: -289}
+      - {x: 115, y: -280}
+      - {x: 104, y: -259}
+    - - {x: -148, y: -209}
+      - {x: -159, y: -209}
+      - {x: -171, y: -225}
+      - {x: -171, y: -233}
+      - {x: -169, y: -240}
+      - {x: -162, y: -252}
+      - {x: -146, y: -256}
+      - {x: -136, y: -256}
+      - {x: -134, y: -253}
+      - {x: -134, y: -244}
+      - {x: -143, y: -215}
+    - - {x: -107, y: -209}
+      - {x: -119, y: -229}
+      - {x: -119, y: -237}
+      - {x: -105, y: -251}
+      - {x: -100, y: -255}
+      - {x: -96, y: -256}
+      - {x: -87, y: -256}
+      - {x: -85, y: -255}
+      - {x: -85, y: -235}
+      - {x: -93, y: -209}
+    - - {x: -65, y: -209}
+      - {x: -67, y: -221}
+      - {x: -67, y: -249}
+      - {x: -57, y: -256}
+      - {x: -44, y: -256}
+      - {x: -37, y: -253}
+      - {x: -37, y: -234}
+      - {x: -39, y: -215}
+      - {x: -44, y: -209}
+    - - {x: -9, y: -209}
+      - {x: -22, y: -229}
+      - {x: -22, y: -236}
+      - {x: -18, y: -237}
+      - {x: -16, y: -237}
+      - {x: -13, y: -235}
+      - {x: -13, y: -236}
+      - {x: -22, y: -249}
+      - {x: -22, y: -256}
+      - {x: 18, y: -256}
+      - {x: 18, y: -230}
+      - {x: 16, y: -227}
+      - {x: 5, y: -209}
+    - - {x: 31, y: -256}
+      - {x: 48, y: -256}
+      - {x: 64, y: -247}
+      - {x: 64, y: -222}
+      - {x: 61, y: -209}
+      - {x: 37, y: -209}
+      - {x: 31, y: -213}
+    - - {x: 96, y: -240}
+      - {x: 96, y: -239}
+      - {x: 97, y: -239}
+      - {x: 94, y: -243}
+      - {x: 94, y: -244}
+      - {x: 98, y: -256}
+      - {x: 101, y: -256}
+      - {x: 116, y: -244}
+      - {x: 116, y: -225}
+      - {x: 105, y: -209}
+      - {x: 92, y: -209}
+      - {x: 89, y: -210}
+      - {x: 79, y: -240}
+      - {x: 79, y: -250}
+      - {x: 83, y: -256}
+      - {x: 91, y: -256}
+      - {x: 93, y: -251}
+      - {x: 91, y: -246}
+      - {x: 90, y: -245}
+    - - {x: 136, y: -209}
+      - {x: 128, y: -216}
+      - {x: 128, y: -256}
+      - {x: 168, y: -256}
+      - {x: 168, y: -212}
+      - {x: 167, y: -209}
+    - - {x: 190, y: -209}
+      - {x: 180, y: -215}
+      - {x: 178, y: -225}
+      - {x: 178, y: -252}
+      - {x: 183, y: -256}
+      - {x: 215, y: -256}
+      - {x: 215, y: -221}
+      - {x: 209, y: -209}
+    - - {x: -171, y: -193}
+      - {x: -160, y: -206}
+      - {x: -138, y: -206}
+      - {x: -134, y: -204}
+      - {x: -134, y: -183}
+      - {x: -140, y: -163}
+      - {x: -149, y: -159}
+      - {x: -161, y: -159}
+      - {x: -171, y: -173}
+    - - {x: -113, y: -159}
+      - {x: -119, y: -172}
+      - {x: -119, y: -203}
+      - {x: -110, y: -206}
+      - {x: -86, y: -206}
+      - {x: -86, y: -180}
+      - {x: -92, y: -159}
+    - - {x: -57, y: -159}
+      - {x: -68, y: -177}
+      - {x: -68, y: -189}
+      - {x: -55, y: -206}
+      - {x: -42, y: -206}
+      - {x: -37, y: -201}
+      - {x: -37, y: -162}
+      - {x: -46, y: -159}
+    - - {x: -21, y: -159}
+      - {x: -21, y: -206}
+      - {x: -3, y: -206}
+      - {x: 17, y: -198}
+      - {x: 17, y: -171}
+      - {x: 15, y: -159}
+    - - {x: 55, y: -159}
+      - {x: 44, y: -159}
+      - {x: 39, y: -161}
+      - {x: 29, y: -183}
+      - {x: 29, y: -202}
+      - {x: 33, y: -206}
+      - {x: 56, y: -206}
+      - {x: 63, y: -202}
+      - {x: 66, y: -191}
+      - {x: 66, y: -180}
+    - - {x: 92, y: -159}
+      - {x: 90, y: -160}
+      - {x: 78, y: -186}
+      - {x: 78, y: -201}
+      - {x: 83, y: -204}
+      - {x: 96, y: -191}
+      - {x: 102, y: -205}
+      - {x: 104, y: -206}
+      - {x: 113, y: -206}
+      - {x: 117, y: -203}
+      - {x: 117, y: -175}
+      - {x: 111, y: -159}
+    - - {x: 139, y: -159}
+      - {x: 129, y: -181}
+      - {x: 129, y: -193}
+      - {x: 150, y: -206}
+      - {x: 163, y: -206}
+      - {x: 167, y: -205}
+      - {x: 167, y: -177}
+      - {x: 155, y: -159}
+    - - {x: 191, y: -159}
+      - {x: 183, y: -168}
+      - {x: 182, y: -176}
+      - {x: 182, y: -203}
+      - {x: 188, y: -206}
+      - {x: 201, y: -206}
+      - {x: 213, y: -191}
+      - {x: 213, y: -177}
+      - {x: 202, y: -159}
+    - - {x: -67, y: -109}
+      - {x: -72, y: -110}
+      - {x: -72, y: -142}
+      - {x: -68, y: -157}
+      - {x: -32, y: -157}
+      - {x: -32, y: -109}
+    - - {x: -8, y: -109}
+      - {x: -21, y: -116}
+      - {x: -21, y: -134}
+      - {x: -8, y: -156}
+      - {x: 16, y: -156}
+      - {x: 16, y: -115}
+      - {x: 10, y: -109}
+    - - {x: 40, y: -109}
+      - {x: 35, y: -110}
+      - {x: 29, y: -137}
+      - {x: 29, y: -156}
+      - {x: 58, y: -156}
+      - {x: 66, y: -132}
+      - {x: 66, y: -118}
+      - {x: 52, y: -109}
+    - - {x: 90, y: -109}
+      - {x: 80, y: -115}
+      - {x: 78, y: -138}
+      - {x: 78, y: -151}
+      - {x: 82, y: -156}
+      - {x: 110, y: -156}
+      - {x: 118, y: -135}
+      - {x: 118, y: -116}
+      - {x: 109, y: -109}
+    - - {x: -10, y: -59}
+      - {x: -22, y: -65}
+      - {x: -22, y: -107}
+      - {x: 18, y: -107}
+      - {x: 18, y: -67}
+      - {x: 12, y: -59}
+    - - {x: -157, y: -59}
+      - {x: -169, y: -65}
+      - {x: -169, y: -84}
+      - {x: -158, y: -106}
+      - {x: -136, y: -106}
+      - {x: -136, y: -59}
+    - - {x: -123, y: -98}
+      - {x: -118, y: -106}
+      - {x: -88, y: -106}
+      - {x: -81, y: -102}
+      - {x: -81, y: -79}
+      - {x: -87, y: -61}
+      - {x: -92, y: -59}
+      - {x: -111, y: -59}
+      - {x: -123, y: -70}
+    - - {x: -74, y: -106}
+      - {x: -31, y: -106}
+      - {x: -31, y: -79}
+      - {x: -39, y: -60}
+      - {x: -65, y: -60}
+      - {x: -74, y: -71}
+    - - {x: 45, y: -89}
+      - {x: 46, y: -89}
+      - {x: 43, y: -93}
+      - {x: 43, y: -94}
+      - {x: 49, y: -102}
+      - {x: 65, y: -105}
+      - {x: 68, y: -90}
+      - {x: 68, y: -61}
+      - {x: 64, y: -59}
+      - {x: 40, y: -59}
+      - {x: 30, y: -65}
+      - {x: 28, y: -81}
+      - {x: 28, y: -99}
+      - {x: 32, y: -106}
+      - {x: 43, y: -106}
+      - {x: 42, y: -94}
+      - {x: 39, y: -95}
+      - {x: 45, y: -90}
+    - - {x: 89, y: -59}
+      - {x: 76, y: -77}
+      - {x: 76, y: -106}
+      - {x: 114, y: -106}
+      - {x: 119, y: -102}
+      - {x: 119, y: -59}
+    - - {x: 169, y: -68}
+      - {x: 159, y: -59}
+      - {x: 143, y: -59}
+      - {x: 132, y: -66}
+      - {x: 127, y: -80}
+      - {x: 127, y: -97}
+      - {x: 142, y: -106}
+      - {x: 158, y: -106}
+      - {x: 163, y: -103}
+      - {x: 165, y: -99}
+      - {x: 169, y: -85}
+    - - {x: 188, y: -59}
+      - {x: 181, y: -63}
+      - {x: 181, y: -103}
+      - {x: 185, y: -106}
+      - {x: 200, y: -106}
+      - {x: 214, y: -82}
+      - {x: 214, y: -69}
+      - {x: 203, y: -59}
+    - - {x: -157, y: -9}
+      - {x: -170, y: -22}
+      - {x: -170, y: -37}
+      - {x: -149, y: -57}
+      - {x: -134, y: -57}
+      - {x: -134, y: -22}
+      - {x: -140, y: -9}
+    - - {x: 206, y: -9}
+      - {x: 190, y: -9}
+      - {x: 180, y: -13}
+      - {x: 180, y: -57}
+      - {x: 192, y: -57}
+      - {x: 193, y: -56}
+      - {x: 196, y: -52}
+      - {x: 215, y: -31}
+      - {x: 215, y: -14}
+    - - {x: -93, y: -9}
+      - {x: -107, y: -9}
+      - {x: -119, y: -22}
+      - {x: -119, y: -27}
+      - {x: -116, y: -30}
+      - {x: -105, y: -56}
+      - {x: -90, y: -56}
+      - {x: -85, y: -49}
+      - {x: -85, y: -13}
+    - - {x: -41, y: -9}
+      - {x: -67, y: -9}
+      - {x: -73, y: -11}
+      - {x: -73, y: -40}
+      - {x: -70, y: -54}
+      - {x: -62, y: -56}
+      - {x: -53, y: -56}
+      - {x: -32, y: -46}
+      - {x: -32, y: -26}
+      - {x: -39, y: -14}
+    - - {x: -19, y: -10}
+      - {x: -23, y: -15}
+      - {x: -23, y: -56}
+      - {x: 19, y: -56}
+      - {x: 19, y: -21}
+      - {x: 8, y: -10}
+    - - {x: 33, y: -9}
+      - {x: 27, y: -20}
+      - {x: 27, y: -54}
+      - {x: 32, y: -53}
+      - {x: 41, y: -45}
+      - {x: 45, y: -41}
+      - {x: 51, y: -55}
+      - {x: 53, y: -56}
+      - {x: 69, y: -56}
+      - {x: 69, y: -19}
+      - {x: 55, y: -9}
+    - - {x: 93, y: -9}
+      - {x: 87, y: -11}
+      - {x: 77, y: -31}
+      - {x: 77, y: -39}
+      - {x: 78, y: -43}
+      - {x: 98, y: -56}
+      - {x: 111, y: -56}
+      - {x: 117, y: -55}
+      - {x: 118, y: -42}
+      - {x: 118, y: -20}
+      - {x: 103, y: -9}
+    - - {x: 134, y: -9}
+      - {x: 131, y: -18}
+      - {x: 131, y: -56}
+      - {x: 150, y: -56}
+      - {x: 165, y: -33}
+      - {x: 165, y: -19}
+      - {x: 151, y: -9}
+    - - {x: -15, y: 41}
+      - {x: -15, y: -6}
+      - {x: 10, y: -6}
+      - {x: 10, y: 41}
+    - - {x: 35, y: 41}
+      - {x: 35, y: -6}
+      - {x: 60, y: -6}
+      - {x: 60, y: 30}
+      - {x: 57, y: 41}
+    - - {x: -48, y: 37}
+      - {x: -60, y: 37}
+      - {x: -65, y: 35}
+      - {x: -65, y: -2}
+      - {x: -39, y: -2}
+      - {x: -39, y: 32}
+      - {x: -44, y: 35}
+    - - {x: 88, y: 37}
+      - {x: 85, y: 35}
+      - {x: 85, y: 10}
+      - {x: 87, y: -2}
+      - {x: 111, y: -2}
+      - {x: 111, y: 33}
+      - {x: 103, y: 37}
+    - - {x: -140, y: 92}
+      - {x: -156, y: 92}
+      - {x: -165, y: 86}
+      - {x: -165, y: 47}
+      - {x: -158, y: 43}
+      - {x: -149, y: 43}
+      - {x: -142, y: 48}
+      - {x: -139, y: 69}
+      - {x: -139, y: 91}
+    - - {x: 190, y: 92}
+      - {x: 185, y: 91}
+      - {x: 185, y: 46}
+      - {x: 190, y: 43}
+      - {x: 202, y: 43}
+      - {x: 209, y: 46}
+      - {x: 211, y: 67}
+      - {x: 211, y: 82}
+      - {x: 203, y: 92}
+    - - {x: -110, y: 89}
+      - {x: -113, y: 86}
+      - {x: -113, y: 53}
+      - {x: -111, y: 45}
+      - {x: -91, y: 45}
+      - {x: -91, y: 87}
+      - {x: -96, y: 89}
+    - - {x: 38, y: 89}
+      - {x: 37, y: 88}
+      - {x: 37, y: 45}
+      - {x: 59, y: 45}
+      - {x: 59, y: 84}
+      - {x: 53, y: 89}
+    - - {x: -7, y: 88}
+      - {x: -12, y: 86}
+      - {x: -14, y: 70}
+      - {x: -14, y: 46}
+      - {x: 5, y: 46}
+      - {x: 9, y: 47}
+      - {x: 9, y: 80}
+      - {x: 3, y: 88}
+    - - {x: 109, y: 57}
+      - {x: 109, y: 72}
+      - {x: 106, y: 86}
+      - {x: 100, y: 88}
+      - {x: 89, y: 88}
+      - {x: 86, y: 86}
+      - {x: 86, y: 46}
+      - {x: 90, y: 46}
+      - {x: 93, y: 47}
+      - {x: 105, y: 47}
+      - {x: 108, y: 48}
+    - - {x: -64, y: 71}
+      - {x: -64, y: 47}
+      - {x: -45, y: 47}
+      - {x: -41, y: 48}
+      - {x: -41, y: 65}
+      - {x: -42, y: 81}
+      - {x: -47, y: 88}
+      - {x: -59, y: 88}
+      - {x: -63, y: 87}
+    - - {x: 138, y: 87}
+      - {x: 136, y: 83}
+      - {x: 136, y: 47}
+      - {x: 160, y: 47}
+      - {x: 160, y: 87}
+    - - {x: -109, y: 142}
+      - {x: -116, y: 135}
+      - {x: -116, y: 118}
+      - {x: -112, y: 102}
+      - {x: -103, y: 93}
+      - {x: -97, y: 93}
+      - {x: -89, y: 99}
+      - {x: -89, y: 140}
+      - {x: -90, y: 142}
+    - - {x: 154, y: 142}
+      - {x: 138, y: 142}
+      - {x: 134, y: 136}
+      - {x: 134, y: 106}
+      - {x: 135, y: 102}
+      - {x: 141, y: 93}
+      - {x: 149, y: 93}
+      - {x: 159, y: 106}
+      - {x: 161, y: 111}
+      - {x: 161, y: 139}
+    - - {x: -58, y: 141}
+      - {x: -62, y: 138}
+      - {x: -63, y: 133}
+      - {x: -63, y: 105}
+      - {x: -61, y: 94}
+      - {x: -44, y: 94}
+      - {x: -41, y: 97}
+      - {x: -41, y: 128}
+      - {x: -45, y: 141}
+    - - {x: 89, y: 141}
+      - {x: 87, y: 140}
+      - {x: 87, y: 99}
+      - {x: 93, y: 94}
+      - {x: 101, y: 94}
+      - {x: 105, y: 95}
+      - {x: 109, y: 109}
+      - {x: 109, y: 136}
+      - {x: 107, y: 141}
+    - - {x: -12, y: 139}
+      - {x: -14, y: 134}
+      - {x: -14, y: 95}
+      - {x: 8, y: 95}
+      - {x: 9, y: 98}
+      - {x: 9, y: 137}
+      - {x: 6, y: 139}
+    - - {x: 40, y: 139}
+      - {x: 36, y: 133}
+      - {x: 36, y: 95}
+      - {x: 59, y: 95}
+      - {x: 59, y: 132}
+      - {x: 56, y: 139}
+    - - {x: -158, y: 138}
+      - {x: -161, y: 136}
+      - {x: -164, y: 125}
+      - {x: -164, y: 104}
+      - {x: -161, y: 97}
+      - {x: -142, y: 97}
+      - {x: -141, y: 99}
+      - {x: -141, y: 130}
+      - {x: -144, y: 138}
+    - - {x: 209, y: 111}
+      - {x: 209, y: 121}
+      - {x: 206, y: 136}
+      - {x: 201, y: 138}
+      - {x: 192, y: 138}
+      - {x: 187, y: 132}
+      - {x: 186, y: 114}
+      - {x: 186, y: 98}
+      - {x: 190, y: 97}
+      - {x: 193, y: 98}
+      - {x: 205, y: 98}
+      - {x: 208, y: 99}
+    - - {x: -63, y: 190}
+      - {x: -66, y: 189}
+      - {x: -70, y: 173}
+      - {x: -70, y: 146}
+      - {x: -68, y: 144}
+      - {x: -55, y: 144}
+      - {x: -34, y: 155}
+      - {x: -34, y: 176}
+      - {x: -47, y: 190}
+    - - {x: -22, y: 191}
+      - {x: -22, y: 144}
+      - {x: 10, y: 144}
+      - {x: 16, y: 146}
+      - {x: 17, y: 148}
+      - {x: 17, y: 172}
+      - {x: 5, y: 191}
+    - - {x: 61, y: 191}
+      - {x: 40, y: 191}
+      - {x: 28, y: 187}
+      - {x: 28, y: 144}
+      - {x: 65, y: 144}
+      - {x: 67, y: 147}
+      - {x: 67, y: 175}
+      - {x: 65, y: 187}
+    - - {x: 90, y: 190}
+      - {x: 86, y: 188}
+      - {x: 80, y: 171}
+      - {x: 80, y: 148}
+      - {x: 92, y: 144}
+      - {x: 116, y: 144}
+      - {x: 116, y: 162}
+      - {x: 110, y: 190}
+    - - {x: -161, y: 241}
+      - {x: -169, y: 233}
+      - {x: -169, y: 194}
+      - {x: -141, y: 194}
+      - {x: -136, y: 198}
+      - {x: -136, y: 215}
+      - {x: -138, y: 230}
+      - {x: -149, y: 241}
+    - - {x: -115, y: 227}
+      - {x: -115, y: 209}
+      - {x: -105, y: 194}
+      - {x: -91, y: 194}
+      - {x: -89, y: 195}
+      - {x: -89, y: 223}
+      - {x: -94, y: 240}
+      - {x: -107, y: 240}
+      - {x: -110, y: 236}
+    - - {x: -48, y: 240}
+      - {x: -57, y: 240}
+      - {x: -63, y: 237}
+      - {x: -64, y: 234}
+      - {x: -64, y: 208}
+      - {x: -61, y: 194}
+      - {x: -47, y: 194}
+      - {x: -41, y: 204}
+      - {x: -41, y: 215}
+      - {x: -43, y: 234}
+    - - {x: 1, y: 240}
+      - {x: -16, y: 240}
+      - {x: -20, y: 218}
+      - {x: -20, y: 194}
+      - {x: -5, y: 194}
+      - {x: 16, y: 208}
+      - {x: 16, y: 217}
+      - {x: 12, y: 228}
+    - - {x: 61, y: 200}
+      - {x: 64, y: 220}
+      - {x: 64, y: 232}
+      - {x: 58, y: 241}
+      - {x: 45, y: 241}
+      - {x: 36, y: 238}
+      - {x: 31, y: 203}
+      - {x: 31, y: 201}
+      - {x: 35, y: 194}
+      - {x: 42, y: 194}
+      - {x: 44, y: 196}
+      - {x: 44, y: 199}
+      - {x: 53, y: 198}
+    - - {x: 109, y: 238}
+      - {x: 107, y: 240}
+      - {x: 90, y: 240}
+      - {x: 85, y: 228}
+      - {x: 85, y: 195}
+      - {x: 87, y: 194}
+      - {x: 95, y: 194}
+      - {x: 98, y: 195}
+      - {x: 111, y: 211}
+      - {x: 111, y: 220}
+    - - {x: 141, y: 240}
+      - {x: 136, y: 231}
+      - {x: 136, y: 201}
+      - {x: 140, y: 194}
+      - {x: 159, y: 194}
+      - {x: 159, y: 240}
+    - - {x: 198, y: 210}
+      - {x: 198, y: 211}
+      - {x: 199, y: 211}
+      - {x: 196, y: 207}
+      - {x: 196, y: 206}
+      - {x: 202, y: 198}
+      - {x: 214, y: 197}
+      - {x: 214, y: 237}
+      - {x: 209, y: 241}
+      - {x: 185, y: 241}
+      - {x: 181, y: 226}
+      - {x: 181, y: 197}
+      - {x: 184, y: 194}
+      - {x: 193, y: 194}
+      - {x: 195, y: 199}
+      - {x: 194, y: 205}
+      - {x: 192, y: 205}
+    - - {x: -172, y: 244}
+      - {x: -133, y: 244}
+      - {x: -133, y: 289}
+      - {x: -149, y: 291}
+      - {x: -160, y: 291}
+      - {x: -172, y: 285}
+    - - {x: -119, y: 244}
+      - {x: -90, y: 244}
+      - {x: -86, y: 247}
+      - {x: -86, y: 262}
+      - {x: -93, y: 287}
+      - {x: -97, y: 291}
+      - {x: -110, y: 291}
+      - {x: -119, y: 285}
+    - - {x: -59, y: 290}
+      - {x: -62, y: 287}
+      - {x: -66, y: 280}
+      - {x: -66, y: 261}
+      - {x: -61, y: 245}
+      - {x: -55, y: 244}
+      - {x: -39, y: 244}
+      - {x: -39, y: 271}
+      - {x: -47, y: 290}
+    - - {x: -9, y: 290}
+      - {x: -13, y: 279}
+      - {x: -13, y: 259}
+      - {x: -8, y: 245}
+      - {x: -4, y: 244}
+      - {x: 3, y: 244}
+      - {x: 9, y: 248}
+      - {x: 9, y: 279}
+      - {x: 6, y: 290}
+    - - {x: 44, y: 290}
+      - {x: 40, y: 289}
+      - {x: 37, y: 282}
+      - {x: 37, y: 248}
+      - {x: 39, y: 244}
+      - {x: 55, y: 244}
+      - {x: 59, y: 259}
+      - {x: 59, y: 282}
+      - {x: 55, y: 290}
+    - - {x: 93, y: 290}
+      - {x: 84, y: 287}
+      - {x: 84, y: 244}
+      - {x: 111, y: 244}
+      - {x: 111, y: 278}
+      - {x: 105, y: 290}
+    - - {x: 163, y: 287}
+      - {x: 159, y: 291}
+      - {x: 143, y: 291}
+      - {x: 132, y: 285}
+      - {x: 128, y: 265}
+      - {x: 128, y: 248}
+      - {x: 133, y: 247}
+      - {x: 142, y: 255}
+      - {x: 146, y: 259}
+      - {x: 152, y: 245}
+      - {x: 154, y: 244}
+      - {x: 165, y: 244}
+      - {x: 167, y: 245}
+      - {x: 167, y: 272}
+      - {x: 166, y: 277}
+    - - {x: 193, y: 290}
+      - {x: 180, y: 279}
+      - {x: 180, y: 256}
+      - {x: 191, y: 244}
+      - {x: 215, y: 244}
+      - {x: 215, y: 269}
+      - {x: 213, y: 278}
+      - {x: 204, y: 290}
+    - - {x: -146, y: 341}
+      - {x: -159, y: 341}
+      - {x: -163, y: 330}
+      - {x: -163, y: 294}
+      - {x: -141, y: 294}
+      - {x: -141, y: 334}
+      - {x: -144, y: 340}
+    - - {x: -108, y: 341}
+      - {x: -110, y: 340}
+      - {x: -113, y: 320}
+      - {x: -113, y: 294}
+      - {x: -93, y: 294}
+      - {x: -91, y: 296}
+      - {x: -91, y: 327}
+      - {x: -97, y: 341}
+    - - {x: 146, y: 341}
+      - {x: 142, y: 339}
+      - {x: 137, y: 327}
+      - {x: 137, y: 296}
+      - {x: 140, y: 294}
+      - {x: 159, y: 294}
+      - {x: 159, y: 330}
+      - {x: 153, y: 341}
+    - - {x: 187, y: 341}
+      - {x: 187, y: 294}
+      - {x: 207, y: 294}
+      - {x: 209, y: 295}
+      - {x: 209, y: 322}
+      - {x: 204, y: 341}
+    - - {x: -167, y: 389}
+      - {x: -169, y: 384}
+      - {x: -169, y: 374}
+      - {x: -160, y: 345}
+      - {x: -137, y: 345}
+      - {x: -136, y: 346}
+      - {x: -136, y: 378}
+      - {x: -155, y: 389}
+    - - {x: 211, y: 389}
+      - {x: 198, y: 389}
+      - {x: 186, y: 384}
+      - {x: 182, y: 374}
+      - {x: 181, y: 370}
+      - {x: 181, y: 347}
+      - {x: 184, y: 346}
+      - {x: 204, y: 346}
+      - {x: 204, y: 347}
+      - {x: 214, y: 377}
+      - {x: 214, y: 383}
+    - - {x: -107, y: 385}
+      - {x: -115, y: 371}
+      - {x: -115, y: 351}
+      - {x: -113, y: 349}
+      - {x: -90, y: 349}
+      - {x: -90, y: 385}
+    - - {x: -54, y: 385}
+      - {x: -65, y: 376}
+      - {x: -65, y: 350}
+      - {x: -63, y: 349}
+      - {x: -40, y: 349}
+      - {x: -40, y: 379}
+      - {x: -42, y: 385}
+    - - {x: -4, y: 385}
+      - {x: -15, y: 376}
+      - {x: -15, y: 350}
+      - {x: -13, y: 349}
+      - {x: 10, y: 349}
+      - {x: 10, y: 379}
+      - {x: 8, y: 385}
+    - - {x: 52, y: 385}
+      - {x: 39, y: 385}
+      - {x: 35, y: 383}
+      - {x: 35, y: 349}
+      - {x: 59, y: 349}
+      - {x: 60, y: 354}
+      - {x: 60, y: 376}
+    - - {x: 90, y: 385}
+      - {x: 85, y: 383}
+      - {x: 85, y: 351}
+      - {x: 86, y: 349}
+      - {x: 110, y: 349}
+      - {x: 110, y: 375}
+      - {x: 102, y: 385}
+    - - {x: 138, y: 385}
+      - {x: 135, y: 381}
+      - {x: 135, y: 349}
+      - {x: 160, y: 349}
+      - {x: 160, y: 385}
+    - - {x: -145, y: 438}
+      - {x: -166, y: 438}
+      - {x: -168, y: 436}
+      - {x: -168, y: 399}
+      - {x: -164, y: 396}
+      - {x: -136, y: 396}
+      - {x: -136, y: 425}
+      - {x: -139, y: 437}
+    - - {x: 201, y: 438}
+      - {x: 182, y: 430}
+      - {x: 182, y: 397}
+      - {x: 206, y: 397}
+      - {x: 214, y: 425}
+      - {x: 214, y: 434}
+      - {x: 212, y: 438}
+    - - {x: -106, y: 435}
+      - {x: -115, y: 424}
+      - {x: -115, y: 405}
+      - {x: -114, y: 399}
+      - {x: -92, y: 399}
+      - {x: -90, y: 402}
+      - {x: -90, y: 433}
+      - {x: -95, y: 435}
+    - - {x: -70, y: 487}
+      - {x: -70, y: 417}
+      - {x: -68, y: 399}
+      - {x: -34, y: 399}
+      - {x: -34, y: 483}
+      - {x: -57, y: 487}
+    - - {x: -6, y: 435}
+      - {x: -15, y: 423}
+      - {x: -15, y: 409}
+      - {x: -12, y: 400}
+      - {x: -10, y: 399}
+      - {x: 10, y: 399}
+      - {x: 10, y: 433}
+      - {x: 6, y: 435}
+    - - {x: 35, y: 400}
+      - {x: 36, y: 399}
+      - {x: 60, y: 399}
+      - {x: 60, y: 435}
+      - {x: 39, y: 435}
+      - {x: 35, y: 430}
+    - - {x: 80, y: 486}
+      - {x: 80, y: 399}
+      - {x: 116, y: 399}
+      - {x: 116, y: 484}
+      - {x: 115, y: 486}
+    - - {x: 135, y: 401}
+      - {x: 136, y: 399}
+      - {x: 160, y: 399}
+      - {x: 160, y: 435}
+      - {x: 138, y: 435}
+      - {x: 135, y: 432}
+    - - {x: -9, y: 484}
+      - {x: -20, y: 464}
+      - {x: -20, y: 452}
+      - {x: -12, y: 438}
+      - {x: 15, y: 438}
+      - {x: 15, y: 484}
+    - - {x: 33, y: 484}
+      - {x: 30, y: 466}
+      - {x: 30, y: 442}
+      - {x: 32, y: 438}
+      - {x: 56, y: 438}
+      - {x: 65, y: 451}
+      - {x: 65, y: 468}
+      - {x: 59, y: 484}
+    - - {x: -109, y: 484}
+      - {x: -117, y: 484}
+      - {x: -118, y: 483}
+      - {x: -118, y: 463}
+      - {x: -114, y: 442}
+      - {x: -87, y: 442}
+      - {x: -87, y: 474}
+      - {x: -96, y: 481}
+    - - {x: 137, y: 484}
+      - {x: 132, y: 470}
+      - {x: 132, y: 443}
+      - {x: 133, y: 442}
+      - {x: 153, y: 442}
+      - {x: 159, y: 447}
+      - {x: 163, y: 451}
+      - {x: 163, y: 484}
+    - - {x: -157, y: 483}
+      - {x: -167, y: 461}
+      - {x: -167, y: 456}
+      - {x: -159, y: 443}
+      - {x: -137, y: 443}
+      - {x: -137, y: 480}
+      - {x: -145, y: 483}
+    - - {x: 213, y: 464}
+      - {x: 201, y: 483}
+      - {x: 191, y: 483}
+      - {x: 183, y: 475}
+      - {x: 183, y: 443}
+      - {x: 204, y: 443}
+      - {x: 206, y: 448}
+      - {x: 213, y: 453}
+    - - {x: -110, y: 544}
+      - {x: -114, y: 538}
+      - {x: -114, y: 486}
+      - {x: -92, y: 486}
+      - {x: -90, y: 489}
+      - {x: -90, y: 514}
+      - {x: -97, y: 544}
+    - - {x: -53, y: 544}
+      - {x: -64, y: 544}
+      - {x: -64, y: 486}
+      - {x: -40, y: 486}
+      - {x: -40, y: 534}
+      - {x: -48, y: 542}
+    - - {x: 106, y: 544}
+      - {x: 91, y: 544}
+      - {x: 86, y: 527}
+      - {x: 86, y: 486}
+      - {x: 110, y: 486}
+      - {x: 110, y: 528}
+      - {x: 108, y: 542}
+    - - {x: 160, y: 486}
+      - {x: 160, y: 540}
+      - {x: 159, y: 544}
+      - {x: 139, y: 544}
+      - {x: 136, y: 541}
+      - {x: 136, y: 486}
+    - - {x: -167, y: 542}
+      - {x: -170, y: 541}
+      - {x: -170, y: 527}
+      - {x: -159, y: 488}
+      - {x: -134, y: 488}
+      - {x: -134, y: 534}
+      - {x: -156, y: 542}
+    - - {x: 186, y: 542}
+      - {x: 180, y: 526}
+      - {x: 180, y: 489}
+      - {x: 207, y: 489}
+      - {x: 215, y: 519}
+      - {x: 215, y: 540}
+      - {x: 210, y: 542}
+    - - {x: 5, y: 539}
+      - {x: -5, y: 539}
+      - {x: -16, y: 522}
+      - {x: -16, y: 506}
+      - {x: -13, y: 495}
+      - {x: 10, y: 495}
+      - {x: 11, y: 498}
+      - {x: 11, y: 522}
+      - {x: 9, y: 532}
+    - - {x: 51, y: 539}
+      - {x: 35, y: 539}
+      - {x: 34, y: 535}
+      - {x: 34, y: 495}
+      - {x: 56, y: 495}
+      - {x: 58, y: 500}
+      - {x: 61, y: 515}
+      - {x: 61, y: 525}
+    - - {x: -153, y: 594}
+      - {x: -168, y: 594}
+      - {x: -170, y: 590}
+      - {x: -170, y: 581}
+      - {x: -159, y: 541}
+      - {x: -136, y: 541}
+      - {x: -134, y: 543}
+      - {x: -134, y: 570}
+      - {x: -142, y: 592}
+    - - {x: 185, y: 593}
+      - {x: 180, y: 576}
+      - {x: 180, y: 542}
+      - {x: 181, y: 541}
+      - {x: 211, y: 541}
+      - {x: 215, y: 555}
+      - {x: 215, y: 593}
+    - - {x: -96, y: 591}
+      - {x: -111, y: 591}
+      - {x: -117, y: 578}
+      - {x: -117, y: 553}
+      - {x: -114, y: 544}
+      - {x: -90, y: 544}
+      - {x: -87, y: 546}
+      - {x: -87, y: 560}
+      - {x: -91, y: 588}
+    - - {x: -46, y: 591}
+      - {x: -56, y: 591}
+      - {x: -67, y: 579}
+      - {x: -67, y: 567}
+      - {x: -63, y: 544}
+      - {x: -42, y: 544}
+      - {x: -37, y: 546}
+      - {x: -37, y: 562}
+      - {x: -42, y: 584}
+    - - {x: 4, y: 591}
+      - {x: -6, y: 591}
+      - {x: -17, y: 579}
+      - {x: -17, y: 567}
+      - {x: -13, y: 544}
+      - {x: 8, y: 544}
+      - {x: 13, y: 546}
+      - {x: 13, y: 562}
+      - {x: 8, y: 584}
+    - - {x: 56, y: 589}
+      - {x: 53, y: 591}
+      - {x: 38, y: 591}
+      - {x: 33, y: 578}
+      - {x: 33, y: 544}
+      - {x: 58, y: 544}
+      - {x: 59, y: 545}
+      - {x: 63, y: 564}
+      - {x: 63, y: 581}
+    - - {x: 106, y: 589}
+      - {x: 101, y: 591}
+      - {x: 90, y: 591}
+      - {x: 85, y: 588}
+      - {x: 83, y: 572}
+      - {x: 83, y: 548}
+      - {x: 86, y: 544}
+      - {x: 106, y: 544}
+      - {x: 109, y: 545}
+      - {x: 113, y: 564}
+      - {x: 113, y: 581}
+    - - {x: 156, y: 589}
+      - {x: 151, y: 591}
+      - {x: 140, y: 591}
+      - {x: 135, y: 588}
+      - {x: 133, y: 572}
+      - {x: 133, y: 548}
+      - {x: 136, y: 544}
+      - {x: 156, y: 544}
+      - {x: 159, y: 545}
+      - {x: 163, y: 564}
+      - {x: 163, y: 581}
+    - - {x: -190, y: 597}
+      - {x: -188, y: 614}
+      - {x: -188, y: 640}
+      - {x: -189, y: 641}
+      - {x: -215, y: 641}
+      - {x: -215, y: 591}
+      - {x: -188, y: 591}
+      - {x: -188, y: 594}
+      - {x: -189, y: 595}
+    - - {x: -165, y: 641}
+      - {x: -165, y: 592}
+      - {x: -140, y: 592}
+      - {x: -140, y: 641}
+    - - {x: 186, y: 641}
+      - {x: 186, y: 592}
+      - {x: 210, y: 592}
+      - {x: 210, y: 640}
+      - {x: 208, y: 641}
+    - - {x: -97, y: 641}
+      - {x: -109, y: 641}
+      - {x: -117, y: 633}
+      - {x: -117, y: 595}
+      - {x: -116, y: 594}
+      - {x: -87, y: 594}
+      - {x: -87, y: 614}
+      - {x: -90, y: 638}
+    - - {x: -46, y: 641}
+      - {x: -56, y: 641}
+      - {x: -67, y: 626}
+      - {x: -67, y: 618}
+      - {x: -62, y: 594}
+      - {x: -42, y: 594}
+      - {x: -37, y: 596}
+      - {x: -37, y: 612}
+      - {x: -42, y: 634}
+    - - {x: 4, y: 641}
+      - {x: -6, y: 641}
+      - {x: -17, y: 626}
+      - {x: -17, y: 618}
+      - {x: -12, y: 594}
+      - {x: 8, y: 594}
+      - {x: 13, y: 596}
+      - {x: 13, y: 612}
+      - {x: 8, y: 634}
+    - - {x: 38, y: 641}
+      - {x: 33, y: 629}
+      - {x: 33, y: 594}
+      - {x: 63, y: 594}
+      - {x: 63, y: 641}
+    - - {x: 88, y: 641}
+      - {x: 83, y: 628}
+      - {x: 83, y: 594}
+      - {x: 113, y: 594}
+      - {x: 113, y: 641}
+    - - {x: 163, y: 633}
+      - {x: 153, y: 641}
+      - {x: 138, y: 641}
+      - {x: 135, y: 638}
+      - {x: 133, y: 622}
+      - {x: 133, y: 598}
+      - {x: 136, y: 594}
+      - {x: 155, y: 594}
+      - {x: 157, y: 596}
+      - {x: 163, y: 609}
+    physicsShape:
+    - - {x: -157, y: -623}
+      - {x: -162, y: -625}
+      - {x: -162, y: -641}
+      - {x: -143, y: -641}
+      - {x: -142, y: -640}
+      - {x: -142, y: -625}
+      - {x: -144, y: -623}
+    - - {x: -96, y: -623}
+      - {x: -109, y: -623}
+      - {x: -112, y: -624}
+      - {x: -112, y: -641}
+      - {x: -94, y: -641}
+      - {x: -92, y: -638}
+      - {x: -92, y: -627}
+    - - {x: -57, y: -623}
+      - {x: -61, y: -627}
+      - {x: -62, y: -630}
+      - {x: -62, y: -638}
+      - {x: -59, y: -641}
+      - {x: -44, y: -641}
+      - {x: -42, y: -639}
+      - {x: -42, y: -629}
+      - {x: -44, y: -623}
+    - - {x: -7, y: -623}
+      - {x: -11, y: -627}
+      - {x: -12, y: -630}
+      - {x: -12, y: -638}
+      - {x: -9, y: -641}
+      - {x: 6, y: -641}
+      - {x: 8, y: -639}
+      - {x: 8, y: -629}
+      - {x: 6, y: -623}
+    - - {x: 40, y: -623}
+      - {x: 38, y: -627}
+      - {x: 38, y: -640}
+      - {x: 39, y: -641}
+      - {x: 57, y: -641}
+      - {x: 58, y: -638}
+      - {x: 58, y: -626}
+      - {x: 55, y: -623}
+    - - {x: 91, y: -623}
+      - {x: 88, y: -625}
+      - {x: 88, y: -640}
+      - {x: 89, y: -641}
+      - {x: 108, y: -641}
+      - {x: 108, y: -624}
+      - {x: 104, y: -623}
+    - - {x: 141, y: -623}
+      - {x: 138, y: -625}
+      - {x: 138, y: -640}
+      - {x: 139, y: -641}
+      - {x: 158, y: -641}
+      - {x: 158, y: -624}
+      - {x: 154, y: -623}
+    - - {x: 191, y: -623}
+      - {x: 188, y: -625}
+      - {x: 188, y: -640}
+      - {x: 189, y: -641}
+      - {x: 208, y: -641}
+      - {x: 208, y: -624}
+      - {x: 204, y: -623}
+    - - {x: -144, y: -573}
+      - {x: -161, y: -573}
+      - {x: -162, y: -579}
+      - {x: -162, y: -589}
+      - {x: -158, y: -593}
+      - {x: -147, y: -593}
+      - {x: -142, y: -589}
+      - {x: -142, y: -578}
+    - - {x: -108, y: -573}
+      - {x: -112, y: -578}
+      - {x: -112, y: -591}
+      - {x: -106, y: -593}
+      - {x: -94, y: -593}
+      - {x: -92, y: -592}
+      - {x: -92, y: -575}
+      - {x: -97, y: -573}
+    - - {x: -58, y: -573}
+      - {x: -62, y: -578}
+      - {x: -62, y: -589}
+      - {x: -57, y: -593}
+      - {x: -43, y: -593}
+      - {x: -42, y: -590}
+      - {x: -42, y: -574}
+      - {x: -46, y: -573}
+    - - {x: -8, y: -573}
+      - {x: -12, y: -578}
+      - {x: -12, y: -589}
+      - {x: -7, y: -593}
+      - {x: 7, y: -593}
+      - {x: 8, y: -590}
+      - {x: 8, y: -574}
+      - {x: 4, y: -573}
+    - - {x: 43, y: -573}
+      - {x: 38, y: -576}
+      - {x: 38, y: -590}
+      - {x: 41, y: -593}
+      - {x: 53, y: -593}
+      - {x: 58, y: -591}
+      - {x: 58, y: -578}
+      - {x: 53, y: -573}
+    - - {x: 103, y: -573}
+      - {x: 93, y: -573}
+      - {x: 88, y: -578}
+      - {x: 88, y: -591}
+      - {x: 93, y: -593}
+      - {x: 105, y: -593}
+      - {x: 108, y: -589}
+      - {x: 108, y: -578}
+    - - {x: 153, y: -573}
+      - {x: 143, y: -573}
+      - {x: 138, y: -578}
+      - {x: 138, y: -591}
+      - {x: 143, y: -593}
+      - {x: 155, y: -593}
+      - {x: 158, y: -589}
+      - {x: 158, y: -578}
+    - - {x: 203, y: -573}
+      - {x: 193, y: -573}
+      - {x: 188, y: -578}
+      - {x: 188, y: -591}
+      - {x: 193, y: -593}
+      - {x: 205, y: -593}
+      - {x: 208, y: -589}
+      - {x: 208, y: -578}
+    - - {x: -112, y: -515}
+      - {x: -112, y: -550}
+      - {x: -98, y: -550}
+      - {x: -92, y: -547}
+      - {x: -92, y: -515}
+    - - {x: 138, y: -515}
+      - {x: 138, y: -546}
+      - {x: 147, y: -550}
+      - {x: 157, y: -550}
+      - {x: 158, y: -548}
+      - {x: 158, y: -515}
+    - - {x: -167, y: -535}
+      - {x: -154, y: -549}
+      - {x: -142, y: -549}
+      - {x: -138, y: -546}
+      - {x: -138, y: -531}
+      - {x: -141, y: -519}
+      - {x: -143, y: -517}
+      - {x: -167, y: -517}
+    - - {x: 205, y: -517}
+      - {x: 187, y: -517}
+      - {x: 183, y: -528}
+      - {x: 183, y: -549}
+      - {x: 197, y: -549}
+      - {x: 202, y: -547}
+      - {x: 212, y: -533}
+      - {x: 212, y: -522}
+    - - {x: -56, y: -518}
+      - {x: -68, y: -533}
+      - {x: -68, y: -543}
+      - {x: -67, y: -545}
+      - {x: -61, y: -547}
+      - {x: -46, y: -547}
+      - {x: -36, y: -539}
+      - {x: -36, y: -521}
+      - {x: -42, y: -518}
+    - - {x: 83, y: -518}
+      - {x: 82, y: -521}
+      - {x: 82, y: -543}
+      - {x: 88, y: -547}
+      - {x: 107, y: -547}
+      - {x: 114, y: -545}
+      - {x: 114, y: -535}
+      - {x: 100, y: -518}
+    - - {x: -18, y: -523}
+      - {x: -20, y: -524}
+      - {x: -20, y: -533}
+      - {x: -14, y: -543}
+      - {x: 10, y: -543}
+      - {x: 15, y: -539}
+      - {x: 15, y: -529}
+      - {x: 13, y: -523}
+    - - {x: 31, y: -523}
+      - {x: 30, y: -524}
+      - {x: 30, y: -538}
+      - {x: 32, y: -543}
+      - {x: 59, y: -543}
+      - {x: 65, y: -533}
+      - {x: 65, y: -523}
+    - - {x: -102, y: -465}
+      - {x: -112, y: -471}
+      - {x: -112, y: -495}
+      - {x: -108, y: -500}
+      - {x: -98, y: -500}
+      - {x: -92, y: -498}
+      - {x: -92, y: -467}
+      - {x: -93, y: -465}
+    - - {x: 153, y: -465}
+      - {x: 138, y: -465}
+      - {x: 138, y: -497}
+      - {x: 140, y: -500}
+      - {x: 153, y: -500}
+      - {x: 158, y: -498}
+      - {x: 158, y: -469}
+      - {x: 157, y: -466}
+    - - {x: -163, y: -467}
+      - {x: -167, y: -469}
+      - {x: -167, y: -496}
+      - {x: -166, y: -499}
+      - {x: -139, y: -499}
+      - {x: -138, y: -498}
+      - {x: -138, y: -480}
+      - {x: -145, y: -467}
+    - - {x: 190, y: -467}
+      - {x: 183, y: -479}
+      - {x: 183, y: -499}
+      - {x: 206, y: -499}
+      - {x: 212, y: -491}
+      - {x: 212, y: -474}
+      - {x: 210, y: -467}
+    - - {x: -40, y: -468}
+      - {x: -53, y: -468}
+      - {x: -66, y: -471}
+      - {x: -68, y: -473}
+      - {x: -68, y: -491}
+      - {x: -65, y: -497}
+      - {x: -51, y: -497}
+      - {x: -49, y: -495}
+      - {x: -36, y: -477}
+      - {x: -36, y: -472}
+    - - {x: 89, y: -468}
+      - {x: 82, y: -470}
+      - {x: 82, y: -486}
+      - {x: 97, y: -497}
+      - {x: 112, y: -497}
+      - {x: 114, y: -493}
+      - {x: 114, y: -476}
+      - {x: 105, y: -468}
+    - - {x: -16, y: -473}
+      - {x: -20, y: -478}
+      - {x: -20, y: -493}
+      - {x: 15, y: -493}
+      - {x: 15, y: -481}
+      - {x: 9, y: -473}
+    - - {x: 63, y: -473}
+      - {x: 36, y: -473}
+      - {x: 30, y: -483}
+      - {x: 30, y: -492}
+      - {x: 32, y: -493}
+      - {x: 62, y: -493}
+      - {x: 65, y: -490}
+      - {x: 65, y: -479}
+    - - {x: -41, y: -411}
+      - {x: -62, y: -407}
+      - {x: -68, y: -407}
+      - {x: -72, y: -408}
+      - {x: -72, y: -419}
+      - {x: -68, y: -430}
+      - {x: -71, y: -452}
+      - {x: -70, y: -456}
+      - {x: -62, y: -459}
+      - {x: -53, y: -459}
+      - {x: -34, y: -446}
+      - {x: -33, y: -446}
+      - {x: -33, y: -428}
+    - - {x: 8, y: -413}
+      - {x: -4, y: -410}
+      - {x: -6, y: -403}
+      - {x: 13, y: -405}
+      - {x: 18, y: -405}
+      - {x: 18, y: -388}
+      - {x: 6, y: -386}
+      - {x: 6, y: -378}
+      - {x: 4, y: -365}
+      - {x: -1, y: -360}
+      - {x: -7, y: -357}
+      - {x: -2, y: -341}
+      - {x: 2, y: -349}
+      - {x: 17, y: -357}
+      - {x: 18, y: -356}
+      - {x: 18, y: -342}
+      - {x: 17, y: -338}
+      - {x: 7, y: -336}
+      - {x: 8, y: -320}
+      - {x: 0, y: -309}
+      - {x: -13, y: -307}
+      - {x: -20, y: -307}
+      - {x: -23, y: -310}
+      - {x: -23, y: -311}
+      - {x: -21, y: -317}
+      - {x: -12, y: -332}
+      - {x: -15, y: -345}
+      - {x: -21, y: -353}
+      - {x: -23, y: -357}
+      - {x: -23, y: -363}
+      - {x: -21, y: -367}
+      - {x: -16, y: -378}
+      - {x: -13, y: -388}
+      - {x: -23, y: -406}
+      - {x: -22, y: -418}
+      - {x: -15, y: -435}
+      - {x: -14, y: -453}
+      - {x: -5, y: -455}
+      - {x: 6, y: -459}
+      - {x: 13, y: -459}
+      - {x: 18, y: -454}
+      - {x: 18, y: -451}
+      - {x: 8, y: -432}
+    - - {x: 59, y: -435}
+      - {x: 55, y: -430}
+      - {x: 68, y: -415}
+      - {x: 68, y: -404}
+      - {x: 62, y: -394}
+      - {x: 57, y: -381}
+      - {x: 68, y: -365}
+      - {x: 68, y: -359}
+      - {x: 64, y: -357}
+      - {x: 57, y: -357}
+      - {x: 46, y: -361}
+      - {x: 38, y: -370}
+      - {x: 39, y: -382}
+      - {x: 28, y: -388}
+      - {x: 27, y: -392}
+      - {x: 27, y: -405}
+      - {x: 32, y: -406}
+      - {x: 45, y: -411}
+      - {x: 37, y: -420}
+      - {x: 37, y: -432}
+      - {x: 29, y: -450}
+      - {x: 29, y: -452}
+      - {x: 33, y: -459}
+      - {x: 41, y: -459}
+      - {x: 43, y: -454}
+      - {x: 51, y: -455}
+      - {x: 59, y: -453}
+    - - {x: 111, y: -426}
+      - {x: 118, y: -415}
+      - {x: 118, y: -407}
+      - {x: 106, y: -407}
+      - {x: 90, y: -413}
+      - {x: 85, y: -436}
+      - {x: 78, y: -440}
+      - {x: 78, y: -459}
+      - {x: 97, y: -446}
+      - {x: 104, y: -459}
+      - {x: 114, y: -459}
+      - {x: 118, y: -454}
+      - {x: 118, y: -450}
+      - {x: 109, y: -438}
+    - - {x: -148, y: -360}
+      - {x: -156, y: -357}
+      - {x: -166, y: -357}
+      - {x: -170, y: -358}
+      - {x: -170, y: -365}
+      - {x: -169, y: -367}
+      - {x: -163, y: -390}
+      - {x: -156, y: -406}
+      - {x: -149, y: -409}
+      - {x: -138, y: -409}
+      - {x: -135, y: -404}
+      - {x: -135, y: -390}
+      - {x: -143, y: -365}
+    - - {x: -96, y: -359}
+      - {x: -109, y: -357}
+      - {x: -116, y: -357}
+      - {x: -118, y: -359}
+      - {x: -118, y: -364}
+      - {x: -117, y: -367}
+      - {x: -111, y: -378}
+      - {x: -107, y: -396}
+      - {x: -102, y: -409}
+      - {x: -93, y: -409}
+      - {x: -87, y: -401}
+      - {x: -87, y: -379}
+      - {x: -88, y: -370}
+    - - {x: -32, y: -386}
+      - {x: -41, y: -379}
+      - {x: -44, y: -364}
+      - {x: -63, y: -357}
+      - {x: -72, y: -357}
+      - {x: -72, y: -369}
+      - {x: -67, y: -380}
+      - {x: -60, y: -387}
+      - {x: -67, y: -400}
+      - {x: -70, y: -406}
+      - {x: -64, y: -409}
+      - {x: -56, y: -409}
+      - {x: -53, y: -408}
+      - {x: -48, y: -402}
+      - {x: -33, y: -397}
+      - {x: -32, y: -393}
+    - - {x: 118, y: -364}
+      - {x: 118, y: -359}
+      - {x: 114, y: -357}
+      - {x: 107, y: -357}
+      - {x: 90, y: -364}
+      - {x: 88, y: -379}
+      - {x: 78, y: -385}
+      - {x: 78, y: -395}
+      - {x: 79, y: -397}
+      - {x: 94, y: -400}
+      - {x: 100, y: -409}
+      - {x: 111, y: -409}
+      - {x: 117, y: -402}
+      - {x: 106, y: -387}
+      - {x: 108, y: -375}
+    - - {x: 163, y: -359}
+      - {x: 159, y: -357}
+      - {x: 152, y: -357}
+      - {x: 135, y: -364}
+      - {x: 132, y: -379}
+      - {x: 132, y: -405}
+      - {x: 139, y: -409}
+      - {x: 149, y: -409}
+      - {x: 157, y: -397}
+      - {x: 149, y: -380}
+      - {x: 163, y: -364}
+    - - {x: 215, y: -364}
+      - {x: 215, y: -359}
+      - {x: 211, y: -357}
+      - {x: 204, y: -357}
+      - {x: 187, y: -364}
+      - {x: 187, y: -388}
+      - {x: 180, y: -399}
+      - {x: 180, y: -407}
+      - {x: 185, y: -409}
+      - {x: 197, y: -409}
+      - {x: 201, y: -405}
+      - {x: 209, y: -386}
+      - {x: 201, y: -381}
+    - - {x: -142, y: -320}
+      - {x: -148, y: -308}
+      - {x: -160, y: -307}
+      - {x: -168, y: -307}
+      - {x: -171, y: -309}
+      - {x: -171, y: -314}
+      - {x: -170, y: -317}
+      - {x: -165, y: -328}
+      - {x: -163, y: -353}
+      - {x: -154, y: -355}
+      - {x: -144, y: -359}
+      - {x: -138, y: -359}
+      - {x: -133, y: -354}
+      - {x: -133, y: -350}
+      - {x: -142, y: -331}
+    - - {x: -91, y: -314}
+      - {x: -112, y: -307}
+      - {x: -119, y: -307}
+      - {x: -119, y: -319}
+      - {x: -115, y: -330}
+      - {x: -107, y: -332}
+      - {x: -113, y: -341}
+      - {x: -98, y: -358}
+      - {x: -96, y: -359}
+      - {x: -88, y: -359}
+      - {x: -85, y: -355}
+      - {x: -85, y: -348}
+      - {x: -90, y: -332}
+    - - {x: -40, y: -314}
+      - {x: -47, y: -312}
+      - {x: -61, y: -307}
+      - {x: -68, y: -307}
+      - {x: -68, y: -319}
+      - {x: -64, y: -330}
+      - {x: -58, y: -346}
+      - {x: -52, y: -359}
+      - {x: -44, y: -359}
+      - {x: -38, y: -355}
+      - {x: -36, y: -352}
+      - {x: -36, y: -334}
+    - - {x: 64, y: -307}
+      - {x: 56, y: -307}
+      - {x: 45, y: -311}
+      - {x: 37, y: -320}
+      - {x: 28, y: -337}
+      - {x: 28, y: -342}
+      - {x: 29, y: -345}
+      - {x: 45, y: -348}
+      - {x: 51, y: -359}
+      - {x: 59, y: -359}
+      - {x: 66, y: -357}
+      - {x: 60, y: -339}
+      - {x: 67, y: -316}
+      - {x: 67, y: -308}
+    - - {x: 114, y: -309}
+      - {x: 110, y: -307}
+      - {x: 103, y: -307}
+      - {x: 86, y: -313}
+      - {x: 82, y: -337}
+      - {x: 82, y: -350}
+      - {x: 83, y: -352}
+      - {x: 89, y: -359}
+      - {x: 96, y: -359}
+      - {x: 100, y: -358}
+      - {x: 103, y: -338}
+      - {x: 114, y: -315}
+    - - {x: 165, y: -309}
+      - {x: 161, y: -307}
+      - {x: 154, y: -307}
+      - {x: 143, y: -311}
+      - {x: 135, y: -320}
+      - {x: 131, y: -347}
+      - {x: 131, y: -354}
+      - {x: 136, y: -359}
+      - {x: 145, y: -359}
+      - {x: 159, y: -341}
+      - {x: 154, y: -330}
+      - {x: 165, y: -315}
+    - - {x: 196, y: -343}
+      - {x: 196, y: -342}
+      - {x: 197, y: -342}
+      - {x: 194, y: -346}
+      - {x: 194, y: -347}
+      - {x: 200, y: -355}
+      - {x: 209, y: -353}
+      - {x: 215, y: -324}
+      - {x: 215, y: -307}
+      - {x: 192, y: -307}
+      - {x: 179, y: -334}
+      - {x: 179, y: -357}
+      - {x: 182, y: -359}
+      - {x: 191, y: -359}
+      - {x: 193, y: -354}
+      - {x: 191, y: -349}
+      - {x: 190, y: -348}
+    - - {x: -33, y: -282}
+      - {x: -43, y: -265}
+      - {x: -48, y: -259}
+      - {x: -57, y: -259}
+      - {x: -62, y: -261}
+      - {x: -71, y: -279}
+      - {x: -71, y: -291}
+      - {x: -69, y: -299}
+      - {x: -70, y: -303}
+      - {x: -62, y: -306}
+      - {x: -56, y: -306}
+      - {x: -50, y: -296}
+      - {x: -33, y: -293}
+    - - {x: 17, y: -303}
+      - {x: 17, y: -284}
+      - {x: 2, y: -259}
+      - {x: -9, y: -259}
+      - {x: -22, y: -279}
+      - {x: -22, y: -306}
+      - {x: -9, y: -306}
+      - {x: -8, y: -304}
+      - {x: 1, y: -296}
+      - {x: 16, y: -304}
+    - - {x: 58, y: -269}
+      - {x: 50, y: -259}
+      - {x: 41, y: -259}
+      - {x: 33, y: -268}
+      - {x: 33, y: -298}
+      - {x: 40, y: -306}
+      - {x: 46, y: -306}
+      - {x: 49, y: -305}
+      - {x: 63, y: -288}
+      - {x: 63, y: -279}
+    - - {x: 104, y: -259}
+      - {x: 90, y: -259}
+      - {x: 87, y: -260}
+      - {x: 86, y: -285}
+      - {x: 81, y: -296}
+      - {x: 81, y: -300}
+      - {x: 85, y: -306}
+      - {x: 92, y: -306}
+      - {x: 96, y: -305}
+      - {x: 101, y: -302}
+      - {x: 115, y: -286}
+      - {x: 115, y: -280}
+    - - {x: -143, y: -215}
+      - {x: -148, y: -209}
+      - {x: -159, y: -209}
+      - {x: -171, y: -225}
+      - {x: -171, y: -233}
+      - {x: -169, y: -240}
+      - {x: -162, y: -252}
+      - {x: -156, y: -253}
+      - {x: -145, y: -256}
+      - {x: -136, y: -256}
+      - {x: -134, y: -253}
+      - {x: -134, y: -246}
+      - {x: -142, y: -230}
+    - - {x: -96, y: -209}
+      - {x: -106, y: -209}
+      - {x: -113, y: -219}
+      - {x: -119, y: -230}
+      - {x: -119, y: -236}
+      - {x: -105, y: -251}
+      - {x: -100, y: -255}
+      - {x: -96, y: -256}
+      - {x: -88, y: -256}
+      - {x: -85, y: -253}
+      - {x: -85, y: -242}
+      - {x: -91, y: -215}
+    - - {x: -53, y: -209}
+      - {x: -58, y: -211}
+      - {x: -61, y: -220}
+      - {x: -67, y: -230}
+      - {x: -67, y: -237}
+      - {x: -64, y: -240}
+      - {x: -59, y: -244}
+      - {x: -53, y: -256}
+      - {x: -44, y: -256}
+      - {x: -37, y: -253}
+      - {x: -37, y: -234}
+      - {x: -39, y: -215}
+      - {x: -44, y: -209}
+    - - {x: 5, y: -209}
+      - {x: -9, y: -209}
+      - {x: -22, y: -229}
+      - {x: -22, y: -236}
+      - {x: -18, y: -237}
+      - {x: -16, y: -237}
+      - {x: -13, y: -235}
+      - {x: -13, y: -236}
+      - {x: -22, y: -249}
+      - {x: -22, y: -250}
+      - {x: -20, y: -255}
+      - {x: -17, y: -256}
+      - {x: 3, y: -256}
+      - {x: 18, y: -254}
+      - {x: 18, y: -233}
+      - {x: 16, y: -227}
+    - - {x: 40, y: -209}
+      - {x: 34, y: -218}
+      - {x: 31, y: -236}
+      - {x: 31, y: -250}
+      - {x: 35, y: -256}
+      - {x: 44, y: -256}
+      - {x: 64, y: -246}
+      - {x: 64, y: -222}
+      - {x: 61, y: -209}
+    - - {x: 96, y: -240}
+      - {x: 96, y: -239}
+      - {x: 97, y: -239}
+      - {x: 94, y: -243}
+      - {x: 94, y: -244}
+      - {x: 98, y: -256}
+      - {x: 101, y: -256}
+      - {x: 116, y: -244}
+      - {x: 116, y: -225}
+      - {x: 105, y: -209}
+      - {x: 92, y: -209}
+      - {x: 89, y: -210}
+      - {x: 79, y: -240}
+      - {x: 79, y: -250}
+      - {x: 83, y: -256}
+      - {x: 91, y: -256}
+      - {x: 93, y: -251}
+      - {x: 91, y: -246}
+      - {x: 90, y: -245}
+    - - {x: 157, y: -209}
+      - {x: 139, y: -209}
+      - {x: 139, y: -229}
+      - {x: 128, y: -235}
+      - {x: 128, y: -252}
+      - {x: 133, y: -253}
+      - {x: 146, y: -246}
+      - {x: 152, y: -255}
+      - {x: 154, y: -256}
+      - {x: 162, y: -256}
+      - {x: 167, y: -253}
+      - {x: 168, y: -249}
+      - {x: 168, y: -228}
+    - - {x: 215, y: -237}
+      - {x: 215, y: -226}
+      - {x: 211, y: -218}
+      - {x: 205, y: -209}
+      - {x: 197, y: -209}
+      - {x: 191, y: -211}
+      - {x: 187, y: -219}
+      - {x: 178, y: -231}
+      - {x: 178, y: -240}
+      - {x: 179, y: -244}
+      - {x: 195, y: -248}
+      - {x: 199, y: -255}
+      - {x: 200, y: -256}
+      - {x: 211, y: -256}
+      - {x: 215, y: -252}
+      - {x: 215, y: -241}
+      - {x: 214, y: -238}
+    - - {x: -150, y: -159}
+      - {x: -158, y: -159}
+      - {x: -171, y: -178}
+      - {x: -171, y: -189}
+      - {x: -161, y: -201}
+      - {x: -156, y: -201}
+      - {x: -149, y: -194}
+      - {x: -147, y: -205}
+      - {x: -145, y: -206}
+      - {x: -139, y: -206}
+      - {x: -134, y: -201}
+      - {x: -134, y: -194}
+      - {x: -143, y: -165}
+    - - {x: -106, y: -159}
+      - {x: -113, y: -169}
+      - {x: -119, y: -181}
+      - {x: -119, y: -185}
+      - {x: -116, y: -188}
+      - {x: -100, y: -206}
+      - {x: -88, y: -206}
+      - {x: -86, y: -205}
+      - {x: -86, y: -180}
+      - {x: -92, y: -159}
+    - - {x: -40, y: -165}
+      - {x: -47, y: -159}
+      - {x: -54, y: -159}
+      - {x: -62, y: -169}
+      - {x: -68, y: -179}
+      - {x: -68, y: -186}
+      - {x: -57, y: -196}
+      - {x: -54, y: -206}
+      - {x: -42, y: -206}
+      - {x: -37, y: -198}
+      - {x: -37, y: -184}
+    - - {x: 17, y: -182}
+      - {x: 7, y: -165}
+      - {x: 2, y: -159}
+      - {x: -7, y: -159}
+      - {x: -12, y: -161}
+      - {x: -21, y: -179}
+      - {x: -21, y: -191}
+      - {x: -19, y: -199}
+      - {x: -20, y: -203}
+      - {x: -12, y: -206}
+      - {x: -6, y: -206}
+      - {x: 0, y: -196}
+      - {x: 17, y: -193}
+    - - {x: 66, y: -188}
+      - {x: 66, y: -180}
+      - {x: 55, y: -159}
+      - {x: 44, y: -159}
+      - {x: 40, y: -161}
+      - {x: 36, y: -169}
+      - {x: 29, y: -189}
+      - {x: 29, y: -199}
+      - {x: 33, y: -206}
+      - {x: 41, y: -206}
+      - {x: 46, y: -198}
+      - {x: 57, y: -204}
+      - {x: 59, y: -200}
+    - - {x: 92, y: -159}
+      - {x: 90, y: -160}
+      - {x: 78, y: -186}
+      - {x: 78, y: -201}
+      - {x: 83, y: -204}
+      - {x: 96, y: -191}
+      - {x: 102, y: -205}
+      - {x: 104, y: -206}
+      - {x: 112, y: -206}
+      - {x: 117, y: -203}
+      - {x: 117, y: -175}
+      - {x: 110, y: -159}
+    - - {x: 155, y: -159}
+      - {x: 146, y: -159}
+      - {x: 140, y: -161}
+      - {x: 132, y: -174}
+      - {x: 129, y: -184}
+      - {x: 129, y: -191}
+      - {x: 130, y: -192}
+      - {x: 146, y: -195}
+      - {x: 152, y: -206}
+      - {x: 163, y: -206}
+      - {x: 167, y: -205}
+      - {x: 167, y: -202}
+      - {x: 162, y: -193}
+      - {x: 167, y: -184}
+      - {x: 167, y: -177}
+    - - {x: 208, y: -169}
+      - {x: 200, y: -159}
+      - {x: 191, y: -159}
+      - {x: 183, y: -168}
+      - {x: 182, y: -177}
+      - {x: 182, y: -203}
+      - {x: 188, y: -206}
+      - {x: 199, y: -206}
+      - {x: 199, y: -205}
+      - {x: 213, y: -188}
+      - {x: 213, y: -179}
+    - - {x: -40, y: -115}
+      - {x: -43, y: -109}
+      - {x: -57, y: -109}
+      - {x: -72, y: -117}
+      - {x: -72, y: -130}
+      - {x: -62, y: -138}
+      - {x: -63, y: -151}
+      - {x: -54, y: -154}
+      - {x: -43, y: -157}
+      - {x: -35, y: -157}
+      - {x: -32, y: -153}
+      - {x: -32, y: -147}
+      - {x: -40, y: -130}
+    - - {x: 9, y: -109}
+      - {x: -8, y: -109}
+      - {x: -21, y: -116}
+      - {x: -21, y: -134}
+      - {x: -8, y: -156}
+      - {x: 10, y: -156}
+      - {x: 16, y: -152}
+      - {x: 16, y: -139}
+      - {x: 14, y: -128}
+    - - {x: 66, y: -122}
+      - {x: 51, y: -109}
+      - {x: 40, y: -109}
+      - {x: 35, y: -110}
+      - {x: 35, y: -135}
+      - {x: 29, y: -143}
+      - {x: 29, y: -150}
+      - {x: 32, y: -156}
+      - {x: 42, y: -156}
+      - {x: 44, y: -155}
+      - {x: 50, y: -153}
+      - {x: 58, y: -134}
+      - {x: 66, y: -129}
+    - - {x: 112, y: -135}
+      - {x: 118, y: -130}
+      - {x: 118, y: -119}
+      - {x: 107, y: -109}
+      - {x: 90, y: -109}
+      - {x: 80, y: -115}
+      - {x: 78, y: -138}
+      - {x: 78, y: -151}
+      - {x: 82, y: -156}
+      - {x: 90, y: -156}
+      - {x: 95, y: -148}
+      - {x: 106, y: -156}
+      - {x: 107, y: -156}
+    - - {x: 17, y: -72}
+      - {x: 5, y: -59}
+      - {x: -8, y: -59}
+      - {x: -22, y: -70}
+      - {x: -22, y: -79}
+      - {x: -21, y: -82}
+      - {x: -12, y: -101}
+      - {x: -3, y: -103}
+      - {x: 3, y: -106}
+      - {x: 7, y: -107}
+      - {x: 15, y: -107}
+      - {x: 18, y: -103}
+      - {x: 18, y: -93}
+      - {x: 15, y: -80}
+    - - {x: -155, y: -59}
+      - {x: -169, y: -70}
+      - {x: -169, y: -81}
+      - {x: -157, y: -94}
+      - {x: -152, y: -106}
+      - {x: -144, y: -106}
+      - {x: -136, y: -103}
+      - {x: -136, y: -70}
+      - {x: -140, y: -59}
+    - - {x: -98, y: -59}
+      - {x: -111, y: -59}
+      - {x: -123, y: -70}
+      - {x: -123, y: -77}
+      - {x: -110, y: -93}
+      - {x: -119, y: -99}
+      - {x: -116, y: -105}
+      - {x: -114, y: -106}
+      - {x: -105, y: -106}
+      - {x: -102, y: -105}
+      - {x: -81, y: -95}
+      - {x: -81, y: -80}
+      - {x: -89, y: -63}
+    - - {x: -35, y: -74}
+      - {x: -47, y: -60}
+      - {x: -60, y: -60}
+      - {x: -72, y: -69}
+      - {x: -74, y: -73}
+      - {x: -74, y: -83}
+      - {x: -70, y: -92}
+      - {x: -73, y: -106}
+      - {x: -55, y: -106}
+      - {x: -50, y: -99}
+      - {x: -32, y: -104}
+      - {x: -31, y: -100}
+      - {x: -31, y: -83}
+    - - {x: 45, y: -89}
+      - {x: 46, y: -89}
+      - {x: 43, y: -93}
+      - {x: 43, y: -94}
+      - {x: 49, y: -102}
+      - {x: 65, y: -105}
+      - {x: 68, y: -90}
+      - {x: 68, y: -61}
+      - {x: 64, y: -59}
+      - {x: 40, y: -59}
+      - {x: 30, y: -65}
+      - {x: 28, y: -81}
+      - {x: 28, y: -99}
+      - {x: 32, y: -106}
+      - {x: 43, y: -106}
+      - {x: 42, y: -94}
+      - {x: 39, y: -95}
+      - {x: 45, y: -90}
+    - - {x: 117, y: -81}
+      - {x: 119, y: -77}
+      - {x: 119, y: -69}
+      - {x: 111, y: -62}
+      - {x: 100, y: -59}
+      - {x: 93, y: -59}
+      - {x: 86, y: -67}
+      - {x: 81, y: -85}
+      - {x: 76, y: -87}
+      - {x: 76, y: -100}
+      - {x: 77, y: -104}
+      - {x: 81, y: -103}
+      - {x: 98, y: -106}
+      - {x: 110, y: -106}
+      - {x: 115, y: -103}
+      - {x: 116, y: -99}
+      - {x: 107, y: -86}
+    - - {x: 167, y: -81}
+      - {x: 169, y: -77}
+      - {x: 169, y: -69}
+      - {x: 155, y: -59}
+      - {x: 144, y: -59}
+      - {x: 136, y: -67}
+      - {x: 127, y: -81}
+      - {x: 127, y: -90}
+      - {x: 128, y: -94}
+      - {x: 144, y: -98}
+      - {x: 148, y: -105}
+      - {x: 150, y: -106}
+      - {x: 158, y: -106}
+      - {x: 163, y: -103}
+      - {x: 165, y: -99}
+      - {x: 157, y: -84}
+    - - {x: 214, y: -69}
+      - {x: 200, y: -59}
+      - {x: 189, y: -59}
+      - {x: 181, y: -67}
+      - {x: 181, y: -102}
+      - {x: 187, y: -106}
+      - {x: 198, y: -106}
+      - {x: 204, y: -84}
+      - {x: 214, y: -79}
+    - - {x: -153, y: -9}
+      - {x: -170, y: -22}
+      - {x: -170, y: -35}
+      - {x: -149, y: -57}
+      - {x: -139, y: -57}
+      - {x: -134, y: -52}
+      - {x: -134, y: -34}
+      - {x: -141, y: -9}
+    - - {x: 215, y: -32}
+      - {x: 215, y: -19}
+      - {x: 203, y: -9}
+      - {x: 190, y: -9}
+      - {x: 180, y: -13}
+      - {x: 180, y: -57}
+      - {x: 192, y: -57}
+      - {x: 193, y: -56}
+      - {x: 196, y: -52}
+      - {x: 206, y: -38}
+      - {x: 206, y: -36}
+    - - {x: -93, y: -9}
+      - {x: -107, y: -9}
+      - {x: -119, y: -22}
+      - {x: -119, y: -27}
+      - {x: -116, y: -30}
+      - {x: -108, y: -32}
+      - {x: -105, y: -56}
+      - {x: -90, y: -56}
+      - {x: -85, y: -49}
+      - {x: -85, y: -13}
+    - - {x: -49, y: -9}
+      - {x: -59, y: -9}
+      - {x: -71, y: -18}
+      - {x: -73, y: -22}
+      - {x: -73, y: -30}
+      - {x: -62, y: -37}
+      - {x: -70, y: -54}
+      - {x: -61, y: -56}
+      - {x: -53, y: -56}
+      - {x: -32, y: -46}
+      - {x: -32, y: -26}
+      - {x: -39, y: -14}
+    - - {x: 19, y: -37}
+      - {x: 8, y: -33}
+      - {x: 11, y: -14}
+      - {x: 3, y: -10}
+      - {x: -11, y: -10}
+      - {x: -23, y: -22}
+      - {x: -23, y: -42}
+      - {x: -19, y: -56}
+      - {x: -8, y: -56}
+      - {x: -5, y: -55}
+      - {x: 4, y: -45}
+      - {x: 18, y: -54}
+      - {x: 19, y: -51}
+    - - {x: 33, y: -9}
+      - {x: 27, y: -20}
+      - {x: 27, y: -54}
+      - {x: 32, y: -53}
+      - {x: 41, y: -45}
+      - {x: 45, y: -41}
+      - {x: 51, y: -55}
+      - {x: 53, y: -56}
+      - {x: 69, y: -56}
+      - {x: 69, y: -19}
+      - {x: 55, y: -9}
+    - - {x: 118, y: -20}
+      - {x: 103, y: -9}
+      - {x: 93, y: -9}
+      - {x: 87, y: -11}
+      - {x: 77, y: -31}
+      - {x: 77, y: -39}
+      - {x: 78, y: -43}
+      - {x: 99, y: -49}
+      - {x: 100, y: -56}
+      - {x: 111, y: -56}
+      - {x: 117, y: -55}
+      - {x: 106, y: -32}
+      - {x: 116, y: -32}
+      - {x: 118, y: -27}
+    - - {x: 151, y: -9}
+      - {x: 140, y: -9}
+      - {x: 132, y: -17}
+      - {x: 131, y: -23}
+      - {x: 131, y: -54}
+      - {x: 135, y: -56}
+      - {x: 148, y: -56}
+      - {x: 155, y: -34}
+      - {x: 165, y: -30}
+      - {x: 165, y: -19}
+    - - {x: 1, y: 41}
+      - {x: -13, y: 41}
+      - {x: -15, y: 39}
+      - {x: -15, y: -4}
+      - {x: -14, y: -6}
+      - {x: 8, y: -6}
+      - {x: 10, y: -2}
+      - {x: 10, y: 23}
+      - {x: 8, y: 39}
+    - - {x: 35, y: 41}
+      - {x: 35, y: -6}
+      - {x: 60, y: -6}
+      - {x: 60, y: 30}
+      - {x: 57, y: 41}
+    - - {x: -48, y: 37}
+      - {x: -60, y: 37}
+      - {x: -65, y: 35}
+      - {x: -65, y: -2}
+      - {x: -39, y: -2}
+      - {x: -39, y: 32}
+      - {x: -44, y: 35}
+    - - {x: 91, y: 37}
+      - {x: 85, y: 32}
+      - {x: 85, y: 13}
+      - {x: 87, y: 2}
+      - {x: 88, y: -2}
+      - {x: 111, y: -2}
+      - {x: 111, y: 17}
+      - {x: 109, y: 32}
+      - {x: 102, y: 37}
+    - - {x: -139, y: 90}
+      - {x: -142, y: 92}
+      - {x: -154, y: 92}
+      - {x: -160, y: 89}
+      - {x: -165, y: 84}
+      - {x: -165, y: 47}
+      - {x: -158, y: 43}
+      - {x: -149, y: 43}
+      - {x: -142, y: 48}
+      - {x: -140, y: 67}
+      - {x: -139, y: 74}
+    - - {x: 202, y: 92}
+      - {x: 193, y: 92}
+      - {x: 186, y: 87}
+      - {x: 185, y: 81}
+      - {x: 185, y: 76}
+      - {x: 189, y: 67}
+      - {x: 188, y: 48}
+      - {x: 193, y: 43}
+      - {x: 202, y: 43}
+      - {x: 209, y: 46}
+      - {x: 209, y: 68}
+      - {x: 211, y: 76}
+      - {x: 211, y: 82}
+    - - {x: -110, y: 89}
+      - {x: -113, y: 86}
+      - {x: -113, y: 53}
+      - {x: -111, y: 45}
+      - {x: -92, y: 45}
+      - {x: -91, y: 48}
+      - {x: -91, y: 86}
+      - {x: -98, y: 89}
+    - - {x: 41, y: 89}
+      - {x: 37, y: 82}
+      - {x: 37, y: 49}
+      - {x: 38, y: 45}
+      - {x: 59, y: 45}
+      - {x: 59, y: 84}
+      - {x: 53, y: 89}
+    - - {x: -7, y: 88}
+      - {x: -12, y: 86}
+      - {x: -14, y: 70}
+      - {x: -14, y: 46}
+      - {x: 5, y: 46}
+      - {x: 9, y: 47}
+      - {x: 9, y: 80}
+      - {x: 3, y: 88}
+    - - {x: 109, y: 57}
+      - {x: 109, y: 72}
+      - {x: 106, y: 86}
+      - {x: 100, y: 88}
+      - {x: 89, y: 88}
+      - {x: 86, y: 86}
+      - {x: 86, y: 46}
+      - {x: 90, y: 46}
+      - {x: 93, y: 47}
+      - {x: 105, y: 47}
+      - {x: 108, y: 48}
+    - - {x: -64, y: 71}
+      - {x: -64, y: 47}
+      - {x: -45, y: 47}
+      - {x: -41, y: 48}
+      - {x: -41, y: 65}
+      - {x: -42, y: 81}
+      - {x: -47, y: 88}
+      - {x: -59, y: 88}
+      - {x: -63, y: 87}
+    - - {x: 154, y: 87}
+      - {x: 141, y: 87}
+      - {x: 136, y: 83}
+      - {x: 136, y: 47}
+      - {x: 160, y: 47}
+      - {x: 160, y: 78}
+      - {x: 157, y: 84}
+    - - {x: -89, y: 125}
+      - {x: -89, y: 134}
+      - {x: -96, y: 142}
+      - {x: -108, y: 142}
+      - {x: -116, y: 135}
+      - {x: -116, y: 118}
+      - {x: -112, y: 102}
+      - {x: -103, y: 93}
+      - {x: -97, y: 93}
+      - {x: -90, y: 100}
+      - {x: -91, y: 102}
+      - {x: -93, y: 117}
+    - - {x: 153, y: 142}
+      - {x: 142, y: 142}
+      - {x: 134, y: 134}
+      - {x: 134, y: 106}
+      - {x: 135, y: 102}
+      - {x: 141, y: 93}
+      - {x: 149, y: 93}
+      - {x: 159, y: 106}
+      - {x: 161, y: 114}
+      - {x: 161, y: 136}
+    - - {x: -49, y: 141}
+      - {x: -58, y: 141}
+      - {x: -62, y: 138}
+      - {x: -63, y: 129}
+      - {x: -63, y: 113}
+      - {x: -62, y: 107}
+      - {x: -59, y: 95}
+      - {x: -57, y: 94}
+      - {x: -46, y: 94}
+      - {x: -41, y: 101}
+      - {x: -41, y: 124}
+      - {x: -42, y: 132}
+    - - {x: 108, y: 138}
+      - {x: 107, y: 141}
+      - {x: 94, y: 141}
+      - {x: 87, y: 138}
+      - {x: 87, y: 103}
+      - {x: 88, y: 101}
+      - {x: 93, y: 94}
+      - {x: 101, y: 94}
+      - {x: 105, y: 95}
+      - {x: 108, y: 107}
+      - {x: 109, y: 114}
+      - {x: 109, y: 133}
+    - - {x: -11, y: 139}
+      - {x: -13, y: 136}
+      - {x: -14, y: 132}
+      - {x: -14, y: 95}
+      - {x: 8, y: 95}
+      - {x: 9, y: 98}
+      - {x: 9, y: 137}
+      - {x: 3, y: 139}
+    - - {x: 54, y: 139}
+      - {x: 40, y: 139}
+      - {x: 36, y: 133}
+      - {x: 36, y: 95}
+      - {x: 59, y: 95}
+      - {x: 59, y: 130}
+      - {x: 57, y: 136}
+    - - {x: -158, y: 138}
+      - {x: -161, y: 136}
+      - {x: -164, y: 125}
+      - {x: -164, y: 104}
+      - {x: -161, y: 97}
+      - {x: -142, y: 97}
+      - {x: -141, y: 99}
+      - {x: -141, y: 130}
+      - {x: -144, y: 138}
+    - - {x: 209, y: 111}
+      - {x: 209, y: 121}
+      - {x: 206, y: 136}
+      - {x: 201, y: 138}
+      - {x: 192, y: 138}
+      - {x: 187, y: 132}
+      - {x: 186, y: 114}
+      - {x: 186, y: 98}
+      - {x: 190, y: 97}
+      - {x: 193, y: 98}
+      - {x: 205, y: 98}
+      - {x: 208, y: 99}
+    - - {x: -49, y: 190}
+      - {x: -59, y: 190}
+      - {x: -64, y: 188}
+      - {x: -64, y: 169}
+      - {x: -70, y: 155}
+      - {x: -70, y: 147}
+      - {x: -69, y: 145}
+      - {x: -67, y: 144}
+      - {x: -58, y: 144}
+      - {x: -55, y: 145}
+      - {x: -34, y: 155}
+      - {x: -34, y: 174}
+      - {x: -41, y: 183}
+    - - {x: 6, y: 188}
+      - {x: 3, y: 191}
+      - {x: -16, y: 191}
+      - {x: -21, y: 190}
+      - {x: -21, y: 177}
+      - {x: -14, y: 171}
+      - {x: -22, y: 153}
+      - {x: -22, y: 148}
+      - {x: -21, y: 145}
+      - {x: -20, y: 144}
+      - {x: -8, y: 144}
+      - {x: -2, y: 151}
+      - {x: 16, y: 146}
+      - {x: 17, y: 150}
+      - {x: 17, y: 167}
+    - - {x: 66, y: 178}
+      - {x: 64, y: 186}
+      - {x: 53, y: 191}
+      - {x: 46, y: 191}
+      - {x: 36, y: 183}
+      - {x: 38, y: 165}
+      - {x: 28, y: 163}
+      - {x: 28, y: 144}
+      - {x: 64, y: 144}
+      - {x: 67, y: 147}
+      - {x: 67, y: 152}
+      - {x: 59, y: 164}
+    - - {x: 114, y: 172}
+      - {x: 108, y: 190}
+      - {x: 94, y: 190}
+      - {x: 87, y: 187}
+      - {x: 80, y: 170}
+      - {x: 80, y: 160}
+      - {x: 81, y: 156}
+      - {x: 97, y: 152}
+      - {x: 101, y: 145}
+      - {x: 103, y: 144}
+      - {x: 112, y: 144}
+      - {x: 116, y: 146}
+      - {x: 116, y: 150}
+      - {x: 115, y: 153}
+    - - {x: -138, y: 230}
+      - {x: -149, y: 241}
+      - {x: -161, y: 241}
+      - {x: -169, y: 233}
+      - {x: -169, y: 223}
+      - {x: -167, y: 217}
+      - {x: -166, y: 200}
+      - {x: -157, y: 198}
+      - {x: -147, y: 194}
+      - {x: -141, y: 194}
+      - {x: -136, y: 199}
+      - {x: -136, y: 203}
+      - {x: -144, y: 220}
+    - - {x: -98, y: 240}
+      - {x: -107, y: 240}
+      - {x: -110, y: 236}
+      - {x: -115, y: 227}
+      - {x: -115, y: 209}
+      - {x: -105, y: 194}
+      - {x: -94, y: 194}
+      - {x: -89, y: 199}
+      - {x: -89, y: 213}
+      - {x: -91, y: 231}
+    - - {x: -48, y: 240}
+      - {x: -57, y: 240}
+      - {x: -63, y: 237}
+      - {x: -64, y: 231}
+      - {x: -64, y: 216}
+      - {x: -62, y: 207}
+      - {x: -59, y: 195}
+      - {x: -56, y: 194}
+      - {x: -47, y: 194}
+      - {x: -41, y: 204}
+      - {x: -41, y: 215}
+      - {x: -43, y: 234}
+    - - {x: 12, y: 228}
+      - {x: 1, y: 240}
+      - {x: -8, y: 240}
+      - {x: -14, y: 238}
+      - {x: -16, y: 222}
+      - {x: -20, y: 204}
+      - {x: -20, y: 196}
+      - {x: -13, y: 194}
+      - {x: -6, y: 194}
+      - {x: 5, y: 205}
+      - {x: 16, y: 209}
+      - {x: 16, y: 217}
+    - - {x: 61, y: 200}
+      - {x: 64, y: 220}
+      - {x: 64, y: 232}
+      - {x: 58, y: 241}
+      - {x: 45, y: 241}
+      - {x: 36, y: 238}
+      - {x: 31, y: 203}
+      - {x: 31, y: 201}
+      - {x: 35, y: 194}
+      - {x: 42, y: 194}
+      - {x: 44, y: 196}
+      - {x: 44, y: 199}
+      - {x: 53, y: 198}
+    - - {x: 109, y: 238}
+      - {x: 104, y: 240}
+      - {x: 93, y: 240}
+      - {x: 88, y: 235}
+      - {x: 85, y: 216}
+      - {x: 85, y: 200}
+      - {x: 89, y: 194}
+      - {x: 95, y: 194}
+      - {x: 98, y: 195}
+      - {x: 111, y: 211}
+      - {x: 111, y: 220}
+    - - {x: 153, y: 240}
+      - {x: 144, y: 240}
+      - {x: 139, y: 234}
+      - {x: 136, y: 222}
+      - {x: 136, y: 201}
+      - {x: 142, y: 194}
+      - {x: 154, y: 194}
+      - {x: 159, y: 215}
+      - {x: 159, y: 234}
+      - {x: 158, y: 238}
+    - - {x: 198, y: 210}
+      - {x: 198, y: 211}
+      - {x: 199, y: 211}
+      - {x: 196, y: 207}
+      - {x: 196, y: 206}
+      - {x: 202, y: 198}
+      - {x: 214, y: 197}
+      - {x: 214, y: 237}
+      - {x: 209, y: 241}
+      - {x: 185, y: 241}
+      - {x: 181, y: 226}
+      - {x: 181, y: 197}
+      - {x: 184, y: 194}
+      - {x: 193, y: 194}
+      - {x: 195, y: 199}
+      - {x: 194, y: 205}
+      - {x: 192, y: 205}
+    - - {x: -140, y: 284}
+      - {x: -147, y: 290}
+      - {x: -152, y: 291}
+      - {x: -160, y: 291}
+      - {x: -172, y: 283}
+      - {x: -172, y: 248}
+      - {x: -171, y: 245}
+      - {x: -170, y: 244}
+      - {x: -154, y: 244}
+      - {x: -150, y: 247}
+      - {x: -133, y: 244}
+      - {x: -133, y: 263}
+      - {x: -143, y: 272}
+    - - {x: -93, y: 287}
+      - {x: -97, y: 291}
+      - {x: -110, y: 291}
+      - {x: -119, y: 285}
+      - {x: -119, y: 262}
+      - {x: -117, y: 250}
+      - {x: -108, y: 248}
+      - {x: -97, y: 244}
+      - {x: -90, y: 244}
+      - {x: -86, y: 248}
+      - {x: -86, y: 254}
+      - {x: -92, y: 267}
+    - - {x: -51, y: 290}
+      - {x: -57, y: 290}
+      - {x: -62, y: 287}
+      - {x: -66, y: 280}
+      - {x: -66, y: 261}
+      - {x: -61, y: 245}
+      - {x: -55, y: 244}
+      - {x: -42, y: 244}
+      - {x: -39, y: 247}
+      - {x: -39, y: 259}
+      - {x: -44, y: 285}
+    - - {x: 7, y: 284}
+      - {x: 2, y: 290}
+      - {x: -9, y: 290}
+      - {x: -13, y: 279}
+      - {x: -13, y: 259}
+      - {x: -8, y: 245}
+      - {x: -4, y: 244}
+      - {x: 3, y: 244}
+      - {x: 8, y: 249}
+      - {x: 9, y: 251}
+      - {x: 9, y: 269}
+    - - {x: 55, y: 290}
+      - {x: 44, y: 290}
+      - {x: 40, y: 289}
+      - {x: 37, y: 274}
+      - {x: 37, y: 248}
+      - {x: 45, y: 244}
+      - {x: 55, y: 244}
+      - {x: 59, y: 259}
+      - {x: 59, y: 282}
+    - - {x: 105, y: 290}
+      - {x: 94, y: 290}
+      - {x: 90, y: 283}
+      - {x: 84, y: 258}
+      - {x: 84, y: 247}
+      - {x: 87, y: 244}
+      - {x: 96, y: 244}
+      - {x: 105, y: 247}
+      - {x: 111, y: 257}
+      - {x: 111, y: 278}
+    - - {x: 163, y: 287}
+      - {x: 159, y: 291}
+      - {x: 143, y: 291}
+      - {x: 132, y: 285}
+      - {x: 128, y: 265}
+      - {x: 128, y: 248}
+      - {x: 133, y: 247}
+      - {x: 142, y: 255}
+      - {x: 146, y: 259}
+      - {x: 152, y: 245}
+      - {x: 154, y: 244}
+      - {x: 165, y: 244}
+      - {x: 167, y: 245}
+      - {x: 167, y: 272}
+      - {x: 166, y: 277}
+    - - {x: 193, y: 290}
+      - {x: 180, y: 270}
+      - {x: 180, y: 259}
+      - {x: 181, y: 257}
+      - {x: 202, y: 251}
+      - {x: 203, y: 244}
+      - {x: 215, y: 244}
+      - {x: 215, y: 261}
+      - {x: 213, y: 269}
+      - {x: 213, y: 278}
+      - {x: 204, y: 290}
+    - - {x: -146, y: 341}
+      - {x: -159, y: 341}
+      - {x: -163, y: 326}
+      - {x: -163, y: 295}
+      - {x: -161, y: 294}
+      - {x: -142, y: 294}
+      - {x: -141, y: 296}
+      - {x: -141, y: 329}
+      - {x: -144, y: 340}
+    - - {x: -108, y: 341}
+      - {x: -110, y: 340}
+      - {x: -113, y: 320}
+      - {x: -113, y: 294}
+      - {x: -93, y: 294}
+      - {x: -91, y: 296}
+      - {x: -91, y: 327}
+      - {x: -97, y: 341}
+    - - {x: 146, y: 341}
+      - {x: 142, y: 339}
+      - {x: 137, y: 327}
+      - {x: 137, y: 296}
+      - {x: 140, y: 294}
+      - {x: 159, y: 294}
+      - {x: 159, y: 330}
+      - {x: 153, y: 341}
+    - - {x: 187, y: 341}
+      - {x: 187, y: 294}
+      - {x: 207, y: 294}
+      - {x: 209, y: 295}
+      - {x: 209, y: 322}
+      - {x: 204, y: 341}
+    - - {x: -167, y: 389}
+      - {x: -169, y: 384}
+      - {x: -169, y: 374}
+      - {x: -160, y: 345}
+      - {x: -137, y: 345}
+      - {x: -136, y: 346}
+      - {x: -136, y: 378}
+      - {x: -155, y: 389}
+    - - {x: 211, y: 389}
+      - {x: 198, y: 389}
+      - {x: 186, y: 384}
+      - {x: 182, y: 374}
+      - {x: 181, y: 370}
+      - {x: 181, y: 347}
+      - {x: 184, y: 346}
+      - {x: 204, y: 346}
+      - {x: 204, y: 347}
+      - {x: 214, y: 377}
+      - {x: 214, y: 383}
+    - - {x: -107, y: 385}
+      - {x: -115, y: 371}
+      - {x: -115, y: 353}
+      - {x: -112, y: 349}
+      - {x: -90, y: 349}
+      - {x: -90, y: 385}
+    - - {x: -54, y: 385}
+      - {x: -65, y: 376}
+      - {x: -65, y: 350}
+      - {x: -63, y: 349}
+      - {x: -40, y: 349}
+      - {x: -40, y: 379}
+      - {x: -42, y: 385}
+    - - {x: -4, y: 385}
+      - {x: -15, y: 376}
+      - {x: -15, y: 350}
+      - {x: -13, y: 349}
+      - {x: 10, y: 349}
+      - {x: 10, y: 379}
+      - {x: 8, y: 385}
+    - - {x: 52, y: 385}
+      - {x: 39, y: 385}
+      - {x: 35, y: 383}
+      - {x: 35, y: 349}
+      - {x: 59, y: 349}
+      - {x: 60, y: 354}
+      - {x: 60, y: 376}
+    - - {x: 90, y: 385}
+      - {x: 85, y: 383}
+      - {x: 85, y: 351}
+      - {x: 86, y: 349}
+      - {x: 110, y: 349}
+      - {x: 110, y: 375}
+      - {x: 102, y: 385}
+    - - {x: 138, y: 385}
+      - {x: 135, y: 381}
+      - {x: 135, y: 349}
+      - {x: 160, y: 349}
+      - {x: 160, y: 385}
+    - - {x: -145, y: 438}
+      - {x: -166, y: 438}
+      - {x: -168, y: 436}
+      - {x: -168, y: 399}
+      - {x: -164, y: 396}
+      - {x: -136, y: 396}
+      - {x: -136, y: 425}
+      - {x: -139, y: 437}
+    - - {x: 212, y: 438}
+      - {x: 201, y: 438}
+      - {x: 182, y: 430}
+      - {x: 182, y: 397}
+      - {x: 205, y: 397}
+      - {x: 207, y: 417}
+      - {x: 214, y: 428}
+      - {x: 214, y: 434}
+    - - {x: -106, y: 435}
+      - {x: -115, y: 424}
+      - {x: -115, y: 405}
+      - {x: -114, y: 399}
+      - {x: -92, y: 399}
+      - {x: -90, y: 402}
+      - {x: -90, y: 433}
+      - {x: -95, y: 435}
+    - - {x: -34, y: 445}
+      - {x: -40, y: 455}
+      - {x: -38, y: 475}
+      - {x: -44, y: 481}
+      - {x: -61, y: 487}
+      - {x: -68, y: 487}
+      - {x: -70, y: 483}
+      - {x: -70, y: 478}
+      - {x: -60, y: 464}
+      - {x: -58, y: 436}
+      - {x: -68, y: 419}
+      - {x: -64, y: 408}
+      - {x: -62, y: 400}
+      - {x: -60, y: 399}
+      - {x: -41, y: 399}
+      - {x: -38, y: 410}
+      - {x: -38, y: 430}
+      - {x: -34, y: 439}
+    - - {x: -6, y: 435}
+      - {x: -15, y: 423}
+      - {x: -15, y: 409}
+      - {x: -12, y: 400}
+      - {x: -10, y: 399}
+      - {x: 10, y: 399}
+      - {x: 10, y: 433}
+      - {x: 6, y: 435}
+    - - {x: 35, y: 400}
+      - {x: 36, y: 399}
+      - {x: 60, y: 399}
+      - {x: 60, y: 435}
+      - {x: 39, y: 435}
+      - {x: 35, y: 430}
+    - - {x: 101, y: 462}
+      - {x: 116, y: 477}
+      - {x: 116, y: 484}
+      - {x: 115, y: 486}
+      - {x: 103, y: 486}
+      - {x: 89, y: 483}
+      - {x: 83, y: 474}
+      - {x: 86, y: 452}
+      - {x: 80, y: 443}
+      - {x: 80, y: 436}
+      - {x: 84, y: 430}
+      - {x: 83, y: 402}
+      - {x: 85, y: 399}
+      - {x: 109, y: 399}
+      - {x: 113, y: 420}
+      - {x: 105, y: 426}
+      - {x: 107, y: 456}
+    - - {x: 135, y: 401}
+      - {x: 136, y: 399}
+      - {x: 160, y: 399}
+      - {x: 160, y: 435}
+      - {x: 138, y: 435}
+      - {x: 135, y: 432}
+    - - {x: 7, y: 484}
+      - {x: -9, y: 484}
+      - {x: -20, y: 464}
+      - {x: -20, y: 452}
+      - {x: -12, y: 438}
+      - {x: 12, y: 438}
+      - {x: 15, y: 443}
+      - {x: 15, y: 457}
+      - {x: 11, y: 480}
+    - - {x: 33, y: 484}
+      - {x: 34, y: 467}
+      - {x: 30, y: 456}
+      - {x: 30, y: 442}
+      - {x: 32, y: 438}
+      - {x: 56, y: 438}
+      - {x: 65, y: 451}
+      - {x: 65, y: 468}
+      - {x: 59, y: 484}
+    - - {x: -109, y: 484}
+      - {x: -117, y: 484}
+      - {x: -118, y: 483}
+      - {x: -118, y: 470}
+      - {x: -115, y: 461}
+      - {x: -114, y: 442}
+      - {x: -87, y: 442}
+      - {x: -87, y: 474}
+      - {x: -96, y: 481}
+    - - {x: 163, y: 483}
+      - {x: 161, y: 484}
+      - {x: 137, y: 484}
+      - {x: 132, y: 470}
+      - {x: 132, y: 443}
+      - {x: 133, y: 442}
+      - {x: 153, y: 442}
+      - {x: 159, y: 447}
+      - {x: 159, y: 462}
+      - {x: 163, y: 473}
+    - - {x: -144, y: 483}
+      - {x: -154, y: 483}
+      - {x: -166, y: 463}
+      - {x: -167, y: 461}
+      - {x: -167, y: 456}
+      - {x: -159, y: 443}
+      - {x: -137, y: 443}
+      - {x: -137, y: 467}
+      - {x: -138, y: 477}
+    - - {x: 213, y: 464}
+      - {x: 201, y: 483}
+      - {x: 191, y: 483}
+      - {x: 183, y: 475}
+      - {x: 183, y: 443}
+      - {x: 204, y: 443}
+      - {x: 206, y: 448}
+      - {x: 213, y: 453}
+    - - {x: -100, y: 544}
+      - {x: -107, y: 544}
+      - {x: -112, y: 542}
+      - {x: -114, y: 535}
+      - {x: -114, y: 486}
+      - {x: -93, y: 486}
+      - {x: -90, y: 491}
+      - {x: -90, y: 509}
+      - {x: -91, y: 520}
+    - - {x: -48, y: 542}
+      - {x: -53, y: 544}
+      - {x: -60, y: 544}
+      - {x: -61, y: 542}
+      - {x: -64, y: 529}
+      - {x: -64, y: 486}
+      - {x: -43, y: 486}
+      - {x: -40, y: 491}
+      - {x: -40, y: 506}
+      - {x: -43, y: 527}
+    - - {x: 104, y: 544}
+      - {x: 96, y: 544}
+      - {x: 88, y: 526}
+      - {x: 86, y: 515}
+      - {x: 86, y: 490}
+      - {x: 88, y: 486}
+      - {x: 110, y: 486}
+      - {x: 110, y: 528}
+      - {x: 108, y: 542}
+    - - {x: 156, y: 544}
+      - {x: 147, y: 544}
+      - {x: 143, y: 542}
+      - {x: 138, y: 526}
+      - {x: 136, y: 516}
+      - {x: 136, y: 490}
+      - {x: 138, y: 486}
+      - {x: 159, y: 486}
+      - {x: 160, y: 489}
+      - {x: 160, y: 539}
+    - - {x: -144, y: 535}
+      - {x: -158, y: 542}
+      - {x: -167, y: 542}
+      - {x: -170, y: 541}
+      - {x: -170, y: 532}
+      - {x: -163, y: 517}
+      - {x: -158, y: 488}
+      - {x: -137, y: 488}
+      - {x: -134, y: 493}
+      - {x: -134, y: 507}
+      - {x: -138, y: 529}
+    - - {x: 203, y: 542}
+      - {x: 190, y: 536}
+      - {x: 183, y: 529}
+      - {x: 180, y: 513}
+      - {x: 180, y: 493}
+      - {x: 182, y: 489}
+      - {x: 207, y: 489}
+      - {x: 215, y: 519}
+      - {x: 215, y: 540}
+      - {x: 210, y: 542}
+    - - {x: 9, y: 532}
+      - {x: 5, y: 539}
+      - {x: -5, y: 539}
+      - {x: -16, y: 522}
+      - {x: -16, y: 506}
+      - {x: -13, y: 495}
+      - {x: 10, y: 495}
+      - {x: 11, y: 498}
+      - {x: 11, y: 507}
+      - {x: 8, y: 510}
+    - - {x: 51, y: 539}
+      - {x: 41, y: 539}
+      - {x: 34, y: 532}
+      - {x: 34, y: 498}
+      - {x: 35, y: 495}
+      - {x: 56, y: 495}
+      - {x: 58, y: 500}
+      - {x: 61, y: 515}
+      - {x: 61, y: 525}
+    - - {x: -144, y: 588}
+      - {x: -161, y: 594}
+      - {x: -168, y: 594}
+      - {x: -170, y: 590}
+      - {x: -170, y: 585}
+      - {x: -160, y: 571}
+      - {x: -158, y: 541}
+      - {x: -137, y: 541}
+      - {x: -134, y: 546}
+      - {x: -134, y: 560}
+      - {x: -138, y: 582}
+    - - {x: 203, y: 593}
+      - {x: 189, y: 590}
+      - {x: 183, y: 581}
+      - {x: 180, y: 565}
+      - {x: 180, y: 545}
+      - {x: 182, y: 541}
+      - {x: 205, y: 541}
+      - {x: 207, y: 563}
+      - {x: 215, y: 579}
+      - {x: 215, y: 593}
+    - - {x: -96, y: 591}
+      - {x: -105, y: 591}
+      - {x: -117, y: 576}
+      - {x: -117, y: 568}
+      - {x: -113, y: 544}
+      - {x: -90, y: 544}
+      - {x: -87, y: 546}
+      - {x: -87, y: 559}
+      - {x: -92, y: 587}
+    - - {x: -46, y: 591}
+      - {x: -56, y: 591}
+      - {x: -67, y: 579}
+      - {x: -67, y: 568}
+      - {x: -64, y: 553}
+      - {x: -62, y: 544}
+      - {x: -42, y: 544}
+      - {x: -37, y: 546}
+      - {x: -37, y: 562}
+      - {x: -42, y: 584}
+    - - {x: 4, y: 591}
+      - {x: -6, y: 591}
+      - {x: -17, y: 579}
+      - {x: -17, y: 568}
+      - {x: -14, y: 553}
+      - {x: -12, y: 544}
+      - {x: 8, y: 544}
+      - {x: 13, y: 546}
+      - {x: 13, y: 562}
+      - {x: 8, y: 584}
+    - - {x: 56, y: 589}
+      - {x: 51, y: 591}
+      - {x: 42, y: 591}
+      - {x: 36, y: 584}
+      - {x: 37, y: 565}
+      - {x: 33, y: 558}
+      - {x: 33, y: 544}
+      - {x: 58, y: 544}
+      - {x: 59, y: 545}
+      - {x: 63, y: 564}
+      - {x: 63, y: 581}
+    - - {x: 106, y: 589}
+      - {x: 101, y: 591}
+      - {x: 90, y: 591}
+      - {x: 85, y: 588}
+      - {x: 83, y: 572}
+      - {x: 83, y: 548}
+      - {x: 86, y: 544}
+      - {x: 106, y: 544}
+      - {x: 109, y: 545}
+      - {x: 113, y: 564}
+      - {x: 113, y: 581}
+    - - {x: 156, y: 589}
+      - {x: 151, y: 591}
+      - {x: 140, y: 591}
+      - {x: 135, y: 588}
+      - {x: 133, y: 572}
+      - {x: 133, y: 548}
+      - {x: 136, y: 544}
+      - {x: 156, y: 544}
+      - {x: 159, y: 545}
+      - {x: 163, y: 564}
+      - {x: 163, y: 581}
+    - - {x: -190, y: 597}
+      - {x: -188, y: 614}
+      - {x: -188, y: 640}
+      - {x: -189, y: 641}
+      - {x: -215, y: 641}
+      - {x: -215, y: 591}
+      - {x: -188, y: 591}
+      - {x: -188, y: 594}
+      - {x: -189, y: 595}
+    - - {x: -163, y: 641}
+      - {x: -165, y: 634}
+      - {x: -165, y: 595}
+      - {x: -158, y: 592}
+      - {x: -144, y: 592}
+      - {x: -140, y: 598}
+      - {x: -140, y: 637}
+      - {x: -146, y: 641}
+    - - {x: 189, y: 641}
+      - {x: 186, y: 637}
+      - {x: 186, y: 629}
+      - {x: 189, y: 608}
+      - {x: 186, y: 599}
+      - {x: 186, y: 595}
+      - {x: 188, y: 592}
+      - {x: 210, y: 592}
+      - {x: 210, y: 640}
+      - {x: 208, y: 641}
+    - - {x: -90, y: 638}
+      - {x: -97, y: 641}
+      - {x: -108, y: 641}
+      - {x: -117, y: 624}
+      - {x: -117, y: 620}
+      - {x: -112, y: 594}
+      - {x: -90, y: 594}
+      - {x: -87, y: 596}
+      - {x: -87, y: 607}
+      - {x: -91, y: 624}
+    - - {x: -42, y: 634}
+      - {x: -46, y: 641}
+      - {x: -56, y: 641}
+      - {x: -67, y: 626}
+      - {x: -67, y: 618}
+      - {x: -62, y: 594}
+      - {x: -42, y: 594}
+      - {x: -37, y: 596}
+      - {x: -37, y: 604}
+      - {x: -42, y: 615}
+    - - {x: 8, y: 634}
+      - {x: 4, y: 641}
+      - {x: -6, y: 641}
+      - {x: -17, y: 626}
+      - {x: -17, y: 618}
+      - {x: -12, y: 594}
+      - {x: 8, y: 594}
+      - {x: 13, y: 596}
+      - {x: 13, y: 604}
+      - {x: 8, y: 615}
+    - - {x: 56, y: 638}
+      - {x: 50, y: 641}
+      - {x: 42, y: 641}
+      - {x: 36, y: 634}
+      - {x: 39, y: 615}
+      - {x: 33, y: 606}
+      - {x: 33, y: 595}
+      - {x: 34, y: 594}
+      - {x: 55, y: 594}
+      - {x: 57, y: 596}
+      - {x: 63, y: 616}
+      - {x: 63, y: 629}
+    - - {x: 106, y: 638}
+      - {x: 100, y: 641}
+      - {x: 92, y: 641}
+      - {x: 86, y: 634}
+      - {x: 87, y: 615}
+      - {x: 83, y: 608}
+      - {x: 83, y: 594}
+      - {x: 105, y: 594}
+      - {x: 107, y: 596}
+      - {x: 113, y: 616}
+      - {x: 113, y: 629}
+    - - {x: 163, y: 633}
+      - {x: 153, y: 641}
+      - {x: 138, y: 641}
+      - {x: 135, y: 638}
+      - {x: 133, y: 622}
+      - {x: 133, y: 598}
+      - {x: 136, y: 594}
+      - {x: 155, y: 594}
+      - {x: 157, y: 596}
+      - {x: 163, y: 609}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
