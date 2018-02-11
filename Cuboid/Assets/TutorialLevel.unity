@@ -11906,11 +11906,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4686034476788358, guid: e589d71cbb1ea8941bd568773b079766, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -7.21
+      value: -6.89
       objectReference: {fileID: 0}
     - target: {fileID: 4686034476788358, guid: e589d71cbb1ea8941bd568773b079766, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.46
+      value: 1.49
       objectReference: {fileID: 0}
     - target: {fileID: 4686034476788358, guid: e589d71cbb1ea8941bd568773b079766, type: 2}
       propertyPath: m_LocalPosition.z
@@ -12466,7 +12466,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4034927907181318, guid: c0d7da662f82bc74d9da1b1f12493042, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.38
+      value: -4.73
       objectReference: {fileID: 0}
     - target: {fileID: 4034927907181318, guid: c0d7da662f82bc74d9da1b1f12493042, type: 2}
       propertyPath: m_LocalPosition.z
@@ -12520,7 +12520,7 @@ Prefab:
     - target: {fileID: 114543104448875954, guid: c0d7da662f82bc74d9da1b1f12493042,
         type: 2}
       propertyPath: comp.deplacement
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 50703467948834346, guid: c0d7da662f82bc74d9da1b1f12493042,
         type: 2}
@@ -12535,7 +12535,7 @@ Prefab:
     - target: {fileID: 114543104448875954, guid: c0d7da662f82bc74d9da1b1f12493042,
         type: 2}
       propertyPath: comp.dmgAttaque
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114543104448875954, guid: c0d7da662f82bc74d9da1b1f12493042,
         type: 2}
@@ -12556,6 +12556,20 @@ Prefab:
         type: 2}
       propertyPath: facingRight
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114543104448875954, guid: c0d7da662f82bc74d9da1b1f12493042,
+        type: 2}
+      propertyPath: distActivation
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1171337023374186, guid: c0d7da662f82bc74d9da1b1f12493042, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114543104448875954, guid: c0d7da662f82bc74d9da1b1f12493042,
+        type: 2}
+      propertyPath: direction.x
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c0d7da662f82bc74d9da1b1f12493042, type: 2}
@@ -12612,7 +12626,7 @@ Prefab:
     - target: {fileID: 114423212518679096, guid: 85ee787e8fae0bf47a4ab1aaca41a6de,
         type: 2}
       propertyPath: comp.attaque
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1121619541646682, guid: 85ee787e8fae0bf47a4ab1aaca41a6de, type: 2}
       propertyPath: m_IsActive
@@ -12622,6 +12636,31 @@ Prefab:
         type: 2}
       propertyPath: facingRight
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114423212518679096, guid: 85ee787e8fae0bf47a4ab1aaca41a6de,
+        type: 2}
+      propertyPath: comp.dmgAttaque
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114423212518679096, guid: 85ee787e8fae0bf47a4ab1aaca41a6de,
+        type: 2}
+      propertyPath: comp.eRadius
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114423212518679096, guid: 85ee787e8fae0bf47a4ab1aaca41a6de,
+        type: 2}
+      propertyPath: comp.ePower
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 114423212518679096, guid: 85ee787e8fae0bf47a4ab1aaca41a6de,
+        type: 2}
+      propertyPath: distActivation
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114423212518679096, guid: 85ee787e8fae0bf47a4ab1aaca41a6de,
+        type: 2}
+      propertyPath: comp.deplacement
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 85ee787e8fae0bf47a4ab1aaca41a6de, type: 2}
