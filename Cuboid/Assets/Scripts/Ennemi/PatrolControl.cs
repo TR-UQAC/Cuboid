@@ -10,18 +10,15 @@ public class PatrolControl : MonoBehaviour {
     public Vector2 direction;
 
     public LayerMask detectWhat;
-
-    public Transform lEC; //leftEdgeCheck
     public float edgeCheckRadius;
 
     public Transform sightStart;
     public Transform sightEnd;
 
-    private Transform myTransform;
+    public Transform lEC; //leftEdgeCheck
 
     void Start () {
-        rb = this.GetComponent<Rigidbody2D>() as Rigidbody2D;
-        myTransform = transform;
+        rb = this.GetComponent<Rigidbody2D>();
 
         sightStart = transform.Find("sightStart");
         sightEnd = transform.Find("sightEnd");
@@ -31,9 +28,9 @@ public class PatrolControl : MonoBehaviour {
 	
 	public Vector2 checkDirection() {
             if (detectColH() || !detectEdge() && rb.gravityScale != 0) {
-                myTransform.localScale = new Vector2(myTransform.localScale.x*-1, 1);
+                transform.localScale = new Vector2(transform.localScale.x*-1, 1);
                 rb.velocity = new Vector2(-rb.velocity.x/10, rb.velocity.y);
-                direction.x *= -1;
+            direction.x *= -1;
         }
         return direction;
     }

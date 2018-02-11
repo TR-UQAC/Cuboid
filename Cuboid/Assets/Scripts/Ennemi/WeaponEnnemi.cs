@@ -22,7 +22,7 @@ public class WeaponEnnemi : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        Ennemis.Comportement comp = GetComponent<Ennemis>().comp as Ennemis.Comportement;
+        Ennemis.Comportement comp = GetComponent<Ennemis>().comp;
         attaqueCooldown = 0f;
 
         ePower          = comp.ePower;
@@ -55,7 +55,7 @@ public class WeaponEnnemi : MonoBehaviour {
 
             attaqueCooldown = fireRate;
 
-            Bullet bul = Instantiate(attaquePrefab, firePoint.position, firePoint.rotation).GetComponent<Bullet>() as Bullet;
+            Bullet bul = Instantiate(attaquePrefab, firePoint.position, firePoint.rotation).GetComponent<Bullet>();
             bul.noHit = noHit;
             bul.dommageHit = dommageHit;
             bul.facingRight = facingRight;

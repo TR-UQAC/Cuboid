@@ -19,7 +19,7 @@ public class Bullet : MonoBehaviour {
     // Use this for initialization
     void Start () {
         
-        m_Rigidbody2D = GetComponent<Rigidbody2D>() as Rigidbody2D;
+        m_Rigidbody2D = GetComponent<Rigidbody2D>();
 
         if (!facingRight)
         {
@@ -41,7 +41,7 @@ public class Bullet : MonoBehaviour {
         GameObject go = other.gameObject;
         if (noHit != (noHit | (1 << go.layer))) {
             if (dommageHit == (dommageHit | (1 << go.layer))) {
-                Personnages en = go.GetComponent<Personnages>() as Personnages;
+                Personnages en = (Personnages)go.GetComponent(typeof(Personnages));
                 en.DommagePerso(dmg);
             }
             //TODO: Effet particule de contact

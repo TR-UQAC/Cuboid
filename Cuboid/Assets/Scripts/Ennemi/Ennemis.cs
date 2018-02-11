@@ -12,18 +12,15 @@ public class Ennemis : Personnages {
     public enum typeAttaque { Rien = 0, Tirer = 1, Kamikaze = 2, Explosion = 3}
     public enum typeDeplac { Immobile = 0, Voler = 1, Glisser = 2 }
 
-    public float distActivation = 50;
-
     private PlayerCharacter2D en;
     private bool searchingForPlayer = false;
 
     public PersoStats ennemiStats = new PersoStats();
-    public Comportement comp;
 
     private Rigidbody2D rb;
-    private EnnemiAI artIntel;
     private WeaponEnnemi weapon;
     private PatrolControl control;
+    public Comportement comp;
 
     public Vector2 direction;
     public bool facingRight = false;
@@ -32,8 +29,8 @@ public class Ennemis : Personnages {
 
     private void OnCollisionEnter2D(Collision2D collision) {
         GameObject go = collision.gameObject;
-
         if (go.tag == "Player") {
+
             if(comp.contact)
                 en.DommagePerso(comp.dmgContact);
             
@@ -41,6 +38,7 @@ public class Ennemis : Personnages {
                 weapon.Explosion(comp.dmgAttaque, en);
                 GameMaster.KillEnnemi(this);
             }
+            
         }
     }
 
@@ -59,18 +57,17 @@ public class Ennemis : Personnages {
     }
 
     private void Start() {
-        rb = GetComponent<Rigidbody2D>() as Rigidbody2D;
-
-        if (GetComponent<EnnemiAI>() != null) {
+        rb = this.GetComponent<Rigidbody2D>();
+        if (this.GetComponent<EnnemiAI>() != null) {
             ia = true;
-            artIntel = GetComponent<EnnemiAI>() as EnnemiAI;
-        }
+        } else
+            direction = new Vector3(-1f, 0f, 0f);
 
-        if (GetComponent<WeaponEnnemi>() != null)
-            weapon = GetComponent<WeaponEnnemi>() as WeaponEnnemi;
+        if (this.GetComponent<WeaponEnnemi>() != null)
+            weapon = this.GetComponent<WeaponEnnemi>();
 
-        if (GetComponent<PatrolControl>() != null)
-            control = GetComponent<PatrolControl>() as PatrolControl;
+        if (this.GetComponent<PatrolControl>() != null)
+            control = this.GetComponent<PatrolControl>();
 
         rb.gravityScale = (comp.deplacement == typeDeplac.Voler) ? 0 : rb.gravityScale;
 
@@ -82,16 +79,15 @@ public class Ennemis : Personnages {
             return;
         }
 
-        //enabled = false;
-        StartCoroutine(CheckDistance());
+        enabled = false;
     }
 
     private void FixedUpdate() {
 
-        if (ia)
-            artIntel.iaUpdate();
-        else if (control != null)
+        if (!ia) {
             direction = control.checkDirection();
+        } else
+            GetComponent<EnnemiAI>().iaUpdate();
 
         if (en == null) {
             if (!searchingForPlayer) {
@@ -104,7 +100,7 @@ public class Ennemis : Personnages {
         if (comp.deplacement != typeDeplac.Immobile)
             Deplacement(direction);
 
-        Attaque();
+            Attaque();
     }
 
     public void Attaque() {
@@ -145,7 +141,7 @@ public class Ennemis : Personnages {
         if (!ia)
             facingRight = (dir.x > 0) ? true : false;
         else {
-            if (artIntel.target.transform.position.x < this.transform.position.x)
+            if (this.GetComponent<EnnemiAI>().target.transform.position.x < this.transform.position.x)
                 facingRight = false;
             else
                 facingRight = true;
@@ -172,46 +168,23 @@ public class Ennemis : Personnages {
     }
 
     //**** Désactivation des ennemis quand il ne sont pas vu ****//
-    /*
+    
     void OnBecameVisible() {
         enabled = true;
     }
-    */
     /*
     void OnBecameInvisible() {
         enabled = false;
     }
     */
-
-    //**** Activation/ Desactivation par rapport à la distance ****//
-    IEnumerator CheckDistance() {
-        //Debug.Log("Check dist : " + distActivation);
-        if (en == null) {
-            if (!searchingForPlayer) {
-                searchingForPlayer = true;
-                StartCoroutine(SearchForPlayer());
-            }
-            yield break;
-        }
-
-        if ((en.transform.position - transform.position).sqrMagnitude < distActivation * distActivation)
-            enabled = true;
-        else
-            enabled = false;
-
-        yield return new WaitForSeconds(5f);
-        StartCoroutine(CheckDistance());
-    }
-
     IEnumerator SearchForPlayer() {
         GameObject sResult = GameObject.FindGameObjectWithTag("Player");
         if (sResult == null) {
             yield return new WaitForSeconds(0.5f);
             StartCoroutine(SearchForPlayer());
         } else {
-            en = sResult.GetComponent<PlayerCharacter2D>() as PlayerCharacter2D;
+            en = (PlayerCharacter2D)sResult.GetComponent(typeof(PlayerCharacter2D));
             searchingForPlayer = false;
-            StartCoroutine(CheckDistance());
             yield break;
         }
     }

@@ -240,7 +240,7 @@ MonoBehaviour:
     m_Bits: 6656
   dommageHit:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 0
   attackPrefab: {fileID: 0}
 --- !u!114 &114543104448875954
 MonoBehaviour:
@@ -253,13 +253,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8577aa4a7e2f2548867055835ff8ab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distActivation: 20
   ennemiStats:
     vie: 100
     vieMax: 100
     m_JumpForce: 1000
     speed: 250
-    maxSpeed: 10
     fMode: 0
     resitGlace: 0
     resitPoison: 0
@@ -272,13 +270,14 @@ MonoBehaviour:
     dmgContact: 10
     attaque: 1
     dmgAttaque: 0
-    fireRate: 0.5
+    firegRate: 0.5
     ePower: 0
     eRadius: 0
     upwardsModifier: 0
     deplacement: 2
   direction: {x: 0, y: 0}
   facingRight: 0
+  maxSpeed: 10
 --- !u!114 &114916545814430656
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -294,10 +293,10 @@ MonoBehaviour:
   detectWhat:
     serializedVersion: 2
     m_Bits: 1024
-  lEC: {fileID: 4354862634213932}
   edgeCheckRadius: 0.02
   sightStart: {fileID: 4428273870213594}
   sightEnd: {fileID: 4614105502142198}
+  lEC: {fileID: 4354862634213932}
 --- !u!212 &212210370922209052
 SpriteRenderer:
   m_ObjectHideFlags: 1
