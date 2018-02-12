@@ -1,35 +1,31 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class WeaponEnnemi : MonoBehaviour {
 
-    public GameObject attaquePrefab;
+    public GameObject bulletPrefab;
 
     public LayerMask noHit;
     public LayerMask dommageHit;
 
     private Transform firePoint;
-    public  Transform attackPrefab;
+    public  Transform effetAttaquePrefab;
 
-    private float fireRate;
+    //private float fireRate;
     private float attaqueCooldown;
 
     //Les parametres pour les explosion
-    private float ePower;
-    private float eRadius;
-    private float upwardsModifier;
-
+    [Tooltip("Utilisé pour les explosion et les balles")]
+    [Header("Paramètre d'explosion")]
+    public float eForce;
+    public float eRadius;
+    public float upwardsModifier;
+    
     // Use this for initialization
     void Start () {
-        Ennemis.Comportement comp = GetComponent<Ennemis>().comp as Ennemis.Comportement;
         attaqueCooldown = 0f;
-
-        ePower          = comp.ePower;
-        eRadius         = comp.eRadius;
-        fireRate       = comp.fireRate;
-        upwardsModifier = comp.upwardsModifier;
-
     }
 
     void Awake() {
@@ -45,38 +41,46 @@ public class WeaponEnnemi : MonoBehaviour {
         }
     }
 
-    public void Tirer(bool facingRight, int dmg) {
+    public void Tirer(bool facingRight, int dmg, float fireRate) {
         if (CanAttack) {
             //TODO: Création d'un effet tirer
-            if (attackPrefab != null) {
-                Transform clone = Instantiate(attackPrefab, firePoint.position, firePoint.rotation) as Transform;
+            if (effetAttaquePrefab != null) {
+                Transform clone = Instantiate(effetAttaquePrefab, firePoint.position, firePoint.rotation) as Transform;
                 Destroy(clone.gameObject, 3f);
             }
 
             attaqueCooldown = fireRate;
 
-            Bullet bul = Instantiate(attaquePrefab, firePoint.position, firePoint.rotation).GetComponent<Bullet>() as Bullet;
+            if (bulletPrefab == null) {
+                Debug.LogWarning("Il n'y a aucun prefab de balle dans " + name);
+                return;
+            }
+            Bullet bul = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation).GetComponent<Bullet>() as Bullet;
             bul.noHit = noHit;
             bul.dommageHit = dommageHit;
             bul.facingRight = facingRight;
             bul.dmg = dmg;
 
+            bul.eForce          = eForce;
+            bul.eRadius         = eRadius;
+            bul.upwardsModifier = upwardsModifier;
+
             FindObjectOfType<AudioManager>().Play("Shoot");
         }
     }
 
-    public void Explosion(int dmg, PlayerCharacter2D pl) {
+    public void Explosion(int dmg, PlayerCharacter2D pl, float fireRate) {
         if (CanAttack) {
             //TODO: Répultion du joueur
             //TODO: Création d'un effet EXPLOSION
-            if (attackPrefab != null) {
-                Transform clone = Instantiate(attackPrefab, firePoint.position, firePoint.rotation) as Transform;
+            if (effetAttaquePrefab != null) {
+                Transform clone = Instantiate(effetAttaquePrefab, firePoint.position, firePoint.rotation) as Transform;
                 Destroy(clone.gameObject, 3f);
             }
 
             attaqueCooldown = fireRate;
 
-            if (pl.GetComponent<Rigidbody2D>().AddExplosionForce(ePower, firePoint.position, eRadius, upwardsModifier))
+            if (Rigidbody2DExt.AddExplosionForce(pl.GetComponent<Rigidbody2D>(), eForce, firePoint.position, eRadius, upwardsModifier))
                 pl.DommagePerso(dmg);
 
             //Debug.Log("EXPLOSION");
@@ -86,6 +90,11 @@ public class WeaponEnnemi : MonoBehaviour {
         }
     }
 
+    public void Contact(int dmg, PlayerCharacter2D pl, float f, float r, float upM) {
+        Rigidbody2DExt.AddExplosionForce(pl.GetComponent<Rigidbody2D>(), f, firePoint.position, r, upM);
+        pl.DommagePerso(dmg);
+        Debug.Log("Dommage contact");
+    }
 
     public bool CanAttack {
         get {
