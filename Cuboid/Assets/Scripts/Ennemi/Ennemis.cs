@@ -8,7 +8,7 @@ using UnityEditor;
 [DisallowMultipleComponent]
 [RequireComponent(typeof(Rigidbody2D))]
 public class Ennemis : Personnages {
-    
+#region Variable
     public enum typeAttaque { Rien = 0, Tirer = 1, Kamikaze = 2, Explosion = 3}
     public enum typeDeplac { Immobile = 0, Voler = 1, Glisser = 2 }
 
@@ -30,16 +30,19 @@ public class Ennemis : Personnages {
     private Transform myTransform;
 
     private bool ia = false;
+    #endregion
 
+#region Collision
     private void OnCollisionEnter2D(Collision2D collision) {
         GameObject go = collision.gameObject;
 
         if (go.tag == "Player") {
-            if(comp.contact)
-                en.DommagePerso(comp.dmgContact);
+            if (comp.contact)
+                weapon.Contact(comp.dmgAttaque, en, comp.ePower, comp.eRadius, comp.upwardsModifier);
+
             
             if (comp.attaque == typeAttaque.Kamikaze) {
-                weapon.Explosion(comp.dmgAttaque, en);
+                weapon.Explosion(comp.dmgAttaque, en, comp.fireRate);
                 GameMaster.KillEnnemi(this);
             }
         }
@@ -50,7 +53,8 @@ public class Ennemis : Personnages {
         if (go.tag == "KillZone")
             GameMaster.KillEnnemi(this);
     }
-
+#endregion
+    
     public override void DommagePerso(int dommage) {
         if (!ennemiStats.immortel) {
             ennemiStats.vie -= dommage;
@@ -117,11 +121,11 @@ public class Ennemis : Personnages {
     public void Attaque() {
         switch (comp.attaque) {
             case typeAttaque.Tirer:
-                weapon.Tirer(facingRight, comp.dmgAttaque);
+                weapon.Tirer(facingRight, comp.dmgAttaque, comp.fireRate);
                 break;
 
             case typeAttaque.Explosion:
-                weapon.Explosion(comp.dmgAttaque, en);
+                weapon.Explosion(comp.dmgAttaque, en, comp.fireRate);
                 break;
 
             default:
@@ -165,22 +169,19 @@ public class Ennemis : Personnages {
         public bool contact;
         public int dmgContact = 0;
 
+        public float ePower = 0;
+        public float eRadius = 0;
+        public float upwardsModifier = 0;
+
         public typeAttaque attaque;
 
         public int dmgAttaque;
-        [Tooltip("Mise à jour dans le start de WeaponEnnemi")]
         public float fireRate = 0.5f;
-
-        [Tooltip("Mise à jour dans le start de WeaponEnnemi")]
-        public float ePower;
-        [Tooltip("Mise à jour dans le start de WeaponEnnemi")]
-        public float eRadius;
-        [Tooltip("Mise à jour dans le start de WeaponEnnemi")]
-        public float upwardsModifier;
 
         public typeDeplac deplacement;
     }
 
+#region Activation
     //**** Désactivation des ennemis quand il ne sont pas vu ****//
     /*
     void OnBecameVisible() {
@@ -212,7 +213,7 @@ public class Ennemis : Personnages {
         yield return new WaitForSeconds(5f);
         StartCoroutine(CheckDistance());
     }
-
+#endregion
     IEnumerator SearchForPlayer() {
         GameObject sResult = GameObject.FindGameObjectWithTag("Player");
         if (sResult == null) {
@@ -225,4 +226,6 @@ public class Ennemis : Personnages {
             yield break;
         }
     }
+    
+
 }

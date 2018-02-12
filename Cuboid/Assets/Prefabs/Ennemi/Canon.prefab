@@ -119,7 +119,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.052672297}
   m_SpriteTilingProperty:
@@ -145,15 +145,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8654fd578b60cb48b86175d977ed373, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attaquePrefab: {fileID: 1670978521406608, guid: e4a60708d73f3c045a81e69e97ad689e,
+  bulletPrefab: {fileID: 1670978521406608, guid: e4a60708d73f3c045a81e69e97ad689e,
     type: 2}
   noHit:
     serializedVersion: 2
-    m_Bits: 6656
+    m_Bits: 4294967039
   dommageHit:
     serializedVersion: 2
     m_Bits: 256
-  attackPrefab: {fileID: 0}
+  effetAttaquePrefab: {fileID: 0}
+  eForce: 1
+  eRadius: 10
+  upwardsModifier: 0
 --- !u!114 &114289145540984430
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -183,12 +186,12 @@ MonoBehaviour:
   comp:
     contact: 0
     dmgContact: 10
-    attaque: 1
-    dmgAttaque: 20
-    fireRate: 1.5
     ePower: 0
     eRadius: 0
     upwardsModifier: 0
+    attaque: 1
+    dmgAttaque: 20
+    fireRate: 1.5
     deplacement: 0
   direction: {x: 0, y: 0}
   facingRight: 1

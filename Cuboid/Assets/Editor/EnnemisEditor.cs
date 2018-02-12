@@ -95,7 +95,13 @@ public class EnnemisEditor : Editor {
                 EditorGUI.indentLevel++;
                 EditorGUILayout.IntSlider(dmgContact, 0, 100, "Dommage Contact");
                 ProgressBar(dmgContact.intValue / 100f, "Dommage");
+
+                EditorGUILayout.PropertyField(ePower, new GUIContent("Force répulsion"));
+                EditorGUILayout.PropertyField(eRadius, new GUIContent("Rayon répultion"));
+                EditorGUILayout.PropertyField(upwardsModifier, new GUIContent("Upwards Modifier"));
+
                 EditorGUI.indentLevel--;
+                EditorGUILayout.Space();
             }
 
             //***** Attaque *****//
@@ -112,13 +118,14 @@ public class EnnemisEditor : Editor {
             switch (tAttaque) {
                 case Ennemis.typeAttaque.Rien:
                     break;
-                    
+
+                case Ennemis.typeAttaque.Explosion:
                 case Ennemis.typeAttaque.Tirer:
                     EditorGUI.indentLevel++;
                     EditorGUILayout.PropertyField(fireRate, new GUIContent("Fire Rate"));
                     EditorGUI.indentLevel--;
                     break;
-
+                    /*
                 case Ennemis.typeAttaque.Kamikaze:
                     EditorGUI.indentLevel++;
                     EditorGUILayout.PropertyField(ePower, new GUIContent("Explosion Power"));
@@ -135,6 +142,7 @@ public class EnnemisEditor : Editor {
                     EditorGUILayout.PropertyField(upwardsModifier, new GUIContent("Upwards Modifier"));
                     EditorGUI.indentLevel--;
                     break;
+                    */
                 default:
                     break;
             }
