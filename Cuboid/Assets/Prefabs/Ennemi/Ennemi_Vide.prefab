@@ -145,8 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8654fd578b60cb48b86175d977ed373, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attaquePrefab: {fileID: 1670978521406608, guid: e4a60708d73f3c045a81e69e97ad689e,
-    type: 2}
+  attaquePrefab: {fileID: 0}
   noHit:
     serializedVersion: 2
     m_Bits: 6656
