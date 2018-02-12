@@ -79,7 +79,7 @@ public class WeaponEnnemi : MonoBehaviour {
             if (pl.GetComponent<Rigidbody2D>().AddExplosionForce(ePower, firePoint.position, eRadius, upwardsModifier))
                 pl.DommagePerso(dmg);
 
-            Debug.Log("EXPLOSION");
+            //Debug.Log("EXPLOSION");
 
 
             //TODO: ajouter un caméra shake

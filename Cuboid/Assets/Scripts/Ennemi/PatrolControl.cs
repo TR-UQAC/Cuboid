@@ -31,7 +31,7 @@ public class PatrolControl : MonoBehaviour {
 	
 	public Vector2 checkDirection() {
             if (detectColH() || !detectEdge() && rb.gravityScale != 0) {
-                myTransform.localScale = new Vector2(myTransform.localScale.x*-1, 1);
+                myTransform.localScale = new Vector2(myTransform.localScale.x*-1, myTransform.localScale.y);
                 rb.velocity = new Vector2(-rb.velocity.x/10, rb.velocity.y);
                 direction.x *= -1;
         }

@@ -6,7 +6,7 @@ using UnityEditor;
 
 
 [DisallowMultipleComponent]
-[RequireComponent(typeof(Rigidbody2D), typeof(WeaponEnnemi))]
+[RequireComponent(typeof(Rigidbody2D))]
 public class Ennemis : Personnages {
     
     public enum typeAttaque { Rien = 0, Tirer = 1, Kamikaze = 2, Explosion = 3}
@@ -27,6 +27,7 @@ public class Ennemis : Personnages {
 
     public Vector2 direction;
     public bool facingRight = false;
+    private Transform myTransform;
 
     private bool ia = false;
 
@@ -51,14 +52,18 @@ public class Ennemis : Personnages {
     }
 
     public override void DommagePerso(int dommage) {
-        ennemiStats.vie -= dommage;
-        if (ennemiStats.vie <= 0) {
-            GameMaster.KillEnnemi(this);
-            //TimeManager.DoSlowMotion();
+        if (!ennemiStats.immortel) {
+            ennemiStats.vie -= dommage;
+
+            if (ennemiStats.vie <= 0) {
+                GameMaster.KillEnnemi(this);
+                //TimeManager.DoSlowMotion();
+            }
         }
     }
 
     private void Start() {
+        myTransform = transform;
         rb = GetComponent<Rigidbody2D>() as Rigidbody2D;
 
         if (GetComponent<EnnemiAI>() != null) {
@@ -103,6 +108,8 @@ public class Ennemis : Personnages {
 
         if (comp.deplacement != typeDeplac.Immobile)
             Deplacement(direction);
+        else if (ia)
+            DirectionTarget();
 
         Attaque();
     }
@@ -125,6 +132,7 @@ public class Ennemis : Personnages {
     public void Deplacement(Vector2 dir) {
 
         switch (comp.deplacement) {
+            case typeDeplac.Voler:
             case typeDeplac.Glisser:
                 dir *= ennemiStats.speed * Time.fixedDeltaTime;
                 rb.AddRelativeForce(dir, ennemiStats.fMode);
@@ -133,24 +141,22 @@ public class Ennemis : Personnages {
                     rb.velocity = rb.velocity.normalized * ennemiStats.maxSpeed;
                 break;
 
-            case typeDeplac.Voler:
-                dir *= ennemiStats.speed * Time.fixedDeltaTime;
-                rb.AddForce(dir, ennemiStats.fMode);
-                break;
-
             default:
                 break;
         }
 
         if (!ia)
             facingRight = (dir.x > 0) ? true : false;
-        else {
-            if (artIntel.target.transform.position.x < this.transform.position.x)
-                facingRight = false;
-            else
-                facingRight = true;
-            }
-            
+        else DirectionTarget();
+
+
+    }
+
+    void DirectionTarget() {
+        if (artIntel.target.transform.position.x < myTransform.position.x)
+            facingRight = false;
+        else
+            facingRight = true;
     }
 
     [System.Serializable]
@@ -162,10 +168,14 @@ public class Ennemis : Personnages {
         public typeAttaque attaque;
 
         public int dmgAttaque;
+        [Tooltip("Mise à jour dans le start de WeaponEnnemi")]
         public float fireRate = 0.5f;
 
+        [Tooltip("Mise à jour dans le start de WeaponEnnemi")]
         public float ePower;
+        [Tooltip("Mise à jour dans le start de WeaponEnnemi")]
         public float eRadius;
+        [Tooltip("Mise à jour dans le start de WeaponEnnemi")]
         public float upwardsModifier;
 
         public typeDeplac deplacement;
@@ -194,7 +204,7 @@ public class Ennemis : Personnages {
             yield break;
         }
 
-        if ((en.transform.position - transform.position).sqrMagnitude < distActivation * distActivation)
+        if ((en.transform.position - myTransform.position).sqrMagnitude < distActivation * distActivation)
             enabled = true;
         else
             enabled = false;

@@ -6,15 +6,21 @@ abstract public class Personnages : MonoBehaviour {
 
     [System.Serializable]
     public class PersoStats {
-        [Header("Vie")]
+#if !UNITY_EDITOR
+            [Header("Vie")]
+#endif
         public int vie = 100;
         public int vieMax = 100;
+        public bool immortel;
 
-        //[Space]
 
-        [Header("Mouvement Force")]
+#if !UNITY_EDITOR
+            [Space]
+            [Header("Mouvement Force")]
+#endif
         //La vitesse
-        public float m_JumpForce = 1000;
+        [Tooltip("Pas encore implémenter")]
+        public float m_JumpForce = 0;
         public float speed = 600f;
         public float maxSpeed = 10f;
         public ForceMode2D fMode;

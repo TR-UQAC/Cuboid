@@ -9,16 +9,39 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1121619541646682}
+  m_RootGameObject: {fileID: 1409100073982400}
   m_IsPrefabParent: 1
---- !u!1 &1092139371414626
+--- !u!1 &1409100073982400
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4572969732751852}
+  - component: {fileID: 4580964949076924}
+  - component: {fileID: 212822522088290266}
+  - component: {fileID: 114104778706365868}
+  - component: {fileID: 50539341165816874}
+  - component: {fileID: 114394561355032158}
+  - component: {fileID: 61838136787096904}
+  - component: {fileID: 114486575394193594}
+  - component: {fileID: 114936880472984518}
+  - component: {fileID: 58970857138979716}
+  m_Layer: 11
+  m_Name: Kamikaze
+  m_TagString: Ennemi
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1475531127382686
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4260477398777876}
   m_Layer: 11
   m_Name: FirePoint
   m_TagString: Untagged
@@ -26,63 +49,40 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1121619541646682
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4009021712880410}
-  - component: {fileID: 212558551910071826}
-  - component: {fileID: 114598886800425420}
-  - component: {fileID: 50438125626287090}
-  - component: {fileID: 114553822365292442}
-  - component: {fileID: 61904881881171692}
-  - component: {fileID: 114423212518679096}
-  - component: {fileID: 114947482930623302}
-  - component: {fileID: 58927031059299032}
-  m_Layer: 11
-  m_Name: Ennemi_Rose
-  m_TagString: Ennemi
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4009021712880410
+--- !u!4 &4260477398777876
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1121619541646682}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 4572969732751852}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4572969732751852
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1092139371414626}
+  m_GameObject: {fileID: 1475531127382686}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4009021712880410}
+  m_Father: {fileID: 4580964949076924}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50438125626287090
+--- !u!4 &4580964949076924
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1409100073982400}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_Children:
+  - {fileID: 4260477398777876}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50539341165816874
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1121619541646682}
+  m_GameObject: {fileID: 1409100073982400}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -96,12 +96,12 @@ Rigidbody2D:
   m_SleepingMode: 2
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &58927031059299032
+--- !u!58 &58970857138979716
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1121619541646682}
+  m_GameObject: {fileID: 1409100073982400}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -111,12 +111,12 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.32
---- !u!61 &61904881881171692
+--- !u!61 &61838136787096904
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1121619541646682}
+  m_GameObject: {fileID: 1409100073982400}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -136,64 +136,12 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.64, y: 0.5346554}
   m_EdgeRadius: 0
---- !u!114 &114423212518679096
+--- !u!114 &114104778706365868
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1121619541646682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8577aa4a7e2f2548867055835ff8ab2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ennemiStats:
-    vie: 100
-    vieMax: 100
-    m_JumpForce: 1000
-    speed: 1000
-    fMode: 0
-    resitGlace: 0
-    resitPoison: 0
-    resitFoudre: 0
-    glace: 0
-    poison: 0
-    foudre: 0
-  comp:
-    contact: 0
-    dmgContact: 57
-    attaque: 1
-    dmgAttaque: 0
-    firegRate: 0.5
-    ePower: 0
-    eRadius: 0
-    upwardsModifier: 0
-    deplacement: 1
-  direction: {x: 0, y: 0}
-  facingRight: 0
-  maxSpeed: 10
---- !u!114 &114553822365292442
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1121619541646682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd19e5901211c78469605f81fcdf38d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  updateRate: 2
-  pathIsEnded: 0
-  nextWaypointDistance: 3
-  distFollow: 20
---- !u!114 &114598886800425420
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1121619541646682}
+  m_GameObject: {fileID: 1409100073982400}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
@@ -213,12 +161,66 @@ MonoBehaviour:
     useGraphRaycasting: 0
   traversableTags: -1
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
---- !u!114 &114947482930623302
+--- !u!114 &114394561355032158
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1121619541646682}
+  m_GameObject: {fileID: 1409100073982400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd19e5901211c78469605f81fcdf38d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  updateRate: 2
+  pathIsEnded: 0
+  nextWaypointDistance: 3
+  distFollow: 20
+--- !u!114 &114486575394193594
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1409100073982400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8577aa4a7e2f2548867055835ff8ab2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distActivation: 50
+  ennemiStats:
+    vie: 1
+    vieMax: 1
+    immortel: 0
+    m_JumpForce: 1000
+    speed: 1000
+    maxSpeed: 10
+    fMode: 0
+    resitGlace: 0
+    resitPoison: 0
+    resitFoudre: 0
+    glace: 0
+    poison: 0
+    foudre: 0
+  comp:
+    contact: 0
+    dmgContact: 57
+    attaque: 2
+    dmgAttaque: 30
+    fireRate: 0.5
+    ePower: 1000
+    eRadius: 10
+    upwardsModifier: 1
+    deplacement: 1
+  direction: {x: 0, y: 0}
+  facingRight: 0
+--- !u!114 &114936880472984518
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1409100073982400}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f8654fd578b60cb48b86175d977ed373, type: 3}
@@ -233,12 +235,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   attackPrefab: {fileID: 0}
---- !u!212 &212558551910071826
+--- !u!212 &212822522088290266
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1121619541646682}
+  m_GameObject: {fileID: 1409100073982400}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -267,7 +269,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ed4bfc92fbea7de4497693d0aa53f15d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a7be3619d139a724fa6a87131e0d0fe0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

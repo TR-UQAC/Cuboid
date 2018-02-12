@@ -10,10 +10,10 @@ public class EnnemisEditor : Editor {
     private static bool showMouvement = true;
     private static bool showElements = true;
 
-    //TODO: Ajouter les paramètre de AddExplosionForce, maxSpeed, firegRate et facingRight
 
     private SerializedProperty
         vie, vieMax,
+        immortel,
 
         contact, dmgContact,
 
@@ -31,9 +31,10 @@ public class EnnemisEditor : Editor {
 
     private void OnEnable() {
 
-        vie     = serializedObject.FindProperty("ennemiStats.vie");
-        vieMax  = serializedObject.FindProperty("ennemiStats.vieMax");
-        
+        vie      = serializedObject.FindProperty("ennemiStats.vie");
+        vieMax   = serializedObject.FindProperty("ennemiStats.vieMax");
+        immortel = serializedObject.FindProperty("ennemiStats.immortel");
+
         contact    = serializedObject.FindProperty("comp.contact");
         dmgContact = serializedObject.FindProperty("comp.dmgContact");
 
@@ -71,12 +72,15 @@ public class EnnemisEditor : Editor {
         showVie = EditorGUILayout.Foldout(showVie, "Vie", true);
         if (showVie) {
             EditorGUI.indentLevel++;
+            EditorGUILayout.PropertyField(immortel, new GUIContent("Immortel"));
+            if (!immortel.boolValue) {
                 EditorGUILayout.IntSlider(vie, 0, vieMax.intValue, "Vie courante");
                 ProgressBar((float)vie.intValue / (float)vieMax.intValue, "Vie");
 
                 EditorGUI.indentLevel++;
-                    EditorGUILayout.PropertyField(vieMax, new GUIContent("Vie Max"));
+                EditorGUILayout.PropertyField(vieMax, new GUIContent("Vie Max"));
                 EditorGUI.indentLevel--;
+            }
             EditorGUI.indentLevel--;
         }
        
@@ -162,7 +166,7 @@ public class EnnemisEditor : Editor {
                 EditorGUILayout.PropertyField(maxSpeed, new GUIContent("maxSpeed"));
                 EditorGUILayout.PropertyField(fMode, new GUIContent("FMode"));
             }
-            EditorGUILayout.PropertyField(facingRight, new GUIContent("facingRight"));
+            EditorGUILayout.PropertyField(facingRight, new GUIContent("Facing Right"));
             EditorGUI.indentLevel--;
         }
 

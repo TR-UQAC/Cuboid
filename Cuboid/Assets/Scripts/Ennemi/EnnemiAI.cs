@@ -46,6 +46,7 @@ public class EnnemiAI : MonoBehaviour {
         }
 
         //Commencer un nouveau chemin vers la position de la cible, retourne le resultat a la methode OnPathComplete
+        //TODO: !Ne pas chercher le chemin quand le joueur est trops loin
         seeker.StartPath(myTransform.position, target.position, OnPathComplete);
 
         StartCoroutine(UpdatePath());
