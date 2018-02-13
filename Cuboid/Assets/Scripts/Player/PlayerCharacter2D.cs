@@ -122,7 +122,9 @@ public class PlayerCharacter2D : Personnages {
             m_Anim.SetFloat("Speed", Mathf.Abs(move));
 
             // Move the character
+            //TODO:! Changer la manière de bouger du joueur pour que les explosion fonctionne correctement
             m_Rigidbody2D.velocity = new Vector2(move * m_MaxSpeed, m_Rigidbody2D.velocity.y);
+            //m_Rigidbody2D.AddForce(new Vector2(move * m_MaxSpeed, m_Rigidbody2D.velocity.y), ForceMode2D.Impulse);
 
             // If the input is moving the player right and the player is facing left...
             if (move > 0 && !m_FacingRight)

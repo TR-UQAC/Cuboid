@@ -80,7 +80,6 @@ public class WeaponEnnemi : MonoBehaviour {
 
     public void Explosion(int dmg, PlayerCharacter2D pl, float fireRate) {
         if (CanAttack) {
-            //TODO: !Répultion du joueur
             //TODO: Création d'un effet EXPLOSION
             if (effetAttaquePrefab != null) {
                 Transform clone = Instantiate(effetAttaquePrefab, firePoint.position, firePoint.rotation) as Transform;
