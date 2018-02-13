@@ -32,22 +32,22 @@ abstract public class Personnages : MonoBehaviour {
 
         [Header("Debuff")]
         [Tooltip("Defini si le personnage est gelé, pour changer le temps et le multiplicateur, aller dans le script Personnages")]
-        public bool glace  = false;
+        public bool glacer  = false;
             //Temps en seconde que le personnage est ralentit
             public static float tempsG = 5f;
             //Multiplicateur de ralentisement
             public static float mRalentit = 0.5f;
 
         [Tooltip("Defini si le personnage est empoisonné, pour changer le temps et les dommages , aller dans le script Personnages")]
-        public bool poison = false;
+        public bool empoisoner = false;
             //Durée de l'empoisonnement en seconde
             public static float tempsP = 5f;
             //Dommage du poison par seconde
             public static int dommageP = 1;
 
         [Tooltip("Defini si le personnage est paralysé, pour changer le temps, aller dans le script Personnages")]
-        public bool foudre = false;
-            //Durée de la paralysi en seconde
+        public bool paralyse = false;
+            //Durée de la paralysie en seconde
             public static float tempsF = 5f;
     }
 

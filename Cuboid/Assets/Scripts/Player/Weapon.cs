@@ -14,11 +14,13 @@ public class Weapon : MonoBehaviour
     private Transform firePoint;
 
     //Les parametres pour les explosion
+    public DegatAttaque statAttaque;
+    /*
     [Header("Paramètre de force explosive")]
     public float eForce;
     public float eRadius;
     public float upwardsModifier;
-
+    */
     void Awake()
     {
         firePoint = transform.Find("FirePoint");
@@ -43,11 +45,12 @@ public class Weapon : MonoBehaviour
         bul.dommageHit = dommageHit;
         //bul.facingRight = facingRight;
         bul.dmg = dmg;
-
+        bul.statAttaque = statAttaque;
+        /*
         bul.eForce = eForce;
         bul.eRadius = eRadius;
         bul.upwardsModifier = upwardsModifier;
-
+        */
         if (FindObjectOfType<AudioManager>() != null)
         {
             FindObjectOfType<AudioManager>().Play("Shoot");

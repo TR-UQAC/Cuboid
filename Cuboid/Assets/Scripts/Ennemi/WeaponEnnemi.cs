@@ -17,11 +17,8 @@ public class WeaponEnnemi : MonoBehaviour {
     private float attaqueCooldown;
 
     //Les parametres pour les explosion
-    [Header("Paramètre de force explosive")]
-    public float eForce;
-    public float eRadius;
-    public float upwardsModifier;
-    
+    public DegatAttaque statAttaque;
+
     // Use this for initialization
     void Start () {
         attaqueCooldown = 0f;
@@ -41,7 +38,6 @@ public class WeaponEnnemi : MonoBehaviour {
     }
 
     public void Tirer(Vector2 dir, int dmg, float fireRate, bool cibler = false) {
-        //public void Tirer(Vector2 direction, int dmg, float fireRate) {
         if (CanAttack) {
             //TODO: Création d'un effet tirer
             if (effetAttaquePrefab != null) {
@@ -56,21 +52,12 @@ public class WeaponEnnemi : MonoBehaviour {
                 return;
             }
             Bullet bul = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation).GetComponent<Bullet>() as Bullet;
-            if (cibler) {
-                bul.direction = cibleDirection();
-            } else {
-                bul.direction = dir;
-            }
-
+            bul.direction = (cibler) ? cibleDirection() : dir;
             bul.noHit = noHit;
             bul.dommageHit = dommageHit;
-            //bul.direction = direction;
-            //bul.facingRight = facingRight;
             bul.dmg = dmg;
 
-            bul.eForce          = eForce;
-            bul.eRadius         = eRadius;
-            bul.upwardsModifier = upwardsModifier;
+            bul.statAttaque = statAttaque;
 
             if (FindObjectOfType<AudioManager>() != null) {
                 FindObjectOfType<AudioManager>().Play("Shoot");
@@ -88,7 +75,7 @@ public class WeaponEnnemi : MonoBehaviour {
 
             attaqueCooldown = fireRate;
 
-            if (Rigidbody2DExt.AddExplosionForce(pl.GetComponent<Rigidbody2D>(), eForce, firePoint.position, eRadius, upwardsModifier))
+            if (Rigidbody2DExt.AddExplosionForce(pl.GetComponent<Rigidbody2D>(), statAttaque.ePower, firePoint.position, statAttaque.eRadius, statAttaque.upwardsModifier))
                 pl.DommagePerso(dmg);
 
 
