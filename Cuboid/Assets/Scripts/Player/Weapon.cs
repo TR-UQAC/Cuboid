@@ -5,7 +5,7 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
 
-    public int fireRate = 0;
+    public float fireCooldown = 0;
     public int dmg = 100;
     public LayerMask noHit;
     public LayerMask dommageHit;
