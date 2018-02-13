@@ -41,7 +41,7 @@ public class Ennemis : Personnages {
 
         if (go.tag == "Player") {
             if (comp.contact)
-                weapon.Contact(comp.dmgAttaque, en, comp.ePower, comp.eRadius, comp.upwardsModifier);
+                weapon.Contact(comp.dmgContact, en, comp.ePower, comp.eRadius, comp.upwardsModifier);
 
             
             if (comp.attaque == typeAttaque.Kamikaze) {

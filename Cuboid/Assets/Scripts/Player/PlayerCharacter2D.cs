@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//TODO: ! Ajout d'un temps d'immortalité pour le joueur
 public class PlayerCharacter2D : Personnages {
 
     public PersoStats joueurStats = new PersoStats();
@@ -191,6 +191,7 @@ public class PlayerCharacter2D : Personnages {
     }
 
     public override void DommagePerso(int dommage) {
+        Debug.Log("Le joueur subit " + dommage + " dommages");
         joueurStats.vie -= dommage;
         if (joueurStats.vie <= 0) {
             GameMaster.KillJoueur(this);
