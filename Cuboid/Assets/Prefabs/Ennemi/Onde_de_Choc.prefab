@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 114302346917831590}
   - component: {fileID: 58879315036571364}
   m_Layer: 11
-  m_Name: Onde de Choc
+  m_Name: Onde_de_Choc
   m_TagString: Ennemi
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
