@@ -41,7 +41,7 @@ public class Ennemis : Personnages {
 
         if (go.tag == "Player") {
             if (comp.contact)
-                weapon.Contact(comp.dmgContact, en, comp.ePower, comp.eRadius, comp.upwardsModifier);
+                weapon.Contact(comp.dmgContact, en, comp.statAttaque.ePower, comp.statAttaque.eRadius, comp.statAttaque.upwardsModifier);
 
             
             if (comp.attaque == typeAttaque.Kamikaze) {
@@ -175,10 +175,7 @@ public class Ennemis : Personnages {
         public bool contact;
         public int dmgContact = 0;
 
-        public float ePower = 0;
-        public float eRadius = 0;
-        public float upwardsModifier = 0;
-
+        [SerializeField] public DegatAttaque statAttaque;
         public typeAttaque attaque;
 
         public int dmgAttaque;
@@ -232,6 +229,15 @@ public class Ennemis : Personnages {
             yield break;
         }
     }
-    
+
+#if UNITY_EDITOR
+    //Put gui elements for custom inspector here
+
+    [HideInInspector] public bool showVie;
+    [HideInInspector] public bool showDommage;
+    [HideInInspector] public bool showContactDommage;
+    [HideInInspector] public bool showMouvement;
+    [HideInInspector] public bool showElements;
+#endif
 
 }

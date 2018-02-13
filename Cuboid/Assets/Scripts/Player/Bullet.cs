@@ -17,11 +17,9 @@ public class Bullet : MonoBehaviour {
 
     private Rigidbody2D m_Rigidbody2D;
 
-    public float eForce = 0;
-    public float eRadius = 0;
-    public float upwardsModifier = 0;
-
+    public DegatAttaque statAttaque;
     private Transform myTransform;
+
     // Use this for initialization
     void Start () {
         
@@ -38,8 +36,6 @@ public class Bullet : MonoBehaviour {
 
         m_Rigidbody2D.velocity = speed * direction.normalized;
 
-
-
         Destroy(gameObject, maxTimeToLive);
     }
 
@@ -48,11 +44,11 @@ public class Bullet : MonoBehaviour {
         if (noHit != (noHit | (1 << go.layer))) {
             
             if (dommageHit == (dommageHit | (1 << go.layer)) && myTransform != null) {
-                Collider2D[] colliders = Physics2D.OverlapCircleAll(myTransform.position, eRadius, dommageHit);
+                Collider2D[] colliders = Physics2D.OverlapCircleAll(myTransform.position, statAttaque.eRadius, dommageHit);
                 foreach (Collider2D nerbyObject in colliders) {
 
-                //for (int i = colliders.Length-1; i < 0; i--) {
-                    Rigidbody2DExt.AddExplosionForce(nerbyObject.GetComponent<Rigidbody2D>(), eForce, myTransform.position, eRadius, upwardsModifier);
+                    if(statAttaque.ePower != 0)
+                    Rigidbody2DExt.AddExplosionForce(nerbyObject.GetComponent<Rigidbody2D>(), statAttaque.ePower, myTransform.position, statAttaque.eRadius, statAttaque.upwardsModifier);
 
                     Personnages en = nerbyObject.GetComponent<Personnages>() as Personnages;
                     en.DommagePerso(dmg);

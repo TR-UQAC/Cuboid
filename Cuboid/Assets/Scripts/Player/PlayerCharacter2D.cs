@@ -9,8 +9,6 @@ public class PlayerCharacter2D : Personnages {
 
     Dictionary<string, bool> activeUpgradeTable { get; set; }
 
-    [SerializeField] private float m_MaxSpeed = 10f;                    // The fastest the player can travel in the x axis.
-    [SerializeField] private float m_JumpForce = 400f;                  // Amount of force added when the player jumps.
     [Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;  // Amount of maxSpeed applied to crouching movement. 1 = 100%
     [SerializeField] private bool m_AirControl = false;                 // Whether or not a player can steer while jumping;
     [SerializeField] private LayerMask m_WhatIsGround;                  // A mask determining what is ground to the character
@@ -30,7 +28,7 @@ public class PlayerCharacter2D : Personnages {
     public float lowJumpMultiplier = 2f;
 
     private bool m_DoubleJump = true;
-
+    private float shootTimer = 0;
 
     private void Awake()
     {
@@ -63,16 +61,17 @@ public class PlayerCharacter2D : Personnages {
         m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
 
         BetterJumpPhysic();
+        shootTimer += Time.deltaTime;
 
         if (IsRunning)
         {
             Debug.Log("Je cours !");
             m_Anim.Play("RunFast");
-            m_MaxSpeed = 20f;
+            joueurStats.maxSpeed = 20f;
         }
         else
         {
-            m_MaxSpeed = 10f;
+            joueurStats.maxSpeed = 10f;
         }
     }
 
@@ -92,11 +91,14 @@ public class PlayerCharacter2D : Personnages {
             Debug.LogError("Failed to find active weapon!");
         }
         else
-        {        
-            currentWeapon.Shoot(m_FacingRight);
+        {
+            if (shootTimer > currentWeapon.fireCooldown)
+            {
+                shootTimer = 0;
+                currentWeapon.Shoot(m_FacingRight);
+            }        
         }
     }
-
     public void Move(float move, bool crouch, bool jump)
     {
         // If crouching, check to see if the character can stand up
@@ -121,10 +123,17 @@ public class PlayerCharacter2D : Personnages {
             // The Speed animator parameter is set to the absolute value of the horizontal input.
             m_Anim.SetFloat("Speed", Mathf.Abs(move));
 
-            // Move the character
-            //TODO:! Changer la manière de bouger du joueur pour que les explosion fonctionne correctement
-            m_Rigidbody2D.velocity = new Vector2(move * m_MaxSpeed, m_Rigidbody2D.velocity.y);
-            //m_Rigidbody2D.AddForce(new Vector2(move * m_MaxSpeed, m_Rigidbody2D.velocity.y), ForceMode2D.Impulse);
+            Vector2 dir = new Vector2(move, 0f);
+
+            dir *= joueurStats.speed * Time.fixedDeltaTime;
+            m_Rigidbody2D.AddRelativeForce(dir, joueurStats.fMode);
+
+            if (m_Rigidbody2D.velocity.x > joueurStats.maxSpeed)
+                m_Rigidbody2D.velocity = new Vector2(joueurStats.maxSpeed, m_Rigidbody2D.velocity.y);
+
+            else if (m_Rigidbody2D.velocity.x < -joueurStats.maxSpeed)
+                m_Rigidbody2D.velocity = new Vector2(-joueurStats.maxSpeed, m_Rigidbody2D.velocity.y);
+
 
             // If the input is moving the player right and the player is facing left...
             if (move > 0 && !m_FacingRight)
@@ -146,13 +155,13 @@ public class PlayerCharacter2D : Personnages {
             // Add a vertical force to the player.
             m_Grounded = false;
             m_Anim.SetBool("Ground", false);
-            m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+            m_Rigidbody2D.AddForce(new Vector2(0f, joueurStats.m_JumpForce));
         }
         else if (m_DoubleJump && jump)
         {
             m_DoubleJump = false;
             m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, 0);
-            m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+            m_Rigidbody2D.AddForce(new Vector2(0f, joueurStats.m_JumpForce));
         }
     }
 
@@ -193,10 +202,11 @@ public class PlayerCharacter2D : Personnages {
     }
 
     public override void DommagePerso(int dommage) {
-        Debug.Log("Le joueur subit " + dommage + " dommages");
-        joueurStats.vie -= dommage;
-        if (joueurStats.vie <= 0) {
-            GameMaster.KillJoueur(this);
+        if (!joueurStats.immortel) {
+            joueurStats.vie -= dommage;
+            if (joueurStats.vie <= 0) {
+                GameMaster.KillJoueur(this);
+            }
         }
     }
 }
