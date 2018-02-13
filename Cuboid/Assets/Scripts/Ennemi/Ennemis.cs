@@ -81,11 +81,14 @@ public class Ennemis : Personnages {
         if (GetComponent<WeaponEnnemi>() != null)
             weapon = GetComponent<WeaponEnnemi>() as WeaponEnnemi;
 
-        if (GetComponent<PatrolControl>() != null)
+        if (GetComponent<PatrolControl>() != null) {
             control = GetComponent<PatrolControl>() as PatrolControl;
+            direction.x = control.direction.x;
+            myTransform.localScale = new Vector2(myTransform.localScale.x * -direction.x, myTransform.localScale.y);
+        }
+
 
         rb.gravityScale = (comp.deplacement == typeDeplac.Voler) ? 0 : rb.gravityScale;
-
         directionTir.x = (facingRight) ? 1 : -1;
 
         if (en == null) {
@@ -93,10 +96,8 @@ public class Ennemis : Personnages {
                 searchingForPlayer = true;
                 StartCoroutine(SearchForPlayer());
             }
-            return;
         }
 
-        //enabled = false;
         StartCoroutine(CheckDistance());
     }
 
@@ -152,10 +153,12 @@ public class Ennemis : Personnages {
                 break;
         }
 
-        if(ia && !tirerSurJoueur)
+        if (ia && !tirerSurJoueur)
             DirectionTarget();
-        else
+        else {
+            direction = dir;
             directionTir = dir;
+        }
 
     }
 

@@ -188,7 +188,7 @@ MonoBehaviour:
     ePower: 0
     eRadius: 0
     upwardsModifier: 0
-    attaque: 3
+    attaque: 2
     dmgAttaque: 0
     fireRate: 1
     deplacement: 0
