@@ -26,10 +26,13 @@ public class Ennemis : Personnages {
     private PatrolControl control;
 
     public Vector2 direction;
+    public Vector2 directionTir = new Vector2(0,0);
     public bool facingRight = false;
+
     private Transform myTransform;
 
     private bool ia = false;
+    public bool tirerSurJoueur = false;
     #endregion
 
 #region Collision
@@ -83,6 +86,8 @@ public class Ennemis : Personnages {
 
         rb.gravityScale = (comp.deplacement == typeDeplac.Voler) ? 0 : rb.gravityScale;
 
+        directionTir.x = (facingRight) ? 1 : -1;
+
         if (en == null) {
             if (!searchingForPlayer) {
                 searchingForPlayer = true;
@@ -112,8 +117,6 @@ public class Ennemis : Personnages {
 
         if (comp.deplacement != typeDeplac.Immobile)
             Deplacement(direction);
-        else if (ia)
-            DirectionTarget();
 
         Attaque();
     }
@@ -121,7 +124,7 @@ public class Ennemis : Personnages {
     public void Attaque() {
         switch (comp.attaque) {
             case typeAttaque.Tirer:
-                weapon.Tirer(facingRight, comp.dmgAttaque, comp.fireRate);
+                weapon.Tirer(directionTir, comp.dmgAttaque, comp.fireRate, tirerSurJoueur);
                 break;
 
             case typeAttaque.Explosion:
@@ -149,18 +152,18 @@ public class Ennemis : Personnages {
                 break;
         }
 
-        if (!ia)
-            facingRight = (dir.x > 0) ? true : false;
-        else DirectionTarget();
-
+        if(ia && !tirerSurJoueur)
+            DirectionTarget();
+        else
+            directionTir = dir;
 
     }
 
     void DirectionTarget() {
         if (artIntel.target.transform.position.x < myTransform.position.x)
-            facingRight = false;
+            directionTir.x = -1;
         else
-            facingRight = true;
+            directionTir.x = 1;
     }
 
     [System.Serializable]

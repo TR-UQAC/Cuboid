@@ -13,6 +13,12 @@ public class Weapon : MonoBehaviour
     public GameObject bulletPref;
     private Transform firePoint;
 
+    //Les parametres pour les explosion
+    [Header("Paramètre de force explosive")]
+    public float eForce;
+    public float eRadius;
+    public float upwardsModifier;
+
     void Awake()
     {
         firePoint = transform.Find("FirePoint");
@@ -31,10 +37,16 @@ public class Weapon : MonoBehaviour
     {
         //TODO: Effet particule de tir
         Bullet bul = Instantiate(bulletPref, firePoint.position, firePoint.rotation).GetComponent<Bullet>();
+        bul.direction.x = (facingRight) ? 1 : -1;
+
         bul.noHit = noHit;
         bul.dommageHit = dommageHit;
-        bul.facingRight = facingRight;
+        //bul.facingRight = facingRight;
         bul.dmg = dmg;
+
+        bul.eForce = eForce;
+        bul.eRadius = eRadius;
+        bul.upwardsModifier = upwardsModifier;
 
         if (FindObjectOfType<AudioManager>() != null)
         {

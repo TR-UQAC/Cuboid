@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour {
 
+    
     public float speed = 25f;
     public float maxTimeToLive = 2f;
     public bool facingRight;
     public int dmg;
 
+    public  Vector2 direction = new Vector2(0,0);
+
     public LayerMask noHit;
     public LayerMask dommageHit;
 
-
-    private float direction;
     private Rigidbody2D m_Rigidbody2D;
 
     public float eForce = 0;
@@ -27,18 +28,17 @@ public class Bullet : MonoBehaviour {
         m_Rigidbody2D = GetComponent<Rigidbody2D>() as Rigidbody2D;
         myTransform = transform;
 
-        if (!facingRight)
-        {
-            speed = speed * (-1);
-        }
-        else
-        {
-            Vector3 theScale = myTransform.localScale;
-            theScale.x *= -1;
-            myTransform.localScale = theScale;
-        }
+        Vector3 theScale = myTransform.localScale;
+        theScale.x *= -1;
+        myTransform.localScale = theScale;
 
-        m_Rigidbody2D.velocity = new Vector2(speed, m_Rigidbody2D.velocity.y);
+        var angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        var rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        transform.rotation = rotation;
+
+        m_Rigidbody2D.velocity = speed * direction.normalized;
+
+
 
         Destroy(gameObject, maxTimeToLive);
     }

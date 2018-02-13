@@ -111,6 +111,7 @@ MonoBehaviour:
   maxTimeToLive: 2
   facingRight: 0
   dmg: 0
+  direction: {x: 1, y: 0}
   noHit:
     serializedVersion: 2
     m_Bits: 4096

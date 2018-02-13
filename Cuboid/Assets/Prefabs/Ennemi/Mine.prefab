@@ -148,7 +148,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 0}
   noHit:
     serializedVersion: 2
-    m_Bits: 4294967039
+    m_Bits: 4294966015
   dommageHit:
     serializedVersion: 2
     m_Bits: 256
@@ -193,7 +193,9 @@ MonoBehaviour:
     fireRate: 1
     deplacement: 0
   direction: {x: 0, y: 0}
+  directionTir: {x: 0, y: 0}
   facingRight: 0
+  tirerSurJoueur: 0
 --- !u!212 &212443887019801380
 SpriteRenderer:
   m_ObjectHideFlags: 1

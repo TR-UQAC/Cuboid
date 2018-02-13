@@ -149,7 +149,7 @@ MonoBehaviour:
     type: 2}
   noHit:
     serializedVersion: 2
-    m_Bits: 4294967039
+    m_Bits: 4294966015
   dommageHit:
     serializedVersion: 2
     m_Bits: 256
@@ -194,7 +194,9 @@ MonoBehaviour:
     fireRate: 0.5
     deplacement: 0
   direction: {x: 0, y: 0}
+  directionTir: {x: 0, y: 0}
   facingRight: 0
+  tirerSurJoueur: 0
 --- !u!212 &212680857006608880
 SpriteRenderer:
   m_ObjectHideFlags: 1

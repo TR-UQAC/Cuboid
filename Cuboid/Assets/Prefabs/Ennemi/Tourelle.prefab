@@ -69,7 +69,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1319388181737290}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.14, y: 3.67, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 4234946908447268}
@@ -192,7 +192,7 @@ MonoBehaviour:
     type: 2}
   noHit:
     serializedVersion: 2
-    m_Bits: 4294967039
+    m_Bits: 4294966015
   dommageHit:
     serializedVersion: 2
     m_Bits: 256
@@ -215,7 +215,7 @@ MonoBehaviour:
   ennemiStats:
     vie: 100
     vieMax: 100
-    immortel: 0
+    immortel: 1
     m_JumpForce: 1000
     speed: 1000
     maxSpeed: 10
@@ -233,11 +233,13 @@ MonoBehaviour:
     eRadius: 0
     upwardsModifier: 0
     attaque: 1
-    dmgAttaque: 10
+    dmgAttaque: 0
     fireRate: 1.5
     deplacement: 0
   direction: {x: 0, y: 0}
+  directionTir: {x: 0, y: 0}
   facingRight: 0
+  tirerSurJoueur: 0
 --- !u!212 &212369356814088144
 SpriteRenderer:
   m_ObjectHideFlags: 1
