@@ -8,9 +8,10 @@ public class MultipleTargetCamera : MonoBehaviour {
     public List<Transform> targets;
 
     public Vector3 offset;
-    public float smoothTime = 0.5f;
+    public float smoothTime = 0.2f;
+    public float smoothTimeMultiTarget = 0.5f;
 
-    public float minZoom = 4.0f;
+    public float minZoom = 8.0f;
     public float maxZoom = 16.0f;
     public float zoomLimiter = 50.0f;
 
@@ -65,7 +66,11 @@ public class MultipleTargetCamera : MonoBehaviour {
 
         Vector3 newPosition = centerPoint + offset;
 
-        transform.position = Vector3.SmoothDamp(transform.position, newPosition, ref velocity, smoothTime);
+        if(targets.Count <=1)
+            transform.position = Vector3.SmoothDamp(transform.position, newPosition, ref velocity, smoothTime);
+        else
+            transform.position = Vector3.SmoothDamp(transform.position, newPosition, ref velocity, smoothTimeMultiTarget);
+        
     }
 
     float GetGreatestDistance()

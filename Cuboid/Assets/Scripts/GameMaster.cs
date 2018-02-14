@@ -13,7 +13,7 @@ public class GameMaster : MonoBehaviour {
     public Transform playerPrefab;
 
 
-    void Start() {
+    void Awake() {
         if (instance == null)
             instance = this;
         else {
@@ -22,6 +22,7 @@ public class GameMaster : MonoBehaviour {
         }
 
         Physics2D.IgnoreLayerCollision(11, 11, true);
+
         DontDestroyOnLoad(gameObject);
     }
 

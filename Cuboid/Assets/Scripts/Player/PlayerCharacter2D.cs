@@ -28,7 +28,7 @@ public class PlayerCharacter2D : Personnages {
     public float lowJumpMultiplier = 2f;
 
     private bool m_DoubleJump = true;
-    private float shootTimer = 0;
+
 
     private void Awake()
     {
@@ -61,7 +61,6 @@ public class PlayerCharacter2D : Personnages {
         m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
 
         BetterJumpPhysic();
-        shootTimer += Time.deltaTime;
 
         if (IsRunning)
         {
@@ -91,12 +90,8 @@ public class PlayerCharacter2D : Personnages {
             Debug.LogError("Failed to find active weapon!");
         }
         else
-        {
-            if (shootTimer > currentWeapon.fireCooldown)
-            {
-                shootTimer = 0;
-                currentWeapon.Shoot(m_FacingRight);
-            }        
+        {        
+            currentWeapon.Shoot(m_FacingRight);
         }
     }
     public void Move(float move, bool crouch, bool jump)
