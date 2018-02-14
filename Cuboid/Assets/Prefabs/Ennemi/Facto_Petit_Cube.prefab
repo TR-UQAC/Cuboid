@@ -258,21 +258,25 @@ MonoBehaviour:
     vieMax: 300
     immortel: 0
     m_JumpForce: 0
-    speed: 150
-    maxSpeed: 10
+    speed: 500
+    maxSpeed: 5
     fMode: 0
     resitGlace: 0
     resitPoison: 0
     resitFoudre: 0
-    glace: 0
-    poison: 0
-    foudre: 0
+    glacer: 0
+    empoisoner: 0
+    paralyse: 0
   comp:
     contact: 1
     dmgContact: 20
-    ePower: 10
-    eRadius: 10
-    upwardsModifier: 0
+    statAttaque:
+      ePower: 0
+      eRadius: 0
+      upwardsModifier: 0
+      degGlace: 0
+      degPoison: 0
+      degFoudre: 0
     attaque: 0
     dmgAttaque: 0
     fireRate: 0.5
@@ -281,6 +285,11 @@ MonoBehaviour:
   directionTir: {x: 0, y: 0}
   facingRight: 0
   tirerSurJoueur: 0
+  showVie: 1
+  showDommage: 1
+  showContactDommage: 0
+  showMouvement: 1
+  showElements: 0
 --- !u!114 &114930850987638704
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -300,9 +309,13 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   effetAttaquePrefab: {fileID: 0}
-  eForce: 0
-  eRadius: 0
-  upwardsModifier: 0
+  statAttaque:
+    ePower: 0
+    eRadius: 0
+    upwardsModifier: 0
+    degGlace: 0
+    degPoison: 0
+    degFoudre: 0
 --- !u!212 &212034650359336656
 SpriteRenderer:
   m_ObjectHideFlags: 1

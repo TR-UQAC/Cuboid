@@ -286,7 +286,7 @@ MonoBehaviour:
       degPoison: 0
       degFoudre: 0
     attaque: 1
-    dmgAttaque: 0
+    dmgAttaque: 10
     fireRate: 0.5
     deplacement: 2
   direction: {x: 0, y: 0}
