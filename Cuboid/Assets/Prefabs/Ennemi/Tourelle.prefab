@@ -197,9 +197,13 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   effetAttaquePrefab: {fileID: 0}
-  eForce: 1
-  eRadius: 10
-  upwardsModifier: 0
+  statAttaque:
+    ePower: 0
+    eRadius: 0
+    upwardsModifier: 0
+    degGlace: 0
+    degPoison: 0
+    degFoudre: 0
 --- !u!114 &114600729564373794
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -223,23 +227,32 @@ MonoBehaviour:
     resitGlace: 0
     resitPoison: 0
     resitFoudre: 0
-    glace: 0
-    poison: 0
-    foudre: 0
+    glacer: 0
+    empoisoner: 0
+    paralyse: 0
   comp:
     contact: 0
     dmgContact: 0
-    ePower: 0
-    eRadius: 0
-    upwardsModifier: 0
+    statAttaque:
+      ePower: 0
+      eRadius: 0
+      upwardsModifier: 0
+      degGlace: 0
+      degPoison: 0
+      degFoudre: 0
     attaque: 1
-    dmgAttaque: 0
+    dmgAttaque: 10
     fireRate: 1.5
     deplacement: 0
   direction: {x: 0, y: 0}
   directionTir: {x: 0, y: 0}
   facingRight: 0
   tirerSurJoueur: 1
+  showVie: 0
+  showDommage: 1
+  showContactDommage: 0
+  showMouvement: 0
+  showElements: 0
 --- !u!212 &212369356814088144
 SpriteRenderer:
   m_ObjectHideFlags: 1

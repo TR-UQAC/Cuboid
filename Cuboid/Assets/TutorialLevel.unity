@@ -12108,6 +12108,10 @@ Prefab:
       propertyPath: statAttaque.eRadius
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1675349826042032, guid: 2b9e47665d19cc440ad346986e0a3e5c, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2b9e47665d19cc440ad346986e0a3e5c, type: 2}
   m_IsPrefabParent: 0
@@ -12120,11 +12124,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4686034476788358, guid: e589d71cbb1ea8941bd568773b079766, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 39.04
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 4686034476788358, guid: e589d71cbb1ea8941bd568773b079766, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 4.154999
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 4686034476788358, guid: e589d71cbb1ea8941bd568773b079766, type: 2}
       propertyPath: m_LocalPosition.z
@@ -12167,7 +12171,7 @@ Prefab:
     - target: {fileID: 114169987853243778, guid: e589d71cbb1ea8941bd568773b079766,
         type: 2}
       propertyPath: joueurStats.immortel
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114434940233586698, guid: e589d71cbb1ea8941bd568773b079766,
         type: 2}
@@ -12548,6 +12552,10 @@ Prefab:
     - target: {fileID: 4836505623081962, guid: 7d417b6013409db4f8fa575ff953cea7, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786370508566204, guid: 7d417b6013409db4f8fa575ff953cea7, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7d417b6013409db4f8fa575ff953cea7, type: 2}
@@ -13997,6 +14005,10 @@ Prefab:
       propertyPath: direction.x
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 1171337023374186, guid: c0d7da662f82bc74d9da1b1f12493042, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c0d7da662f82bc74d9da1b1f12493042, type: 2}
   m_IsPrefabParent: 0
@@ -14044,6 +14056,10 @@ Prefab:
     - target: {fileID: 4009021712880410, guid: 85ee787e8fae0bf47a4ab1aaca41a6de, type: 2}
       propertyPath: m_RootOrder
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1121619541646682, guid: 85ee787e8fae0bf47a4ab1aaca41a6de, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 85ee787e8fae0bf47a4ab1aaca41a6de, type: 2}
@@ -14216,6 +14232,10 @@ Prefab:
       propertyPath: statAttaque.eRadius
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 1409100073982400, guid: 0e8a4cb346e964e4088097a23e2486c2, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0e8a4cb346e964e4088097a23e2486c2, type: 2}
   m_IsPrefabParent: 0
@@ -14292,6 +14312,20 @@ Prefab:
     - target: {fileID: 114255591608085970, guid: c0d7da662f82bc74d9da1b1f12493042,
         type: 2}
       propertyPath: statAttaque.eRadius
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1171337023374186, guid: c0d7da662f82bc74d9da1b1f12493042, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114543104448875954, guid: c0d7da662f82bc74d9da1b1f12493042,
+        type: 2}
+      propertyPath: comp.dmgAttaque
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114543104448875954, guid: c0d7da662f82bc74d9da1b1f12493042,
+        type: 2}
+      propertyPath: showDommage
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -14459,6 +14493,10 @@ Prefab:
       propertyPath: statAttaque.upwardsModifier
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1624414363356482, guid: cdfe7344ea03c8d4eb4c2f89414877c0, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cdfe7344ea03c8d4eb4c2f89414877c0, type: 2}
   m_IsPrefabParent: 0
@@ -14593,6 +14631,10 @@ Prefab:
         type: 2}
       propertyPath: showContactDommage
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1362764826406958, guid: c10e95177075c2745bd41f79fb9b43b0, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c10e95177075c2745bd41f79fb9b43b0, type: 2}
@@ -14750,6 +14792,10 @@ Prefab:
         type: 2}
       propertyPath: statAttaque.eRadius
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1319388181737290, guid: 4d095d26ff3bd004cb255b95067de770, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114009242828683700, guid: 4d095d26ff3bd004cb255b95067de770, type: 2}

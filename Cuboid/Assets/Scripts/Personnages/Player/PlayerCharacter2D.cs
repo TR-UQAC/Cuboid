@@ -198,7 +198,7 @@ public class PlayerCharacter2D : Personnages {
     }
 
     public override void DommagePerso(int dommage) {
-        if (!joueurStats.immortel) {
+        if (!joueurStats.immortel && joueurStats.vie > 0) {
             joueurStats.vie -= dommage;
             if (joueurStats.vie <= 0) {
                 GameMaster.KillJoueur(this);
