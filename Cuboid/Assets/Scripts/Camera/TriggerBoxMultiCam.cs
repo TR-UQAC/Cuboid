@@ -22,8 +22,6 @@ public class TriggerBoxMultiCam : MonoBehaviour {
         if (collision.tag != "Player" || InZone == true)
             return;
 
-        Debug.Log("Le transform : ");
-
         foreach (Transform item in transform)
         {
             if(item != null)

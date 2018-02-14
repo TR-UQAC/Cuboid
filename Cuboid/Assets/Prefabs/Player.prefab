@@ -143,7 +143,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1749170591753294}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.33, y: 1.08, z: 0}
+  m_LocalPosition: {x: -2.71, y: 4.154999, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 4118770277036440}
@@ -159,7 +159,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1758063192400028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.026, y: 0.007, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children:
   - {fileID: 4635412391440040}
@@ -178,7 +178,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 2
+  m_LinearDrag: 1
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -282,8 +282,8 @@ MonoBehaviour:
   joueurStats:
     vie: 100
     vieMax: 100
-    immortel: 0
-    m_JumpForce: 2000
+    immortel: 1
+    m_JumpForce: 1500
     speed: 600
     maxSpeed: 10
     fMode: 1
@@ -340,8 +340,8 @@ MonoBehaviour:
     m_Bits: 2048
   bulletPref: {fileID: 1670978521406608, guid: e4a60708d73f3c045a81e69e97ad689e, type: 2}
   statAttaque:
-    ePower: 2
-    eRadius: 10
+    ePower: 5
+    eRadius: 2
     upwardsModifier: 0
     degGlace: 0
     degPoison: 0

@@ -11,6 +11,7 @@ public static class Rigidbody2DExt {
             return false;
 
         Vector3 baseForce = dir.normalized * (wearoff <= 0f ? 0f : explosionForce) * wearoff;
+        baseForce.x *= 2;
         baseForce.z = 0;
         rb.AddForce(baseForce, mode);
 
