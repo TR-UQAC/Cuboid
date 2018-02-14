@@ -144,9 +144,7 @@ public class Ennemis : Personnages {
             case typeDeplac.Glisser:
                 dir *= ennemiStats.speed * Time.fixedDeltaTime;
                 rb.AddRelativeForce(dir, ennemiStats.fMode);
-                /*
-                if (rb.velocity.x > ennemiStats.maxSpeed)
-                    rb.velocity = rb.velocity.normalized * ennemiStats.maxSpeed;*/
+
                 break;
 
             default:
@@ -199,7 +197,6 @@ public class Ennemis : Personnages {
 
     //**** Activation/ Desactivation par rapport à la distance ****//
     IEnumerator CheckDistance() {
-        //Debug.Log("Check dist : " + distActivation);
         if (en == null) {
             if (!searchingForPlayer) {
                 searchingForPlayer = true;
@@ -210,8 +207,10 @@ public class Ennemis : Personnages {
 
         if ((en.transform.position - myTransform.position).sqrMagnitude < distActivation * distActivation)
             enabled = true;
-        else
+        else {
+            rb.velocity = new Vector2(0,0);
             enabled = false;
+        }
 
         yield return new WaitForSeconds(5f);
         StartCoroutine(CheckDistance());

@@ -86,8 +86,8 @@ public class WeaponEnnemi : MonoBehaviour {
         }
     }
 
-    public void Contact(int dmg, PlayerCharacter2D pl, float f, float r, float upM) {
-        Rigidbody2DExt.AddExplosionForce(pl.GetComponent<Rigidbody2D>(), f, firePoint.position, r, upM);
+    public void Contact(int dmg, PlayerCharacter2D pl, float f, float r, float upM) { 
+        Rigidbody2DExt.AddExplosionForce(pl.GetComponent<Rigidbody2D>(), f, firePoint.position, r, upM, ForceMode2D.Force);
         pl.DommagePerso(dmg);
         Debug.Log("Dommage contact");
     }

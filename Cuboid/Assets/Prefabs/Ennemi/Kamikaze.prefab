@@ -26,7 +26,6 @@ GameObject:
   - component: {fileID: 61838136787096904}
   - component: {fileID: 114486575394193594}
   - component: {fileID: 114936880472984518}
-  - component: {fileID: 58970857138979716}
   m_Layer: 11
   m_Name: Kamikaze
   m_TagString: Ennemi
@@ -69,7 +68,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1409100073982400}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 16.99, y: -2.43, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 4260477398777876}
@@ -96,21 +95,6 @@ Rigidbody2D:
   m_SleepingMode: 2
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &58970857138979716
-CircleCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1409100073982400}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.32
 --- !u!61 &61838136787096904
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -123,7 +107,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.052672297}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -134,7 +118,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.64, y: 0.5346554}
+  m_Size: {x: 0.64, y: 0.64}
   m_EdgeRadius: 0
 --- !u!114 &114104778706365868
 MonoBehaviour:
@@ -200,23 +184,32 @@ MonoBehaviour:
     resitGlace: 0
     resitPoison: 0
     resitFoudre: 0
-    glace: 0
-    poison: 0
-    foudre: 0
+    glacer: 0
+    empoisoner: 0
+    paralyse: 0
   comp:
     contact: 0
     dmgContact: 57
-    ePower: 0
-    eRadius: 0
-    upwardsModifier: 0
+    statAttaque:
+      ePower: 0
+      eRadius: 0
+      upwardsModifier: 0
+      degGlace: 0
+      degPoison: 0
+      degFoudre: 0
     attaque: 2
-    dmgAttaque: 30
+    dmgAttaque: 0
     fireRate: 0.5
     deplacement: 1
   direction: {x: 0, y: 0}
   directionTir: {x: 0, y: 0}
   facingRight: 0
   tirerSurJoueur: 0
+  showVie: 0
+  showDommage: 0
+  showContactDommage: 0
+  showMouvement: 0
+  showElements: 0
 --- !u!114 &114936880472984518
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -235,10 +228,15 @@ MonoBehaviour:
   dommageHit:
     serializedVersion: 2
     m_Bits: 256
-  effetAttaquePrefab: {fileID: 0}
-  eForce: 50
-  eRadius: 10
-  upwardsModifier: 0
+  effetAttaquePrefab: {fileID: 4793239945891142, guid: 2f080beb01f61df4a86c8847a84e0313,
+    type: 2}
+  statAttaque:
+    ePower: 10
+    eRadius: 10
+    upwardsModifier: 0
+    degGlace: 0
+    degPoison: 0
+    degFoudre: 0
 --- !u!212 &212822522088290266
 SpriteRenderer:
   m_ObjectHideFlags: 1
