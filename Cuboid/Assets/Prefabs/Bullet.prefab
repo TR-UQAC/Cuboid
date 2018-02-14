@@ -118,9 +118,15 @@ MonoBehaviour:
   dommageHit:
     serializedVersion: 2
     m_Bits: 0
-  eForce: 10
-  eRadius: 2
-  upwardsModifier: 0
+  statAttaque:
+    ePower: 0
+    eRadius: 0
+    upwardsModifier: 0
+    degGlace: 0
+    degPoison: 0
+    degFoudre: 0
+  effetExplosion: {fileID: 4793239945891142, guid: 2f080beb01f61df4a86c8847a84e0313,
+    type: 2}
 --- !u!212 &212074767135830764
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -53,8 +53,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1624414363356482}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -64.67001, y: -146.98999, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 0.5, z: 1}
   m_Children:
   - {fileID: 4566112320573526}
@@ -81,11 +81,11 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1624414363356482}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -152,10 +152,15 @@ MonoBehaviour:
   dommageHit:
     serializedVersion: 2
     m_Bits: 256
-  effetAttaquePrefab: {fileID: 0}
-  eForce: 50
-  eRadius: 10
-  upwardsModifier: 0
+  effetAttaquePrefab: {fileID: 4793239945891142, guid: 2f080beb01f61df4a86c8847a84e0313,
+    type: 2}
+  statAttaque:
+    ePower: 50
+    eRadius: 5
+    upwardsModifier: 0
+    degGlace: 0
+    degPoison: 0
+    degFoudre: 0
 --- !u!114 &114888880467656520
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -169,7 +174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distActivation: 50
   ennemiStats:
-    vie: 100
+    vie: 10
     vieMax: 100
     immortel: 0
     m_JumpForce: 1000
@@ -179,23 +184,32 @@ MonoBehaviour:
     resitGlace: 0
     resitPoison: 0
     resitFoudre: 0
-    glace: 0
-    poison: 0
-    foudre: 0
+    glacer: 0
+    empoisoner: 0
+    paralyse: 0
   comp:
     contact: 0
     dmgContact: 10
-    ePower: 0
-    eRadius: 0
-    upwardsModifier: 0
+    statAttaque:
+      ePower: 0
+      eRadius: 0
+      upwardsModifier: 0
+      degGlace: 0
+      degPoison: 0
+      degFoudre: 0
     attaque: 2
-    dmgAttaque: 0
+    dmgAttaque: 30
     fireRate: 1
     deplacement: 0
   direction: {x: 0, y: 0}
   directionTir: {x: 0, y: 0}
   facingRight: 0
   tirerSurJoueur: 0
+  showVie: 0
+  showDommage: 0
+  showContactDommage: 0
+  showMouvement: 0
+  showElements: 0
 --- !u!212 &212443887019801380
 SpriteRenderer:
   m_ObjectHideFlags: 1
