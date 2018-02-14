@@ -140,7 +140,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1749170591753294}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -41.83, y: -3.31, z: 0}
+  m_LocalPosition: {x: 32.26, y: -3.35, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 4118770277036440}
@@ -175,7 +175,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0.5
+  m_LinearDrag: 1.5
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -255,7 +255,7 @@ MonoBehaviour:
     vie: 100
     vieMax: 100
     immortel: 0
-    m_JumpForce: 1000
+    m_JumpForce: 30
     speed: 600
     maxSpeed: 10
     fMode: 1
@@ -272,7 +272,7 @@ MonoBehaviour:
     m_Bits: 3072
   IsRunning: 0
   fallMultiplier: 10
-  lowJumpMultiplier: 9
+  lowJumpMultiplier: 4
   dureeImmortel: 0.2
 --- !u!114 &114434940233586698
 MonoBehaviour:
@@ -286,7 +286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireRate: 0
-  dmg: 100
+  dmg: 50
   noHit:
     serializedVersion: 2
     m_Bits: 4294964223

@@ -151,8 +151,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1362764826406958}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 23.417759, y: 0.43088484, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children:
   - {fileID: 4109120865429862}
@@ -252,9 +252,9 @@ MonoBehaviour:
     contact: 1
     dmgContact: 10
     statAttaque:
-      ePower: 1000
+      ePower: 100
       eRadius: 5
-      upwardsModifier: 0
+      upwardsModifier: 1
       degGlace: 0
       degPoison: 0
       degFoudre: 0
@@ -269,7 +269,7 @@ MonoBehaviour:
   showVie: 0
   showDommage: 1
   showContactDommage: 1
-  showMouvement: 1
+  showMouvement: 0
   showElements: 0
 --- !u!114 &114721889817618374
 MonoBehaviour:

@@ -122,7 +122,7 @@ public class PlayerCharacter2D : Personnages {
 
             dir *= joueurStats.speed * Time.fixedDeltaTime;
             //m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x + move * joueurStats.speed, m_Rigidbody2D.velocity.y);
-            m_Rigidbody2D.AddRelativeForce(dir, joueurStats.fMode);
+            m_Rigidbody2D.AddForce(dir, joueurStats.fMode);
 
             if (m_Rigidbody2D.velocity.x > joueurStats.maxSpeed)
                 m_Rigidbody2D.velocity = new Vector2(joueurStats.maxSpeed, m_Rigidbody2D.velocity.y);
@@ -151,25 +151,36 @@ public class PlayerCharacter2D : Personnages {
             // Add a vertical force to the player.
             m_Grounded = false;
             m_Anim.SetBool("Ground", false);
-            m_Rigidbody2D.AddForce(new Vector2(0f, joueurStats.m_JumpForce));
+            m_Rigidbody2D.AddForce(Vector2.up * joueurStats.m_JumpForce, ForceMode2D.Impulse);
         }
         else if (m_DoubleJump && jump)
         {
             m_DoubleJump = false;
-            m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, 0);
-            m_Rigidbody2D.AddForce(new Vector2(0f, joueurStats.m_JumpForce));
+            Vector2 d_jump;
+            if (m_Rigidbody2D.velocity.y >= 0)
+                d_jump = Vector2.up * joueurStats.m_JumpForce;
+            else 
+                d_jump = Vector2.up * (joueurStats.m_JumpForce +Mathf.Abs(m_Rigidbody2D.velocity.y));
+
+
+            m_Rigidbody2D.AddForce(d_jump, ForceMode2D.Impulse);
         }
     }
 
     private void BetterJumpPhysic()
     {
+
         if (m_Rigidbody2D.velocity.y < 0)
         {
-            m_Rigidbody2D.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+            m_Rigidbody2D.gravityScale = fallMultiplier;
+            //m_Rigidbody2D.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
         }
         else if (m_Rigidbody2D.velocity.y > 0 && !Input.GetButton("Jump"))
         {
-            m_Rigidbody2D.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+            m_Rigidbody2D.gravityScale = lowJumpMultiplier;
+            //m_Rigidbody2D.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+        } else {
+            m_Rigidbody2D.gravityScale = 4f;
         }
     }
 
