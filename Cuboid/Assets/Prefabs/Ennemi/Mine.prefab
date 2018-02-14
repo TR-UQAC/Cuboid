@@ -39,7 +39,6 @@ GameObject:
   - component: {fileID: 61504920672342548}
   - component: {fileID: 114888880467656520}
   - component: {fileID: 114704817824342208}
-  - component: {fileID: 58252945459192222}
   m_Layer: 11
   m_Name: Mine
   m_TagString: Ennemi
@@ -53,7 +52,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1624414363356482}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 0.5, z: 1}
   m_Children:
@@ -94,21 +93,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &58252945459192222
-CircleCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1624414363356482}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.32
 --- !u!61 &61504920672342548
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -157,7 +141,7 @@ MonoBehaviour:
   statAttaque:
     ePower: 50
     eRadius: 5
-    upwardsModifier: 0
+    upwardsModifier: 0.2
     degGlace: 0
     degPoison: 0
     degFoudre: 0

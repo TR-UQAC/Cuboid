@@ -190,7 +190,7 @@ MonoBehaviour:
   facingRight: 0
   tirerSurJoueur: 0
   showVie: 1
-  showDommage: 0
+  showDommage: 1
   showContactDommage: 0
   showMouvement: 0
   showElements: 0

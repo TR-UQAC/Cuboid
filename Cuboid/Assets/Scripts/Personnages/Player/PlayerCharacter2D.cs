@@ -29,7 +29,7 @@ public class PlayerCharacter2D : Personnages {
 
     private bool m_DoubleJump = true;
 
-
+    public float dureeImmortel = 0.5f;
     private void Awake()
     {
         // Setting up references.
@@ -199,10 +199,17 @@ public class PlayerCharacter2D : Personnages {
 
     public override void DommagePerso(int dommage) {
         if (!joueurStats.immortel && joueurStats.vie > 0) {
+            joueurStats.immortel = true;
+            StartCoroutine(ChangeImmortel());
             joueurStats.vie -= dommage;
             if (joueurStats.vie <= 0) {
                 GameMaster.KillJoueur(this);
             }
         }
+    }
+
+    IEnumerator ChangeImmortel() {
+        yield return new WaitForSeconds(dureeImmortel);
+        joueurStats.immortel = false;
     }
 }

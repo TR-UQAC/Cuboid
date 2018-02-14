@@ -198,8 +198,8 @@ MonoBehaviour:
     m_Bits: 256
   effetAttaquePrefab: {fileID: 0}
   statAttaque:
-    ePower: 0
-    eRadius: 0
+    ePower: 10
+    eRadius: 1.5
     upwardsModifier: 0
     degGlace: 0
     degPoison: 0

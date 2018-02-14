@@ -68,12 +68,9 @@ GameObject:
   - component: {fileID: 95815708418832840}
   - component: {fileID: 58397281021277928}
   - component: {fileID: 50634907689854870}
-  - component: {fileID: 114410728604093512}
-  - component: {fileID: 114656499653277982}
   - component: {fileID: 61000555817684058}
   - component: {fileID: 114169987853243778}
   - component: {fileID: 114765597985804808}
-  - component: {fileID: 61128068168448206}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -143,7 +140,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1749170591753294}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.71, y: 4.154999, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 4118770277036440}
@@ -178,7 +175,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
+  m_LinearDrag: 1.5
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -226,31 +223,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.25, y: 0.44}
   m_EdgeRadius: 0
---- !u!61 &61128068168448206
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1749170591753294}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.26, y: 0.43}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.26, y: 0.43}
-  m_EdgeRadius: 0
 --- !u!95 &95815708418832840
 Animator:
   serializedVersion: 3
@@ -282,8 +254,8 @@ MonoBehaviour:
   joueurStats:
     vie: 100
     vieMax: 100
-    immortel: 1
-    m_JumpForce: 1500
+    immortel: 0
+    m_JumpForce: 1000
     speed: 600
     maxSpeed: 10
     fMode: 1
@@ -301,24 +273,7 @@ MonoBehaviour:
   IsRunning: 0
   fallMultiplier: 10
   lowJumpMultiplier: 9
---- !u!114 &114410728604093512
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1749170591753294}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d08f91df3bd212f429df17f53ce2f364, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MaxSpeed: 10
-  m_JumpForce: 1000
-  m_CrouchSpeed: 0.25
-  m_AirControl: 1
-  m_WhatIsGround:
-    serializedVersion: 2
-    m_Bits: 1025
+  dureeImmortel: 0.2
 --- !u!114 &114434940233586698
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -346,17 +301,6 @@ MonoBehaviour:
     degGlace: 0
     degPoison: 0
     degFoudre: 0
---- !u!114 &114656499653277982
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1749170591753294}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3d7b34a3bb2d4e4b926e7e729d3d410, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114765597985804808
 MonoBehaviour:
   m_ObjectHideFlags: 1
