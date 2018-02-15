@@ -11,8 +11,10 @@ public class TimeManager : MonoBehaviour {
     }
     // Update is called once per frame
     void Update () {
-        Time.timeScale += (1f / slowdownLength) * Time.unscaledDeltaTime;
-        Time.timeScale = Mathf.Clamp(Time.timeScale, 0f, 1f);
+        if (!PauseMenu.GameIsPaused) {
+            Time.timeScale += (1f / slowdownLength) * Time.unscaledDeltaTime;
+            Time.timeScale = Mathf.Clamp(Time.timeScale, 0f, 1f);
+        }
 	}
 
     public static void DoSlowMotion(){
