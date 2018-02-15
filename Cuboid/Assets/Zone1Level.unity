@@ -29281,7 +29281,12 @@ Prefab:
     - target: {fileID: 114395762384103536, guid: c1dd8a2f210ed7e4ebd4fd9620672bc9,
         type: 2}
       propertyPath: data.dataString
-      value: UEsDBBQAAAgIAACYn+sUSnswHQIAAH4EAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VE2TmkAQ/SsW52gBq+ySW6K7JgdXa00q53FoZMphhpqPuLrlf0/PMAghlRNNv/54r7vhI2JCN0CNVGvFio0sIPo8iZwdfZpExGNvxDCJ7gQ9TMsajGL0izhyFxuj0wpWSlU/F0dYSm00ukvCNSCkpHHZAl0fk+gdH9PcpVzQSh+ddUUrjyc3NCkIA2oQmj3N8nyxSEPCNE9nSZJkDyGtzbKCclI3UOzZFfrkNHvs+sQPPlCguhDjpFDJOdOBW2QujZf+Ri5OecEI6vRkXPcK2LEy4eWeuC1LDSYMQZHLiikcV1sx+ipN5SrVRJ9aVr8Jt755nM49obbq5p+AaeLhUsn6W9c4iV0TUzF6QoqUaDOY8tC96pknfjpnwk/kwOFXBeJVrpW0okDQKOtSrYZ01b/etS0roKfe31IdOW3Tj7tbardSp+Hm5b8vOasPDprNW8eeSz9sfwmgcC3fkbC/Ex1KoNex+KnhBzkODyoAL0xpg1BQKRy9g7TKhUbPfmZOjTVLqQSoYYUGBOHmssM6ZrzEEfb/rBfivpnQPWDdJzFK8e4+Po5H0E6e79vSlTxvQFdbazgTw2IOecVJLaUQ7ZHpfhFd2t6qklDogaNlxd+3FRXxIUvmlKRA42IB+RSyLM8PpASyKLL0KYn88TGBOgnftUTDeHBtoi8u8NC6v8VkrUjj771Q5Lxm11oO+DFRyj1VAGLbVvCqbn8AUEsDBBQAAAgIAACYn+tu4XRLNAAAADcAAAASACQAZ3JhcGgwX2VkaXRvci5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1bKyU/OTk1RslIoKSpN1VFQKs7IL3etKClKBAqlJeYUg8QKMsvyS4B8JefUvJLUIqVaAFBLAwQUAAAICAAAmJ/rnevrLm0AAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9QzNNBRUEovSizIKAaKGII4pZkpIHa0UopBkpmhSXKiUWqyQYppqqVuqpmZpWVSYlpqommKmZGFoVIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAAmJ/rFEp7MB0CAAB+BAAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAAmJ/rbuF0SzQAAAA3AAAAEgAkAAAAAAAAAAAAAABqAgAAZ3JhcGgwX2VkaXRvci5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAJif653r6y5tAAAAeAAAAAkAJAAAAAAAAAAAAAAA8gIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAwADABwBAACqAwAAAAA=
+      value: UEsDBBQAAAgIAACYn+tA4r7DFgIAAHYEAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VE1z2jAQ/SuMziVju+DEvbWQ0B4ITEinZyGtsQZZ8uijBDL5713JNnbp9IT03u7qvd0170Qo2wBz2qyM4GvNgXyZkHAmnyaERu6FOqERThERVtfgjGBf1UGG2ARBr0SpTf3ID7DQ1lmESyotIGW0C9kKofcJecOfaRFSznjK7sPpgqcimXzgkYFyYEah+cPdvAueFlk8h/A22ismad0A34kLDElZft/XTz7HQIWuuphggWkphe00EXduouUXeg6OuaDoL4rI8FqBOFSuu1wTN2VpwXXmDT0vhcE2tRXJN+2qUKmm9tiq+k2lj48n2SwKaquu/wmYppEuja6/9w+nSXjEVYIdUSKj1o26O4aXg/I0dudE5ZHuJfyqQD3rldFecSSd8SHVW8iWw/XqbVEBOw54K/UG9M3Q7n6Y/SiDh49o/20hRb0P1N2sBXZSx2bHDQCDY/mBguN+2K4EokHFTwuv9DBepI54EsY6pDqXKsjba29CKHmMPQtuvFtoo8CMKzSgqHTnLdZxt0O84f6f9UTDt9K93nH9p3CTEuEhPkluqK0+XadlK31ag6023kmhxsUC84ydWmil2iWzwyD6tJ03JWUwEAcv+N+7RXiyz9MZoxmwhM+hmEKeF8WelkDnPM8eUhKXTyj0SeW2Fdq1B8emhuIKF63/l5isDG3ivnNDTytxqfVIn1Cl3jEDoDZthejq4w9QSwMEFAAACAgAAJif627hdEs0AAAANwAAABIAJABncmFwaDBfZWRpdG9yLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVsrJT85OTVGyUigpKk3VUVAqzsgvd60oKUoECqUl5hSDxAoyy/JLgHwl59S8ktQipVoAUEsDBBQAAAgIAACYn+ud6+subQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz1DM00FFQSi9KLMgoBooYgjilmSkgdrRSikGSmaFJcqJRarJBimmqpW6qmZmlZVJiWmqiaYqZkYWhUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAACYn+tA4r7DFgIAAHYEAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAACYn+tu4XRLNAAAADcAAAASACQAAAAAAAAAAAAAAGMCAABncmFwaDBfZWRpdG9yLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAAmJ/rnevrLm0AAAB4AAAACQAkAAAAAAAAAAAAAADrAgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAADAAMAHAEAAKMDAAAAAA==
+      objectReference: {fileID: 0}
+    - target: {fileID: 114395762384103536, guid: c1dd8a2f210ed7e4ebd4fd9620672bc9,
+        type: 2}
+      propertyPath: showNavGraphs
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c1dd8a2f210ed7e4ebd4fd9620672bc9, type: 2}
@@ -29418,11 +29423,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -33009,11 +33014,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -33405,6 +33410,11 @@ Prefab:
     - target: {fileID: 4308735941533798, guid: e5734b82833ac7045bed4c0a7520e04f, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114223851395116910, guid: e5734b82833ac7045bed4c0a7520e04f,
+        type: 2}
+      propertyPath: sounds.Array.data[0].loop
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5734b82833ac7045bed4c0a7520e04f, type: 2}
@@ -34138,11 +34148,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4686034476788358, guid: e589d71cbb1ea8941bd568773b079766, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -1.01
+      value: 0.656
       objectReference: {fileID: 0}
     - target: {fileID: 4686034476788358, guid: e589d71cbb1ea8941bd568773b079766, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.55
+      value: -1.698
       objectReference: {fileID: 0}
     - target: {fileID: 4686034476788358, guid: e589d71cbb1ea8941bd568773b079766, type: 2}
       propertyPath: m_LocalPosition.z
@@ -34517,11 +34527,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -34676,11 +34686,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:

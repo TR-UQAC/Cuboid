@@ -9528,7 +9528,7 @@ TilemapCollider2D:
   m_GameObject: {fileID: 304913058}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 3626fe8e008014f6bbd19bb72937b311, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -9596,6 +9596,11 @@ Prefab:
       value: 
       objectReference: {fileID: 24300002, guid: e656a0185bed51949bc16f804413d0e7,
         type: 2}
+    - target: {fileID: 114223851395116910, guid: e5734b82833ac7045bed4c0a7520e04f,
+        type: 2}
+      propertyPath: sounds.Array.data[0].loop
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5734b82833ac7045bed4c0a7520e04f, type: 2}
   m_IsPrefabParent: 0
@@ -13871,6 +13876,11 @@ Prefab:
       propertyPath: m_Tiles.Array.data[24].second.m_TileSpriteIndex
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2113883506262465218, guid: 19e8a8e072b12c14dbebd4e2c8afd3af,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 3626fe8e008014f6bbd19bb72937b311, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 19e8a8e072b12c14dbebd4e2c8afd3af, type: 2}
   m_IsPrefabParent: 0
@@ -14043,10 +14053,14 @@ Prefab:
         type: 2}
       propertyPath: cam
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2062805137}
     - target: {fileID: 1037595027239456, guid: 156b0a46637a80f48ae1811fe561f00d, type: 2}
       propertyPath: m_Name
       value: TriggerCam
+      objectReference: {fileID: 0}
+    - target: {fileID: 1037595027239456, guid: 156b0a46637a80f48ae1811fe561f00d, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 156b0a46637a80f48ae1811fe561f00d, type: 2}
@@ -14598,6 +14612,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5068669919639e944b67c725f546dca7, type: 2}
   m_IsPrefabParent: 0
+--- !u!20 &2062805137 stripped
+Camera:
+  m_PrefabParentObject: {fileID: 20362537443931312, guid: 79da5af29764ba9448384642d6f5af86,
+    type: 2}
+  m_PrefabInternal: {fileID: 545856545}
 --- !u!1001 &2133372361
 Prefab:
   m_ObjectHideFlags: 0
