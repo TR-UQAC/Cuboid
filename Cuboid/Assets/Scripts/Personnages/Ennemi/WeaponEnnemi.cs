@@ -71,7 +71,7 @@ public class WeaponEnnemi : MonoBehaviour {
             if (effetAttaquePrefab != null) {
                 Transform clone = Instantiate(effetAttaquePrefab, firePoint.position, firePoint.rotation) as Transform;
                 ShockWaveForce wave = clone.GetComponent<ShockWaveForce>();
-                wave.radius = statAttaque.eRadius;
+                wave.radius = statAttaque.eRadius*1.3f;
 
                 Destroy(clone.gameObject, 1f);
             }

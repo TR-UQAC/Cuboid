@@ -51,7 +51,7 @@ public class Bullet : MonoBehaviour {
                 foreach (Collider2D nerbyObject in colliders) {
                     if (dommageHit == (dommageHit | (1 << nerbyObject.gameObject.layer))){
                         if (statAttaque.ePower != 0)
-                            Rigidbody2DExt.AddExplosionForce(nerbyObject.GetComponent<Rigidbody2D>(), statAttaque.ePower, myTransform.position, statAttaque.eRadius+2f, statAttaque.upwardsModifier);
+                            Rigidbody2DExt.AddExplosionForce(nerbyObject.GetComponent<Rigidbody2D>(), statAttaque.ePower, myTransform.position, statAttaque.eRadius*1.3f, statAttaque.upwardsModifier);
 
                         Personnages en = nerbyObject.GetComponent<Personnages>() as Personnages;
                         en.DommagePerso(dmg);
@@ -62,7 +62,7 @@ public class Bullet : MonoBehaviour {
             if (effetExplosion != null && statAttaque.eRadius != 0) {
                     Transform clone = Instantiate(effetExplosion, myTransform.position, myTransform.rotation) as Transform;
                     ShockWaveForce wave = clone.GetComponent<ShockWaveForce>();
-                    wave.radius = statAttaque.eRadius+2f;
+                    wave.radius = statAttaque.eRadius*1.3f;
                     Destroy(clone.gameObject, 1f);
                 }
             }

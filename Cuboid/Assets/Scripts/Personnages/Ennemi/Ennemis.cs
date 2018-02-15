@@ -33,9 +33,11 @@ public class Ennemis : Personnages {
 
     private bool ia = false;
     public bool tirerSurJoueur = false;
+
+    public float decelleration = 2f;
     #endregion
 
-#region Collision
+    #region Collision
     private void OnCollisionEnter2D(Collision2D collision) {
         GameObject go = collision.gameObject;
 
@@ -143,9 +145,17 @@ public class Ennemis : Personnages {
 
         switch (comp.deplacement) {
             case typeDeplac.Voler:
+                dir *= ennemiStats.speed * Time.fixedDeltaTime;
+                rb.AddRelativeForce(dir, ennemiStats.fMode);
+                break;
+
             case typeDeplac.Glisser:
                 dir *= ennemiStats.speed * Time.fixedDeltaTime;
                 rb.AddRelativeForce(dir, ennemiStats.fMode);
+
+                Vector2 velo = new Vector2(-rb.velocity.x * decelleration, 0);
+                rb.AddRelativeForce(velo);
+
 
                 break;
 

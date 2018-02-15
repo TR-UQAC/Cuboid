@@ -26,10 +26,12 @@ public class PlayerCharacter2D : Personnages {
 
     public float fallMultiplier = 2.5f;
     public float lowJumpMultiplier = 2f;
+    public float decelleration = 4f;
 
     private bool m_DoubleJump = true;
 
     public float dureeImmortel = 0.5f;
+
     private void Awake()
     {
         // Setting up references.
@@ -72,6 +74,9 @@ public class PlayerCharacter2D : Personnages {
         {
             joueurStats.maxSpeed = 10f;
         }
+
+        if(m_Grounded)
+            m_Rigidbody2D.AddRelativeForce(-m_Rigidbody2D.velocity * decelleration);
     }
 
     public void PrintAllUpgrade()

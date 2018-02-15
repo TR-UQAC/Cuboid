@@ -176,7 +176,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 4
   m_Material: {fileID: 0}
   m_Interpolate: 1
   m_SleepingMode: 1
@@ -258,7 +258,7 @@ MonoBehaviour:
     vieMax: 300
     immortel: 0
     m_JumpForce: 0
-    speed: 500
+    speed: 1000
     maxSpeed: 5
     fMode: 0
     resitGlace: 0
@@ -271,9 +271,9 @@ MonoBehaviour:
     contact: 1
     dmgContact: 20
     statAttaque:
-      ePower: 0
-      eRadius: 0
-      upwardsModifier: 0
+      ePower: 150
+      eRadius: 5
+      upwardsModifier: 1
       degGlace: 0
       degPoison: 0
       degFoudre: 0
@@ -285,9 +285,10 @@ MonoBehaviour:
   directionTir: {x: 0, y: 0}
   facingRight: 0
   tirerSurJoueur: 0
+  decelleration: 2
   showVie: 1
   showDommage: 1
-  showContactDommage: 0
+  showContactDommage: 1
   showMouvement: 1
   showElements: 0
 --- !u!114 &114930850987638704
