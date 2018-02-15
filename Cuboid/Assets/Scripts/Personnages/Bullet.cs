@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour {
 
-    
+    #region variable
     public float speed = 25f;
     public float maxTimeToLive = 2f;
     public bool facingRight;
@@ -21,7 +21,9 @@ public class Bullet : MonoBehaviour {
     private Transform myTransform;
 
     public Transform effetExplosion;
+#endregion
     // Use this for initialization
+
     void Start () {
         
         m_Rigidbody2D = GetComponent<Rigidbody2D>() as Rigidbody2D;
@@ -45,21 +47,22 @@ public class Bullet : MonoBehaviour {
         if (noHit != (noHit | (1 << go.layer))) {
             
             if (myTransform != null) {
-                Collider2D[] colliders = Physics2D.OverlapCircleAll(myTransform.position, statAttaque.eRadius, dommageHit);
+                Collider2D[] colliders = Physics2D.OverlapCircleAll(myTransform.position, statAttaque.eRadius+0.1f, dommageHit);
                 foreach (Collider2D nerbyObject in colliders) {
-                    if (dommageHit == (dommageHit | (1 << go.layer))){
+                    if (dommageHit == (dommageHit | (1 << nerbyObject.gameObject.layer))){
                         if (statAttaque.ePower != 0)
-                            Rigidbody2DExt.AddExplosionForce(nerbyObject.GetComponent<Rigidbody2D>(), statAttaque.ePower, myTransform.position, statAttaque.eRadius, statAttaque.upwardsModifier);
+                            Rigidbody2DExt.AddExplosionForce(nerbyObject.GetComponent<Rigidbody2D>(), statAttaque.ePower, myTransform.position, statAttaque.eRadius+2f, statAttaque.upwardsModifier);
 
                         Personnages en = nerbyObject.GetComponent<Personnages>() as Personnages;
                         en.DommagePerso(dmg);
+
                     }
                 }
 
             if (effetExplosion != null && statAttaque.eRadius != 0) {
                     Transform clone = Instantiate(effetExplosion, myTransform.position, myTransform.rotation) as Transform;
                     ShockWaveForce wave = clone.GetComponent<ShockWaveForce>();
-                    wave.radius = statAttaque.eRadius;
+                    wave.radius = statAttaque.eRadius+2f;
                     Destroy(clone.gameObject, 1f);
                 }
             }

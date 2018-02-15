@@ -15,7 +15,7 @@ public class LevelLoader : MonoBehaviour {
     }
 
     public void DemoEnnemi() {
-        Debug.Log("DemoEnnemi");
+        LoadLevel(2);
         //SceneManager.LoadScene(2);
     }
 

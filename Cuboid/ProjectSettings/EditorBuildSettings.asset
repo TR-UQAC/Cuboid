@@ -11,3 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Zone1Level.unity
     guid: 24e6b39cb511488429b17ee30afd76c3
+  - enabled: 1
+    path: Assets/DemoEnnemi.unity
+    guid: ff967e799c9906c41ab1b85e95718ce3

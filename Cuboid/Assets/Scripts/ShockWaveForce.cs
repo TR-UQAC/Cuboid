@@ -19,7 +19,7 @@ public class ShockWaveForce : MonoBehaviour {
         main.startSizeMultiplier = radius/1.5f;
 
         var main2 = postFx.main;
-        main2.startSizeMultiplier = radius*2;
+        main2.startSizeMultiplier = radius*2.5f;
     }
 
 	// Update is called once per frame

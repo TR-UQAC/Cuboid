@@ -60,6 +60,8 @@ public class Ennemis : Personnages {
     
     public override void DommagePerso(int dommage) {
         if (!ennemiStats.immortel) {
+            ennemiStats.immortel = true;
+            StartCoroutine(ChangeImmortel());
             ennemiStats.vie -= dommage;
 
             if (ennemiStats.vie <= 0) {
@@ -68,7 +70,7 @@ public class Ennemis : Personnages {
             }
         }
     }
-
+    #region corp
     private void Start() {
         myTransform = transform;
         rb = GetComponent<Rigidbody2D>() as Rigidbody2D;
@@ -181,8 +183,9 @@ public class Ennemis : Personnages {
 
         public typeDeplac deplacement;
     }
+#endregion
 
-#region Activation
+    #region Activation
     //**** Désactivation des ennemis quand il ne sont pas vu ****//
     /*
     void OnBecameVisible() {
@@ -229,6 +232,11 @@ public class Ennemis : Personnages {
         }
     }
 
+
+    IEnumerator ChangeImmortel() {
+        yield return new WaitForSeconds(0.1f);
+        ennemiStats.immortel = false;
+    }
 #if UNITY_EDITOR
     //Put gui elements for custom inspector here
 

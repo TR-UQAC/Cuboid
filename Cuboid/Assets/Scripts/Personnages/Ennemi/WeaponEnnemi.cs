@@ -21,7 +21,7 @@ public class WeaponEnnemi : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        attaqueCooldown = 0f;
+        attaqueCooldown = 0.1f;
     }
 
     void Awake() {

@@ -19,6 +19,7 @@ public class MultipleTargetCamera : MonoBehaviour {
     private Camera cam;
     private bool searchingForPlayer = false;
 
+    public bool test = false;
     void Start()
     {
         if (targets[0] == null)
@@ -48,6 +49,9 @@ public class MultipleTargetCamera : MonoBehaviour {
 
         if (targets.Count == 0)
             return;
+
+        if(test)
+            offset.x = targets[0].localScale.x;
 
         Move();
         Zoom();

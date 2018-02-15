@@ -232,7 +232,7 @@ MonoBehaviour:
     type: 2}
   statAttaque:
     ePower: 10
-    eRadius: 10
+    eRadius: 4
     upwardsModifier: 0
     degGlace: 0
     degPoison: 0

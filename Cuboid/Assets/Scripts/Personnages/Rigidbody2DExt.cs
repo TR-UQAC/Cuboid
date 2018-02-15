@@ -26,3 +26,5 @@ public static class Rigidbody2DExt {
         return true;
     }
 }
+
+//TODO: Faire un gizmo pour vérifié la taille du prefab;

@@ -139,7 +139,7 @@ MonoBehaviour:
   effetAttaquePrefab: {fileID: 4793239945891142, guid: 2f080beb01f61df4a86c8847a84e0313,
     type: 2}
   statAttaque:
-    ePower: 50
+    ePower: 30
     eRadius: 5
     upwardsModifier: 0.2
     degGlace: 0
@@ -190,7 +190,7 @@ MonoBehaviour:
   facingRight: 0
   tirerSurJoueur: 0
   showVie: 0
-  showDommage: 0
+  showDommage: 1
   showContactDommage: 0
   showMouvement: 0
   showElements: 0
