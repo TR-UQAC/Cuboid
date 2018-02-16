@@ -288,7 +288,7 @@ MonoBehaviour:
     m_Bits: 3072
   IsRunning: 0
   fallMultiplier: 7
-  lowJumpMultiplier: 8
+  lowJumpMultiplier: 10
   decelleration: 4
   dureeImmortel: 0.2
 --- !u!114 &114434940233586698
@@ -302,7 +302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 738d3d4d2ccdeb140a3393f8a11239dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireRate: 0
+  fireCooldown: 0
   dmg: 50
   noHit:
     serializedVersion: 2
