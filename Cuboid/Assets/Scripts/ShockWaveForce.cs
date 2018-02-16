@@ -16,10 +16,10 @@ public class ShockWaveForce : MonoBehaviour {
         postFx = this.transform.Find("PostFx").GetComponent<ParticleSystem>();
 
         var main = ps.main;
-        main.startSizeMultiplier = radius/1.5f;
+        main.startSizeMultiplier = radius;
 
         var main2 = postFx.main;
-        main2.startSizeMultiplier = radius*2.5f;
+        main2.startSizeMultiplier = radius*2f;
     }
 
 	// Update is called once per frame

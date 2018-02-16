@@ -182,13 +182,14 @@ MonoBehaviour:
       degPoison: 0
       degFoudre: 0
     attaque: 3
-    dmgAttaque: 0
+    dmgAttaque: 15
     fireRate: 1
     deplacement: 0
   direction: {x: 0, y: 0}
   directionTir: {x: 0, y: 0}
   facingRight: 0
   tirerSurJoueur: 0
+  decelleration: 2
   showVie: 1
   showDommage: 1
   showContactDommage: 0

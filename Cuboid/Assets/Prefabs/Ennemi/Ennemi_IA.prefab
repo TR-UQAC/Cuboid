@@ -55,7 +55,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1121619541646682}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.23, y: 3.74, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 4572969732751852}
@@ -164,6 +164,7 @@ MonoBehaviour:
   directionTir: {x: 0, y: 0}
   facingRight: 0
   tirerSurJoueur: 0
+  decelleration: 2
   showVie: 1
   showDommage: 1
   showContactDommage: 0
