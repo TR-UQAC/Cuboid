@@ -151,8 +151,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1362764826406958}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 64.833786, y: 20.69677, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children:
   - {fileID: 4109120865429862}
@@ -239,7 +239,7 @@ MonoBehaviour:
     vieMax: 100
     immortel: 0
     m_JumpForce: 0
-    speed: 2000
+    speed: 1000
     maxSpeed: 10
     fMode: 0
     resitGlace: 0
@@ -267,7 +267,7 @@ MonoBehaviour:
   facingRight: 0
   tirerSurJoueur: 0
   decelleration: 2
-  showVie: 0
+  showVie: 1
   showDommage: 1
   showContactDommage: 1
   showMouvement: 1

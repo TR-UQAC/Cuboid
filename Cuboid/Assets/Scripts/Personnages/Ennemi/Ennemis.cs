@@ -8,7 +8,7 @@ using UnityEngine;
 [DisallowMultipleComponent]
 [RequireComponent(typeof(Rigidbody2D))]
 public class Ennemis : Personnages {
-#region Variable
+    #region Variable
     public enum typeAttaque { Rien = 0, Tirer = 1, Kamikaze = 2, Explosion = 3}
     public enum typeDeplac { Immobile = 0, Voler = 1, Glisser = 2 }
 
@@ -36,43 +36,7 @@ public class Ennemis : Personnages {
 
     public float decelleration = 2f;
     #endregion
-
-    #region Collision
-    private void OnCollisionEnter2D(Collision2D collision) {
-        GameObject go = collision.gameObject;
-
-        if (go.tag == "Player") {
-            if (comp.contact)
-                weapon.Contact(comp.dmgContact, en, comp.statAttaque.ePower, comp.statAttaque.eRadius, comp.statAttaque.upwardsModifier);
-
-            
-            if (comp.attaque == typeAttaque.Kamikaze) {
-                weapon.Explosion(comp.dmgAttaque, en, comp.fireRate);
-                GameMaster.KillEnnemi(this);
-            }
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision) {
-        GameObject go = collision.gameObject;
-        if (go.tag == "KillZone")
-            GameMaster.KillEnnemi(this);
-    }
-#endregion
-    
-    public override void DommagePerso(int dommage) {
-        if (!ennemiStats.immortel) {
-            ennemiStats.immortel = true;
-            StartCoroutine(ChangeImmortel());
-            ennemiStats.vie -= dommage;
-
-            if (ennemiStats.vie <= 0) {
-                GameMaster.KillEnnemi(this);
-                //TimeManager.DoSlowMotion();
-            }
-        }
-    }
-    #region corp
+    #region Corps
     private void Start() {
         myTransform = transform;
         rb = GetComponent<Rigidbody2D>() as Rigidbody2D;
@@ -120,10 +84,27 @@ public class Ennemis : Personnages {
             return;
         }
 
-        if (comp.deplacement != typeDeplac.Immobile)
-            Deplacement(direction);
+        Deplacement(direction);
+
+        if (rb.velocity.x > ennemiStats.maxSpeed)
+            rb.velocity = Vector2.right * ennemiStats.maxSpeed;
+        else if (rb.velocity.x < -ennemiStats.maxSpeed)
+            rb.velocity = Vector2.right * -ennemiStats.maxSpeed;
 
         Attaque();
+    }
+
+    public override void DommagePerso(int dommage) {
+        if (!ennemiStats.immortel) {
+            ennemiStats.immortel = true;
+            StartCoroutine(ChangeImmortel());
+            ennemiStats.vie -= dommage;
+
+            if (ennemiStats.vie <= 0) {
+                GameMaster.KillEnnemi(this);
+                //TimeManager.DoSlowMotion();
+            }
+        }
     }
 
     public void Attaque() {
@@ -155,17 +136,17 @@ public class Ennemis : Personnages {
 
                 Vector2 velo = new Vector2(-rb.velocity.x * decelleration, 0);
                 rb.AddRelativeForce(velo);
-
-
                 break;
 
             default:
+                Vector2 velo2 = new Vector2(-rb.velocity.x * decelleration, 0);
+                rb.AddRelativeForce(velo2);
                 break;
         }
 
         if (ia && !tirerSurJoueur)
             DirectionTarget();
-        else {
+        else if (comp.deplacement != typeDeplac.Immobile) {
             direction = dir;
             directionTir = dir;
         }
@@ -193,8 +174,29 @@ public class Ennemis : Personnages {
 
         public typeDeplac deplacement;
     }
-#endregion
+    #endregion
+    #region Collision
+    private void OnCollisionEnter2D(Collision2D collision) {
+        GameObject go = collision.gameObject;
 
+        if (go.tag == "Player") {
+            if (comp.contact)
+                weapon.Contact(comp.dmgContact, en, comp.statAttaque.ePower, comp.statAttaque.eRadius, comp.statAttaque.upwardsModifier);
+
+            
+            if (comp.attaque == typeAttaque.Kamikaze) {
+                weapon.Explosion(comp.dmgAttaque, en, comp.fireRate);
+                GameMaster.KillEnnemi(this);
+            }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+        GameObject go = collision.gameObject;
+        if (go.tag == "KillZone")
+            GameMaster.KillEnnemi(this);
+    }
+    #endregion
     #region Activation
     //**** Désactivation des ennemis quand il ne sont pas vu ****//
     /*
@@ -228,7 +230,7 @@ public class Ennemis : Personnages {
         yield return new WaitForSeconds(5f);
         StartCoroutine(CheckDistance());
     }
-#endregion
+    #endregion
     IEnumerator SearchForPlayer() {
         GameObject sResult = GameObject.FindGameObjectWithTag("Player");
         if (sResult == null) {
@@ -241,7 +243,6 @@ public class Ennemis : Personnages {
             yield break;
         }
     }
-
 
     IEnumerator ChangeImmortel() {
         yield return new WaitForSeconds(0.1f);
@@ -256,5 +257,4 @@ public class Ennemis : Personnages {
     [HideInInspector] public bool showMouvement;
     [HideInInspector] public bool showElements;
 #endif
-
 }

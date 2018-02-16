@@ -25,6 +25,10 @@ public class Platformer2DControls : MonoBehaviour
             // Read the jump input in Update so button presses aren't missed.
             m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
         }
+
+        if (Input.GetKeyDown(KeyCode.I)) {
+            m_Character.joueurStats.immortel = !m_Character.joueurStats.immortel;
+        }
     }
 
 
