@@ -34186,6 +34186,11 @@ Prefab:
       propertyPath: fireCooldown
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 114169987853243778, guid: e589d71cbb1ea8941bd568773b079766,
+        type: 2}
+      propertyPath: joueurStats.immortel
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e589d71cbb1ea8941bd568773b079766, type: 2}
   m_IsPrefabParent: 0

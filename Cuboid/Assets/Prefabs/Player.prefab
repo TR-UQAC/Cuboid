@@ -270,7 +270,7 @@ MonoBehaviour:
   joueurStats:
     vie: 100
     vieMax: 100
-    immortel: 1
+    immortel: 0
     m_JumpForce: 38
     speed: 600
     maxSpeed: 10
