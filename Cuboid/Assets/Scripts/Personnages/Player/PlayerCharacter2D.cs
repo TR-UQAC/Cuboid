@@ -21,6 +21,7 @@ public class PlayerCharacter2D : Personnages {
     private Animator m_Anim;            // Reference to the player's animator component.
     private Rigidbody2D m_Rigidbody2D;
     private bool m_FacingRight = true;  // For determining which way the player is currently facing.
+    private float shootTimer = 0;
 
     public bool IsRunning = false;
 
@@ -63,6 +64,7 @@ public class PlayerCharacter2D : Personnages {
         m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
 
         BetterJumpPhysic();
+        shootTimer += Time.deltaTime;
 
         if (IsRunning)
         {
@@ -95,8 +97,12 @@ public class PlayerCharacter2D : Personnages {
             Debug.LogError("Failed to find active weapon!");
         }
         else
-        {        
-            currentWeapon.Shoot(m_FacingRight);
+        {
+            if (shootTimer > currentWeapon.fireCooldown)
+            {
+                shootTimer = 0;
+                currentWeapon.Shoot(m_FacingRight);
+            }
         }
     }
     public void Move(float move, bool crouch, bool jump)
