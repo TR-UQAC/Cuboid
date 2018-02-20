@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 //TODO: ! Ajout d'un temps d'immortalité pour le joueur
 public class PlayerCharacter2D : Personnages {
 
@@ -42,6 +43,7 @@ public class PlayerCharacter2D : Personnages {
         m_Rigidbody2D = GetComponent<Rigidbody2D>();
 
         activeUpgradeTable = new Dictionary<string, bool>();
+        UpdateHealthBar();
     }
 
 
@@ -219,7 +221,10 @@ public class PlayerCharacter2D : Personnages {
         }
     }
 
-    public override void DommagePerso(int dommage) {
+    public override void DommagePerso(int dommage)
+    {
+        UpdateHealthBar();
+
         if (!joueurStats.immortel && joueurStats.vie > 0) {
             joueurStats.immortel = true;
             StartCoroutine(ChangeImmortel());
@@ -228,6 +233,12 @@ public class PlayerCharacter2D : Personnages {
                 GameMaster.KillJoueur(this);
             }
         }
+    }
+
+    private void UpdateHealthBar()
+    {
+        GameObject bar = GameObject.FindGameObjectWithTag("HealthUI");
+        bar.GetComponent<HealthBar>().health = joueurStats.vie;   
     }
 
     IEnumerator ChangeImmortel() {
