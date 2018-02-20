@@ -28,11 +28,11 @@ public class Bullet : MonoBehaviour {
         
         m_Rigidbody2D = GetComponent<Rigidbody2D>() as Rigidbody2D;
         myTransform = transform;
-
+        /*
         Vector3 theScale = myTransform.localScale;
         theScale.x *= -1;
         myTransform.localScale = theScale;
-
+        */
         var angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         var rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         transform.rotation = rotation;
