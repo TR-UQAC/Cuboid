@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 1c2469a1284c2604fa79538e8c76fddd
-timeCreated: 1517774460
+timeCreated: 1519162840
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -187,7 +187,7 @@ TextureImporter:
     21300360: SNES - Super Metroid - Samus Varia Suit_180
     21300362: SNES - Super Metroid - Samus Varia Suit_181
     21300364: SNES - Super Metroid - Samus Varia Suit_182
-    21300366: SNES - Super Metroid - Samus Varia Suit_183
+    21300366: morph01
     21300368: SNES - Super Metroid - Samus Varia Suit_184
     21300370: SNES - Super Metroid - Samus Varia Suit_185
   externalObjects: {}
@@ -2838,7 +2838,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: SNES - Super Metroid - Samus Varia Suit_183
+      name: morph01
       rect:
         serializedVersion: 2
         x: 305
