@@ -237,10 +237,8 @@ public class PlayerCharacter2D : Personnages {
 
     private void UpdateHealthBar()
     {
-        if (GameObject.FindGameObjectWithTag("HealthUI")) {
-            GameObject bar = GameObject.FindGameObjectWithTag("HealthUI");
-            bar.GetComponent<HealthBar>().health = joueurStats.vie;
-        }
+        GameObject bar = GameObject.FindGameObjectWithTag("HealthUI");
+        bar.GetComponent<HealthBar>().health = joueurStats.vie;   
     }
 
     IEnumerator ChangeImmortel() {
