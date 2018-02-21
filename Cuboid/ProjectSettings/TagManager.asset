@@ -7,7 +7,6 @@ TagManager:
   - Ennemi
   - GM
   - KillZone
-  - HealthUI
   layers:
   - Default
   - TransparentFX
