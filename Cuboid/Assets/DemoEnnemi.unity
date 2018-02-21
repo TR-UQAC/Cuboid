@@ -3317,6 +3317,12 @@ Prefab:
       propertyPath: statAttaque.eRadius
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 114160919802564104, guid: 7d417b6013409db4f8fa575ff953cea7,
+        type: 2}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 1670978521406608, guid: 5e5d96120a1be4a4e9d9c00a450601dd,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7d417b6013409db4f8fa575ff953cea7, type: 2}
   m_IsPrefabParent: 0
@@ -4781,6 +4787,12 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114441861830949516, guid: 4d095d26ff3bd004cb255b95067de770,
+        type: 2}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 1670978521406608, guid: 5e5d96120a1be4a4e9d9c00a450601dd,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4d095d26ff3bd004cb255b95067de770, type: 2}
   m_IsPrefabParent: 0
@@ -4833,6 +4845,12 @@ Prefab:
       propertyPath: showDommage
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114255591608085970, guid: c0d7da662f82bc74d9da1b1f12493042,
+        type: 2}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 1670978521406608, guid: 5e5d96120a1be4a4e9d9c00a450601dd,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c0d7da662f82bc74d9da1b1f12493042, type: 2}
   m_IsPrefabParent: 0
@@ -5048,7 +5066,7 @@ Prefab:
         type: 2}
       propertyPath: bulletPref
       value: 
-      objectReference: {fileID: 1837535584037162, guid: 781c17d22859ca848891f7749191f234,
+      objectReference: {fileID: 1670978521406608, guid: 75468c4e938724a4eab3fd69fbd9ddad,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e589d71cbb1ea8941bd568773b079766, type: 2}
@@ -5469,6 +5487,12 @@ Prefab:
       propertyPath: comp.attaque
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114947482930623302, guid: 85ee787e8fae0bf47a4ab1aaca41a6de,
+        type: 2}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 1670978521406608, guid: 5e5d96120a1be4a4e9d9c00a450601dd,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 85ee787e8fae0bf47a4ab1aaca41a6de, type: 2}
   m_IsPrefabParent: 0

@@ -242,8 +242,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98e1eaa56be706447a158b20b66114a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  morphSprite: {fileID: 21300366, guid: 1c2469a1284c2604fa79538e8c76fddd, type: 3}
-  standardSprite: {fileID: 21300010, guid: 1c2469a1284c2604fa79538e8c76fddd, type: 3}
 --- !u!114 &114273674530360128
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -309,7 +307,7 @@ MonoBehaviour:
   dommageHit:
     serializedVersion: 2
     m_Bits: 2048
-  bulletPref: {fileID: 1670978521406608, guid: e4a60708d73f3c045a81e69e97ad689e, type: 2}
+  bulletPref: {fileID: 1670978521406608, guid: 75468c4e938724a4eab3fd69fbd9ddad, type: 2}
   statAttaque:
     ePower: 4
     eRadius: 2
