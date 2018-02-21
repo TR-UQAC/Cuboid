@@ -14,15 +14,21 @@ MonoBehaviour:
   m_PixelRect:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 0
     y: 43
     width: 1920
     height: 997
 =======
+=======
+>>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
     x: 8
     y: 51
     width: 1664
     height: 951
+<<<<<<< HEAD
+>>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
+=======
 >>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
   m_ShowMode: 4
   m_Title: 
@@ -73,6 +79,7 @@ MonoBehaviour:
     x: 0
     y: 30
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1920
     height: 947
   m_MinSize: {x: 925, y: 492}
@@ -81,6 +88,8 @@ MonoBehaviour:
   controlID: 13
 --- !u!114 &4
 =======
+=======
+>>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
     width: 1664
     height: 901
   m_MinSize: {x: 683, y: 492}
@@ -103,8 +112,11 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 1531
 =======
+=======
+>>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
     x: 1327
 >>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
     y: 0
@@ -113,8 +125,11 @@ MonoBehaviour:
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_ActualView: {fileID: 16}
 =======
+=======
+>>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
   m_ActualView: {fileID: 14}
 >>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
   m_Panes:
@@ -138,8 +153,13 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 247
     height: 573
+=======
+    width: 214
+    height: 545
+>>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
 =======
     width: 214
     height: 545
@@ -167,9 +187,15 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 573
     width: 1531
     height: 374
+=======
+    y: 545
+    width: 1327
+    height: 356
+>>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
 =======
     y: 545
     width: 1327
@@ -184,8 +210,11 @@ MonoBehaviour:
   m_Selected: 0
   m_LastSelected: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &7
 =======
+=======
+>>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
 --- !u!114 &6
 >>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
 MonoBehaviour:
@@ -207,10 +236,13 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1920
     height: 997
   m_MinSize: {x: 950, y: 542}
 =======
+=======
+>>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
     width: 1664
     height: 951
   m_MinSize: {x: 950, y: 300}
@@ -233,7 +265,11 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1920
+=======
+    width: 1664
+>>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
 =======
     width: 1664
 >>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
@@ -257,8 +293,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 977
     width: 1920
+=======
+    y: 931
+    width: 1664
+>>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
 =======
     y: 931
     width: 1664
@@ -285,6 +326,7 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1531
     height: 947
   m_MinSize: {x: 650, y: 492}
@@ -293,6 +335,8 @@ MonoBehaviour:
   controlID: 14
 --- !u!114 &11
 =======
+=======
+>>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
     width: 1327
     height: 901
   m_MinSize: {x: 406, y: 492}
@@ -320,6 +364,7 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1531
     height: 573
   m_MinSize: {x: 650, y: 221}
@@ -328,6 +373,8 @@ MonoBehaviour:
   controlID: 15
 --- !u!114 &12
 =======
+=======
+>>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
     width: 1327
     height: 545
   m_MinSize: {x: 406, y: 221}
@@ -350,15 +397,21 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 247
     y: 0
     width: 856
     height: 573
 =======
+=======
+>>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
     x: 214
     y: 0
     width: 1113
     height: 545
+<<<<<<< HEAD
+>>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
+=======
 >>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
   m_MinSize: {x: 204, y: 221}
   m_MaxSize: {x: 4004, y: 4021}
@@ -451,15 +504,21 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 0
     y: 665
     width: 1529
     height: 353
 =======
+=======
+>>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
     x: 8
     y: 645
     width: 1325
     height: 335
+<<<<<<< HEAD
+>>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
+=======
 >>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SearchFilter:
@@ -475,7 +534,11 @@ MonoBehaviour:
     m_SearchArea: 0
     m_Folders:
 <<<<<<< HEAD
+<<<<<<< HEAD
     - Assets/Sprites/Palettes
+=======
+    - Assets/Material
+>>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
@@ -484,6 +547,7 @@ MonoBehaviour:
   m_LastProjectPath: E:\Users\Utilisateur\Documents\GAB_GIT\Cuboid\Cuboid
   m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 224}
     m_SelectedIDs: 00570000
     m_LastClickedID: 22272
@@ -498,10 +562,15 @@ MonoBehaviour:
   m_LastProjectPath: C:\Users\pfouquet\Documents\GitHub\Cuboid\Cuboid
   m_IsLocked: 0
   m_FolderTreeState:
+=======
+>>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
     scrollPos: {x: 0, y: 22}
     m_SelectedIDs: 78550000
     m_LastClickedID: 21880
     m_ExpandedIDs: 00000000ea290000fa290000f22c0000602d00006a2d0000762d000058320000e6330000dc36000046370000783700005e380000103a00001a4200001044000088440000aa45000038480000164b0000964b0000da4b00004e4c00002c51000024560000285600002657000054570000f25c0000525d00006e5d0000dc5d0000625e0000286200002a62000000ca9a3bffffff7f
+<<<<<<< HEAD
+>>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
+=======
 >>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -531,7 +600,11 @@ MonoBehaviour:
     m_SelectedIDs: 
     m_LastClickedID: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000e6290000f6290000c62a0000c22b0000e82c0000562d0000602d00006c2d00004a3200001c330000dc33000074350000d23600003c3700006a370000503800004e390000fc39000004420000fa430000724400009245000020480000fe4a00007e4b0000c04b0000344c0000a24c000012510000085600000c5600000a5700002257000036570000ce5c00002e5d00004a5d0000b85d00003e5e00000262000004620000
+=======
+    m_ExpandedIDs: 00000000ea290000fa290000c82b0000f22c0000602d00006a2d0000762d00005832000026330000e6330000dc36000046370000783700005e380000103a00001a4200001044000088440000aa45000038480000164b0000964b0000da4b00004e4c0000bc4c00002c51000024560000285600002657000054570000f25c0000525d00006e5d0000dc5d0000625e0000286200002a620000
+>>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
 =======
     m_ExpandedIDs: 00000000ea290000fa290000c82b0000f22c0000602d00006a2d0000762d00005832000026330000e6330000dc36000046370000783700005e380000103a00001a4200001044000088440000aa45000038480000164b0000964b0000da4b00004e4c0000bc4c00002c51000024560000285600002657000054570000f25c0000525d00006e5d0000dc5d0000625e0000286200002a620000
 >>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
@@ -562,8 +635,11 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_HadKeyboardFocusLastEvent: 1
 =======
+=======
+>>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
     m_HadKeyboardFocusLastEvent: 0
 >>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
     m_ExpandedInstanceIDs: c6230000bc840000dc5100006e32000062510000
@@ -616,15 +692,21 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 1533
     y: 92
     width: 387
     height: 926
 =======
+=======
+>>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
     x: 1337
     y: 100
     width: 335
     height: 880
+<<<<<<< HEAD
+>>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
+=======
 >>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
   m_PersistentViewDataDictionary: {fileID: 0}
   m_ScrollPosition: {x: 0, y: 0}
@@ -657,15 +739,21 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 0
     y: 92
     width: 245
     height: 552
 =======
+=======
+>>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
     x: 8
     y: 100
     width: 212
     height: 524
+<<<<<<< HEAD
+>>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
+=======
 >>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
@@ -673,7 +761,11 @@ MonoBehaviour:
     m_SelectedIDs: 
     m_LastClickedID: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: c63dfdffd63ffdffde73feff2cbbffffced9ffff9efbffff00000000
+=======
+    m_ExpandedIDs: 80fbffff86fbffff9efbffff00000000
+>>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
 =======
     m_ExpandedIDs: 80fbffff86fbffff9efbffff00000000
 >>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
@@ -722,15 +814,21 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 249
     y: 92
     width: 852
     height: 552
 =======
+=======
+>>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
     x: 224
     y: 100
     width: 1109
     height: 524
+<<<<<<< HEAD
+>>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
+=======
 >>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
@@ -740,9 +838,15 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_Position:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: -33.01647, y: -1.9768077, z: 0.1328125}
     speed: 2
     m_Value: {x: -33.01647, y: -1.9768077, z: 0.1328125}
+=======
+    m_Target: {x: 5.7164187, y: -4.124604, z: -12.267906}
+    speed: 2
+    m_Value: {x: 5.7164187, y: -4.124604, z: -12.267906}
+>>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
 =======
     m_Target: {x: 5.7164187, y: -4.124604, z: -12.267906}
     speed: 2
@@ -776,9 +880,15 @@ MonoBehaviour:
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: 9.874377
     speed: 2
     m_Value: 9.874377
+=======
+    m_Target: 7.9824104
+    speed: 2
+    m_Value: 7.9824104
+>>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
 =======
     m_Target: 7.9824104
     speed: 2
@@ -789,8 +899,13 @@ MonoBehaviour:
     speed: 2
     m_Value: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_ShowGlobalGrid: 0
   m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+=======
+  m_ShowGlobalGrid: 1
+  m_LastSceneViewRotation: {x: 0.07822969, y: 0.00089984114, z: -0.000070610105, w: 0.99693495}
+>>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
 =======
   m_ShowGlobalGrid: 1
   m_LastSceneViewRotation: {x: 0.07822969, y: 0.00089984114, z: -0.000070610105, w: 0.99693495}
@@ -823,15 +938,21 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 249
     y: 92
     width: 852
     height: 552
 =======
+=======
+>>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
     x: 224
     y: 100
     width: 1109
     height: 524
+<<<<<<< HEAD
+>>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
+=======
 >>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
   m_PersistentViewDataDictionary: {fileID: 0}
   m_MaximizeOnPlay: 0
@@ -843,15 +964,21 @@ MonoBehaviour:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_HBaseRangeMin: -426
     m_HBaseRangeMax: 426
     m_VBaseRangeMin: -267.5
     m_VBaseRangeMax: 267.5
 =======
+=======
+>>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
     m_HBaseRangeMin: -554.5
     m_HBaseRangeMax: 554.5
     m_VBaseRangeMin: -253.5
     m_VBaseRangeMax: 253.5
+<<<<<<< HEAD
+>>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
+=======
 >>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
@@ -870,15 +997,21 @@ MonoBehaviour:
       x: 0
       y: 17
 <<<<<<< HEAD
+<<<<<<< HEAD
       width: 852
       height: 535
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 426, y: 267.5}
 =======
+=======
+>>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
       width: 1109
       height: 507
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 554.5, y: 253.5}
+<<<<<<< HEAD
+>>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
+=======
 >>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
     m_MarginLeft: 0
     m_MarginRight: 0
@@ -887,22 +1020,32 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
       x: -426
       y: -267.5
       width: 852
       height: 535
 =======
+=======
+>>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
       x: -554.5
       y: -253.5
       width: 1109
       height: 507
+<<<<<<< HEAD
+>>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
+=======
 >>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LastWindowPixelSize: {x: 852, y: 552}
+=======
+  m_LastWindowPixelSize: {x: 1109, y: 524}
+>>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
 =======
   m_LastWindowPixelSize: {x: 1109, y: 524}
 >>>>>>> parent of fedbeda... Merge branch 'master' of https://github.com/TR-UQAC/Cuboid
