@@ -24,7 +24,6 @@ public class Ennemis : Personnages {
     private EnnemiAI artIntel;
     private WeaponEnnemi weapon;
     private PatrolControl control;
-    private SpriteRenderer sprite;
 
     public Vector2 direction;
     public Vector2 directionTir = new Vector2(0,0);
@@ -55,9 +54,6 @@ public class Ennemis : Personnages {
             direction.x = control.direction.x;
             myTransform.localScale = new Vector2(myTransform.localScale.x * -direction.x, myTransform.localScale.y);
         }
-
-        if (GetComponent<SpriteRenderer>() != null)
-            sprite = GetComponent<SpriteRenderer>();
 
 
         rb.gravityScale = (comp.deplacement == typeDeplac.Voler) ? 0 : rb.gravityScale;
@@ -99,7 +95,6 @@ public class Ennemis : Personnages {
     }
 
     public override void DommagePerso(int dommage) {
-        
         if (!ennemiStats.immortel) {
             ennemiStats.immortel = true;
             StartCoroutine(ChangeImmortel());

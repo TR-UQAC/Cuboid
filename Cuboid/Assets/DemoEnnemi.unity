@@ -5044,12 +5044,6 @@ Prefab:
       propertyPath: joueurStats.vieMax
       value: 100
       objectReference: {fileID: 0}
-    - target: {fileID: 114434940233586698, guid: e589d71cbb1ea8941bd568773b079766,
-        type: 2}
-      propertyPath: bulletPref
-      value: 
-      objectReference: {fileID: 1837535584037162, guid: 781c17d22859ca848891f7749191f234,
-        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e589d71cbb1ea8941bd568773b079766, type: 2}
   m_IsPrefabParent: 0
