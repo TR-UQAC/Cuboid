@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 1c2469a1284c2604fa79538e8c76fddd
-timeCreated: 1519162840
+timeCreated: 1519267993
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -287,7 +287,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12.5, y: 24}
+        - {x: -12.5, y: -24}
+        - {x: 12.5, y: -24}
+        - {x: 12.5, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_1
@@ -301,7 +305,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -10.5, y: 23}
+        - {x: -10.5, y: -23}
+        - {x: 10.5, y: -23}
+        - {x: 10.5, y: 23}
       tessellationDetail: 0
     - serializedVersion: 2
       name: Stand_Left
@@ -315,7 +323,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 9, y: 21.5}
+        - {x: -8, y: 21.5}
+        - {x: -13, y: 16.5}
+        - {x: -13, y: -21.5}
+        - {x: 13, y: -21.5}
+        - {x: 13, y: 9.5}
+        - {x: 11, y: 20.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_3
@@ -329,7 +344,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 9, y: 21.5}
+        - {x: -8, y: 21.5}
+        - {x: -13, y: 16.5}
+        - {x: -13, y: -21.5}
+        - {x: 13, y: -21.5}
+        - {x: 13, y: 9.5}
+        - {x: 11, y: 20.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_4
@@ -343,7 +365,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 9, y: 21.5}
+        - {x: -8, y: 21.5}
+        - {x: -13, y: 16.5}
+        - {x: -13, y: -21.5}
+        - {x: 13, y: -21.5}
+        - {x: 13, y: 9.5}
+        - {x: 11, y: 20.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: Stand_Right
@@ -357,7 +386,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -13, y: 21.5}
+        - {x: -13, y: -21.5}
+        - {x: 12, y: -21.5}
+        - {x: 13, y: -17.5}
+        - {x: 13, y: 14.5}
+        - {x: 9, y: 21.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_6
@@ -371,7 +406,12 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -13, y: 21.5}
+        - {x: -13, y: -21.5}
+        - {x: 11, y: -21.5}
+        - {x: 13, y: -12.5}
+        - {x: 13, y: 21.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_7
@@ -385,7 +425,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -13, y: 21.5}
+        - {x: -13, y: -21.5}
+        - {x: 12, y: -21.5}
+        - {x: 13, y: -17.5}
+        - {x: 13, y: 14.5}
+        - {x: 9, y: 21.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_8
@@ -399,7 +445,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -10, y: 23}
+        - {x: -10, y: -23}
+        - {x: 4, y: -23}
+        - {x: 9, y: -22}
+        - {x: 10, y: -22}
+        - {x: 10, y: 23}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_9
@@ -413,7 +465,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -16, y: 24.5}
+        - {x: -16, y: 2.5}
+        - {x: -10, y: -24.5}
+        - {x: 16, y: -24.5}
+        - {x: 16, y: 18.5}
+        - {x: -2, y: 24.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_10
@@ -427,7 +485,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 8, y: 21.5}
+        - {x: -9, y: 21.5}
+        - {x: -13, y: 16.5}
+        - {x: -13, y: -6.5}
+        - {x: -10, y: -21.5}
+        - {x: 13, y: -21.5}
+        - {x: 13, y: 6.5}
+        - {x: 11, y: 20.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_11
@@ -441,7 +507,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 8, y: 21.5}
+        - {x: -9, y: 21.5}
+        - {x: -13, y: 16.5}
+        - {x: -13, y: -6.5}
+        - {x: -10, y: -21.5}
+        - {x: 13, y: -21.5}
+        - {x: 13, y: 6.5}
+        - {x: 11, y: 20.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_12
@@ -455,7 +529,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 8, y: 21.5}
+        - {x: -9, y: 21.5}
+        - {x: -13, y: 16.5}
+        - {x: -13, y: -6.5}
+        - {x: -10, y: -21.5}
+        - {x: 13, y: -21.5}
+        - {x: 13, y: 6.5}
+        - {x: 11, y: 20.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_13
@@ -469,7 +551,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 7, y: 21.5}
+        - {x: -13, y: 21.5}
+        - {x: -13, y: -21.5}
+        - {x: 13, y: -21.5}
+        - {x: 13, y: 16.5}
+        - {x: 9, y: 20.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_14
@@ -483,7 +571,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -13, y: 21.5}
+        - {x: -13, y: -21.5}
+        - {x: 11, y: -21.5}
+        - {x: 13, y: -14.5}
+        - {x: 13, y: 16.5}
+        - {x: 8, y: 21.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_15
@@ -497,7 +591,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -13, y: 21.5}
+        - {x: -13, y: -21.5}
+        - {x: 11, y: -21.5}
+        - {x: 13, y: -14.5}
+        - {x: 13, y: 16.5}
+        - {x: 8, y: 21.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_16
@@ -511,7 +611,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 24}
+        - {x: -16, y: 13}
+        - {x: -16, y: -24}
+        - {x: 8, y: -24}
+        - {x: 16, y: 6}
+        - {x: 16, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_17
@@ -525,7 +631,12 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -16, y: 25}
+        - {x: -16, y: -25}
+        - {x: 16, y: -25}
+        - {x: 16, y: 20}
+        - {x: 5, y: 25}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_18
@@ -539,7 +650,12 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -10, y: 27}
+        - {x: -10, y: -27}
+        - {x: 10, y: -27}
+        - {x: 10, y: 4}
+        - {x: 6, y: 27}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_19
@@ -553,7 +669,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 4, y: 27}
+        - {x: -9, y: 27}
+        - {x: -10, y: 19}
+        - {x: -10, y: -27}
+        - {x: 10, y: -27}
+        - {x: 10, y: 3}
+        - {x: 9, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_20
@@ -567,7 +690,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -4.5, y: 20}
+        - {x: -11.5, y: 11}
+        - {x: -11.5, y: -16}
+        - {x: -10.5, y: -20}
+        - {x: 11.5, y: -20}
+        - {x: 11.5, y: 20}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_21
@@ -581,7 +710,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -9.5, y: 20}
+        - {x: -11.5, y: 19}
+        - {x: -11.5, y: -20}
+        - {x: 11.5, y: -20}
+        - {x: 11.5, y: 11}
+        - {x: 6.5, y: 20}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_22
@@ -595,7 +730,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: 27}
+        - {x: -10, y: 19}
+        - {x: -10, y: -27}
+        - {x: 10, y: -27}
+        - {x: 10, y: 19}
+        - {x: 9, y: 27}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_23
@@ -609,7 +750,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -10, y: 27}
+        - {x: -10, y: -27}
+        - {x: 10, y: -27}
+        - {x: 10, y: 27}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_24
@@ -623,7 +768,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -13, y: 24.5}
+        - {x: -16, y: 13.5}
+        - {x: -16, y: -24.5}
+        - {x: 12, y: -24.5}
+        - {x: 16, y: -10.5}
+        - {x: 16, y: 24.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_25
@@ -637,7 +788,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -6, y: 18}
+        - {x: -13, y: 2}
+        - {x: -13, y: -9}
+        - {x: -11, y: -18}
+        - {x: 13, y: -18}
+        - {x: 13, y: 16}
+        - {x: 9, y: 18}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_26
@@ -651,7 +809,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -13.5, y: 19}
+        - {x: -13.5, y: -7}
+        - {x: -10.5, y: -19}
+        - {x: 13.5, y: -19}
+        - {x: 13.5, y: 0}
+        - {x: 11.5, y: 14}
+        - {x: 7.5, y: 19}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_27
@@ -665,7 +830,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -16, y: 24.5}
+        - {x: -16, y: 2.5}
+        - {x: -10, y: -24.5}
+        - {x: 16, y: -24.5}
+        - {x: 16, y: 18.5}
+        - {x: -2, y: 24.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_28
@@ -679,7 +850,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 11.5, y: 21}
+        - {x: -9.5, y: 21}
+        - {x: -15.5, y: 10}
+        - {x: -15.5, y: -20}
+        - {x: -14.5, y: -21}
+        - {x: 15.5, y: -21}
+        - {x: 15.5, y: 20}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_29
@@ -693,7 +871,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12.5, y: 21}
+        - {x: -15.5, y: 13}
+        - {x: -15.5, y: -21}
+        - {x: 9.5, y: -21}
+        - {x: 15.5, y: -7}
+        - {x: 15.5, y: 9}
+        - {x: 4.5, y: 21}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_30
@@ -707,7 +892,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 24}
+        - {x: -16, y: 13}
+        - {x: -16, y: -24}
+        - {x: 8, y: -24}
+        - {x: 16, y: 6}
+        - {x: 16, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_31
@@ -721,7 +912,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -5.5, y: 19}
+        - {x: -12.5, y: 14}
+        - {x: -13.5, y: 6}
+        - {x: -13.5, y: -19}
+        - {x: 8.5, y: -19}
+        - {x: 10.5, y: -16}
+        - {x: 13.5, y: -4}
+        - {x: 13.5, y: 19}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_32
@@ -735,7 +934,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -9, y: 18}
+        - {x: -13, y: 12}
+        - {x: -13, y: -18}
+        - {x: 9, y: -18}
+        - {x: 13, y: -8}
+        - {x: 13, y: 2}
+        - {x: 3, y: 18}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_33
@@ -749,7 +955,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -14, y: 19}
+        - {x: -14, y: 8}
+        - {x: -7, y: -17}
+        - {x: -6, y: -19}
+        - {x: 14, y: -19}
+        - {x: 14, y: 14}
+        - {x: 5, y: 19}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_34
@@ -763,7 +976,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -5.5, y: 16}
+        - {x: -10.5, y: 9}
+        - {x: -10.5, y: -11}
+        - {x: -9.5, y: -16}
+        - {x: 10.5, y: -16}
+        - {x: 10.5, y: 16}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_35
@@ -777,7 +996,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -5.5, y: 16}
+        - {x: -10.5, y: 9}
+        - {x: -10.5, y: -11}
+        - {x: -9.5, y: -16}
+        - {x: 10.5, y: -16}
+        - {x: 10.5, y: 16}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_36
@@ -791,7 +1016,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -5.5, y: 16}
+        - {x: -10.5, y: 9}
+        - {x: -10.5, y: -11}
+        - {x: -9.5, y: -16}
+        - {x: 10.5, y: -16}
+        - {x: 10.5, y: 16}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_37
@@ -805,7 +1036,12 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -10.5, y: 16}
+        - {x: -10.5, y: -16}
+        - {x: 10.5, y: -16}
+        - {x: 10.5, y: 9}
+        - {x: 6.5, y: 16}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_38
@@ -819,7 +1055,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -10.5, y: 16}
+        - {x: -10.5, y: -16}
+        - {x: 10.5, y: -16}
+        - {x: 10.5, y: 16}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_39
@@ -833,7 +1073,12 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -10.5, y: 16}
+        - {x: -10.5, y: -16}
+        - {x: 10.5, y: -16}
+        - {x: 10.5, y: 9}
+        - {x: 6.5, y: 16}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_40
@@ -847,7 +1092,16 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 2, y: 18.5}
+        - {x: -10, y: 15.5}
+        - {x: -13, y: 10.5}
+        - {x: -14, y: 9.5}
+        - {x: -14, y: -18.5}
+        - {x: 6, y: -18.5}
+        - {x: 7, y: -5.5}
+        - {x: 14, y: 7.5}
+        - {x: 14, y: 18.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_41
@@ -861,7 +1115,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -14.5, y: 20}
+        - {x: -14.5, y: -1}
+        - {x: -9.5, y: -20}
+        - {x: 14.5, y: -20}
+        - {x: 14.5, y: 12}
+        - {x: 0.5, y: 20}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_42
@@ -875,7 +1135,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -6.5, y: 16}
+        - {x: -10.5, y: 10}
+        - {x: -10.5, y: -10}
+        - {x: -9.5, y: -16}
+        - {x: 10.5, y: -16}
+        - {x: 10.5, y: 16}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_43
@@ -889,7 +1155,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -6.5, y: 16}
+        - {x: -10.5, y: 10}
+        - {x: -10.5, y: -10}
+        - {x: -9.5, y: -16}
+        - {x: 10.5, y: -16}
+        - {x: 10.5, y: 16}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_44
@@ -903,7 +1175,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -6.5, y: 16}
+        - {x: -10.5, y: 10}
+        - {x: -10.5, y: -10}
+        - {x: -9.5, y: -16}
+        - {x: 10.5, y: -16}
+        - {x: 10.5, y: 16}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_45
@@ -917,7 +1195,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -10.5, y: 16}
+        - {x: -10.5, y: -16}
+        - {x: 10.5, y: -16}
+        - {x: 10.5, y: 16}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_46
@@ -931,7 +1213,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -10.5, y: 16}
+        - {x: -10.5, y: -16}
+        - {x: 10.5, y: -16}
+        - {x: 10.5, y: 16}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_47
@@ -945,7 +1231,12 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -10.5, y: 16}
+        - {x: -10.5, y: -16}
+        - {x: 10.5, y: -16}
+        - {x: 10.5, y: 12}
+        - {x: 8.5, y: 16}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_48
@@ -959,7 +1250,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -1.5, y: 19.5}
+        - {x: -14.5, y: 12.5}
+        - {x: -14.5, y: -19.5}
+        - {x: 5.5, y: -19.5}
+        - {x: 14.5, y: 8.5}
+        - {x: 14.5, y: 17.5}
+        - {x: 12.5, y: 19.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_49
@@ -973,7 +1271,12 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -7, y: 21.5}
+        - {x: -9, y: 10.5}
+        - {x: -9, y: -21.5}
+        - {x: 9, y: -21.5}
+        - {x: 9, y: 21.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_50
@@ -987,7 +1290,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -5, y: 21.5}
+        - {x: -9, y: 11.5}
+        - {x: -9, y: -21.5}
+        - {x: 9, y: -21.5}
+        - {x: 9, y: 12.5}
+        - {x: 5, y: 21.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_51
@@ -1001,7 +1310,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -7, y: 21.5}
+        - {x: -9, y: 16.5}
+        - {x: -9, y: -21.5}
+        - {x: 9, y: -21.5}
+        - {x: 9, y: 10.5}
+        - {x: 6, y: 21.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_52
@@ -1015,7 +1330,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -7, y: 21.5}
+        - {x: -9, y: 17.5}
+        - {x: -9, y: -21.5}
+        - {x: 9, y: -21.5}
+        - {x: 9, y: 14.5}
+        - {x: 8, y: 21.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_53
@@ -1029,7 +1350,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 6.5, y: 21.5}
+        - {x: -13.5, y: 21.5}
+        - {x: -17.5, y: 13.5}
+        - {x: -17.5, y: -21.5}
+        - {x: 17.5, y: -21.5}
+        - {x: 17.5, y: -2.5}
+        - {x: 11.5, y: 16.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_54
@@ -1043,7 +1371,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -10.5, y: 21.5}
+        - {x: -14.5, y: 17.5}
+        - {x: -14.5, y: -11.5}
+        - {x: -13.5, y: -21.5}
+        - {x: 14.5, y: -21.5}
+        - {x: 14.5, y: 19.5}
+        - {x: 9.5, y: 21.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_55
@@ -1057,7 +1392,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -11.5, y: 21}
+        - {x: -11.5, y: -11}
+        - {x: -7.5, y: -20}
+        - {x: -1.5, y: -21}
+        - {x: 11.5, y: -21}
+        - {x: 11.5, y: 1}
+        - {x: 6.5, y: 21}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_56
@@ -1071,7 +1413,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -7, y: 21}
+        - {x: -9, y: 17}
+        - {x: -9, y: -18}
+        - {x: -5, y: -21}
+        - {x: 9, y: -21}
+        - {x: 9, y: 16}
+        - {x: 7, y: 21}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_57
@@ -1085,7 +1434,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -9, y: 21}
+        - {x: -9, y: -21}
+        - {x: 9, y: -21}
+        - {x: 9, y: 21}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_58
@@ -1099,7 +1452,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -4.5, y: 21}
+        - {x: -9.5, y: 17}
+        - {x: -11.5, y: 2}
+        - {x: -11.5, y: -21}
+        - {x: 7.5, y: -21}
+        - {x: 11.5, y: -16}
+        - {x: 11.5, y: 14}
+        - {x: 8.5, y: 21}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_59
@@ -1113,7 +1474,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8.5, y: 21.5}
+        - {x: -15.5, y: 18.5}
+        - {x: -17.5, y: 11.5}
+        - {x: -17.5, y: -21.5}
+        - {x: 17.5, y: -21.5}
+        - {x: 17.5, y: 21.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_60
@@ -1127,7 +1494,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: 21}
+        - {x: -11, y: 18}
+        - {x: -16, y: 3}
+        - {x: -16, y: -12}
+        - {x: 4, y: -21}
+        - {x: 16, y: -21}
+        - {x: 16, y: 10}
+        - {x: 14, y: 21}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_61
@@ -1141,7 +1516,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -11.5, y: 21.5}
+        - {x: -14.5, y: 17.5}
+        - {x: -14.5, y: -20.5}
+        - {x: -13.5, y: -21.5}
+        - {x: 14.5, y: -21.5}
+        - {x: 14.5, y: 20.5}
+        - {x: 9.5, y: 21.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_62
@@ -1155,7 +1537,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -11, y: 21}
+        - {x: -11, y: -9}
+        - {x: -5, y: -19}
+        - {x: -1, y: -21}
+        - {x: 11, y: -21}
+        - {x: 11, y: 13}
+        - {x: 9, y: 21}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_63
@@ -1169,7 +1558,12 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -9.5, y: 21}
+        - {x: -9.5, y: -18}
+        - {x: -6.5, y: -21}
+        - {x: 9.5, y: -21}
+        - {x: 9.5, y: 21}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_64
@@ -1183,7 +1577,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -13, y: 21}
+        - {x: -16, y: 13}
+        - {x: -16, y: -21}
+        - {x: 13, y: -21}
+        - {x: 16, y: -15}
+        - {x: 16, y: 13}
+        - {x: 8, y: 21}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_65
@@ -1197,7 +1598,16 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 14.5, y: -6.5}
+        - {x: 14.5, y: 21.5}
+        - {x: -9.5, y: 21.5}
+        - {x: -14.5, y: -1.5}
+        - {x: -14.5, y: -21.5}
+        - {x: -3.5, y: -21.5}
+        - {x: -3.5, y: -18.5}
+        - {x: 10.5, y: -18.5}
+        - {x: 12.5, y: -16.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_66
@@ -1211,7 +1621,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -7, y: 21}
+        - {x: -11, y: 16}
+        - {x: -11, y: -20}
+        - {x: -9, y: -21}
+        - {x: 1, y: -21}
+        - {x: 11, y: -12}
+        - {x: 11, y: 15}
+        - {x: 9, y: 21}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_67
@@ -1225,7 +1643,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -7.5, y: 21}
+        - {x: -9.5, y: 13}
+        - {x: -9.5, y: -20}
+        - {x: -7.5, y: -21}
+        - {x: 9.5, y: -21}
+        - {x: 9.5, y: 21}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_68
@@ -1239,7 +1663,25 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 0.5, y: -6.5}
+        - {x: 1.5, y: -6.5}
+        - {x: -1.5, y: -10.5}
+        - {x: -1.5, y: -11.5}
+        - {x: 4.5, y: -19.5}
+        - {x: 13.5, y: -18.5}
+        - {x: 14.5, y: -10.5}
+        - {x: 14.5, y: 17.5}
+        - {x: 8.5, y: 21.5}
+        - {x: -4.5, y: 21.5}
+        - {x: -12.5, y: 12.5}
+        - {x: -14.5, y: -2.5}
+        - {x: -14.5, y: -19.5}
+        - {x: -12.5, y: -21.5}
+        - {x: -2.5, y: -21.5}
+        - {x: -2.5, y: -11.5}
+        - {x: -5.5, y: -12.5}
+        - {x: 0.5, y: -7.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_69
@@ -1253,7 +1695,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -16, y: 21}
+        - {x: -16, y: -21}
+        - {x: -3, y: -21}
+        - {x: 16, y: -12}
+        - {x: 16, y: 10}
+        - {x: 8, y: 21}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_70
@@ -1267,7 +1715,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -13.5, y: 21.5}
+        - {x: -17.5, y: 18.5}
+        - {x: -17.5, y: -21.5}
+        - {x: 17.5, y: -21.5}
+        - {x: 17.5, y: 18.5}
+        - {x: 8.5, y: 21.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_71
@@ -1281,7 +1735,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -13.5, y: 21.5}
+        - {x: -17.5, y: 20.5}
+        - {x: -17.5, y: -21.5}
+        - {x: 17.5, y: -21.5}
+        - {x: 17.5, y: 19.5}
+        - {x: 10.5, y: 21.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_72
@@ -1295,7 +1755,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 10, y: 19}
+        - {x: 9, y: 21}
+        - {x: -7, y: 21}
+        - {x: -16, y: 5}
+        - {x: -16, y: -11}
+        - {x: 2, y: -21}
+        - {x: 16, y: -21}
+        - {x: 16, y: -11}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_73
@@ -1309,7 +1777,12 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -9.5, y: 18.5}
+        - {x: -9.5, y: -18.5}
+        - {x: 9.5, y: -18.5}
+        - {x: 9.5, y: 15.5}
+        - {x: 7.5, y: 18.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_74
@@ -1323,7 +1796,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -7.5, y: 22.5}
+        - {x: -11.5, y: 20.5}
+        - {x: -11.5, y: -7.5}
+        - {x: -9.5, y: -15.5}
+        - {x: -2.5, y: -22.5}
+        - {x: 11.5, y: -22.5}
+        - {x: 11.5, y: 22.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_75
@@ -1337,7 +1817,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -9, y: 21.5}
+        - {x: -9, y: -17.5}
+        - {x: -7, y: -21.5}
+        - {x: 9, y: -21.5}
+        - {x: 9, y: 18.5}
+        - {x: 7, y: 21.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_76
@@ -1351,7 +1837,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -9.5, y: 20}
+        - {x: -9.5, y: -20}
+        - {x: 9.5, y: -20}
+        - {x: 9.5, y: 20}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_77
@@ -1365,7 +1855,12 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8.5, y: 20}
+        - {x: -9.5, y: 18}
+        - {x: -9.5, y: -20}
+        - {x: 9.5, y: -20}
+        - {x: 9.5, y: 20}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_78
@@ -1379,7 +1874,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -6, y: 21.5}
+        - {x: -9, y: 17.5}
+        - {x: -9, y: -17.5}
+        - {x: -6, y: -21.5}
+        - {x: 8, y: -21.5}
+        - {x: 9, y: -17.5}
+        - {x: 9, y: 21.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_79
@@ -1393,7 +1895,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -11.5, y: 22.5}
+        - {x: -11.5, y: -22.5}
+        - {x: 7.5, y: -22.5}
+        - {x: 11.5, y: -20.5}
+        - {x: 11.5, y: 20.5}
+        - {x: 9.5, y: 22.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SamusJumping01
@@ -1407,7 +1915,12 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 9.5, y: -18.5}
+        - {x: 9.5, y: 13.5}
+        - {x: 8.5, y: 18.5}
+        - {x: -9.5, y: 18.5}
+        - {x: -9.5, y: -18.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_81
@@ -1421,7 +1934,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -9, y: 22.5}
+        - {x: -11, y: 21.5}
+        - {x: -11, y: -22.5}
+        - {x: 8, y: -22.5}
+        - {x: 10, y: -19.5}
+        - {x: 11, y: -16.5}
+        - {x: 11, y: 22.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_82
@@ -1435,7 +1955,12 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: 20}
+        - {x: -9, y: 19}
+        - {x: -9, y: -20}
+        - {x: 9, y: -20}
+        - {x: 9, y: 20}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_83
@@ -1449,7 +1974,12 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -9.5, y: 18.5}
+        - {x: -9.5, y: -18.5}
+        - {x: 9.5, y: -18.5}
+        - {x: 9.5, y: 15.5}
+        - {x: 7.5, y: 18.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_84
@@ -1463,7 +1993,12 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -9.5, y: 19}
+        - {x: -9.5, y: -19}
+        - {x: 9.5, y: -19}
+        - {x: 9.5, y: 18}
+        - {x: 8.5, y: 19}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_85
@@ -1477,7 +2012,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -9, y: 20}
+        - {x: -9, y: -20}
+        - {x: 9, y: -20}
+        - {x: 9, y: 20}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_86
@@ -1491,7 +2030,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 9.5, y: 9}
+        - {x: 8.5, y: 18}
+        - {x: 7.5, y: 19}
+        - {x: -9.5, y: 19}
+        - {x: -9.5, y: -19}
+        - {x: 9.5, y: -19}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_87
@@ -1505,7 +2050,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -10, y: 18}
+        - {x: -10, y: -18}
+        - {x: 10, y: -18}
+        - {x: 10, y: 18}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_88
@@ -1519,7 +2068,12 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -11, y: 22.5}
+        - {x: -11, y: -16.5}
+        - {x: -9, y: -22.5}
+        - {x: 11, y: -22.5}
+        - {x: 11, y: 22.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_89
@@ -1533,7 +2087,12 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -11, y: 17.5}
+        - {x: -11, y: -17.5}
+        - {x: 10, y: -17.5}
+        - {x: 11, y: -15.5}
+        - {x: 11, y: 17.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_90
@@ -1547,7 +2106,12 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -10.5, y: 21.5}
+        - {x: -10.5, y: -21.5}
+        - {x: 10.5, y: -21.5}
+        - {x: 10.5, y: 7.5}
+        - {x: 6.5, y: 21.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_91
@@ -1561,7 +2125,12 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -7.5, y: 21.5}
+        - {x: -10.5, y: 17.5}
+        - {x: -10.5, y: -21.5}
+        - {x: 10.5, y: -21.5}
+        - {x: 10.5, y: 21.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_92
@@ -1575,7 +2144,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 9, y: 17.5}
+        - {x: -11, y: 17.5}
+        - {x: -11, y: -17.5}
+        - {x: 11, y: -17.5}
+        - {x: 11, y: 2.5}
+        - {x: 10, y: 13.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_93
@@ -1589,7 +2164,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 9, y: 22}
+        - {x: -9, y: 22}
+        - {x: -16, y: 14}
+        - {x: -16, y: -6}
+        - {x: 2, y: -22}
+        - {x: 16, y: -22}
+        - {x: 16, y: 10}
+        - {x: 13, y: 18}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_94
@@ -1603,7 +2186,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -9, y: 21.5}
+        - {x: -15, y: 13.5}
+        - {x: -15, y: -8.5}
+        - {x: -3, y: -21.5}
+        - {x: 15, y: -21.5}
+        - {x: 15, y: 18.5}
+        - {x: 11, y: 21.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_95
@@ -1617,7 +2207,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 12.5, y: 5.5}
+        - {x: 11.5, y: 21.5}
+        - {x: -18.5, y: 21.5}
+        - {x: -18.5, y: -21.5}
+        - {x: -1.5, y: -21.5}
+        - {x: 18.5, y: -11.5}
+        - {x: 18.5, y: 0.5}
+        - {x: 13.5, y: 5.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_96
@@ -1631,7 +2229,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -16, y: 21}
+        - {x: -19, y: 15}
+        - {x: -19, y: -19}
+        - {x: -18, y: -21}
+        - {x: 16, y: -21}
+        - {x: 19, y: -19}
+        - {x: 19, y: 12}
+        - {x: 10, y: 21}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_97
@@ -1645,7 +2251,19 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 19, y: 13.5}
+        - {x: 8, y: 21.5}
+        - {x: -18, y: 21.5}
+        - {x: -19, y: 12.5}
+        - {x: -19, y: -21.5}
+        - {x: -16, y: -20.5}
+        - {x: -7, y: -12.5}
+        - {x: -3, y: -8.5}
+        - {x: 4, y: -21.5}
+        - {x: 15, y: -21.5}
+        - {x: 18, y: -20.5}
+        - {x: 19, y: -16.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_98
@@ -1659,7 +2277,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12.5, y: 21.5}
+        - {x: -18.5, y: 16.5}
+        - {x: -18.5, y: -14.5}
+        - {x: -12.5, y: -21.5}
+        - {x: 18.5, y: -21.5}
+        - {x: 18.5, y: 13.5}
+        - {x: 7.5, y: 21.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_99
@@ -1673,7 +2298,17 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 15, y: 13.5}
+        - {x: 4, y: 21.5}
+        - {x: -11, y: 21.5}
+        - {x: -15, y: 15.5}
+        - {x: -15, y: -18.5}
+        - {x: -12, y: -21.5}
+        - {x: -1, y: -21.5}
+        - {x: -1, y: -19.5}
+        - {x: 4, y: -10.5}
+        - {x: 15, y: 3.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_100
@@ -1687,7 +2322,12 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -13.5, y: 8.5}
+        - {x: -13.5, y: -8.5}
+        - {x: 13.5, y: -8.5}
+        - {x: 13.5, y: 0.5}
+        - {x: 2.5, y: 8.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_101
@@ -1701,7 +2341,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 7, y: 13.5}
+        - {x: -9, y: 13.5}
+        - {x: -11, y: 8.5}
+        - {x: -11, y: -13.5}
+        - {x: 0, y: -13.5}
+        - {x: 4, y: -10.5}
+        - {x: 11, y: 0.5}
+        - {x: 11, y: 11.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_102
@@ -1715,7 +2363,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -10.5, y: 21.5}
+        - {x: -14.5, y: 20.5}
+        - {x: -14.5, y: -5.5}
+        - {x: -7.5, y: -21.5}
+        - {x: 14.5, y: -21.5}
+        - {x: 14.5, y: 20.5}
+        - {x: 12.5, y: 21.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_103
@@ -1729,7 +2384,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 12, y: 21.5}
+        - {x: -15, y: 21.5}
+        - {x: -19, y: 20.5}
+        - {x: -19, y: -21.5}
+        - {x: 0, y: -21.5}
+        - {x: 19, y: -13.5}
+        - {x: 19, y: 1.5}
+        - {x: 17, y: 7.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_104
@@ -1743,7 +2406,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -17.5, y: 21}
+        - {x: -19.5, y: 20}
+        - {x: -19.5, y: -14}
+        - {x: -18.5, y: -20}
+        - {x: -16.5, y: -21}
+        - {x: 19.5, y: -21}
+        - {x: 19.5, y: -2}
+        - {x: 11.5, y: 21}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_105
@@ -1757,7 +2428,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -18, y: -14}
+        - {x: -15, y: -22}
+        - {x: 18, y: -22}
+        - {x: 18, y: 11}
+        - {x: 14, y: 22}
+        - {x: -14, y: 22}
+        - {x: -18, y: 20}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_106
@@ -1771,7 +2449,24 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -3, y: -6.5}
+        - {x: -2, y: -6.5}
+        - {x: -5, y: -10.5}
+        - {x: -5, y: -11.5}
+        - {x: 1, y: -19.5}
+        - {x: 10, y: -17.5}
+        - {x: 11, y: -0.5}
+        - {x: 18, y: 1.5}
+        - {x: 18, y: 14.5}
+        - {x: 4, y: 21.5}
+        - {x: -12, y: 21.5}
+        - {x: -18, y: 4.5}
+        - {x: -18, y: -21.5}
+        - {x: -6, y: -21.5}
+        - {x: -6, y: -11.5}
+        - {x: -9, y: -12.5}
+        - {x: -3, y: -7.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_107
@@ -1785,7 +2480,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 8.5, y: 21.5}
+        - {x: -8.5, y: 21.5}
+        - {x: -14.5, y: 15.5}
+        - {x: -19.5, y: -2.5}
+        - {x: -19.5, y: -21.5}
+        - {x: 19.5, y: -21.5}
+        - {x: 19.5, y: 14.5}
+        - {x: 13.5, y: 20.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_108
@@ -1799,7 +2502,18 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 8, y: 21.5}
+        - {x: -10, y: 21.5}
+        - {x: -12, y: 15.5}
+        - {x: -19, y: 0.5}
+        - {x: -19, y: -11.5}
+        - {x: -10, y: -14.5}
+        - {x: -5, y: -13.5}
+        - {x: 1, y: -21.5}
+        - {x: 13, y: -21.5}
+        - {x: 19, y: -16.5}
+        - {x: 19, y: 13.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_109
@@ -1813,7 +2527,16 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 3.5, y: 21.5}
+        - {x: -11.5, y: 21.5}
+        - {x: -14.5, y: 18.5}
+        - {x: -14.5, y: -20.5}
+        - {x: -12.5, y: -21.5}
+        - {x: -0.5, y: -21.5}
+        - {x: 3.5, y: -10.5}
+        - {x: 14.5, y: 0.5}
+        - {x: 14.5, y: 13.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_110
@@ -1827,7 +2550,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -4, y: 22}
+        - {x: -18, y: 15}
+        - {x: -18, y: 0}
+        - {x: -11, y: -22}
+        - {x: 18, y: -22}
+        - {x: 18, y: 10}
+        - {x: 12, y: 22}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_111
@@ -1841,7 +2571,17 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 13.5, y: 21.5}
+        - {x: -14.5, y: 21.5}
+        - {x: -16.5, y: 20.5}
+        - {x: -16.5, y: 2.5}
+        - {x: -2.5, y: -20.5}
+        - {x: 3.5, y: -21.5}
+        - {x: 14.5, y: -21.5}
+        - {x: 16.5, y: -19.5}
+        - {x: 16.5, y: -5.5}
+        - {x: 13.5, y: 17.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_112
@@ -1855,7 +2595,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12.5, y: 21.5}
+        - {x: -16.5, y: 4.5}
+        - {x: -16.5, y: -21.5}
+        - {x: 3.5, y: -21.5}
+        - {x: 16.5, y: -0.5}
+        - {x: 16.5, y: 17.5}
+        - {x: 6.5, y: 21.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_113
@@ -1869,7 +2616,16 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 18, y: -4.5}
+        - {x: 18, y: 13.5}
+        - {x: 7, y: 21.5}
+        - {x: -18, y: 21.5}
+        - {x: -18, y: -21.5}
+        - {x: -7, y: -21.5}
+        - {x: -7, y: -18.5}
+        - {x: 2, y: -19.5}
+        - {x: 12, y: -18.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_114
@@ -1883,7 +2639,16 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 6.5, y: 21.5}
+        - {x: -10.5, y: 21.5}
+        - {x: -16.5, y: 9.5}
+        - {x: -16.5, y: -11.5}
+        - {x: -7.5, y: -21.5}
+        - {x: 15.5, y: -21.5}
+        - {x: 16.5, y: -20.5}
+        - {x: 16.5, y: -6.5}
+        - {x: 12.5, y: 18.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_115
@@ -1897,7 +2662,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 9.5, y: 21.5}
+        - {x: -8.5, y: 21.5}
+        - {x: -14.5, y: 6.5}
+        - {x: -14.5, y: -5.5}
+        - {x: 3.5, y: -21.5}
+        - {x: 14.5, y: -21.5}
+        - {x: 14.5, y: 18.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_116
@@ -1911,7 +2683,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -7.5, y: 21.5}
+        - {x: -13.5, y: 11.5}
+        - {x: -13.5, y: -13.5}
+        - {x: -2.5, y: -21.5}
+        - {x: 13.5, y: -21.5}
+        - {x: 13.5, y: 19.5}
+        - {x: 9.5, y: 21.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_117
@@ -1925,7 +2704,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -17, y: -21.5}
+        - {x: 5, y: -21.5}
+        - {x: 17, y: -16.5}
+        - {x: 17, y: 6.5}
+        - {x: 11, y: 19.5}
+        - {x: 8, y: 21.5}
+        - {x: -15, y: 21.5}
+        - {x: -17, y: 13.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_118
@@ -1939,7 +2726,17 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 16.5, y: -11.5}
+        - {x: 16.5, y: 9.5}
+        - {x: 7.5, y: 21.5}
+        - {x: -7.5, y: 21.5}
+        - {x: -16.5, y: -1.5}
+        - {x: -16.5, y: -21.5}
+        - {x: -5.5, y: -21.5}
+        - {x: -5.5, y: -18.5}
+        - {x: 3.5, y: -19.5}
+        - {x: 14.5, y: -19.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_119
@@ -1953,7 +2750,17 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -11.5, y: 21.5}
+        - {x: -17.5, y: 7.5}
+        - {x: -17.5, y: -19.5}
+        - {x: -14.5, y: -20.5}
+        - {x: -5.5, y: -12.5}
+        - {x: -1.5, y: -8.5}
+        - {x: 5.5, y: -21.5}
+        - {x: 17.5, y: -21.5}
+        - {x: 17.5, y: 19.5}
+        - {x: 11.5, y: 21.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_120
@@ -1967,7 +2774,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -7, y: 21.5}
+        - {x: -17, y: 5.5}
+        - {x: -17, y: -10.5}
+        - {x: 3, y: -21.5}
+        - {x: 17, y: -21.5}
+        - {x: 17, y: 7.5}
+        - {x: 7, y: 21.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_121
@@ -1981,7 +2795,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 3.5, y: 21.5}
+        - {x: -12.5, y: 21.5}
+        - {x: -13.5, y: 16.5}
+        - {x: -13.5, y: -21.5}
+        - {x: 0.5, y: -21.5}
+        - {x: 0.5, y: -19.5}
+        - {x: 13.5, y: -3.5}
+        - {x: 13.5, y: 5.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_122
@@ -1995,7 +2817,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 6.5, y: 21.5}
+        - {x: -11.5, y: 21.5}
+        - {x: -16.5, y: 14.5}
+        - {x: -16.5, y: -15.5}
+        - {x: -14.5, y: -21.5}
+        - {x: 16.5, y: -21.5}
+        - {x: 16.5, y: -1.5}
+        - {x: 12.5, y: 19.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_123
@@ -2009,7 +2839,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -15, y: -14.5}
+        - {x: -12, y: -21.5}
+        - {x: 15, y: -21.5}
+        - {x: 15, y: 9.5}
+        - {x: 14, y: 18.5}
+        - {x: 8, y: 21.5}
+        - {x: -10, y: 21.5}
+        - {x: -15, y: 16.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_124
@@ -2023,7 +2861,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -5, y: 21.5}
+        - {x: -13, y: 8.5}
+        - {x: -13, y: -16.5}
+        - {x: -9, y: -21.5}
+        - {x: 13, y: -21.5}
+        - {x: 13, y: 20.5}
+        - {x: 10, y: 21.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_125
@@ -2037,7 +2882,18 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -9, y: 21.5}
+        - {x: -18, y: 9.5}
+        - {x: -18, y: -4.5}
+        - {x: -17, y: -6.5}
+        - {x: -11, y: -2.5}
+        - {x: -11, y: -3.5}
+        - {x: -18, y: -13.5}
+        - {x: -18, y: -21.5}
+        - {x: 18, y: -21.5}
+        - {x: 18, y: -3.5}
+        - {x: 6, y: 21.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_126
@@ -2051,7 +2907,16 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 14.5, y: 7.5}
+        - {x: 4.5, y: 21.5}
+        - {x: -9.5, y: 21.5}
+        - {x: -14.5, y: 7.5}
+        - {x: -14.5, y: -19.5}
+        - {x: -12.5, y: -21.5}
+        - {x: -4.5, y: -21.5}
+        - {x: -0.5, y: -17.5}
+        - {x: 14.5, y: -6.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_127
@@ -2065,7 +2930,24 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -1.5, y: -6.5}
+        - {x: -0.5, y: -6.5}
+        - {x: -3.5, y: -10.5}
+        - {x: -3.5, y: -11.5}
+        - {x: 3.5, y: -18.5}
+        - {x: 7.5, y: -18.5}
+        - {x: 9.5, y: -16.5}
+        - {x: 16.5, y: -6.5}
+        - {x: 16.5, y: 7.5}
+        - {x: 6.5, y: 21.5}
+        - {x: -8.5, y: 21.5}
+        - {x: -16.5, y: 2.5}
+        - {x: -16.5, y: -21.5}
+        - {x: -4.5, y: -21.5}
+        - {x: -4.5, y: -11.5}
+        - {x: -7.5, y: -12.5}
+        - {x: -1.5, y: -7.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_128
@@ -2079,7 +2961,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -7, y: 21.5}
+        - {x: -12, y: 14.5}
+        - {x: -18, y: -2.5}
+        - {x: -18, y: -21.5}
+        - {x: 18, y: -21.5}
+        - {x: 18, y: 9.5}
+        - {x: 9, y: 21.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_129
@@ -2093,7 +2982,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -4.5, y: 21.5}
+        - {x: -12.5, y: 15.5}
+        - {x: -17.5, y: 1.5}
+        - {x: -17.5, y: -15.5}
+        - {x: -9.5, y: -21.5}
+        - {x: 17.5, y: -21.5}
+        - {x: 17.5, y: 18.5}
+        - {x: 10.5, y: 21.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_130
@@ -2107,7 +3004,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -17, y: -21.5}
+        - {x: 5, y: -21.5}
+        - {x: 17, y: -16.5}
+        - {x: 17, y: 6.5}
+        - {x: 11, y: 19.5}
+        - {x: 8, y: 21.5}
+        - {x: -15, y: 21.5}
+        - {x: -17, y: 13.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_131
@@ -2121,7 +3026,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 3.5, y: 21.5}
+        - {x: -8.5, y: 21.5}
+        - {x: -17.5, y: 11.5}
+        - {x: -17.5, y: -21.5}
+        - {x: 4.5, y: -21.5}
+        - {x: 17.5, y: -19.5}
+        - {x: 17.5, y: -3.5}
+        - {x: 8.5, y: 17.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_132
@@ -2135,7 +3048,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 21.5}
+        - {x: -13, y: 13.5}
+        - {x: -13, y: -18.5}
+        - {x: -9, y: -21.5}
+        - {x: 3, y: -21.5}
+        - {x: 13, y: -9.5}
+        - {x: 13, y: 7.5}
+        - {x: 6, y: 21.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_133
@@ -2149,7 +3070,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -10, y: 21.5}
+        - {x: -15, y: 3.5}
+        - {x: -15, y: -21.5}
+        - {x: 3, y: -21.5}
+        - {x: 15, y: -8.5}
+        - {x: 15, y: 5.5}
+        - {x: 6, y: 21.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_134
@@ -2163,7 +3091,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 4, y: 24}
+        - {x: -17, y: 24}
+        - {x: -17, y: -4}
+        - {x: -13, y: -24}
+        - {x: 17, y: -24}
+        - {x: 17, y: -7}
+        - {x: 7, y: 18}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_135
@@ -2177,7 +3112,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -15, y: 24}
+        - {x: -15, y: 9}
+        - {x: -10, y: -8}
+        - {x: 2, y: -24}
+        - {x: 15, y: -24}
+        - {x: 15, y: 6}
+        - {x: 8, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_136
@@ -2191,7 +3133,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -14, y: 24}
+        - {x: -14, y: 9}
+        - {x: -2, y: -24}
+        - {x: 14, y: -24}
+        - {x: 14, y: 23}
+        - {x: 10, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_137
@@ -2205,7 +3153,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 17, y: 17}
+        - {x: 5, y: 24}
+        - {x: -18, y: 24}
+        - {x: -18, y: -24}
+        - {x: 16, y: -24}
+        - {x: 18, y: -23}
+        - {x: 18, y: 2}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_138
@@ -2219,7 +3174,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -2.5, y: 24}
+        - {x: -17.5, y: 13}
+        - {x: -17.5, y: -17}
+        - {x: -11.5, y: -24}
+        - {x: 17.5, y: -24}
+        - {x: 17.5, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_139
@@ -2233,7 +3194,16 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 19}
+        - {x: -14, y: 3}
+        - {x: -14, y: -21}
+        - {x: -11, y: -24}
+        - {x: 2, y: -24}
+        - {x: 14, y: 10}
+        - {x: 14, y: 24}
+        - {x: 1, y: 24}
+        - {x: -6, y: 22}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_140
@@ -2247,7 +3217,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -15, y: 3}
+        - {x: -15, y: -24}
+        - {x: 8, y: -24}
+        - {x: 15, y: -8}
+        - {x: 15, y: 24}
+        - {x: 3, y: 24}
+        - {x: -12, y: 20}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_141
@@ -2261,7 +3238,22 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -2, y: -9}
+        - {x: -1, y: -9}
+        - {x: -4, y: -13}
+        - {x: -4, y: -14}
+        - {x: 2, y: -22}
+        - {x: 11, y: -20}
+        - {x: 17, y: -11}
+        - {x: 17, y: 24}
+        - {x: -7, y: 24}
+        - {x: -17, y: 2}
+        - {x: -17, y: -24}
+        - {x: -5, y: -24}
+        - {x: -5, y: -14}
+        - {x: -8, y: -15}
+        - {x: -2, y: -10}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_142
@@ -2275,7 +3267,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 5.5, y: 24}
+        - {x: -15.5, y: 24}
+        - {x: -15.5, y: -1}
+        - {x: -6.5, y: -24}
+        - {x: 15.5, y: -24}
+        - {x: 15.5, y: -2}
+        - {x: 12.5, y: 13}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_143
@@ -2289,7 +3288,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 7.5, y: 24}
+        - {x: -13.5, y: 24}
+        - {x: -13.5, y: 13}
+        - {x: -3.5, y: -24}
+        - {x: 11.5, y: -24}
+        - {x: 13.5, y: -22}
+        - {x: 13.5, y: 9}
+        - {x: 12.5, y: 19}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_144
@@ -2303,7 +3310,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -18, y: -23}
+        - {x: -17, y: -24}
+        - {x: 6, y: -24}
+        - {x: 18, y: -19}
+        - {x: 18, y: 0}
+        - {x: 6, y: 24}
+        - {x: -18, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_145
@@ -2317,7 +3331,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 18.5, y: -24}
+        - {x: 18.5, y: 9}
+        - {x: 14.5, y: 23}
+        - {x: 9.5, y: 24}
+        - {x: -18.5, y: 24}
+        - {x: -18.5, y: -24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_146
@@ -2331,7 +3351,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -18.5, y: -6}
+        - {x: -18.5, y: -23}
+        - {x: -10.5, y: -24}
+        - {x: 17.5, y: -24}
+        - {x: 18.5, y: -23}
+        - {x: 18.5, y: 24}
+        - {x: -0.5, y: 24}
+        - {x: -8.5, y: 20}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_147
@@ -2345,7 +3373,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -18, y: 5}
+        - {x: -18, y: -16}
+        - {x: 1, y: -24}
+        - {x: 15, y: -24}
+        - {x: 18, y: -22}
+        - {x: 18, y: 24}
+        - {x: 2, y: 24}
+        - {x: -10, y: 20}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_148
@@ -2359,7 +3395,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -13.5, y: -24}
+        - {x: 5.5, y: -24}
+        - {x: 13.5, y: 0}
+        - {x: 13.5, y: 24}
+        - {x: 0.5, y: 24}
+        - {x: -13.5, y: 20}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_149
@@ -2373,7 +3415,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 4.5, y: 24}
+        - {x: -11.5, y: 21}
+        - {x: -15.5, y: -8}
+        - {x: -15.5, y: -24}
+        - {x: 14.5, y: -24}
+        - {x: 15.5, y: -18}
+        - {x: 15.5, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_150
@@ -2387,7 +3436,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -17.5, y: 24}
+        - {x: -17.5, y: -24}
+        - {x: 6.5, y: -24}
+        - {x: 17.5, y: -20}
+        - {x: 17.5, y: 12}
+        - {x: 7.5, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_151
@@ -2401,7 +3456,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -17, y: 24}
+        - {x: -17, y: -2}
+        - {x: -13, y: -20}
+        - {x: -9, y: -23}
+        - {x: -4, y: -24}
+        - {x: 17, y: -24}
+        - {x: 17, y: -7}
+        - {x: 7, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_152
@@ -2415,7 +3478,19 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 17, y: -17}
+        - {x: 17, y: 24}
+        - {x: 1, y: 24}
+        - {x: -3, y: 23}
+        - {x: -12, y: 13}
+        - {x: -17, y: -11}
+        - {x: -17, y: -23}
+        - {x: -16, y: -24}
+        - {x: -6, y: -24}
+        - {x: -6, y: -21}
+        - {x: 3, y: -22}
+        - {x: 16, y: -22}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_153
@@ -2429,7 +3504,16 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: 24}
+        - {x: -18, y: 6}
+        - {x: -18, y: -22}
+        - {x: -15, y: -23}
+        - {x: -6, y: -15}
+        - {x: -2, y: -11}
+        - {x: 5, y: -24}
+        - {x: 18, y: -24}
+        - {x: 18, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_154
@@ -2443,7 +3527,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -2.5, y: 14}
+        - {x: -12.5, y: 14}
+        - {x: -12.5, y: -11}
+        - {x: -11.5, y: -14}
+        - {x: 11.5, y: -14}
+        - {x: 12.5, y: -12}
+        - {x: 12.5, y: 2}
+        - {x: 1.5, y: 11}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_155
@@ -2457,7 +3549,12 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -3, y: 15.5}
+        - {x: -8, y: 12.5}
+        - {x: -8, y: -15.5}
+        - {x: 8, y: -15.5}
+        - {x: 8, y: 15.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_156
@@ -2471,7 +3568,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -7, y: 12.5}
+        - {x: -14, y: 6.5}
+        - {x: -14, y: -12.5}
+        - {x: 5, y: -12.5}
+        - {x: 14, y: -8.5}
+        - {x: 14, y: 12.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_157
@@ -2485,7 +3588,12 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -15.5, y: 8}
+        - {x: -15.5, y: -8}
+        - {x: 15.5, y: -8}
+        - {x: 15.5, y: 3}
+        - {x: 12.5, y: 8}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_158
@@ -2499,7 +3607,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12.5, y: 8}
+        - {x: -15.5, y: 3}
+        - {x: -15.5, y: -8}
+        - {x: 15.5, y: -8}
+        - {x: 15.5, y: 7}
+        - {x: 14.5, y: 8}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_159
@@ -2513,7 +3627,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -14, y: 12.5}
+        - {x: -14, y: 0.5}
+        - {x: -3, y: -12.5}
+        - {x: 11, y: -12.5}
+        - {x: 14, y: -9.5}
+        - {x: 14, y: 7.5}
+        - {x: 8, y: 12.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_160
@@ -2527,7 +3648,12 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: 15.5}
+        - {x: -8, y: -15.5}
+        - {x: 8, y: -15.5}
+        - {x: 8, y: 12.5}
+        - {x: 3, y: 15.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_161
@@ -2541,7 +3667,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 0.5, y: 14}
+        - {x: -12.5, y: 3}
+        - {x: -12.5, y: -11}
+        - {x: -9.5, y: -14}
+        - {x: 7.5, y: -14}
+        - {x: 12.5, y: -8}
+        - {x: 12.5, y: 14}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_162
@@ -2555,7 +3688,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -9.5, y: 14}
+        - {x: -12.5, y: 11}
+        - {x: -12.5, y: -3}
+        - {x: 2.5, y: -14}
+        - {x: 12.5, y: -14}
+        - {x: 12.5, y: 7}
+        - {x: 6.5, y: 14}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_163
@@ -2569,7 +3709,12 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: 15.5}
+        - {x: -8, y: -15.5}
+        - {x: 3, y: -15.5}
+        - {x: 8, y: -12.5}
+        - {x: 8, y: 15.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_164
@@ -2583,7 +3728,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -3, y: 12.5}
+        - {x: -12, y: 3.5}
+        - {x: -14, y: -1.5}
+        - {x: -14, y: -12.5}
+        - {x: 7, y: -12.5}
+        - {x: 14, y: -6.5}
+        - {x: 14, y: 9.5}
+        - {x: 11, y: 12.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_165
@@ -2597,7 +3750,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -15.5, y: 8}
+        - {x: -15.5, y: -3}
+        - {x: -12.5, y: -8}
+        - {x: 14.5, y: -8}
+        - {x: 15.5, y: -7}
+        - {x: 15.5, y: 8}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_166
@@ -2611,7 +3770,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -15.5, y: 8}
+        - {x: -15.5, y: -7}
+        - {x: -14.5, y: -8}
+        - {x: 12.5, y: -8}
+        - {x: 15.5, y: -3}
+        - {x: 15.5, y: 8}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_167
@@ -2625,7 +3790,16 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 1, y: 12.5}
+        - {x: -11, y: 12.5}
+        - {x: -14, y: 9.5}
+        - {x: -14, y: -6.5}
+        - {x: -6, y: -12.5}
+        - {x: 11, y: -12.5}
+        - {x: 14, y: -10.5}
+        - {x: 14, y: -2.5}
+        - {x: 11, y: 2.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_168
@@ -2639,7 +3813,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -7, y: 15.5}
+        - {x: -8, y: 14.5}
+        - {x: -8, y: -12.5}
+        - {x: -3, y: -15.5}
+        - {x: 8, y: -15.5}
+        - {x: 8, y: 15.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_169
@@ -2653,7 +3833,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 9.5, y: 14}
+        - {x: -7.5, y: 14}
+        - {x: -12.5, y: 8}
+        - {x: -12.5, y: -14}
+        - {x: -2.5, y: -14}
+        - {x: 2.5, y: -11}
+        - {x: 12.5, y: -1}
+        - {x: 12.5, y: 11}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_170
@@ -2667,7 +3855,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -6, y: 8}
+        - {x: -8, y: 6}
+        - {x: -8, y: -6}
+        - {x: -6, y: -8}
+        - {x: 6, y: -8}
+        - {x: 8, y: -6}
+        - {x: 8, y: 6}
+        - {x: 6, y: 8}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_171
@@ -2681,7 +3877,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -6, y: 8}
+        - {x: -8, y: 6}
+        - {x: -8, y: -6}
+        - {x: -6, y: -8}
+        - {x: 6, y: -8}
+        - {x: 8, y: -6}
+        - {x: 8, y: 6}
+        - {x: 6, y: 8}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_172
@@ -2695,7 +3899,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -6, y: 8}
+        - {x: -8, y: 6}
+        - {x: -8, y: -6}
+        - {x: -6, y: -8}
+        - {x: 6, y: -8}
+        - {x: 8, y: -6}
+        - {x: 8, y: 6}
+        - {x: 6, y: 8}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_173
@@ -2709,7 +3921,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -6, y: 8}
+        - {x: -8, y: 6}
+        - {x: -8, y: -6}
+        - {x: -6, y: -8}
+        - {x: 6, y: -8}
+        - {x: 8, y: -6}
+        - {x: 8, y: 6}
+        - {x: 6, y: 8}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_174
@@ -2723,7 +3943,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -6, y: 8}
+        - {x: -8, y: 6}
+        - {x: -8, y: -6}
+        - {x: -6, y: -8}
+        - {x: 6, y: -8}
+        - {x: 8, y: -6}
+        - {x: 8, y: 6}
+        - {x: 6, y: 8}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_175
@@ -2737,7 +3965,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -6, y: 8}
+        - {x: -8, y: 6}
+        - {x: -8, y: -6}
+        - {x: -6, y: -8}
+        - {x: 6, y: -8}
+        - {x: 8, y: -6}
+        - {x: 8, y: 6}
+        - {x: 6, y: 8}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_176
@@ -2751,7 +3987,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -6, y: 8}
+        - {x: -8, y: 6}
+        - {x: -8, y: -6}
+        - {x: -6, y: -8}
+        - {x: 6, y: -8}
+        - {x: 8, y: -6}
+        - {x: 8, y: 6}
+        - {x: 6, y: 8}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_177
@@ -2765,7 +4009,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -6, y: 8}
+        - {x: -8, y: 6}
+        - {x: -8, y: -6}
+        - {x: -6, y: -8}
+        - {x: 6, y: -8}
+        - {x: 8, y: -6}
+        - {x: 8, y: 6}
+        - {x: 6, y: 8}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_178
@@ -2779,7 +4031,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -6, y: 8}
+        - {x: -8, y: 6}
+        - {x: -8, y: -6}
+        - {x: -6, y: -8}
+        - {x: 6, y: -8}
+        - {x: 8, y: -6}
+        - {x: 8, y: 6}
+        - {x: 6, y: 8}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_179
@@ -2793,7 +4053,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -6, y: 8}
+        - {x: -8, y: 6}
+        - {x: -8, y: -6}
+        - {x: -6, y: -8}
+        - {x: 6, y: -8}
+        - {x: 8, y: -6}
+        - {x: 8, y: 6}
+        - {x: 6, y: 8}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_180
@@ -2807,7 +4075,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -6, y: 8}
+        - {x: -8, y: 6}
+        - {x: -8, y: -6}
+        - {x: -6, y: -8}
+        - {x: 6, y: -8}
+        - {x: 8, y: -6}
+        - {x: 8, y: 6}
+        - {x: 6, y: 8}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_181
@@ -2821,7 +4097,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -6, y: 8}
+        - {x: -8, y: 6}
+        - {x: -8, y: -6}
+        - {x: -6, y: -8}
+        - {x: 6, y: -8}
+        - {x: 8, y: -6}
+        - {x: 8, y: 6}
+        - {x: 6, y: 8}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_182
@@ -2835,7 +4119,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -6, y: 8}
+        - {x: -8, y: 6}
+        - {x: -8, y: -6}
+        - {x: -6, y: -8}
+        - {x: 6, y: -8}
+        - {x: 8, y: -6}
+        - {x: 8, y: 6}
+        - {x: 6, y: 8}
       tessellationDetail: 0
     - serializedVersion: 2
       name: morph01
@@ -2849,7 +4141,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -6, y: 8}
+        - {x: -8, y: 6}
+        - {x: -8, y: -6}
+        - {x: -6, y: -8}
+        - {x: 6, y: -8}
+        - {x: 8, y: -6}
+        - {x: 8, y: 6}
+        - {x: 6, y: 8}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_184
@@ -2863,7 +4163,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -6, y: 8}
+        - {x: -8, y: 6}
+        - {x: -8, y: -6}
+        - {x: -6, y: -8}
+        - {x: 6, y: -8}
+        - {x: 8, y: -6}
+        - {x: 8, y: 6}
+        - {x: 6, y: 8}
       tessellationDetail: 0
     - serializedVersion: 2
       name: SNES - Super Metroid - Samus Varia Suit_185
@@ -2877,7 +4185,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -6, y: 8}
+        - {x: -8, y: 6}
+        - {x: -8, y: -6}
+        - {x: -6, y: -8}
+        - {x: 6, y: -8}
+        - {x: 8, y: -6}
+        - {x: 8, y: 6}
+        - {x: 6, y: 8}
       tessellationDetail: 0
     outline:
     - - {x: -157, y: -623}
