@@ -129,7 +129,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8654fd578b60cb48b86175d977ed373, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 1670978521406608, guid: 5e5d96120a1be4a4e9d9c00a450601dd,
+    type: 2}
   noHit:
     serializedVersion: 2
     m_Bits: 4294966015
@@ -189,6 +190,7 @@ MonoBehaviour:
   directionTir: {x: 0, y: 0}
   facingRight: 0
   tirerSurJoueur: 0
+  decelleration: 2
   showVie: 0
   showDommage: 1
   showContactDommage: 0

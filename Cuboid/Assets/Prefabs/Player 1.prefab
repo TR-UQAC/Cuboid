@@ -314,7 +314,7 @@ MonoBehaviour:
   IsRunning: 0
   fallMultiplier: 7
   lowJumpMultiplier: 10
-  decelleration: 4
+  decelleration: 6
   dureeImmortel: 0.2
 --- !u!114 &114274902424658836
 MonoBehaviour:
@@ -346,7 +346,7 @@ MonoBehaviour:
   dommageHit:
     serializedVersion: 2
     m_Bits: 2048
-  bulletPref: {fileID: 1670978521406608, guid: e4a60708d73f3c045a81e69e97ad689e, type: 2}
+  bulletPref: {fileID: 1670978521406608, guid: 75468c4e938724a4eab3fd69fbd9ddad, type: 2}
   statAttaque:
     ePower: 4
     eRadius: 2

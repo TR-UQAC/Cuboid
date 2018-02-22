@@ -17,10 +17,14 @@ public class PlayerCharacter2D : Personnages {
     private Transform m_GroundCheck;    // A position marking where to check if the player is grounded.
     const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
     private bool m_Grounded;            // Whether or not the player is grounded.
+
     private Transform m_CeilingCheck;   // A position marking where to check for ceilings
     const float k_CeilingRadius = .01f; // Radius of the overlap circle to determine if the player can stand up
+
     private Animator m_Anim;            // Reference to the player's animator component.
     private Rigidbody2D m_Rigidbody2D;
+    private GameObject bar;
+
     private bool m_FacingRight = true;  // For determining which way the player is currently facing.
     private float shootTimer = 0;
 
@@ -43,6 +47,10 @@ public class PlayerCharacter2D : Personnages {
         m_Rigidbody2D = GetComponent<Rigidbody2D>();
 
         activeUpgradeTable = new Dictionary<string, bool>();
+
+        if(GameObject.FindGameObjectWithTag("HealthUI"))
+            bar = GameObject.FindGameObjectWithTag("HealthUI");
+
         UpdateHealthBar();
     }
 
@@ -237,8 +245,10 @@ public class PlayerCharacter2D : Personnages {
 
     private void UpdateHealthBar()
     {
-        GameObject bar = GameObject.FindGameObjectWithTag("HealthUI");
-        bar.GetComponent<HealthBar>().health = joueurStats.vie;   
+
+        //GameObject bar = GameObject.FindGameObjectWithTag("HealthUI");
+        if(bar != null)
+            bar.GetComponent<HealthBar>().health = joueurStats.vie;   
     }
 
     IEnumerator ChangeImmortel() {

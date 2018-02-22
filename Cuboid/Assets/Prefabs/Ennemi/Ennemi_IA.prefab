@@ -222,7 +222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8654fd578b60cb48b86175d977ed373, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 1670978521406608, guid: e4a60708d73f3c045a81e69e97ad689e,
+  bulletPrefab: {fileID: 1670978521406608, guid: 5e5d96120a1be4a4e9d9c00a450601dd,
     type: 2}
   noHit:
     serializedVersion: 2
