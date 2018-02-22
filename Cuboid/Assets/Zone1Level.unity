@@ -39012,6 +39012,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1381336737 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4407975029275172, guid: 43150b52662491149be83425a7461f33,
+    type: 2}
+  m_PrefabInternal: {fileID: 1340007188}
 --- !u!4 &1464884327 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4801749692113590, guid: c10e95177075c2745bd41f79fb9b43b0,
@@ -39349,7 +39354,7 @@ Prefab:
         type: 2}
       propertyPath: targets.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1381336737}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 79da5af29764ba9448384642d6f5af86, type: 2}
   m_IsPrefabParent: 0
