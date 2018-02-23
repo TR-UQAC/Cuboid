@@ -5,8 +5,8 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class MorphBall : MonoBehaviour {
 
-    private Sprite morphSprite;
-    private Sprite standardSprite;
+    public Sprite morphSprite;
+    public Sprite standardSprite;
 
     private bool ismorphed = false;
 
@@ -32,7 +32,7 @@ public class MorphBall : MonoBehaviour {
                 playergo.GetComponent<Animator>().enabled = false;
 
                 //Disable le capsule collider
-                playergo.GetComponent<CapsuleCollider2D>().enabled = false;
+                playergo.GetComponent<PolygonCollider2D>().enabled = false;
 
                 //Active le sphere collider
                 playergo.GetComponent<CircleCollider2D>().enabled = true;
@@ -40,14 +40,18 @@ public class MorphBall : MonoBehaviour {
                 ismorphed = true;
             }
             else
-            {   
-                //TODO: Ajouter une force pour pas que le sprite aparaisse dans le plancher
-                playergo.GetComponent<SpriteRenderer>().sprite = standardSprite;
-                playergo.GetComponent<Animator>().enabled = true;
-                playergo.GetComponent<CapsuleCollider2D>().enabled = true;
-                playergo.GetComponent<CircleCollider2D>().enabled = false;
+            {
+                //Utilise le ceiling check pour voir si on peux unmorph
+                if (!playergo.GetComponent<PlayerCharacter2D>().IsUnderCeiling())
+                {
+                    //TODO: Ajouter une force pour pas que le sprite aparaisse dans le plancher
+                    playergo.GetComponent<SpriteRenderer>().sprite = standardSprite;
+                    //playergo.GetComponent<Animator>().enabled = true;
+                    playergo.GetComponent<PolygonCollider2D>().enabled = true;
+                    playergo.GetComponent<CircleCollider2D>().enabled = false;
 
-                ismorphed = false;
+                    ismorphed = false;
+                }
             }
 
         }

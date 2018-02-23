@@ -243,6 +243,17 @@ public class PlayerCharacter2D : Personnages {
         }
     }
 
+    public bool IsUnderCeiling()
+    {
+        if (Physics2D.OverlapCircle(m_CeilingCheck.position, k_CeilingRadius, m_WhatIsGround))
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+
     private void UpdateHealthBar()
     {
 
