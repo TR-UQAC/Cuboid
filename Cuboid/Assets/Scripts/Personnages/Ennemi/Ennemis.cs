@@ -12,7 +12,7 @@ public class Ennemis : Personnages {
     public enum typeAttaque { Rien = 0, Tirer = 1, Kamikaze = 2, Explosion = 3}
     public enum typeDeplac { Immobile = 0, Voler = 1, Glisser = 2 }
 
-    public float distActivation = 50;
+    static float distActivation = 100;
 
     private PlayerCharacter2D en;
     private bool searchingForPlayer = false;
@@ -24,7 +24,7 @@ public class Ennemis : Personnages {
     private EnnemiAI artIntel;
     private WeaponEnnemi weapon;
     private PatrolControl control;
-    private SpriteRenderer sprite;
+    //private SpriteRenderer sprite;
 
     public Vector2 direction;
     public Vector2 directionTir = new Vector2(0,0);
@@ -56,8 +56,8 @@ public class Ennemis : Personnages {
             myTransform.localScale = new Vector2(myTransform.localScale.x * -direction.x, myTransform.localScale.y);
         }
 
-        if (GetComponent<SpriteRenderer>() != null)
-            sprite = GetComponent<SpriteRenderer>();
+        //if (GetComponent<SpriteRenderer>() != null)
+           // sprite = GetComponent<SpriteRenderer>();
 
 
         rb.gravityScale = (comp.deplacement == typeDeplac.Voler) ? 0 : rb.gravityScale;

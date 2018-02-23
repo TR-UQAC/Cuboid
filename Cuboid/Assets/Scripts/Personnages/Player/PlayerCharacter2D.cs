@@ -6,7 +6,9 @@ using UnityEngine.UI;
 //TODO: ! Ajout d'un temps d'immortalité pour le joueur
 public class PlayerCharacter2D : Personnages {
 
+    #region Variables
     public PersoStats joueurStats = new PersoStats();
+    private float m_speed;
 
     Dictionary<string, bool> activeUpgradeTable { get; set; }
 
@@ -14,8 +16,11 @@ public class PlayerCharacter2D : Personnages {
     [SerializeField] private bool m_AirControl = false;                 // Whether or not a player can steer while jumping;
     [SerializeField] private LayerMask m_WhatIsGround;                  // A mask determining what is ground to the character
 
-    private Transform m_GroundCheck;    // A position marking where to check if the player is grounded.
-    const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
+    //public Transform m_GroundCheck;    // A position marking where to check if the player is grounded.
+    public Transform sightStart; // For check the ground
+    public Transform sightEnd;   //For check the ground
+
+    //public float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
     private bool m_Grounded;            // Whether or not the player is grounded.
 
     private Transform m_CeilingCheck;   // A position marking where to check for ceilings
@@ -30,6 +35,7 @@ public class PlayerCharacter2D : Personnages {
 
     public bool IsRunning = false;
 
+    public float fallMaxSpeed = 35f;
     public float fallMultiplier = 2.5f;
     public float lowJumpMultiplier = 2f;
     public float decelleration = 4f;
@@ -37,12 +43,18 @@ public class PlayerCharacter2D : Personnages {
     private bool m_DoubleJump = true;
 
     public float dureeImmortel = 0.5f;
+    #endregion
 
+    #region Corps   
     private void Awake()
     {
         // Setting up references.
-        m_GroundCheck = transform.Find("GroundCheck");
+        //m_GroundCheck = transform.Find("GroundCheck");
         m_CeilingCheck = transform.Find("CeilingCheck");
+
+        sightStart = transform.Find("groundSightStart");
+        sightEnd = transform.Find("groundSightEnd");
+
         m_Anim = GetComponent<Animator>();
         m_Rigidbody2D = GetComponent<Rigidbody2D>();
 
@@ -54,13 +66,18 @@ public class PlayerCharacter2D : Personnages {
         UpdateHealthBar();
     }
 
-
     private void FixedUpdate()
     {
         m_Grounded = false;
 
         // The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
         // This can be done using layers instead but Sample Assets will not overwrite your project settings.
+        if (Physics2D.Linecast(sightStart.position, sightEnd.position, m_WhatIsGround)) {
+            m_Grounded = true;
+            m_DoubleJump = true;
+        }
+        
+        /*
         Collider2D[] colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius, m_WhatIsGround);
         for (int i = 0; i < colliders.Length; i++)
         {
@@ -68,6 +85,7 @@ public class PlayerCharacter2D : Personnages {
                 m_Grounded = true;
             m_DoubleJump = true;
         }
+        */
         m_Anim.SetBool("Ground", m_Grounded);
 
         // Set the vertical animation
@@ -78,25 +96,16 @@ public class PlayerCharacter2D : Personnages {
 
         if (IsRunning)
         {
-            Debug.Log("Je cours !");
             m_Anim.Play("RunFast");
-            joueurStats.maxSpeed = 20f;
+            m_speed = joueurStats.maxSpeed*1.5f;
         }
         else
-        {
-            joueurStats.maxSpeed = 10f;
-        }
+            m_speed = joueurStats.maxSpeed;
 
         if(m_Grounded)
             m_Rigidbody2D.AddRelativeForce(-m_Rigidbody2D.velocity * decelleration);
-    }
-
-    public void PrintAllUpgrade()
-    {
-        foreach (KeyValuePair<string, bool> item in activeUpgradeTable)
-        {
-            Debug.Log(item.ToString());
-        }
+        else if (m_Rigidbody2D.velocity.y < -fallMaxSpeed)
+            m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, -fallMaxSpeed);
     }
 
     public void UseWeapon()
@@ -115,6 +124,39 @@ public class PlayerCharacter2D : Personnages {
             }
         }
     }
+    #endregion
+
+    #region Upgrade
+    public void PrintAllUpgrade()
+    {
+        foreach (KeyValuePair<string, bool> item in activeUpgradeTable)
+        {
+            Debug.Log(item.ToString());
+        }
+    }
+
+    public void ToggleUpgrade(string name)
+    {
+        if (activeUpgradeTable.ContainsKey(name))
+        {
+            activeUpgradeTable[name] = !activeUpgradeTable[name];
+        }
+        else
+        {
+            activeUpgradeTable.Add(name, true);
+        }
+    }
+
+    public bool IsUnderCeiling()
+    {
+        if (Physics2D.OverlapCircle(m_CeilingCheck.position, k_CeilingRadius, m_WhatIsGround))
+            return true;
+
+        return false;
+    }
+    #endregion
+
+    #region Mouvement
     public void Move(float move, bool crouch, bool jump)
     {
         // If crouching, check to see if the character can stand up
@@ -136,20 +178,24 @@ public class PlayerCharacter2D : Personnages {
             // Reduce the speed if crouching by the crouchSpeed multiplier
             move = (crouch ? move * m_CrouchSpeed : move);
 
+            if (m_Grounded && Mathf.Abs(move) < 0.5f && !jump)
+                decelleration = 30f;
+            else
+                decelleration = 10f;
+
             // The Speed animator parameter is set to the absolute value of the horizontal input.
             m_Anim.SetFloat("Speed", Mathf.Abs(move));
 
             Vector2 dir = new Vector2(move, 0f);
 
             dir *= joueurStats.speed * Time.fixedDeltaTime;
-            //m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x + move * joueurStats.speed, m_Rigidbody2D.velocity.y);
             m_Rigidbody2D.AddForce(dir, joueurStats.fMode);
 
-            if (m_Rigidbody2D.velocity.x > joueurStats.maxSpeed)
-                m_Rigidbody2D.velocity = new Vector2(joueurStats.maxSpeed, m_Rigidbody2D.velocity.y);
+            if (m_Rigidbody2D.velocity.x > m_speed)
+                m_Rigidbody2D.velocity = new Vector2(m_speed, m_Rigidbody2D.velocity.y);
 
-            else if (m_Rigidbody2D.velocity.x < -joueurStats.maxSpeed)
-                m_Rigidbody2D.velocity = new Vector2(-joueurStats.maxSpeed, m_Rigidbody2D.velocity.y);
+            else if (m_Rigidbody2D.velocity.x < -m_speed)
+                m_Rigidbody2D.velocity = new Vector2(-m_speed, m_Rigidbody2D.velocity.y);
 
 
             // If the input is moving the player right and the player is facing left...
@@ -181,7 +227,7 @@ public class PlayerCharacter2D : Personnages {
             if (m_Rigidbody2D.velocity.y >= 0)
                 d_jump = Vector2.up * joueurStats.m_JumpForce;
             else 
-                d_jump = Vector2.up * (joueurStats.m_JumpForce +Mathf.Abs(m_Rigidbody2D.velocity.y));
+                d_jump = Vector2.up * (joueurStats.m_JumpForce + Mathf.Abs(m_Rigidbody2D.velocity.y)/2);
 
 
             m_Rigidbody2D.AddForce(d_jump, ForceMode2D.Impulse);
@@ -194,12 +240,10 @@ public class PlayerCharacter2D : Personnages {
         if (m_Rigidbody2D.velocity.y < 0)
         {
             m_Rigidbody2D.gravityScale = fallMultiplier;
-            //m_Rigidbody2D.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
         }
         else if (m_Rigidbody2D.velocity.y > 0 && !Input.GetButton("Jump"))
         {
             m_Rigidbody2D.gravityScale = lowJumpMultiplier;
-            //m_Rigidbody2D.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         } else {
             m_Rigidbody2D.gravityScale = 4f;
         }
@@ -216,47 +260,31 @@ public class PlayerCharacter2D : Personnages {
         transform.localScale = theScale;
     }
 
-
-    public void ToggleUpgrade(string name)
-    {
-        if (activeUpgradeTable.ContainsKey(name))
-        {
-            activeUpgradeTable[name] = !activeUpgradeTable[name];
-        }
-        else
-        {
-            activeUpgradeTable.Add(name, true);
-        }
+    void OnDrawGizmosSelected() {
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawLine(sightStart.position, sightEnd.position);
     }
+    #endregion
+
+    #region Dommage
 
     public override void DommagePerso(int dommage)
     {
-        UpdateHealthBar();
-
         if (!joueurStats.immortel && joueurStats.vie > 0) {
+
             joueurStats.immortel = true;
             StartCoroutine(ChangeImmortel());
+
             joueurStats.vie -= dommage;
-            if (joueurStats.vie <= 0) {
+            UpdateHealthBar();
+
+            if (joueurStats.vie <= 0)
                 GameMaster.KillJoueur(this);
-            }
         }
     }
-
-    public bool IsUnderCeiling()
-    {
-        if (Physics2D.OverlapCircle(m_CeilingCheck.position, k_CeilingRadius, m_WhatIsGround))
-        {
-            return true;
-        }
-
-        return false;
-    }
-
 
     private void UpdateHealthBar()
     {
-
         //GameObject bar = GameObject.FindGameObjectWithTag("HealthUI");
         if(bar != null)
             bar.GetComponent<HealthBar>().health = joueurStats.vie;   
@@ -266,4 +294,5 @@ public class PlayerCharacter2D : Personnages {
         yield return new WaitForSeconds(dureeImmortel);
         joueurStats.immortel = false;
     }
+    #endregion
 }
