@@ -3323,6 +3323,11 @@ Prefab:
       value: 
       objectReference: {fileID: 1670978521406608, guid: 5e5d96120a1be4a4e9d9c00a450601dd,
         type: 2}
+    - target: {fileID: 114160919802564104, guid: 7d417b6013409db4f8fa575ff953cea7,
+        type: 2}
+      propertyPath: statAttaque.ePower
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7d417b6013409db4f8fa575ff953cea7, type: 2}
   m_IsPrefabParent: 0
@@ -4679,6 +4684,11 @@ Prefab:
       propertyPath: targets.Array.data[0]
       value: 
       objectReference: {fileID: 1452054890}
+    - target: {fileID: 114824283284012474, guid: 79da5af29764ba9448384642d6f5af86,
+        type: 2}
+      propertyPath: smoothTime
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 79da5af29764ba9448384642d6f5af86, type: 2}
   m_IsPrefabParent: 0
@@ -4851,6 +4861,11 @@ Prefab:
       value: 
       objectReference: {fileID: 1670978521406608, guid: 5e5d96120a1be4a4e9d9c00a450601dd,
         type: 2}
+    - target: {fileID: 114255591608085970, guid: c0d7da662f82bc74d9da1b1f12493042,
+        type: 2}
+      propertyPath: statAttaque.ePower
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c0d7da662f82bc74d9da1b1f12493042, type: 2}
   m_IsPrefabParent: 0
@@ -4947,6 +4962,11 @@ Prefab:
     - target: {fileID: 4801749692113590, guid: c10e95177075c2745bd41f79fb9b43b0, type: 2}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114703397968577338, guid: c10e95177075c2745bd41f79fb9b43b0,
+        type: 2}
+      propertyPath: comp.statAttaque.ePower
+      value: 300
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c10e95177075c2745bd41f79fb9b43b0, type: 2}
@@ -5047,27 +5067,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 114169987853243778, guid: e589d71cbb1ea8941bd568773b079766,
-        type: 2}
-      propertyPath: joueurStats.immortel
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114169987853243778, guid: e589d71cbb1ea8941bd568773b079766,
-        type: 2}
-      propertyPath: joueurStats.vie
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 114169987853243778, guid: e589d71cbb1ea8941bd568773b079766,
-        type: 2}
-      propertyPath: joueurStats.vieMax
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 114434940233586698, guid: e589d71cbb1ea8941bd568773b079766,
-        type: 2}
-      propertyPath: bulletPref
-      value: 
-      objectReference: {fileID: 1670978521406608, guid: 75468c4e938724a4eab3fd69fbd9ddad,
-        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e589d71cbb1ea8941bd568773b079766, type: 2}
   m_IsPrefabParent: 0
