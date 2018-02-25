@@ -25,17 +25,34 @@ public class UpgradeItem : MonoBehaviour {
         //feedback de pickup
 
         //fait de quoi sur le player
-        //GameObject monjoueur = GameObject.FindGameObjectWithTag("Player");
-        //PlatformerCharacter2D pc = (PlatformerCharacter2D) monjoueur.GetComponent(typeof(PlatformerCharacter2D));
+        GameObject monjoueur = GameObject.FindGameObjectWithTag("Player");
+        PlayerCharacter2D pc = (PlayerCharacter2D) monjoueur.GetComponent(typeof(PlayerCharacter2D));
 
-        //pc.ToggleUpgrade("Test");
+        if (pc == null)
+        {
+            Debug.Log("Player not found");
+            return;
+        }
 
-        //player.gameObject.AddComponent(typeof(SphereCollider));
+        pc.ToggleUpgrade(UpgradeName);
 
-        player.gameObject.AddComponent(typeof(TestUpgradeBehavior));
+        switch (UpgradeName)
+        {
+            case "MorphBall":
+                pc.ToggleUpgrade(UpgradeName);
+                pc.gameObject.AddComponent(typeof(MorphBall));
+            break;
+            case "MorphBomb":
+                pc.ToggleUpgrade(UpgradeName);
+            break;
+            
+            default:
+                Debug.Log("Upgrade non spécifié ou non reconnue");
+                pc.gameObject.AddComponent(typeof(TestUpgradeBehavior));
+            break;
+        }
 
         gameObject.GetComponent<Animator>().Play("Disapear");
-
 
         Destroy(gameObject, 0.25f);
     }
