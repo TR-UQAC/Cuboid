@@ -16,12 +16,12 @@ public class PlayerCharacter2D : Personnages {
     [SerializeField] private bool m_AirControl = false;                 // Whether or not a player can steer while jumping;
     [SerializeField] private LayerMask m_WhatIsGround;                  // A mask determining what is ground to the character
 
-    //public Transform m_GroundCheck;    // A position marking where to check if the player is grounded.
-    public Transform sightStart; // For check the ground
-    public Transform sightEnd;   //For check the ground
+    public Transform m_GroundCheck;    // A position marking where to check if the player is grounded.
+    //public Transform sightStart; // For check the ground
+    //public Transform sightEnd;   //For check the ground
     public GameObject morphBombPrefab;
 
-    //public float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
+    public float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
     private bool m_Grounded;            // Whether or not the player is grounded.
 
     private Transform m_CeilingCheck;   // A position marking where to check for ceilings
@@ -51,11 +51,11 @@ public class PlayerCharacter2D : Personnages {
     private void Awake()
     {
         // Setting up references.
-        //m_GroundCheck = transform.Find("GroundCheck");
+        m_GroundCheck = transform.Find("GroundCheck");
         m_CeilingCheck = transform.Find("CeilingCheck");
 
-        sightStart = transform.Find("groundSightStart");
-        sightEnd = transform.Find("groundSightEnd");
+        //sightStart = transform.Find("groundSightStart");
+        //sightEnd = transform.Find("groundSightEnd");
 
         m_Anim = GetComponent<Animator>();
         m_Rigidbody2D = GetComponent<Rigidbody2D>();
@@ -75,12 +75,13 @@ public class PlayerCharacter2D : Personnages {
 
         // The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
         // This can be done using layers instead but Sample Assets will not overwrite your project settings.
+        /*
         if (Physics2D.Linecast(sightStart.position, sightEnd.position, m_WhatIsGround)) {
             m_Grounded = true;
             m_DoubleJump = true;
         }
+        */
         
-        /*
         Collider2D[] colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius, m_WhatIsGround);
         for (int i = 0; i < colliders.Length; i++)
         {
@@ -88,7 +89,7 @@ public class PlayerCharacter2D : Personnages {
                 m_Grounded = true;
             m_DoubleJump = true;
         }
-        */
+        
         m_Anim.SetBool("Ground", m_Grounded);
 
         // Set the vertical animation
@@ -106,7 +107,7 @@ public class PlayerCharacter2D : Personnages {
             m_speed = joueurStats.maxSpeed;
 
         if(m_Grounded)
-            m_Rigidbody2D.AddRelativeForce(-m_Rigidbody2D.velocity * decelleration);
+            m_Rigidbody2D.AddRelativeForce(new Vector2(-m_Rigidbody2D.velocity.x * decelleration, -m_Rigidbody2D.velocity.y));
         else if (m_Rigidbody2D.velocity.y < -fallMaxSpeed)
             m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, -fallMaxSpeed);
     }
@@ -276,11 +277,11 @@ public class PlayerCharacter2D : Personnages {
         theScale.x *= -1;
         transform.localScale = theScale;
     }
-
+    /*
     void OnDrawGizmosSelected() {
         Gizmos.color = Color.magenta;
         Gizmos.DrawLine(sightStart.position, sightEnd.position);
-    }
+    }*/
     #endregion
 
     #region Dommage
