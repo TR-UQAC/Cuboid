@@ -127,12 +127,11 @@ public class PlayerCharacter2D : Personnages {
         }
         else
         {
-            PrintAllUpgrade();
-            if (isPlayerMorphed && activeUpgradeTable["MorphBomb"])
+            if (isPlayerMorphed && activeUpgradeTable.ContainsKey("MorphBomb"))
             {
                 Instantiate(morphBombPrefab, m_Rigidbody2D.position, Quaternion.identity);
             }
-            else
+            else if (!isPlayerMorphed)
             {
                 if (shootTimer > currentWeapon.fireCooldown)
                 {
@@ -237,14 +236,14 @@ public class PlayerCharacter2D : Personnages {
         }
 
         // If the player should jump...
-        if (m_Grounded && jump && m_Anim.GetBool("Ground"))
+        if (!isPlayerMorphed && m_Grounded && jump && m_Anim.GetBool("Ground"))
         {
             // Add a vertical force to the player.
             m_Grounded = false;
             m_Anim.SetBool("Ground", false);
             m_Rigidbody2D.AddForce(Vector2.up * joueurStats.m_JumpForce, ForceMode2D.Impulse);
         }
-        else if (m_DoubleJump && jump)
+        else if (!isPlayerMorphed && m_DoubleJump && jump)
         {
             m_DoubleJump = false;
             Vector2 d_jump;
