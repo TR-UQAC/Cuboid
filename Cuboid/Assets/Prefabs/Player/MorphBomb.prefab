@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114807722287843494}
   - component: {fileID: 95587441468302786}
   - component: {fileID: 58227652105101334}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: MorphBomb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionTimer: 1
-  explosionForce: 2000
+  explosionForce: 1700
 --- !u!212 &212517953732643974
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -119,8 +119,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -627212813
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300412, guid: 2472653e2a869a84c8c3108b1e395c2b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
