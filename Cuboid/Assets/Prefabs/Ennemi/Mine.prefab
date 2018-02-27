@@ -142,7 +142,7 @@ MonoBehaviour:
   statAttaque:
     ePower: 30
     eRadius: 5
-    upwardsModifier: 0.2
+    upwardsModifier: 1
     degGlace: 0
     degPoison: 0
     degFoudre: 0
@@ -157,7 +157,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8577aa4a7e2f2548867055835ff8ab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distActivation: 50
   ennemiStats:
     vie: 10
     vieMax: 100

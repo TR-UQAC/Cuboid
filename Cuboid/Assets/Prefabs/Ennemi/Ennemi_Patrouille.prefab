@@ -99,8 +99,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1171337023374186}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.38, y: -4.42, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 4434892804643306}
@@ -243,7 +243,7 @@ MonoBehaviour:
     m_Bits: 256
   effetAttaquePrefab: {fileID: 0}
   statAttaque:
-    ePower: 5
+    ePower: 10
     eRadius: 1
     upwardsModifier: 0
     degGlace: 0
@@ -260,7 +260,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8577aa4a7e2f2548867055835ff8ab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distActivation: 50
   ennemiStats:
     vie: 100
     vieMax: 100
@@ -295,7 +294,7 @@ MonoBehaviour:
   tirerSurJoueur: 0
   decelleration: 2
   showVie: 0
-  showDommage: 0
+  showDommage: 1
   showContactDommage: 0
   showMouvement: 1
   showElements: 0

@@ -19,7 +19,6 @@ abstract public class Personnages : MonoBehaviour {
             [Header("Mouvement Force")]
 #endif
         //La vitesse
-        [Tooltip("Pas encore implémenter")]
         public float m_JumpForce = 0;
         public float speed = 600f;
         public float maxSpeed = 10f;

@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using EZCameraShake;
+
 //TODO: ! Ajout d'un temps d'immortalité pour le joueur
 public class PlayerCharacter2D : Personnages {
 
@@ -66,6 +68,8 @@ public class PlayerCharacter2D : Personnages {
         if(GameObject.FindGameObjectWithTag("HealthUI"))
             bar = GameObject.FindGameObjectWithTag("HealthUI");
 
+        //TODO: !Faire une vérification pour sélectionner la caméra shake
+
         UpdateHealthBar();
     }
 
@@ -110,6 +114,8 @@ public class PlayerCharacter2D : Personnages {
             m_Rigidbody2D.AddRelativeForce(new Vector2(-m_Rigidbody2D.velocity.x * decelleration, -m_Rigidbody2D.velocity.y));
         else if (m_Rigidbody2D.velocity.y < -fallMaxSpeed)
             m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, -fallMaxSpeed);
+        else if (m_Rigidbody2D.velocity.y > fallMaxSpeed)
+            m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, fallMaxSpeed);
     }
 
     public void UseWeapon()
@@ -298,6 +304,8 @@ public class PlayerCharacter2D : Personnages {
 
             if (joueurStats.vie <= 0)
                 GameMaster.KillJoueur(this);
+            else
+                CameraShaker.Instance.ShakeOnce(1f, 3f, .1f, 1f);
         }
     }
 

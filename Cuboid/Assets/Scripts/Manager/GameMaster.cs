@@ -31,7 +31,7 @@ public class GameMaster : MonoBehaviour {
         yield return new WaitForSeconds(spawnDelay);
        
         if(playerPrefab != null)
-            Instantiate(playerPrefab, new Vector3(-30.65f, -0.64f, 0) /*spawnPoint.position*/, Quaternion.identity);
+            Instantiate(playerPrefab, spawnPoint.position, Quaternion.identity);
         if (spawnPrefab != null) {
             Transform clone = Instantiate(spawnPrefab, spawnPoint.position, spawnPoint.rotation) as Transform;
             Destroy(clone.gameObject, 3f);
