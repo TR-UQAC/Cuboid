@@ -26,31 +26,56 @@ public class MorphBall : MonoBehaviour {
             if (!ismorphed)
             {
                 //Change le sprite           
-                playergo.GetComponent<SpriteRenderer>().sprite = morphSprite;
+               // playergo.GetComponent<SpriteRenderer>().sprite = morphSprite;
 
                 //Disable/change l'animator
-                playergo.GetComponent<Animator>().enabled = false;
+                //playergo.GetComponent<Animator>().enabled = false;
 
-                //Disable le capsule collider
-                playergo.GetComponent<PolygonCollider2D>().enabled = false;
-
-                //Active le sphere collider
-                playergo.GetComponent<CircleCollider2D>().enabled = true;
+                //Disable le collider standard
+                //Active le petit collider
+                CircleCollider2D col1 = playergo.GetComponents<CircleCollider2D>()[0];
+                CircleCollider2D col2 = playergo.GetComponents<CircleCollider2D>()[1];
+                if (col1.radius > col2.radius)
+                {
+                    col1.enabled = false;
+                    col2.enabled = true;
+                }
+                else
+                {
+                    col1.enabled = true;
+                    col2.enabled = false;
+                }
 
                 ismorphed = true;
+                playergo.GetComponent<PlayerCharacter2D>().SetMorph(ismorphed);
+                playergo.GetComponent<Animator>().SetBool("Morphed", ismorphed);    
             }
             else
             {
                 //Utilise le ceiling check pour voir si on peux unmorph
                 if (!playergo.GetComponent<PlayerCharacter2D>().IsUnderCeiling())
                 {
-                    //TODO: Ajouter une force pour pas que le sprite aparaisse dans le plancher
-                    playergo.GetComponent<SpriteRenderer>().sprite = standardSprite;
+                    //playergo.GetComponent<SpriteRenderer>().sprite = standardSprite;
                     //playergo.GetComponent<Animator>().enabled = true;
-                    playergo.GetComponent<PolygonCollider2D>().enabled = true;
-                    playergo.GetComponent<CircleCollider2D>().enabled = false;
 
                     ismorphed = false;
+                    playergo.GetComponent<PlayerCharacter2D>().SetMorph(ismorphed);
+                    playergo.GetComponent<Animator>().SetBool("Morphed", ismorphed);
+
+                    //Active le collider standard
+                    //Desactive le petit collider
+                    CircleCollider2D col1 = playergo.GetComponents<CircleCollider2D>()[0];
+                    CircleCollider2D col2 = playergo.GetComponents<CircleCollider2D>()[1];
+                    if (col1.radius < col2.radius)
+                    {
+                        col1.enabled = false;
+                        col2.enabled = true;
+                    }
+                    else
+                    {
+                        col1.enabled = true;
+                        col2.enabled = false;
+                    }
                 }
             }
 

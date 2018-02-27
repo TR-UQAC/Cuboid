@@ -19,6 +19,7 @@ public class PlayerCharacter2D : Personnages {
     //public Transform m_GroundCheck;    // A position marking where to check if the player is grounded.
     public Transform sightStart; // For check the ground
     public Transform sightEnd;   //For check the ground
+    public GameObject morphBombPrefab;
 
     //public float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
     private bool m_Grounded;            // Whether or not the player is grounded.
@@ -41,6 +42,7 @@ public class PlayerCharacter2D : Personnages {
     public float decelleration = 4f;
 
     private bool m_DoubleJump = true;
+    private bool isPlayerMorphed = false;
 
     public float dureeImmortel = 0.5f;
     #endregion
@@ -59,6 +61,7 @@ public class PlayerCharacter2D : Personnages {
         m_Rigidbody2D = GetComponent<Rigidbody2D>();
 
         activeUpgradeTable = new Dictionary<string, bool>();
+        activeUpgradeTable.Clear();
 
         if(GameObject.FindGameObjectWithTag("HealthUI"))
             bar = GameObject.FindGameObjectWithTag("HealthUI");
@@ -117,10 +120,18 @@ public class PlayerCharacter2D : Personnages {
         }
         else
         {
-            if (shootTimer > currentWeapon.fireCooldown)
+            PrintAllUpgrade();
+            if (isPlayerMorphed && activeUpgradeTable["MorphBomb"])
             {
-                shootTimer = 0;
-                currentWeapon.Shoot(m_FacingRight);
+                Instantiate(morphBombPrefab, m_Rigidbody2D.position, Quaternion.identity);
+            }
+            else
+            {
+                if (shootTimer > currentWeapon.fireCooldown)
+                {
+                    shootTimer = 0;
+                    currentWeapon.Shoot(m_FacingRight);
+                }
             }
         }
     }
@@ -139,12 +150,18 @@ public class PlayerCharacter2D : Personnages {
     {
         if (activeUpgradeTable.ContainsKey(name))
         {
-            activeUpgradeTable[name] = !activeUpgradeTable[name];
+            //Bug: Est appelé même la première fois qu'on pickup un upgrade...
+            //activeUpgradeTable[name] = !activeUpgradeTable[name];
         }
         else
         {
             activeUpgradeTable.Add(name, true);
         }
+    }
+
+    public void SetMorph(bool morph)
+    {
+        isPlayerMorphed = morph;
     }
 
     public bool IsUnderCeiling()

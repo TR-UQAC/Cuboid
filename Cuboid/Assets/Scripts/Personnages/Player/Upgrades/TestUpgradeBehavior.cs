@@ -12,7 +12,7 @@ public class TestUpgradeBehavior : MonoBehaviour {
 
         if (CrossPlatformInputManager.GetButtonDown("TriggerAction1"))
         {
-            Debug.Log("Nouveau Pouvoir activé! PewPew");
+            //Debug.Log("Nouveau Pouvoir activé! PewPew");
 
             if (FindObjectOfType<AudioManager>() != null)
             {
