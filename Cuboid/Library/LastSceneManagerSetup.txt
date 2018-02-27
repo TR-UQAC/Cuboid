@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/Zone1Level.unity
-=======
-- path: Assets/UpgradesTestRoom.unity
->>>>>>> 19d88c253e3a1f2785354b8c92c293b49a6ff9ae
   isLoaded: 1
   isActive: 1
