@@ -67,7 +67,6 @@ public class WeaponEnnemi : MonoBehaviour {
 
     public void Explosion(int dmg, PlayerCharacter2D pl, float fireRate) {
         if (CanAttack) {
-            //TODO: Création d'un effet EXPLOSION
             if (effetAttaquePrefab != null) {
                 Transform clone = Instantiate(effetAttaquePrefab, firePoint.position, firePoint.rotation) as Transform;
                 ShockWaveForce wave = clone.GetComponent<ShockWaveForce>();
@@ -80,9 +79,6 @@ public class WeaponEnnemi : MonoBehaviour {
 
             if (Rigidbody2DExt.AddExplosionForce(pl.GetComponent<Rigidbody2D>(), statAttaque.ePower, firePoint.position, statAttaque.eRadius, statAttaque.upwardsModifier))
                 pl.DommagePerso(dmg);
-
-
-            //TODO: ajouter un caméra shake
         }
     }
 

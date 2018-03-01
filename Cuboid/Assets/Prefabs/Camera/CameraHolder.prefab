@@ -55,7 +55,6 @@ GameObject:
   - component: {fileID: 124702725692708332}
   - component: {fileID: 81780661854794900}
   - component: {fileID: 114169150082837108}
-  - component: {fileID: 114734893896300214}
   - component: {fileID: 114737931682505882}
   m_Layer: 0
   m_Name: MainCamera
@@ -135,7 +134,7 @@ Camera:
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
-  m_AllowMSAA: 1
+  m_AllowMSAA: 0
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
@@ -190,17 +189,6 @@ MonoBehaviour:
   zoomLimiter: 50
   cam: {fileID: 20336516676170988}
   test: 0
---- !u!114 &114734893896300214
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1755084175918338}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 540f13148b6adf543b08cf55ed99d95e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114737931682505882
 MonoBehaviour:
   m_ObjectHideFlags: 1

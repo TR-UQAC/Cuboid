@@ -69,8 +69,6 @@ GameObject:
   - component: {fileID: 50634907689854870}
   - component: {fileID: 114169987853243778}
   - component: {fileID: 114765597985804808}
-  - component: {fileID: 70839871343956406}
-  - component: {fileID: 60005718985144432}
   - component: {fileID: 58460100698538236}
   m_Layer: 8
   m_Name: Player
@@ -199,59 +197,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.20233333
---- !u!60 &60005718985144432
-PolygonCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1749170591753294}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.40466666, y: 0.40466666}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.23538461, y: -0.14923076}
-      - {x: 0.25046274, y: -0.02442105}
-      - {x: 0.21979026, y: 0.07767492}
-      - {x: 0.18019715, y: 0.1289082}
-      - {x: 0.056153845, y: 0.18307692}
-      - {x: -0.039276123, y: 0.18005073}
-      - {x: -0.12769231, y: 0.15846154}
-      - {x: -0.19767837, y: 0.083950974}
-      - {x: -0.2423077, y: -0.0023076923}
-      - {x: -0.2476923, y: -0.13923077}
-      - {x: -0.22646676, y: -0.16612647}
-      - {x: -0.19137268, y: -0.17461602}
-      - {x: 0.18681793, y: -0.18278931}
-      - {x: 0.21538462, y: -0.17307693}
---- !u!70 &70839871343956406
-CapsuleCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1749170591753294}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.21, y: 0.43}
-  m_Direction: 0
 --- !u!95 &95815708418832840
 Animator:
   serializedVersion: 3
@@ -285,8 +230,8 @@ MonoBehaviour:
     vieMax: 100
     immortel: 0
     m_JumpForce: 38
-    speed: 1200
-    maxSpeed: 15
+    speed: 600
+    maxSpeed: 20
     fMode: 1
     resitGlace: 0
     resitPoison: 0
@@ -307,7 +252,7 @@ MonoBehaviour:
   fallMultiplier: 7
   lowJumpMultiplier: 10
   decelleration: 10
-  dureeImmortel: 0.2
+  dureeImmortel: 0.5
 --- !u!114 &114434940233586698
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -319,7 +264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 738d3d4d2ccdeb140a3393f8a11239dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireCooldown: 0.1
+  fireCooldown: 0.5
   dmg: 50
   noHit:
     serializedVersion: 2

@@ -3107,12 +3107,6 @@ MonoBehaviour:
   m_PositionObjectValues: []
   m_PositionColorKeys: []
   m_PositionColorValues: []
---- !u!114 &202463025 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114734893896300214, guid: 24a3485e869566349a39a8cba246bd1e,
-    type: 2}
-  m_PrefabInternal: {fileID: 1027035841}
-  m_Script: {fileID: 11500000, guid: 540f13148b6adf543b08cf55ed99d95e, type: 3}
 --- !u!4 &228332213 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4009021712880410, guid: 85ee787e8fae0bf47a4ab1aaca41a6de,
@@ -4786,21 +4780,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 114169987853243778, guid: e589d71cbb1ea8941bd568773b079766,
-        type: 2}
-      propertyPath: joueurStats.immortel
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114169987853243778, guid: e589d71cbb1ea8941bd568773b079766,
-        type: 2}
-      propertyPath: cameraShake
-      value: 
-      objectReference: {fileID: 202463025}
-    - target: {fileID: 114169987853243778, guid: e589d71cbb1ea8941bd568773b079766,
-        type: 2}
-      propertyPath: dureeImmortel
-      value: 0.5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e589d71cbb1ea8941bd568773b079766, type: 2}
   m_IsPrefabParent: 0
@@ -4898,12 +4877,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114270470886459384, guid: 24a3485e869566349a39a8cba246bd1e,
+    - target: {fileID: 114169150082837108, guid: 24a3485e869566349a39a8cba246bd1e,
         type: 2}
       propertyPath: targets.Array.data[0]
       value: 
       objectReference: {fileID: 1452054890}
-    - target: {fileID: 114169150082837108, guid: 24a3485e869566349a39a8cba246bd1e,
+    - target: {fileID: 114270470886459384, guid: 24a3485e869566349a39a8cba246bd1e,
         type: 2}
       propertyPath: targets.Array.data[0]
       value: 
