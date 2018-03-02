@@ -25,7 +25,6 @@ public class Platformer2DControls : MonoBehaviour
         float h = CrossPlatformInputManager.GetAxis("Horizontal");
         float primaryAttack = Input.GetAxis("Fire1");
 
-        Debug.Log(primaryAttack);
         // Pass all parameters to the character control script.
         m_Character.Move(h, false, m_Jump);
         m_Jump = false;
