@@ -1,9 +1,10 @@
-Library/
-[Tt]emp/
-[Oo]bj/
-[Bb]uild/
-[Bb]uilds/
-Assets/AssetStoreTools*
+### Unity ###
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/Assets/AssetStoreTools*
 
 # Visual Studio 2015 cache directory
 /.vs/
@@ -32,14 +33,4 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
-*.ide
-*.ide-shm
-*.ide-wal
-*.info
-*.log
-Cuboid/Library/CurrentLayout.dwlt
-Cuboid/Library/InspectorExpandedItems.asset
-Cuboid/Library/LastSceneManagerSetup.txt
-Cuboid/Library/CurrentLayout.dwlt
-Cuboid/Library/CurrentLayout.dwlt
-Cuboid/Library/expandedItems
+
