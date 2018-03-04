@@ -230,17 +230,20 @@ public class PlayerCharacter2D : Personnages {
 
         }
         
+
         // Sert à limiter la vélocité
-        Vector2 n_velo = m_Rigidbody2D.velocity;
-        if (Mathf.Abs(m_Rigidbody2D.velocity.x) >= m_speed)
+        Vector2 n_velo = Vector2.zero;
+
+        if (Mathf.Abs(m_Rigidbody2D.velocity.x) >= m_speed) {
             n_velo.x = Mathf.Sign(m_Rigidbody2D.velocity.x) * m_speed;
-            //n_velo.x = 10 * -Mathf.Sign(m_Rigidbody2D.velocity.x) * (Mathf.Abs(m_Rigidbody2D.velocity.x) - m_speed);
+             //n_velo.x = Mathf.Sign(m_Rigidbody2D.velocity.x) * (Mathf.Abs(m_Rigidbody2D.velocity.x) - m_speed);
+        }
 
-        if (Mathf.Abs(m_Rigidbody2D.velocity.y) >= fallMaxSpeed)
+        if (Mathf.Abs(m_Rigidbody2D.velocity.y) >= fallMaxSpeed) {
             n_velo.y = Mathf.Sign(m_Rigidbody2D.velocity.y) * fallMaxSpeed;
-           // n_velo.y = 10 * -Mathf.Sign(m_Rigidbody2D.velocity.y) * (Mathf.Abs(m_Rigidbody2D.velocity.y) - fallMaxSpeed);
-
-        //m_Rigidbody2D.AddForce(n_velo);
+            //n_velo.y = Mathf.Sign(m_Rigidbody2D.velocity.y) * (Mathf.Abs(m_Rigidbody2D.velocity.y) - fallMaxSpeed);
+        }
+        //m_Rigidbody2D.AddForce(-n_velo);
         m_Rigidbody2D.velocity = n_velo;
         
         // If the player should jump...

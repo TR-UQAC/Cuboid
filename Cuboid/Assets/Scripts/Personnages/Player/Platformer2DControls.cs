@@ -23,7 +23,7 @@ public class Platformer2DControls : MonoBehaviour
         // Read the inputs.
         //bool crouch = Input.GetKey(KeyCode.LeftControl);
         float h = CrossPlatformInputManager.GetAxis("Horizontal");
-        float primaryAttack = Input.GetAxis("Fire1");
+        //float primaryAttack = Input.GetAxis("Fire1");
 
         // Pass all parameters to the character control script.
         m_Character.Move(h, false, m_Jump);
@@ -52,31 +52,4 @@ public class Platformer2DControls : MonoBehaviour
             m_Character.joueurStats.immortel = !m_Character.joueurStats.immortel;
         }
     }
-
-
-    private void FixedUpdate()
-    {/*
-        // Read the inputs.
-        //bool crouch = Input.GetKey(KeyCode.LeftControl);
-        float h = CrossPlatformInputManager.GetAxis("Horizontal");
-        // Pass all parameters to the character control script.
-        m_Character.Move(h, false, m_Jump);
-        m_Jump = false;
-
-        if (CrossPlatformInputManager.GetButtonDown("Fire1")){
-            m_Character.UseWeapon();
-        }
-
-        if (CrossPlatformInputManager.GetButtonDown("TriggerAction1")){
-            //m_Character.PrintAllUpgrade();
-        }
-
-        if (CrossPlatformInputManager.GetButton("Run")){
-            m_Character.IsRunning = true;
-        }
-        else{
-            m_Character.IsRunning = false;
-        }*/
-    }
-
 }
