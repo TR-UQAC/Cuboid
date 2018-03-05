@@ -1,4 +1,0 @@
-sceneSetups:
-- path: Assets/UpgradesTestRoom.unity
-  isLoaded: 1
-  isActive: 1

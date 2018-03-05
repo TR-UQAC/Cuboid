@@ -3,7 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-//TODO: ! Ajout d'un temps d'immortalité pour le joueur
+using EZCameraShake;
+
 public class PlayerCharacter2D : Personnages {
 
     #region Variables
@@ -17,8 +18,6 @@ public class PlayerCharacter2D : Personnages {
     [SerializeField] private LayerMask m_WhatIsGround;                  // A mask determining what is ground to the character
 
     public Transform m_GroundCheck;    // A position marking where to check if the player is grounded.
-    //public Transform sightStart; // For check the ground
-    //public Transform sightEnd;   //For check the ground
     public GameObject morphBombPrefab;
 
     public float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
@@ -54,9 +53,6 @@ public class PlayerCharacter2D : Personnages {
         m_GroundCheck = transform.Find("GroundCheck");
         m_CeilingCheck = transform.Find("CeilingCheck");
 
-        //sightStart = transform.Find("groundSightStart");
-        //sightEnd = transform.Find("groundSightEnd");
-
         m_Anim = GetComponent<Animator>();
         m_Rigidbody2D = GetComponent<Rigidbody2D>();
 
@@ -68,20 +64,33 @@ public class PlayerCharacter2D : Personnages {
 
         UpdateHealthBar();
     }
+    /*
+    void Update() {
+        // Sert à limiter la vélocité
+        Vector2 n_velo = new Vector2(0f,0f);
+            if (Mathf.Abs(m_Rigidbody2D.velocity.x) >= m_speed) {
+                if (m_Grounded)
+                    n_velo.x = 2*-Mathf.Sign(m_Rigidbody2D.velocity.x) * (Mathf.Abs(m_Rigidbody2D.velocity.x) - m_speed);
+                else
+                    n_velo.x = Mathf.Sign(m_Rigidbody2D.velocity.x) * m_speed;
 
+                Debug.Log("m_Rigidbody2D.velocity.x : " + m_Rigidbody2D.velocity.x);
+                Debug.Log("n_velo.x : " + n_velo.x);
+            }
+         
+
+        if (Mathf.Abs(m_Rigidbody2D.velocity.y) >= fallMaxSpeed)
+            n_velo.y = 2*-Mathf.Sign(m_Rigidbody2D.velocity.y) * (Mathf.Abs(m_Rigidbody2D.velocity.y)-fallMaxSpeed);
+
+        m_Rigidbody2D.AddForce(n_velo);
+    }
+    */
     private void FixedUpdate()
     {
         m_Grounded = false;
 
         // The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
         // This can be done using layers instead but Sample Assets will not overwrite your project settings.
-        /*
-        if (Physics2D.Linecast(sightStart.position, sightEnd.position, m_WhatIsGround)) {
-            m_Grounded = true;
-            m_DoubleJump = true;
-        }
-        */
-        
         Collider2D[] colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius, m_WhatIsGround);
         for (int i = 0; i < colliders.Length; i++)
         {
@@ -105,11 +114,6 @@ public class PlayerCharacter2D : Personnages {
         }
         else
             m_speed = joueurStats.maxSpeed;
-
-        if(m_Grounded)
-            m_Rigidbody2D.AddRelativeForce(new Vector2(-m_Rigidbody2D.velocity.x * decelleration, -m_Rigidbody2D.velocity.y));
-        else if (m_Rigidbody2D.velocity.y < -fallMaxSpeed)
-            m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, -fallMaxSpeed);
     }
 
     public void UseWeapon()
@@ -195,12 +199,15 @@ public class PlayerCharacter2D : Personnages {
             // Reduce the speed if crouching by the crouchSpeed multiplier
             move = (crouch ? move * m_CrouchSpeed : move);
 
-            if (m_Grounded && Mathf.Abs(move) < 0.5f && !jump)
+            //Ajuste la décélération selon l'emplitude du mouvement du joueur
+            if (Mathf.Abs(move) < 0.5f)
                 decelleration = 30f;
-            else
+            else if (Mathf.Abs(move) > 0.9f)
                 decelleration = 10f;
+            else
+                decelleration = Mathf.Lerp(decelleration, 10f, Time.deltaTime * 2f * Mathf.Abs(move));
 
-            // The Speed animator parameter is set to the absolute value of the horizontal input.
+                // The Speed animator parameter is set to the absolute value of the horizontal input.
             m_Anim.SetFloat("Speed", Mathf.Abs(move));
 
             Vector2 dir = new Vector2(move, 0f);
@@ -208,27 +215,37 @@ public class PlayerCharacter2D : Personnages {
             dir *= joueurStats.speed * Time.fixedDeltaTime;
             m_Rigidbody2D.AddForce(dir, joueurStats.fMode);
 
-            if (m_Rigidbody2D.velocity.x > m_speed)
-                m_Rigidbody2D.velocity = new Vector2(m_speed, m_Rigidbody2D.velocity.y);
+            //Ce bout de code sert à enlever la patinage et a donné plus de controlle au joueur pour les petit mouvement au sol comme dans les air
+            Vector2 n_Force;
+            if (m_Grounded)
+                n_Force = new Vector2(-m_Rigidbody2D.velocity.x * decelleration,0f);
+            else
+                n_Force = new Vector2(-m_Rigidbody2D.velocity.x * decelleration / 1.5f,0f);
 
-            else if (m_Rigidbody2D.velocity.x < -m_speed)
-                m_Rigidbody2D.velocity = new Vector2(-m_speed, m_Rigidbody2D.velocity.y);
-
+            m_Rigidbody2D.AddForce(n_Force);
 
             // If the input is moving the player right and the player is facing left...
-            if (move > 0 && !m_FacingRight)
-            {
-                // ... flip the player.
+            if ((move > 0 && !m_FacingRight) || (move < 0 && m_FacingRight))
                 Flip();
-            }
-            // Otherwise if the input is moving the player left and the player is facing right...
-            else if (move < 0 && m_FacingRight)
-            {
-                // ... flip the player.
-                Flip();
-            }
+
+        }
+        
+
+        // Sert à limiter la vélocité
+        Vector2 n_velo = Vector2.zero;
+
+        if (Mathf.Abs(m_Rigidbody2D.velocity.x) >= m_speed) {
+            n_velo.x = Mathf.Sign(m_Rigidbody2D.velocity.x) * m_speed;
+             //n_velo.x = Mathf.Sign(m_Rigidbody2D.velocity.x) * (Mathf.Abs(m_Rigidbody2D.velocity.x) - m_speed);
         }
 
+        if (Mathf.Abs(m_Rigidbody2D.velocity.y) >= fallMaxSpeed) {
+            n_velo.y = Mathf.Sign(m_Rigidbody2D.velocity.y) * fallMaxSpeed;
+            //n_velo.y = Mathf.Sign(m_Rigidbody2D.velocity.y) * (Mathf.Abs(m_Rigidbody2D.velocity.y) - fallMaxSpeed);
+        }
+        //m_Rigidbody2D.AddForce(-n_velo);
+        m_Rigidbody2D.velocity = n_velo;
+        
         // If the player should jump...
         if (!isPlayerMorphed && m_Grounded && jump && m_Anim.GetBool("Ground"))
         {
@@ -251,19 +268,15 @@ public class PlayerCharacter2D : Personnages {
         }
     }
 
-    private void BetterJumpPhysic()
-    {
-
+    private void BetterJumpPhysic(){
         if (m_Rigidbody2D.velocity.y < 0)
-        {
             m_Rigidbody2D.gravityScale = fallMultiplier;
-        }
+
         else if (m_Rigidbody2D.velocity.y > 0 && !Input.GetButton("Jump"))
-        {
             m_Rigidbody2D.gravityScale = lowJumpMultiplier;
-        } else {
+
+        else
             m_Rigidbody2D.gravityScale = 4f;
-        }
     }
 
     private void Flip()
@@ -276,17 +289,11 @@ public class PlayerCharacter2D : Personnages {
         theScale.x *= -1;
         transform.localScale = theScale;
     }
-    /*
-    void OnDrawGizmosSelected() {
-        Gizmos.color = Color.magenta;
-        Gizmos.DrawLine(sightStart.position, sightEnd.position);
-    }*/
     #endregion
 
     #region Dommage
 
-    public override void DommagePerso(int dommage)
-    {
+    public override void DommagePerso(int dommage){
         if (!joueurStats.immortel && joueurStats.vie > 0) {
 
             joueurStats.immortel = true;
@@ -297,12 +304,12 @@ public class PlayerCharacter2D : Personnages {
 
             if (joueurStats.vie <= 0)
                 GameMaster.KillJoueur(this);
+            else
+                CameraShaker.Instance.ShakeOnce(dommage/10, 2f, .1f, dureeImmortel);
         }
     }
 
-    private void UpdateHealthBar()
-    {
-        //GameObject bar = GameObject.FindGameObjectWithTag("HealthUI");
+    private void UpdateHealthBar(){
         if(bar != null)
             bar.GetComponent<HealthBar>().health = joueurStats.vie;   
     }

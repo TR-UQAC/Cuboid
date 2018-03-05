@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Camera))]
+//[RequireComponent(typeof(Camera))]
 public class MultipleTargetCamera : MonoBehaviour {
 
     public List<Transform> targets;
@@ -16,7 +16,7 @@ public class MultipleTargetCamera : MonoBehaviour {
     public float zoomLimiter = 50.0f;
 
     private Vector3 velocity;
-    private Camera cam;
+    public Camera cam;
     private bool searchingForPlayer = false;
 
     public bool test = false;
@@ -32,7 +32,9 @@ public class MultipleTargetCamera : MonoBehaviour {
             return;
         }
 
-        cam = GetComponent<Camera>();
+        //TODO: !Faire une vérification pour sélectionner la caméra
+        //TODO: !Faire une vérification pour sélectionner le joueur
+        //cam = GetComponent<Camera>();
     }
 
     void LateUpdate()

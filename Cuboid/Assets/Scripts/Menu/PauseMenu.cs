@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class PauseMenu : MonoBehaviour {
 
@@ -10,7 +11,7 @@ public class PauseMenu : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.Escape)) {
+        if (CrossPlatformInputManager.GetButtonDown("Cancel")) {
             if (GameIsPaused)
                 Resume();
             else
