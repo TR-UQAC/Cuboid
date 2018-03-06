@@ -64,27 +64,24 @@ public class PlayerCharacter2D : Personnages {
 
         UpdateHealthBar();
     }
-    /*
+    
+    private float LimitVelo(float velo, float max) {
+        return max * Mathf.Sign(velo) * (Mathf.Abs(velo) - max);
+    }
     void Update() {
         // Sert à limiter la vélocité
-        Vector2 n_velo = new Vector2(0f,0f);
-            if (Mathf.Abs(m_Rigidbody2D.velocity.x) >= m_speed) {
-                if (m_Grounded)
-                    n_velo.x = 2*-Mathf.Sign(m_Rigidbody2D.velocity.x) * (Mathf.Abs(m_Rigidbody2D.velocity.x) - m_speed);
-                else
-                    n_velo.x = Mathf.Sign(m_Rigidbody2D.velocity.x) * m_speed;
+        Vector2 n_velo = Vector2.zero;
+        
+        if (Mathf.Abs(m_Rigidbody2D.velocity.x) > m_speed)
+            n_velo.x = LimitVelo(m_Rigidbody2D.velocity.x, m_speed);
 
-                Debug.Log("m_Rigidbody2D.velocity.x : " + m_Rigidbody2D.velocity.x);
-                Debug.Log("n_velo.x : " + n_velo.x);
-            }
-         
+        if (Mathf.Abs(m_Rigidbody2D.velocity.y) > fallMaxSpeed)
+            n_velo.x = LimitVelo(m_Rigidbody2D.velocity.y, fallMaxSpeed);
+        
+        m_Rigidbody2D.AddRelativeForce(-n_velo);
 
-        if (Mathf.Abs(m_Rigidbody2D.velocity.y) >= fallMaxSpeed)
-            n_velo.y = 2*-Mathf.Sign(m_Rigidbody2D.velocity.y) * (Mathf.Abs(m_Rigidbody2D.velocity.y)-fallMaxSpeed);
-
-        m_Rigidbody2D.AddForce(n_velo);
     }
-    */
+
     private void FixedUpdate()
     {
         m_Grounded = false;
@@ -206,8 +203,8 @@ public class PlayerCharacter2D : Personnages {
                 decelleration = 10f;
             else
                 decelleration = Mathf.Lerp(decelleration, 10f, Time.deltaTime * 2f * Mathf.Abs(move));
-
-                // The Speed animator parameter is set to the absolute value of the horizontal input.
+                
+            // The Speed animator parameter is set to the absolute value of the horizontal input.
             m_Anim.SetFloat("Speed", Mathf.Abs(move));
 
             Vector2 dir = new Vector2(move, 0f);
@@ -220,7 +217,7 @@ public class PlayerCharacter2D : Personnages {
             if (m_Grounded)
                 n_Force = new Vector2(-m_Rigidbody2D.velocity.x * decelleration,0f);
             else
-                n_Force = new Vector2(-m_Rigidbody2D.velocity.x * decelleration / 1.5f,0f);
+                n_Force = new Vector2(-m_Rigidbody2D.velocity.x * decelleration,0f);
 
             m_Rigidbody2D.AddForce(n_Force);
 
@@ -230,22 +227,22 @@ public class PlayerCharacter2D : Personnages {
 
         }
         
-
+        /*
         // Sert à limiter la vélocité
         Vector2 n_velo = Vector2.zero;
 
         if (Mathf.Abs(m_Rigidbody2D.velocity.x) >= m_speed) {
-            n_velo.x = Mathf.Sign(m_Rigidbody2D.velocity.x) * m_speed;
-             //n_velo.x = Mathf.Sign(m_Rigidbody2D.velocity.x) * (Mathf.Abs(m_Rigidbody2D.velocity.x) - m_speed);
+            //n_velo.x = Mathf.Sign(m_Rigidbody2D.velocity.x) * m_speed;
+             n_velo.x = Mathf.Sign(m_Rigidbody2D.velocity.x) * (Mathf.Abs(m_Rigidbody2D.velocity.x) - m_speed);
         }
 
         if (Mathf.Abs(m_Rigidbody2D.velocity.y) >= fallMaxSpeed) {
-            n_velo.y = Mathf.Sign(m_Rigidbody2D.velocity.y) * fallMaxSpeed;
-            //n_velo.y = Mathf.Sign(m_Rigidbody2D.velocity.y) * (Mathf.Abs(m_Rigidbody2D.velocity.y) - fallMaxSpeed);
+            //n_velo.y = Mathf.Sign(m_Rigidbody2D.velocity.y) * fallMaxSpeed;
+            n_velo.y = Mathf.Sign(m_Rigidbody2D.velocity.y) * (Mathf.Abs(m_Rigidbody2D.velocity.y) - fallMaxSpeed);
         }
-        //m_Rigidbody2D.AddForce(-n_velo);
-        m_Rigidbody2D.velocity = n_velo;
-        
+        m_Rigidbody2D.AddForce(-n_velo);
+        //m_Rigidbody2D.velocity = n_velo;
+        */
         // If the player should jump...
         if (!isPlayerMorphed && m_Grounded && jump && m_Anim.GetBool("Ground"))
         {
