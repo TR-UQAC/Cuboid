@@ -46,6 +46,8 @@ public class MorphBall : MonoBehaviour {
                     col2.enabled = false;
                 }
 
+                playergo.GetComponent<BoxCollider2D>().enabled = false;
+
                 ismorphed = true;
                 playergo.GetComponent<PlayerCharacter2D>().SetMorph(ismorphed);
                 playergo.GetComponent<Animator>().SetBool("Morphed", ismorphed);    
@@ -76,6 +78,7 @@ public class MorphBall : MonoBehaviour {
                         col1.enabled = true;
                         col2.enabled = false;
                     }
+                    playergo.GetComponent<BoxCollider2D>().enabled = true;
                 }
             }
 

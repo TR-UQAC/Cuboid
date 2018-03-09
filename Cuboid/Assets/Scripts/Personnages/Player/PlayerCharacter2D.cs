@@ -12,6 +12,8 @@ public class PlayerCharacter2D : Personnages {
     private float m_speed;
 
     Dictionary<string, bool> activeUpgradeTable { get; set; }
+    private List<string> weaponList;
+    public int selectedWeaponIndex = 0;
 
     [Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;  // Amount of maxSpeed applied to crouching movement. 1 = 100%
     [SerializeField] private bool m_AirControl = false;                 // Whether or not a player can steer while jumping;
@@ -58,6 +60,9 @@ public class PlayerCharacter2D : Personnages {
 
         activeUpgradeTable = new Dictionary<string, bool>();
         activeUpgradeTable.Clear();
+
+        weaponList = new List<string>();
+        AddWeapon("BasicBeam");
 
         if(GameObject.FindGameObjectWithTag("HealthUI"))
             bar = GameObject.FindGameObjectWithTag("HealthUI");
@@ -124,15 +129,28 @@ public class PlayerCharacter2D : Personnages {
         {
             if (isPlayerMorphed && activeUpgradeTable.ContainsKey("MorphBomb"))
             {
-                Instantiate(morphBombPrefab, m_Rigidbody2D.position, Quaternion.identity);
+                if (shootTimer > currentWeapon.fireCooldown)
+                {
+                    //TODO: fix le cooldown pour les bombs sinon 2BJ est impossible
+                    Instantiate(morphBombPrefab, m_Rigidbody2D.position, Quaternion.identity);
+                    shootTimer = 0;
+                }
             }
             else if (!isPlayerMorphed)
             {
                 if (shootTimer > currentWeapon.fireCooldown)
                 {
-                    shootTimer = 0;
-                    currentWeapon.Shoot(m_FacingRight);
-                }
+                    if (activeUpgradeTable.ContainsKey("GrappleBeam") && weaponList[selectedWeaponIndex] == "GrappleBeam")
+                    {
+                        Debug.Log("Use grapple");
+                        gameObject.GetComponent<GrappleBeam>().UseGrapple();
+                    }
+                    else
+                    {
+                        shootTimer = 0;
+                        currentWeapon.Shoot(m_FacingRight);
+                    }
+                }   
             }
         }
     }
@@ -160,6 +178,11 @@ public class PlayerCharacter2D : Personnages {
         }
     }
 
+    public void AddWeapon(string weaponName)
+    {
+        weaponList.Add(weaponName);
+    }
+
     public void SetMorph(bool morph)
     {
         isPlayerMorphed = morph;
@@ -168,9 +191,23 @@ public class PlayerCharacter2D : Personnages {
     public bool IsUnderCeiling()
     {
         if (Physics2D.OverlapCircle(m_CeilingCheck.position, k_CeilingRadius, m_WhatIsGround))
+        {
             return true;
+        }
 
         return false;
+    }
+
+    public void WeaponSwitch()
+    {
+        selectedWeaponIndex++;
+
+        if (selectedWeaponIndex == weaponList.Count)
+        {
+            selectedWeaponIndex = 0;
+        }
+
+        Debug.Log("Active Weapon: " + weaponList[selectedWeaponIndex]);
     }
     #endregion
 

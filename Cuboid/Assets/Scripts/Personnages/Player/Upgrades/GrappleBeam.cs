@@ -14,6 +14,9 @@ public class GrappleBeam : MonoBehaviour {
     public LineRenderer grappleRenderer;
     public LayerMask grappleLayerMask;
 
+    public float climbSpeed = 5f;
+    private bool isColliding;
+
     private float grappleMaxCastDistance = 50f;
     private List<Vector2> grapplePositions = new List<Vector2>();
 
@@ -34,13 +37,14 @@ public class GrappleBeam : MonoBehaviour {
 	void Update ()
     {
         playerPosition = player.transform.position;
-        HandleInput();
+        //HandleInput();
         UpdateRopePosition();
+        HandleGrappleLength();
 	}
 
-    private void HandleInput()
+    public void UseGrapple()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (!isGrappleAttached)
         {
             Debug.Log("Tir le grappin");
 
@@ -74,8 +78,7 @@ public class GrappleBeam : MonoBehaviour {
                 grappleJoint.enabled = false;
             }
         }
-
-        if (Input.GetMouseButton(1))
+        else
         {
             grappleJoint.enabled = false;
             isGrappleAttached = false;
@@ -86,6 +89,28 @@ public class GrappleBeam : MonoBehaviour {
             grapplePositions.Clear();
             grappleHingeAnchorSprite.enabled = false;
         }
+    }
+
+    private void HandleGrappleLength()
+    {
+        if (Input.GetKey(KeyCode.W) && isGrappleAttached && !isColliding)
+        {
+            grappleJoint.distance -= Time.deltaTime * climbSpeed;
+        }
+        else if (Input.GetKey(KeyCode.S))
+        {
+            grappleJoint.distance += Time.deltaTime * climbSpeed;
+        }
+    }
+
+    void OntriggerStay2D(Collider2D collider)
+    {
+        isColliding = true;
+    }
+
+    void OnTriggerExit2D(Collider2D collider)
+    {
+        isColliding = false;
     }
 
     private void UpdateRopePosition()
