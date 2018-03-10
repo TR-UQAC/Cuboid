@@ -21,6 +21,7 @@ public class PlayerCharacter2D : Personnages {
 
     public Transform m_GroundCheck;    // A position marking where to check if the player is grounded.
     public GameObject morphBombPrefab;
+    public GameObject m_backSphere;     //  !*! Ajout pour animer le fond avec le transforme
 
     public float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
     private bool m_Grounded;            // Whether or not the player is grounded.
@@ -84,6 +85,9 @@ public class PlayerCharacter2D : Personnages {
             n_velo.x = LimitVelo(m_Rigidbody2D.velocity.y, fallMaxSpeed);
         
         m_Rigidbody2D.AddRelativeForce(-n_velo);
+
+        if (m_backSphere != null && (m_Rigidbody2D.velocity.x > 0.1f || m_Rigidbody2D.velocity.x < -0.1f))
+            m_backSphere.transform.Rotate(0.0f, 0.0f, -Mathf.Abs(m_Rigidbody2D.velocity.x / 2));
 
     }
 
