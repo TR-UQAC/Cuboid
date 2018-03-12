@@ -218,17 +218,18 @@ public class PlayerCharacter2D : Personnages {
             Vector2 dir = new Vector2(move, 0f);
 
             dir *= joueurStats.speed * Time.fixedDeltaTime;
-            m_Rigidbody2D.AddForce(dir, joueurStats.fMode);
 
+            m_Rigidbody2D.AddForce(dir, joueurStats.fMode);
+            
             //Ce bout de code sert à enlever la patinage et a donné plus de controlle au joueur pour les petit mouvement au sol comme dans les air
             Vector2 n_Force;
             if (m_Grounded)
                 n_Force = new Vector2(-m_Rigidbody2D.velocity.x * decelleration,0f);
             else
-                n_Force = new Vector2(-m_Rigidbody2D.velocity.x * decelleration,0f);
+                n_Force = new Vector2(-m_Rigidbody2D.velocity.x * decelleration/1.5f,0f);
             
             m_Rigidbody2D.AddForce(n_Force);
-
+            
             // If the input is moving the player right and the player is facing left...
             if ((move > 0 && !m_FacingRight) || (move < 0 && m_FacingRight))
                 Flip();
