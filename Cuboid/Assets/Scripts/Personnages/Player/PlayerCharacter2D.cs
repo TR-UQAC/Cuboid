@@ -69,6 +69,7 @@ public class PlayerCharacter2D : Personnages {
         return max * Mathf.Sign(velo) * (Mathf.Abs(velo) - max);
     }
     void Update() {
+        
         // Sert à limiter la vélocité
         Vector2 n_velo = Vector2.zero;
         
@@ -78,8 +79,15 @@ public class PlayerCharacter2D : Personnages {
         if (Mathf.Abs(m_Rigidbody2D.velocity.y) > fallMaxSpeed)
             n_velo.x = LimitVelo(m_Rigidbody2D.velocity.y, fallMaxSpeed);
         
-        m_Rigidbody2D.AddRelativeForce(-n_velo);
+        m_Rigidbody2D.AddForce(-n_velo);
 
+        /*
+        Vector3 clampVel = m_Rigidbody2D.velocity;
+        clampVel.x = Mathf.Clamp(clampVel.x, -m_speed, m_speed);
+        clampVel.x = Mathf.Clamp(clampVel.y, -fallMaxSpeed, fallMaxSpeed);
+
+        m_Rigidbody2D.velocity = clampVel;
+        */
     }
 
     private void FixedUpdate()
@@ -218,7 +226,7 @@ public class PlayerCharacter2D : Personnages {
                 n_Force = new Vector2(-m_Rigidbody2D.velocity.x * decelleration,0f);
             else
                 n_Force = new Vector2(-m_Rigidbody2D.velocity.x * decelleration,0f);
-
+            
             m_Rigidbody2D.AddForce(n_Force);
 
             // If the input is moving the player right and the player is facing left...
@@ -226,23 +234,7 @@ public class PlayerCharacter2D : Personnages {
                 Flip();
 
         }
-        
-        /*
-        // Sert à limiter la vélocité
-        Vector2 n_velo = Vector2.zero;
-
-        if (Mathf.Abs(m_Rigidbody2D.velocity.x) >= m_speed) {
-            //n_velo.x = Mathf.Sign(m_Rigidbody2D.velocity.x) * m_speed;
-             n_velo.x = Mathf.Sign(m_Rigidbody2D.velocity.x) * (Mathf.Abs(m_Rigidbody2D.velocity.x) - m_speed);
-        }
-
-        if (Mathf.Abs(m_Rigidbody2D.velocity.y) >= fallMaxSpeed) {
-            //n_velo.y = Mathf.Sign(m_Rigidbody2D.velocity.y) * fallMaxSpeed;
-            n_velo.y = Mathf.Sign(m_Rigidbody2D.velocity.y) * (Mathf.Abs(m_Rigidbody2D.velocity.y) - fallMaxSpeed);
-        }
-        m_Rigidbody2D.AddForce(-n_velo);
-        //m_Rigidbody2D.velocity = n_velo;
-        */
+               
         // If the player should jump...
         if (!isPlayerMorphed && m_Grounded && jump && m_Anim.GetBool("Ground"))
         {
@@ -302,7 +294,7 @@ public class PlayerCharacter2D : Personnages {
             if (joueurStats.vie <= 0)
                 GameMaster.KillJoueur(this);
             else
-                CameraShaker.Instance.ShakeOnce(dommage/10, 2f, .1f, dureeImmortel);
+                CameraShaker.Instance.ShakeOnce(3f, 2f, .1f, dureeImmortel);
         }
     }
 
