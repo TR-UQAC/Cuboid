@@ -47,7 +47,7 @@ public class UpgradeItem : MonoBehaviour {
             break;
             case "GrappleBeam":
                 pc.ToggleUpgrade(UpgradeName);
-                pc.AddWeapon("GrappleBeam");
+                //pc.AddWeapon("GrappleBeam");
                 pc.gameObject.GetComponent<GrappleBeam>().enabled = true;
             break;
             default:

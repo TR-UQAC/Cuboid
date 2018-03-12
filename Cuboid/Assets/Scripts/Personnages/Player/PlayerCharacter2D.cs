@@ -12,8 +12,6 @@ public class PlayerCharacter2D : Personnages {
     private float m_speed;
 
     Dictionary<string, bool> activeUpgradeTable { get; set; }
-    private List<string> weaponList;
-    public int selectedWeaponIndex = 0;
 
     [Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;  // Amount of maxSpeed applied to crouching movement. 1 = 100%
     [SerializeField] private bool m_AirControl = false;                 // Whether or not a player can steer while jumping;
@@ -21,7 +19,6 @@ public class PlayerCharacter2D : Personnages {
 
     public Transform m_GroundCheck;    // A position marking where to check if the player is grounded.
     public GameObject morphBombPrefab;
-    public GameObject m_backSphere;     //  !*! Ajout pour animer le fond avec le transforme
 
     public float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
     private bool m_Grounded;            // Whether or not the player is grounded.
@@ -62,9 +59,6 @@ public class PlayerCharacter2D : Personnages {
         activeUpgradeTable = new Dictionary<string, bool>();
         activeUpgradeTable.Clear();
 
-        weaponList = new List<string>();
-        AddWeapon("BasicBeam");
-
         if(GameObject.FindGameObjectWithTag("HealthUI"))
             bar = GameObject.FindGameObjectWithTag("HealthUI");
 
@@ -75,6 +69,7 @@ public class PlayerCharacter2D : Personnages {
         return max * Mathf.Sign(velo) * (Mathf.Abs(velo) - max);
     }
     void Update() {
+        
         // Sert à limiter la vélocité
         Vector2 n_velo = Vector2.zero;
         
@@ -82,13 +77,18 @@ public class PlayerCharacter2D : Personnages {
             n_velo.x = LimitVelo(m_Rigidbody2D.velocity.x, m_speed);
 
         if (Mathf.Abs(m_Rigidbody2D.velocity.y) > fallMaxSpeed)
-            n_velo.x = LimitVelo(m_Rigidbody2D.velocity.y, fallMaxSpeed);
+            n_velo.y = LimitVelo(m_Rigidbody2D.velocity.y, fallMaxSpeed);
+
         
-        m_Rigidbody2D.AddRelativeForce(-n_velo);
+        m_Rigidbody2D.AddForce(-n_velo);
 
-        if (m_backSphere != null && (m_Rigidbody2D.velocity.x > 0.1f || m_Rigidbody2D.velocity.x < -0.1f))
-            m_backSphere.transform.Rotate(0.0f, 0.0f, -Mathf.Abs(m_Rigidbody2D.velocity.x / 2));
+        /*
+        Vector3 clampVel = m_Rigidbody2D.velocity;
+        clampVel.x = Mathf.Clamp(clampVel.x, -m_speed, m_speed);
+        clampVel.x = Mathf.Clamp(clampVel.y, -fallMaxSpeed, fallMaxSpeed);
 
+        m_Rigidbody2D.velocity = clampVel;
+        */
     }
 
     private void FixedUpdate()
@@ -133,28 +133,15 @@ public class PlayerCharacter2D : Personnages {
         {
             if (isPlayerMorphed && activeUpgradeTable.ContainsKey("MorphBomb"))
             {
-                if (shootTimer > currentWeapon.fireCooldown)
-                {
-                    //TODO: fix le cooldown pour les bombs sinon 2BJ est impossible
-                    Instantiate(morphBombPrefab, m_Rigidbody2D.position, Quaternion.identity);
-                    shootTimer = 0;
-                }
+                Instantiate(morphBombPrefab, m_Rigidbody2D.position, Quaternion.identity);
             }
             else if (!isPlayerMorphed)
             {
                 if (shootTimer > currentWeapon.fireCooldown)
                 {
-                    if (activeUpgradeTable.ContainsKey("GrappleBeam") && weaponList[selectedWeaponIndex] == "GrappleBeam")
-                    {
-                        Debug.Log("Use grapple");
-                        gameObject.GetComponent<GrappleBeam>().UseGrapple();
-                    }
-                    else
-                    {
-                        shootTimer = 0;
-                        currentWeapon.Shoot(m_FacingRight);
-                    }
-                }   
+                    shootTimer = 0;
+                    currentWeapon.Shoot(m_FacingRight);
+                }
             }
         }
     }
@@ -182,11 +169,6 @@ public class PlayerCharacter2D : Personnages {
         }
     }
 
-    public void AddWeapon(string weaponName)
-    {
-        weaponList.Add(weaponName);
-    }
-
     public void SetMorph(bool morph)
     {
         isPlayerMorphed = morph;
@@ -195,23 +177,9 @@ public class PlayerCharacter2D : Personnages {
     public bool IsUnderCeiling()
     {
         if (Physics2D.OverlapCircle(m_CeilingCheck.position, k_CeilingRadius, m_WhatIsGround))
-        {
             return true;
-        }
 
         return false;
-    }
-
-    public void WeaponSwitch()
-    {
-        selectedWeaponIndex++;
-
-        if (selectedWeaponIndex == weaponList.Count)
-        {
-            selectedWeaponIndex = 0;
-        }
-
-        Debug.Log("Active Weapon: " + weaponList[selectedWeaponIndex]);
     }
     #endregion
 
@@ -251,39 +219,24 @@ public class PlayerCharacter2D : Personnages {
             Vector2 dir = new Vector2(move, 0f);
 
             dir *= joueurStats.speed * Time.fixedDeltaTime;
-            m_Rigidbody2D.AddForce(dir, joueurStats.fMode);
 
+            m_Rigidbody2D.AddForce(dir, joueurStats.fMode);
+            
             //Ce bout de code sert à enlever la patinage et a donné plus de controlle au joueur pour les petit mouvement au sol comme dans les air
             Vector2 n_Force;
             if (m_Grounded)
                 n_Force = new Vector2(-m_Rigidbody2D.velocity.x * decelleration,0f);
             else
-                n_Force = new Vector2(-m_Rigidbody2D.velocity.x * decelleration,0f);
-
+                n_Force = new Vector2(-m_Rigidbody2D.velocity.x * decelleration/1.5f,0f);
+            
             m_Rigidbody2D.AddForce(n_Force);
-
+            
             // If the input is moving the player right and the player is facing left...
             if ((move > 0 && !m_FacingRight) || (move < 0 && m_FacingRight))
                 Flip();
 
         }
-        
-        /*
-        // Sert à limiter la vélocité
-        Vector2 n_velo = Vector2.zero;
-
-        if (Mathf.Abs(m_Rigidbody2D.velocity.x) >= m_speed) {
-            //n_velo.x = Mathf.Sign(m_Rigidbody2D.velocity.x) * m_speed;
-             n_velo.x = Mathf.Sign(m_Rigidbody2D.velocity.x) * (Mathf.Abs(m_Rigidbody2D.velocity.x) - m_speed);
-        }
-
-        if (Mathf.Abs(m_Rigidbody2D.velocity.y) >= fallMaxSpeed) {
-            //n_velo.y = Mathf.Sign(m_Rigidbody2D.velocity.y) * fallMaxSpeed;
-            n_velo.y = Mathf.Sign(m_Rigidbody2D.velocity.y) * (Mathf.Abs(m_Rigidbody2D.velocity.y) - fallMaxSpeed);
-        }
-        m_Rigidbody2D.AddForce(-n_velo);
-        //m_Rigidbody2D.velocity = n_velo;
-        */
+               
         // If the player should jump...
         if (!isPlayerMorphed && m_Grounded && jump && m_Anim.GetBool("Ground"))
         {
@@ -343,7 +296,7 @@ public class PlayerCharacter2D : Personnages {
             if (joueurStats.vie <= 0)
                 GameMaster.KillJoueur(this);
             else
-                CameraShaker.Instance.ShakeOnce(dommage/10, 2f, .1f, dureeImmortel);
+                CameraShaker.Instance.ShakeOnce(3f, 2f, .1f, dureeImmortel);
         }
     }
 

@@ -66,8 +66,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1608107827738870}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 95.2, y: 1.67, z: 0}
-  m_LocalScale: {x: 1, y: 10, z: 1}
+  m_LocalPosition: {x: -1.155, y: 0, z: 0}
+  m_LocalScale: {x: 0.4, y: 4, z: 1}
   m_Children:
   - {fileID: 4395541956473678}
   m_Father: {fileID: 0}
@@ -175,7 +175,7 @@ MonoBehaviour:
     contact: 1
     dmgContact: 30
     statAttaque:
-      ePower: 100
+      ePower: 3000
       eRadius: 10
       upwardsModifier: 10
       degGlace: 0
