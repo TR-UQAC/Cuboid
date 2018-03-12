@@ -77,7 +77,8 @@ public class PlayerCharacter2D : Personnages {
             n_velo.x = LimitVelo(m_Rigidbody2D.velocity.x, m_speed);
 
         if (Mathf.Abs(m_Rigidbody2D.velocity.y) > fallMaxSpeed)
-            n_velo.x = LimitVelo(m_Rigidbody2D.velocity.y, fallMaxSpeed);
+            n_velo.y = LimitVelo(m_Rigidbody2D.velocity.y, fallMaxSpeed);
+
         
         m_Rigidbody2D.AddForce(-n_velo);
 
