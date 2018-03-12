@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class GrappleBeam : MonoBehaviour {
 
@@ -13,9 +14,13 @@ public class GrappleBeam : MonoBehaviour {
     public LineRenderer grappleRenderer;
     public LayerMask grappleLayerMask;
 
-    private float grappleMaxCastDistance = 20f;
+    public float climbSpeed = 5f;
+    private bool isColliding;
+
+    private float grappleMaxCastDistance = 50f;
     private List<Vector2> grapplePositions = new List<Vector2>();
 
+    private bool distanceSet;
     private bool isGrappleAttached;
     private Vector2 playerPosition;
     private Rigidbody2D grappleHingeAnchorRb;
@@ -31,12 +36,15 @@ public class GrappleBeam : MonoBehaviour {
 
 	void Update ()
     {
-        HandleInput();
+        playerPosition = player.transform.position;
+        //HandleInput();
+        UpdateRopePosition();
+        HandleGrappleLength();
 	}
 
-    private void HandleInput()
+    public void UseGrapple()
     {
-        if (Input.GetMouseButton(0))
+        if (!isGrappleAttached)
         {
             Debug.Log("Tir le grappin");
 
@@ -48,7 +56,8 @@ public class GrappleBeam : MonoBehaviour {
 
             grappleRenderer.enabled = true;
 
-            var hit = Physics2D.Raycast(playerPosition, Vector2.right, grappleMaxCastDistance, grappleLayerMask);
+            //TODO: set le raycast selon le fire point
+            var hit = Physics2D.Raycast(player.transform.position, player.transform.up, grappleMaxCastDistance, grappleLayerMask);
 
             if (hit.collider != null)
             {
@@ -69,8 +78,7 @@ public class GrappleBeam : MonoBehaviour {
                 grappleJoint.enabled = false;
             }
         }
-
-        if (Input.GetMouseButton(1))
+        else
         {
             grappleJoint.enabled = false;
             isGrappleAttached = false;
@@ -80,6 +88,83 @@ public class GrappleBeam : MonoBehaviour {
             grappleRenderer.SetPosition(1, transform.position);
             grapplePositions.Clear();
             grappleHingeAnchorSprite.enabled = false;
+        }
+    }
+
+    private void HandleGrappleLength()
+    {
+        if (Input.GetKey(KeyCode.W) && isGrappleAttached && !isColliding)
+        {
+            grappleJoint.distance -= Time.deltaTime * climbSpeed;
+        }
+        else if (Input.GetKey(KeyCode.S))
+        {
+            grappleJoint.distance += Time.deltaTime * climbSpeed;
+        }
+    }
+
+    void OntriggerStay2D(Collider2D collider)
+    {
+        isColliding = true;
+    }
+
+    void OnTriggerExit2D(Collider2D collider)
+    {
+        isColliding = false;
+    }
+
+    private void UpdateRopePosition()
+    {
+        if (!isGrappleAttached)
+        {
+            return;
+        }
+
+        grappleRenderer.positionCount = grapplePositions.Count + 1;
+
+        for (var i = grappleRenderer.positionCount - 1; i >= 0; i--)
+        {
+            if (i != grappleRenderer.positionCount - 1)
+            {
+                grappleRenderer.SetPosition(i, grapplePositions[i]);
+
+                if (i == grapplePositions.Count - 1 || grapplePositions.Count == 1)
+                {
+                    //Pas sur de comprendre ce if si les 2 cas font la même chose ?...
+                    var grapplePosition = grapplePositions[grapplePositions.Count - 1];
+                    if (grapplePositions.Count == 1)
+                    {
+                        grappleHingeAnchorRb.transform.position = grapplePosition;
+                        if (!distanceSet)
+                        {
+                            grappleJoint.distance = Vector2.Distance(transform.position, grapplePosition);
+                            distanceSet = true;
+                        }
+                    }
+                    else
+                    {
+                        grappleHingeAnchorRb.transform.position = grapplePosition;
+                        if (!distanceSet)
+                        {
+                            grappleJoint.distance = Vector2.Distance(transform.position, grapplePosition);
+                        }
+                    }     
+                }
+                else if (i - 1 == grapplePositions.IndexOf(grapplePositions.Last()))
+                {
+                    var grapplePosition = grapplePositions.Last();
+                    grappleHingeAnchorRb.transform.position = grapplePosition;
+                    if (!distanceSet)
+                    {
+                        grappleJoint.distance = Vector2.Distance(transform.position, grapplePosition);
+                        distanceSet = true;
+                    }
+                }
+            }
+            else
+            {
+                grappleRenderer.SetPosition(i, transform.position);
+            }
         }
     }
 }

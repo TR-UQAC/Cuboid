@@ -198,7 +198,7 @@ MonoBehaviour:
       degFoudre: 0
     attaque: 1
     dmgAttaque: 5
-    fireRate: 0.5
+    fireRate: 1
     deplacement: 0
   direction: {x: 0, y: 0}
   directionTir: {x: 0, y: 0}

@@ -34,7 +34,7 @@ public class UpgradeItem : MonoBehaviour {
             return;
         }
 
-        pc.ToggleUpgrade(UpgradeName);
+        //pc.ToggleUpgrade(UpgradeName);
 
         switch (UpgradeName)
         {
@@ -45,7 +45,11 @@ public class UpgradeItem : MonoBehaviour {
             case "MorphBomb":
                 pc.ToggleUpgrade(UpgradeName);
             break;
-            
+            case "GrappleBeam":
+                pc.ToggleUpgrade(UpgradeName);
+                pc.AddWeapon("GrappleBeam");
+                pc.gameObject.GetComponent<GrappleBeam>().enabled = true;
+            break;
             default:
                 Debug.Log("Upgrade non spécifié ou non reconnue");
                 pc.gameObject.AddComponent(typeof(TestUpgradeBehavior));
