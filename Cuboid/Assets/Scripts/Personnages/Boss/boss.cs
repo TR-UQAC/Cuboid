@@ -58,7 +58,7 @@ public class boss : MonoBehaviour
     {
         //  test de déplacement avec DOTween
 
-        Vector3 pos = new Vector3(7.0f, 5.0f, 0.0f) + tr.position;
+        Vector3 pos = new Vector3(7.0f, 0.0f, 0.0f) + tr.position;
         Vector3 angle = new Vector3(0.0f, 0.0f, -90.0f) + tr.rotation.eulerAngles;
 
         Sequence bouge = DOTween.Sequence();
