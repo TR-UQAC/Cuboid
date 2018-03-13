@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4391293924211874}
   - component: {fileID: 96593274107943940}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,7 +37,7 @@ GameObject:
   - component: {fileID: 4151645148857648}
   - component: {fileID: 198992921369232368}
   - component: {fileID: 199180117811012062}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 58284318256810782}
   - component: {fileID: 114034751592981238}
   - component: {fileID: 50670740847136106}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Balle_Joueure
   m_TagString: Untagged
   m_Icon: {fileID: -6488666005112524639, guid: 0000000000000000d000000000000000, type: 0}
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 4401059514071992}
   - component: {fileID: 198425235392192508}
   - component: {fileID: 199731367227834856}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: spark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,7 +99,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1096583544607000}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3.333333, y: 3.333333, z: 1}
   m_Children: []
   m_Father: {fileID: 4620463237168724}
@@ -125,7 +125,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1670978521406608}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.78, y: 0, z: 0}
+  m_LocalPosition: {x: -14.78, y: 0, z: 1}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.5}
   m_Children:
   - {fileID: 4401059514071992}
