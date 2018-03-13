@@ -115,7 +115,7 @@ public class boss : MonoBehaviour
 
         Sequence bouge = DOTween.Sequence();
 
-        bouge.Append(tr.DOJump(pos, descend ? 12.0f : 12.0f, 1, 1.0f));
+        bouge.Append(tr.DOJump(pos, 12.0f, 1, 1.0f));
         bouge.Insert(0.1f, tr.DORotate(angle, 0.98f).SetEase(Ease.OutSine));
 
         bouge.Play();
