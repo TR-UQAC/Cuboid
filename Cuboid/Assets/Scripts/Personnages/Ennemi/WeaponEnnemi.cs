@@ -82,9 +82,9 @@ public class WeaponEnnemi : MonoBehaviour {
         }
     }
 
-    public void Contact(int dmg, PlayerCharacter2D pl, float f, float r, float upM) { 
-        Rigidbody2DExt.AddExplosionForce(pl.GetComponent<Rigidbody2D>(), f, firePoint.position, r, upM, ForceMode2D.Force);
-        pl.DommagePerso(dmg);
+    public void Contact(int dmg, PlayerCharacter2D pl, float f, float r, float upM) {
+            Rigidbody2DExt.AddExplosionForce(pl.GetComponent<Rigidbody2D>(), f, firePoint.position, r, upM, ForceMode2D.Impulse);
+            pl.DommagePerso(dmg);
     }
 
     private Vector2 cibleDirection() {
