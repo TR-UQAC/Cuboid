@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4391293924211874}
   - component: {fileID: 96593274107943940}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,7 +37,7 @@ GameObject:
   - component: {fileID: 4151645148857648}
   - component: {fileID: 198992921369232368}
   - component: {fileID: 199180117811012062}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 58284318256810782}
   - component: {fileID: 114034751592981238}
   - component: {fileID: 50670740847136106}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Balle_Ennemi
   m_TagString: Untagged
   m_Icon: {fileID: -1577725955494882426, guid: 0000000000000000d000000000000000, type: 0}
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 4401059514071992}
   - component: {fileID: 198425235392192508}
   - component: {fileID: 199731367227834856}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: spark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
