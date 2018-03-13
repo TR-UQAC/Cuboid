@@ -8,6 +8,7 @@ TagManager:
   - GM
   - KillZone
   - HealthUI
+  - Node
   layers:
   - Default
   - TransparentFX
