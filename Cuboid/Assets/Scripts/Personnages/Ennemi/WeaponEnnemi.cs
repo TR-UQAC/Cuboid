@@ -13,15 +13,17 @@ public class WeaponEnnemi : MonoBehaviour {
     private Transform firePoint;
     public  Transform effetAttaquePrefab;
 
-    //private float fireRate;
     private float attaqueCooldown;
 
     //Les parametres pour les explosion
     public DegatAttaque statAttaque;
 
+    private Transform my_transform;
     // Use this for initialization
     void Start () {
         attaqueCooldown = 0.1f;
+
+        my_transform = transform;
     }
 
     void Awake() {
@@ -35,6 +37,8 @@ public class WeaponEnnemi : MonoBehaviour {
         if (attaqueCooldown > 0) {
             attaqueCooldown -= Time.deltaTime;
         }
+
+        //Debug.DrawRay(my_transform.position, CibleDirection(), Color.green);
     }
 
     public void Tirer(Vector2 dir, int dmg, float fireRate, bool cibler = false) {
@@ -45,14 +49,23 @@ public class WeaponEnnemi : MonoBehaviour {
                 Destroy(clone.gameObject, 3f);
             }
 
-            attaqueCooldown = fireRate;
-
             if (bulletPrefab == null) {
                 Debug.LogWarning("Il n'y a aucun prefab de balle dans " + name);
                 return;
             }
+
+            if (cibler) {
+                //le ~noHit veut dire qu'il prend en compte tout ce qui n'est pas dans le LayerMask noHit
+                RaycastHit2D hit = Physics2D.Raycast(my_transform.position, CibleDirection(), 20f, ~noHit);
+
+                if (hit.collider == null || hit.collider.tag != "Player")
+                    return;
+            }
+
+            attaqueCooldown = fireRate;
+
             Bullet bul = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation).GetComponent<Bullet>() as Bullet;
-            bul.direction = (cibler) ? cibleDirection() : dir;
+            bul.direction = (cibler) ? CibleDirection() : dir;
             bul.noHit = noHit;
             bul.dommageHit = dommageHit;
             bul.dmg = dmg;
@@ -87,10 +100,14 @@ public class WeaponEnnemi : MonoBehaviour {
             pl.DommagePerso(dmg);
     }
 
-    private Vector2 cibleDirection() {
+    private Vector2 CibleDirection() {
+
+        if(GameObject.FindGameObjectWithTag("Player") == null)
+            return Vector2.zero;
+
         Transform playerPos = GameObject.FindGameObjectWithTag("Player").transform;
 
-        return playerPos.position - transform.position;
+         return playerPos.position - my_transform.position;
     }
 
     public bool CanAttack {
