@@ -30,6 +30,9 @@ public class boss : MonoBehaviour
 
     //  référence au joueur à poursuivre
     private GameObject m_Player;
+    private float m_ScaleY = 1.0f;
+    //  la box collider du boss pour l'écrasement
+    private BoxCollider2D bc;
 
     //  si le joueur meur, le chercher
     private bool searchingForPlayer = false;
@@ -37,7 +40,7 @@ public class boss : MonoBehaviour
     //  set les variable avant d'être actif
     private void Awake()
     {
-        m_Player = GameObject.FindGameObjectWithTag("Player");
+        //m_Player = GameObject.FindGameObjectWithTag("Player");
 
         rb = GetComponent<Rigidbody2D>() as Rigidbody2D;
         sr = GetComponent<SpriteRenderer>() as SpriteRenderer;
@@ -47,6 +50,8 @@ public class boss : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
+        bc = GetComponent<BoxCollider2D>() as BoxCollider2D;
+
         m_lstEnnemis = new List<Transform>();
 
         foreach (Transform child in transform)
@@ -80,10 +85,38 @@ public class boss : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
+        //  ajustement du boxCollider2D pour qu'il écrase que si le joueur est en dessous
+        //  Quelque soit l'angle
+
+        int i = (int)tr.rotation.eulerAngles.z;
+
+        if(i > 320 || i < 40)
+        {
+            bc.offset = new Vector2(0.0f, -0.2f);
+            bc.size = new Vector2(2.0f, 2.5f);
+        }
+        else if(i > 50 && i < 130)
+        {
+            bc.offset = new Vector2(-0.2f, 0.0f);
+            bc.size = new Vector2(2.5f, 2.0f);
+        }
+        else if(i > 140 && i < 220)
+        {
+            bc.offset = new Vector2(0.0f, 0.2f);
+            bc.size = new Vector2(2.0f, 2.5f);
+        }
+        else if(i > 230 && i < 310)
+        {
+            bc.offset = new Vector2(0.2f, 0.0f);
+            bc.size = new Vector2(2.5f, 2.0f);
+        }
+
+
+
         if (Input.GetKeyDown("m"))
             jumpRot(false);
     }
-
+    
     //  détermine si le boss va à gauche ou a droite
     private void directionBoss()
     {
@@ -104,15 +137,40 @@ public class boss : MonoBehaviour
         if(m_Player == coll)
         {
             //  désactive les controle
+            PlayerCharacter2D p = coll.GetComponent<PlayerCharacter2D>();
+
+            if (p)
+                p.setEnableInput(false);
+
+            //  rapetisse le joueur
             Sequence ecrase = DOTween.Sequence();
 
-            //ecrase.Append(m_Player.transform.DOScaleY())
+            ecrase.Append(m_Player.transform.DOScaleY(1.0f, 0.2f));
+            //ecrase.Insert(m_MovingRate - 0.2f, m_Player.transform.DOScaleY(m_ScaleY, 0.2f));
+            ecrase.Play();
+            //Invoke("p.setEnableInput(false)", m_MovingRate + 0.1f);
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
+        GameObject coll = other.gameObject;
 
+        if (m_Player == coll)
+        {
+            //  désactive les controle
+            PlayerCharacter2D p = coll.GetComponent<PlayerCharacter2D>();
+
+            if (p)
+                p.setEnableInput(true);
+
+            //  agrandir le joueur
+            Sequence decrase = DOTween.Sequence();
+
+            decrase.Append(m_Player.transform.DOScaleY(m_ScaleY, 0.2f));
+            
+            decrase.Play();
+        }
     }
 
     //  fonction de déplacement vers le noeud précicé, true = gauche / false = droite
@@ -213,6 +271,7 @@ public class boss : MonoBehaviour
         else
         {
             m_Player = sResult;
+            m_ScaleY = sResult.transform.lossyScale.y;
             searchingForPlayer = false;
             StartCoroutine(CheckDistance());
             yield break;

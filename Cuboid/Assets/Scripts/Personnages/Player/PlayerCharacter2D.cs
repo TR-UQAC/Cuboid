@@ -45,6 +45,8 @@ public class PlayerCharacter2D : Personnages {
     private bool isPlayerMorphed = false;
 
     public float dureeImmortel = 0.5f;
+
+    private bool m_enableInput = true;
     #endregion
 
     #region Corps   
@@ -129,6 +131,9 @@ public class PlayerCharacter2D : Personnages {
 
     public void UseWeapon()
     {
+        if (m_enableInput == false)
+            return;
+
         Weapon currentWeapon = (Weapon) transform.Find("Weapon").gameObject.GetComponent(typeof(Weapon));
         if (currentWeapon == null)
         {
@@ -150,6 +155,13 @@ public class PlayerCharacter2D : Personnages {
             }
         }
     }
+
+    //  changer la valeur de m_enableInput qui désactive les mouvement et le tir du joueur
+    public void setEnableInput(bool v)
+    {
+        m_enableInput = v;
+    }
+
     #endregion
 
     #region Upgrade
@@ -191,7 +203,7 @@ public class PlayerCharacter2D : Personnages {
     #region Mouvement
     public void Move(float move, bool crouch, bool jump)
     {
-        if (PauseMenu.GameIsPaused)
+        if (PauseMenu.GameIsPaused || m_enableInput == false)
             return;
 
         // If crouching, check to see if the character can stand up
