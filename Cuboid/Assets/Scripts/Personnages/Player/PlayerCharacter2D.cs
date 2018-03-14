@@ -70,7 +70,7 @@ public class PlayerCharacter2D : Personnages {
         return max * Mathf.Sign(velo) * (Mathf.Abs(velo) - max);
     }
     void Update() {
-        
+        /*
         // Sert à limiter la vélocité
         Vector2 n_velo = Vector2.zero;
         
@@ -80,16 +80,16 @@ public class PlayerCharacter2D : Personnages {
         if (Mathf.Abs(m_Rigidbody2D.velocity.y) > fallMaxSpeed)
             n_velo.y = LimitVelo(m_Rigidbody2D.velocity.y, fallMaxSpeed);
 
+        if(!PauseMenu.GameIsPaused)
+            m_Rigidbody2D.AddForce(-n_velo);
+*/
         
-        m_Rigidbody2D.AddForce(-n_velo);
-
-        /*
         Vector3 clampVel = m_Rigidbody2D.velocity;
         clampVel.x = Mathf.Clamp(clampVel.x, -m_speed, m_speed);
-        clampVel.x = Mathf.Clamp(clampVel.y, -fallMaxSpeed, fallMaxSpeed);
+        clampVel.y = Mathf.Clamp(clampVel.y, -fallMaxSpeed, fallMaxSpeed);
 
         m_Rigidbody2D.velocity = clampVel;
-        */
+        
 
         //  section qui gère la rotation de la partie arrière de la sphere, ne pas enlever
         if (m_backSphere != null && (m_Rigidbody2D.velocity.x > 0.1f || m_Rigidbody2D.velocity.x < -0.1f))
@@ -191,6 +191,9 @@ public class PlayerCharacter2D : Personnages {
     #region Mouvement
     public void Move(float move, bool crouch, bool jump)
     {
+        if (PauseMenu.GameIsPaused)
+            return;
+
         // If crouching, check to see if the character can stand up
         if (!crouch && m_Anim.GetBool("Crouch"))
         {

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityStandardAssets.CrossPlatformInput;
 
@@ -9,8 +10,11 @@ public class PauseMenu : MonoBehaviour {
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
 
-	// Update is called once per frame
-	void Update () {
+    private EventSystem ES;
+    public GameObject storeSelected;
+
+    // Update is called once per frame
+    void Update () {
         if (CrossPlatformInputManager.GetButtonDown("Cancel")) {
             if (GameIsPaused)
                 Resume();
@@ -26,7 +30,10 @@ public class PauseMenu : MonoBehaviour {
     }
 
     void Pause() {
+        ES = FindObjectOfType<EventSystem>();
         GameIsPaused = true;
+        ES.SetSelectedGameObject(storeSelected);
+
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
     }

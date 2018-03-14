@@ -1202,6 +1202,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 1822991120769402}
+  ES: {fileID: 0}
+  storeSelected: {fileID: 1936551741243988}
 --- !u!114 &114851997730814900
 MonoBehaviour:
   m_ObjectHideFlags: 1

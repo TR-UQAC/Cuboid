@@ -251,9 +251,9 @@ MonoBehaviour:
     contact: 1
     dmgContact: 10
     statAttaque:
-      ePower: 100
+      ePower: 10
       eRadius: 10
-      upwardsModifier: 10
+      upwardsModifier: 0.1
       degGlace: 0
       degPoison: 0
       degFoudre: 0
