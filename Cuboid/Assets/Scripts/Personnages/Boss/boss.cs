@@ -80,8 +80,6 @@ public class boss : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        
-
         if (Input.GetKeyDown("m"))
             jumpRot(false);
     }
@@ -98,6 +96,16 @@ public class boss : MonoBehaviour
         }
     }
 
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        //if(other)
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+
+    }
 
     //  fonction de déplacement vers le noeud précicé, true = gauche / false = droite
     public void jumpRot(bool gd)
