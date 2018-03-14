@@ -99,7 +99,15 @@ public class boss : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        //if(other)
+        GameObject coll = other.gameObject;
+
+        if(m_Player == coll)
+        {
+            //  désactive les controle
+            Sequence ecrase = DOTween.Sequence();
+
+            //ecrase.Append(m_Player.transform.DOScaleY())
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
