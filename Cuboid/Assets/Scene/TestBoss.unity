@@ -781,64 +781,9 @@ Prefab:
       propertyPath: m_CurrentNode
       value: 
       objectReference: {fileID: 854315178}
-    - target: {fileID: 114168156488316570, guid: 545acdd60927976478a32048ad0148a8,
+    - target: {fileID: 61695838752783884, guid: 545acdd60927976478a32048ad0148a8,
         type: 2}
-      propertyPath: comp.statAttaque.ePower
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114869288259912408, guid: 545acdd60927976478a32048ad0148a8,
-        type: 2}
-      propertyPath: comp.statAttaque.ePower
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114093742559599656, guid: 545acdd60927976478a32048ad0148a8,
-        type: 2}
-      propertyPath: comp.statAttaque.ePower
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114182502659529144, guid: 545acdd60927976478a32048ad0148a8,
-        type: 2}
-      propertyPath: comp.statAttaque.ePower
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 61104990118003072, guid: 545acdd60927976478a32048ad0148a8,
-        type: 2}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: 8be6341e1ce3f4cec9902bc34f72d20a, type: 2}
-    - target: {fileID: 61553194942390408, guid: 545acdd60927976478a32048ad0148a8,
-        type: 2}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: 8be6341e1ce3f4cec9902bc34f72d20a, type: 2}
-    - target: {fileID: 61167635936843798, guid: 545acdd60927976478a32048ad0148a8,
-        type: 2}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: 8be6341e1ce3f4cec9902bc34f72d20a, type: 2}
-    - target: {fileID: 61002906453878408, guid: 545acdd60927976478a32048ad0148a8,
-        type: 2}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: 8be6341e1ce3f4cec9902bc34f72d20a, type: 2}
-    - target: {fileID: 114168156488316570, guid: 545acdd60927976478a32048ad0148a8,
-        type: 2}
-      propertyPath: comp.statAttaque.upwardsModifier
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114869288259912408, guid: 545acdd60927976478a32048ad0148a8,
-        type: 2}
-      propertyPath: comp.statAttaque.upwardsModifier
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114093742559599656, guid: 545acdd60927976478a32048ad0148a8,
-        type: 2}
-      propertyPath: comp.statAttaque.upwardsModifier
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114182502659529144, guid: 545acdd60927976478a32048ad0148a8,
-        type: 2}
-      propertyPath: comp.statAttaque.upwardsModifier
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

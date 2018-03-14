@@ -44,32 +44,42 @@ public class Bullet : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D other) {
         GameObject go = other.gameObject;
-        if (noHit != (noHit | (1 << go.layer))) {
-            
-            if (statAttaque.ePower == 0 || statAttaque.eRadius == 0) {
-                if (dommageHit == (dommageHit | (1 << go.gameObject.layer))) {
-                    Personnages en = go.GetComponent<Personnages>() as Personnages;
-                    en.DommagePerso(dmg);
-                }
-            }
-            else if (myTransform != null) {
-                    Collider2D[] colliders = Physics2D.OverlapCircleAll(myTransform.position, statAttaque.eRadius, dommageHit);
-                    foreach (Collider2D nerbyObject in colliders) {
-                        if (dommageHit == (dommageHit | (1 << nerbyObject.gameObject.layer))){
-                            if (Rigidbody2DExt.AddExplosionForce(nerbyObject.GetComponent<Rigidbody2D>(), statAttaque.ePower, myTransform.position, statAttaque.eRadius, statAttaque.upwardsModifier)) {
+        if (noHit != (noHit | (1 << go.layer)))
+        {
 
-                                Personnages en = nerbyObject.GetComponent<Personnages>() as Personnages;
-                                en.DommagePerso(dmg);
-                            }
+            //if (statAttaque.ePower == 0 || statAttaque.eRadius == 0) {
+            if (dommageHit == (dommageHit | (1 << go.gameObject.layer)))
+            {
+                Personnages en = go.GetComponent<Personnages>() as Personnages;
+                en.DommagePerso(dmg);
+            }
+            //}else if
+            if (myTransform != null)
+            {
+                Collider2D[] colliders = Physics2D.OverlapCircleAll(myTransform.position, statAttaque.eRadius, dommageHit);
+                foreach (Collider2D nerbyObject in colliders)
+                {
+                    if (nerbyObject == other)
+                        continue;
+
+                    if (dommageHit == (dommageHit | (1 << nerbyObject.gameObject.layer)))
+                    {
+                        if (Rigidbody2DExt.AddExplosionForce(nerbyObject.GetComponent<Rigidbody2D>(), statAttaque.ePower, myTransform.position, statAttaque.eRadius, statAttaque.upwardsModifier))
+                        {
+
+                            Personnages en = nerbyObject.GetComponent<Personnages>() as Personnages;
+                            en.DommagePerso(dmg);
                         }
                     }
+                }
 
-                    if (effetExplosion != null && statAttaque.eRadius != 0) {
-                            Transform clone = Instantiate(effetExplosion, myTransform.position, myTransform.rotation) as Transform;
-                            ShockWaveForce wave = clone.GetComponent<ShockWaveForce>();
-                            wave.radius = statAttaque.eRadius*1.3f;
-                            Destroy(clone.gameObject, 1f);
-                    }
+                if (effetExplosion != null && statAttaque.eRadius != 0)
+                {
+                    Transform clone = Instantiate(effetExplosion, myTransform.position, myTransform.rotation) as Transform;
+                    ShockWaveForce wave = clone.GetComponent<ShockWaveForce>();
+                    wave.radius = statAttaque.eRadius * 1.3f;
+                    Destroy(clone.gameObject, 1f);
+                }
             }
 
             //TODO: Effet particule de contact
