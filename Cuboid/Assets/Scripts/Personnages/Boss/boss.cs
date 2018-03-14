@@ -26,7 +26,7 @@ public class boss : MonoBehaviour
     public float m_MovingRate;
 
     //Temps restant avant de pouvoir ce déplacer de nouveau
-    private float m_CurrentWait;
+    //private float m_CurrentWait;
 
     //  référence au joueur à poursuivre
     private GameObject m_Player;
@@ -66,11 +66,13 @@ public class boss : MonoBehaviour
 
         StartCoroutine(CheckDistance());
 
-        m_CurrentWait = m_MovingRate;
+        //m_CurrentWait = m_MovingRate;
 
         //  lancé l'intro du boss
 
         //jumpRot();
+
+        InvokeRepeating("directionBoss", m_MovingRate, m_MovingRate);
 
 
     }
@@ -152,8 +154,8 @@ public class boss : MonoBehaviour
 
         Sequence bouge = DOTween.Sequence();
 
-        bouge.Append(tr.DOJump(pos, 12.0f, 1, 1.0f));
-        bouge.Insert(0.1f, tr.DORotate(angle, 0.98f).SetEase(Ease.OutSine));
+        bouge.Append(tr.DOJump(pos, 12.0f, 1, 0.8f).SetEase(Ease.InOutQuad));
+        bouge.Insert(0.1f, tr.DORotate(angle, 0.75f).SetEase(Ease.InOutQuart));
 
         bouge.Play();
     }

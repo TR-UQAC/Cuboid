@@ -59,13 +59,12 @@ public class Bullet : MonoBehaviour {
                 Collider2D[] colliders = Physics2D.OverlapCircleAll(myTransform.position, statAttaque.eRadius, dommageHit);
                 foreach (Collider2D nerbyObject in colliders)
                 {
-                    if (nerbyObject == other)
-                        continue;
-
                     if (dommageHit == (dommageHit | (1 << nerbyObject.gameObject.layer)))
                     {
                         if (Rigidbody2DExt.AddExplosionForce(nerbyObject.GetComponent<Rigidbody2D>(), statAttaque.ePower, myTransform.position, statAttaque.eRadius, statAttaque.upwardsModifier))
                         {
+                            if (nerbyObject == other)
+                                continue;
 
                             Personnages en = nerbyObject.GetComponent<Personnages>() as Personnages;
                             en.DommagePerso(dmg);
