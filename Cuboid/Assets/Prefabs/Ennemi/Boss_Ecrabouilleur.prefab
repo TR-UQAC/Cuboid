@@ -152,7 +152,6 @@ GameObject:
   - component: {fileID: 212772899838344972}
   - component: {fileID: 50890046468751286}
   - component: {fileID: 61695838752783884}
-  - component: {fileID: 58882554417445980}
   - component: {fileID: 114740228661133690}
   m_Layer: 11
   m_Name: Boss_Ecrabouilleur
@@ -699,21 +698,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!58 &58882554417445980
-CircleCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1498822815742042}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 1
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 2.02
 --- !u!61 &61002906453878408
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -722,7 +706,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1640318838763580}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 8be6341e1ce3f4cec9902bc34f72d20a, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -747,7 +731,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1299050138978716}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 8be6341e1ce3f4cec9902bc34f72d20a, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -772,7 +756,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1863812148659620}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 8be6341e1ce3f4cec9902bc34f72d20a, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -822,7 +806,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1419214726134906}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 8be6341e1ce3f4cec9902bc34f72d20a, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -893,9 +877,9 @@ MonoBehaviour:
     contact: 1
     dmgContact: 30
     statAttaque:
-      ePower: 50
+      ePower: 0
       eRadius: 10
-      upwardsModifier: 0.1
+      upwardsModifier: 0
       degGlace: 0
       degPoison: 0
       degFoudre: 0
@@ -970,9 +954,9 @@ MonoBehaviour:
     contact: 1
     dmgContact: 30
     statAttaque:
-      ePower: 50
+      ePower: 0
       eRadius: 10
-      upwardsModifier: 0.1
+      upwardsModifier: 0
       degGlace: 0
       degPoison: 0
       degFoudre: 0
@@ -1019,9 +1003,9 @@ MonoBehaviour:
     contact: 1
     dmgContact: 30
     statAttaque:
-      ePower: 50
+      ePower: 0
       eRadius: 10
-      upwardsModifier: 0.1
+      upwardsModifier: 0
       degGlace: 0
       degPoison: 0
       degFoudre: 0
@@ -1260,9 +1244,9 @@ MonoBehaviour:
     contact: 1
     dmgContact: 30
     statAttaque:
-      ePower: 50
+      ePower: 0
       eRadius: 10
-      upwardsModifier: 0.1
+      upwardsModifier: 0
       degGlace: 0
       degPoison: 0
       degFoudre: 0
