@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
+
 using UnityEngine;
 
 public class GameMaster : MonoBehaviour {
@@ -14,6 +16,8 @@ public class GameMaster : MonoBehaviour {
 
 
     void Awake() {
+        Cursor.visible = false;
+        
         if (instance == null)
             instance = this;
         else {

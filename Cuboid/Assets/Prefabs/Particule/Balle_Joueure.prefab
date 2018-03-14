@@ -201,8 +201,8 @@ TrailRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 2048899763
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Time: 0.5
   m_Parameters:
@@ -267,7 +267,7 @@ TrailRenderer:
     textureMode: 0
     generateLightingData: 0
   m_MinVertexDistance: 0.3
-  m_Autodestruct: 0
+  m_Autodestruct: 1
 --- !u!114 &114034751592981238
 MonoBehaviour:
   m_ObjectHideFlags: 1
