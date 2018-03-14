@@ -291,7 +291,7 @@ MonoBehaviour:
     degGlace: 0
     degPoison: 0
     degFoudre: 0
-  effetExplosion: {fileID: 4793239945891142, guid: 2f080beb01f61df4a86c8847a84e0313,
+  effetExplosion: {fileID: 4842071856983680, guid: b719e3c3977c4454f84f5b2c72992769,
     type: 2}
 --- !u!198 &198425235392192508
 ParticleSystem:
