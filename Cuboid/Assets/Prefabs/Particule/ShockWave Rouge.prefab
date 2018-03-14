@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114413184204941184}
   - component: {fileID: 199615705874234618}
   m_Layer: 0
-  m_Name: ShockWave 1
+  m_Name: ShockWave Rouge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

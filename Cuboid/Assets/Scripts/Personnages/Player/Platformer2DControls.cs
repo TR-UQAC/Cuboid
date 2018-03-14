@@ -51,5 +51,9 @@ public class Platformer2DControls : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.I)) {
             m_Character.joueurStats.immortel = !m_Character.joueurStats.immortel;
         }
+
+        if (Input.GetKeyDown(KeyCode.K)) {
+            GameMaster.KillJoueur(m_Character);
+        }
     }
 }
