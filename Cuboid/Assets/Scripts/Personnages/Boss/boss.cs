@@ -8,8 +8,11 @@ using DG.Tweening;
 public class boss : MonoBehaviour
 {
     //  list des parties du boss, ces 4 côté, le core, ces des ennemis normal mais qui seront modifier
-    private List<Transform> m_lstEnnemis;   
-    
+    private List<Transform> m_lstEnnemis;
+
+    //  si le joueur est au dela de cette distance, Désactivation
+    static float distActivation = 100;
+
     //  Liste des noeuds où le boss pourra ce déplacer, il ne pourra pas aller ailleur
     private List<Transform> m_lstNode;
     private Rigidbody2D rb;
@@ -25,9 +28,17 @@ public class boss : MonoBehaviour
     //Temps restant avant de pouvoir ce déplacer de nouveau
     private float m_CurrentWait;
 
+    //  référence au joueur à poursuivre
+    private GameObject m_Player;
+
+    //  si le joueur meur, le chercher
+    private bool searchingForPlayer = false;
+
     //  set les variable avant d'être actif
     private void Awake()
     {
+        m_Player = GameObject.FindGameObjectWithTag("Player");
+
         rb = GetComponent<Rigidbody2D>() as Rigidbody2D;
         sr = GetComponent<SpriteRenderer>() as SpriteRenderer;
         tr = GetComponent<Transform>() as Transform;
@@ -44,6 +55,17 @@ public class boss : MonoBehaviour
                 m_lstEnnemis.Add(child);
         }
 
+        if (m_Player == null)
+        {
+            if (!searchingForPlayer)
+            {
+                searchingForPlayer = true;
+                StartCoroutine(SearchForPlayer());
+            }
+        }
+
+        StartCoroutine(CheckDistance());
+
         m_CurrentWait = m_MovingRate;
 
         //  lancé l'intro du boss
@@ -56,9 +78,24 @@ public class boss : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
+        
+
         if (Input.GetKeyDown("m"))
             jumpRot(false);
     }
+
+    //  détermine si le boss va à gauche ou a droite
+    private void directionBoss()
+    {
+        if (m_Player)
+        {
+            if (m_Player.transform.position.x < tr.position.x)
+                jumpRot(true);
+            else
+                jumpRot(false);
+        }
+    }
+
 
     //  fonction de déplacement vers le noeud précicé, true = gauche / false = droite
     public void jumpRot(bool gd)
@@ -120,4 +157,48 @@ public class boss : MonoBehaviour
 
         bouge.Play();
     }
+
+    #region Activation
+    //**** Activation/ Desactivation par rapport à la distance ****//
+    IEnumerator CheckDistance()
+    {
+        if (m_Player == null)
+        {
+            if (!searchingForPlayer)
+            {
+                searchingForPlayer = true;
+                StartCoroutine(SearchForPlayer());
+            }
+            yield break;
+        }
+
+        if ((m_Player.transform.position - tr.position).sqrMagnitude < distActivation * distActivation)
+            enabled = true;
+        else
+        {
+            rb.velocity = new Vector2(0, 0);
+            enabled = false;
+        }
+
+        yield return new WaitForSeconds(5f);
+        StartCoroutine(CheckDistance());
+    }
+
+    IEnumerator SearchForPlayer()
+    {
+        GameObject sResult = GameObject.FindGameObjectWithTag("Player");
+        if (sResult == null)
+        {
+            yield return new WaitForSeconds(0.5f);
+            StartCoroutine(SearchForPlayer());
+        }
+        else
+        {
+            m_Player = sResult;
+            searchingForPlayer = false;
+            StartCoroutine(CheckDistance());
+            yield break;
+        }
+    }
+    #endregion
 }
