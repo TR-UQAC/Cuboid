@@ -9,6 +9,7 @@ TagManager:
   - KillZone
   - HealthUI
   - Node
+  - Boss
   layers:
   - Default
   - TransparentFX
@@ -24,7 +25,7 @@ TagManager:
   - Ennemi
   - Bullet
   - collideTest
-  - 
+  - Boss
   - 
   - 
   - 

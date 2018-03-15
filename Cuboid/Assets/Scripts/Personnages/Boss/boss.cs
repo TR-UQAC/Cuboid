@@ -9,14 +9,14 @@ public class boss : MonoBehaviour
 {
     //  list des parties du boss, ces 4 côté, le core, ces des ennemis normal mais qui seront modifier
     private List<Transform> m_lstEnnemis;
+    //  le core, qui est désactiver de base mais s'active quand les 4 autre sont mort
+    private Transform m_Core;
 
     //  si le joueur est au dela de cette distance, Désactivation
     static float distActivation = 100;
 
-    //  Liste des noeuds où le boss pourra ce déplacer, il ne pourra pas aller ailleur
-    private List<Transform> m_lstNode;
     private Rigidbody2D rb;
-    private SpriteRenderer sr;
+    //private SpriteRenderer sr;
     private Transform tr;
 
     [Tooltip("le noeud actuelle où ce trouve le boss")]
@@ -24,6 +24,9 @@ public class boss : MonoBehaviour
 
     [Tooltip("Temps en seconde entre 2 déplacement")]
     public float m_MovingRate;
+
+    [Tooltip("Temps en seconde entre 2 déplacement à la 2e phase")]
+    public float m_MovingRate2;
 
     //Temps restant avant de pouvoir ce déplacer de nouveau
     //private float m_CurrentWait;
@@ -36,6 +39,12 @@ public class boss : MonoBehaviour
 
     //  si le joueur meur, le chercher
     private bool searchingForPlayer = false;
+    private bool m_arreter = true;
+
+    //  2e phase du boss, les 4 côté détruit, le core attack
+    private bool m_Phase2 = false;
+
+    public GameObject m_ExplosionEffect;
 
     //  set les variable avant d'être actif
     private void Awake()
@@ -43,7 +52,7 @@ public class boss : MonoBehaviour
         //m_Player = GameObject.FindGameObjectWithTag("Player");
 
         rb = GetComponent<Rigidbody2D>() as Rigidbody2D;
-        sr = GetComponent<SpriteRenderer>() as SpriteRenderer;
+        //sr = GetComponent<SpriteRenderer>() as SpriteRenderer;
         tr = GetComponent<Transform>() as Transform;
     }
 
@@ -57,7 +66,12 @@ public class boss : MonoBehaviour
         foreach (Transform child in transform)
         {
             if (child.tag == "Ennemi")
+            {
+                if (child.name == "CoreEcrabouilleur")
+                    m_Core = child;
+
                 m_lstEnnemis.Add(child);
+            }
         }
 
         if (m_Player == null)
@@ -68,9 +82,6 @@ public class boss : MonoBehaviour
                 StartCoroutine(SearchForPlayer());
             }
         }
-
-        StartCoroutine(CheckDistance());
-
         //m_CurrentWait = m_MovingRate;
 
         //  lancé l'intro du boss
@@ -85,36 +96,58 @@ public class boss : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
+        for (int i = 0; i < m_lstEnnemis.Count; i++)
+        {
+            if (m_lstEnnemis[i] == null)
+                m_lstEnnemis.RemoveAt(i);
+        }
+
+        //  Paramètrage pour la 2e phase
+        if(m_lstEnnemis.Count == 1 && m_Phase2 == false)
+        {
+            m_Phase2 = true;
+            (m_Core.GetComponent<Ennemis>() as Ennemis).ennemiStats.immortel = false;
+            bc.enabled = false;
+            m_MovingRate = m_MovingRate2;
+            rb.bodyType = RigidbodyType2D.Dynamic;
+            rb.gravityScale = 1.0f;
+            rb.angularDrag = 0.0f;
+        }
+
+        if(m_lstEnnemis.Count == 0)
+        {
+            //Instantiate(m_ExplosionEffect, transform.position, transform.rotation);
+
+            GameMaster.KillBoss(this);
+        }
+
         //  ajustement du boxCollider2D pour qu'il écrase que si le joueur est en dessous
         //  Quelque soit l'angle
-
-        int i = (int)tr.rotation.eulerAngles.z;
-
-        if(i > 320 || i < 40)
+        if (m_Phase2 == false)
         {
-            bc.offset = new Vector2(0.0f, -0.2f);
-            bc.size = new Vector2(2.0f, 2.5f);
-        }
-        else if(i > 50 && i < 130)
-        {
-            bc.offset = new Vector2(-0.2f, 0.0f);
-            bc.size = new Vector2(2.5f, 2.0f);
-        }
-        else if(i > 140 && i < 220)
-        {
-            bc.offset = new Vector2(0.0f, 0.2f);
-            bc.size = new Vector2(2.0f, 2.5f);
-        }
-        else if(i > 230 && i < 310)
-        {
-            bc.offset = new Vector2(0.2f, 0.0f);
-            bc.size = new Vector2(2.5f, 2.0f);
-        }
+            int angle = (int)tr.rotation.eulerAngles.z;
 
-
-
-        if (Input.GetKeyDown("m"))
-            jumpRot(false);
+            if (angle > 320 || angle < 40)
+            {
+                bc.offset = new Vector2(0.0f, -0.2f);
+                bc.size = new Vector2(2.0f, 2.5f);
+            }
+            else if (angle > 50 && angle < 130)
+            {
+                bc.offset = new Vector2(-0.2f, 0.0f);
+                bc.size = new Vector2(2.5f, 2.0f);
+            }
+            else if (angle > 140 && angle < 220)
+            {
+                bc.offset = new Vector2(0.0f, 0.2f);
+                bc.size = new Vector2(2.0f, 2.5f);
+            }
+            else if (angle > 230 && angle < 310)
+            {
+                bc.offset = new Vector2(0.2f, 0.0f);
+                bc.size = new Vector2(2.5f, 2.0f);
+            }
+        }
     }
     
     //  détermine si le boss va à gauche ou a droite
@@ -128,7 +161,6 @@ public class boss : MonoBehaviour
                 jumpRot(false);
         }
     }
-
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -179,6 +211,9 @@ public class boss : MonoBehaviour
         //  test de déplacement avec DOTween
         Vector3 pos = tr.position;
         Vector3 angle = tr.rotation.eulerAngles;
+
+        if (m_arreter)
+            return;
 
         //Vector3 pos = new Vector3(7.0f, 0.0f, 0.0f) + tr.position;
         if (m_CurrentNode != null)  // le boss est sur un noeud de la liste
@@ -236,29 +271,6 @@ public class boss : MonoBehaviour
 
     #region Activation
     //**** Activation/ Desactivation par rapport à la distance ****//
-    IEnumerator CheckDistance()
-    {
-        if (m_Player == null)
-        {
-            if (!searchingForPlayer)
-            {
-                searchingForPlayer = true;
-                StartCoroutine(SearchForPlayer());
-            }
-            yield break;
-        }
-
-        if ((m_Player.transform.position - tr.position).sqrMagnitude < distActivation * distActivation)
-            enabled = true;
-        else
-        {
-            rb.velocity = new Vector2(0, 0);
-            enabled = false;
-        }
-
-        yield return new WaitForSeconds(5f);
-        StartCoroutine(CheckDistance());
-    }
 
     IEnumerator SearchForPlayer()
     {
@@ -273,7 +285,7 @@ public class boss : MonoBehaviour
             m_Player = sResult;
             m_ScaleY = sResult.transform.lossyScale.y;
             searchingForPlayer = false;
-            StartCoroutine(CheckDistance());
+            m_arreter = false;
             yield break;
         }
     }

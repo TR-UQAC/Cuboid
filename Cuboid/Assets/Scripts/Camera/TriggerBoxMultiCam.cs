@@ -25,7 +25,7 @@ public class TriggerBoxMultiCam : MonoBehaviour {
         foreach (Transform item in transform)
         {
             if(item != null)
-                cam.GetComponent<MultipleTargetCamera>().targets.Add(item);
+                cam.GetComponentInParent<MultipleTargetCamera>().targets.Add(item);
         }
         InZone = true;
     }
@@ -38,7 +38,7 @@ public class TriggerBoxMultiCam : MonoBehaviour {
         foreach (Transform item in transform)
         {
             if (item != null)
-                cam.GetComponent<MultipleTargetCamera>().targets.Remove(item);
+                cam.GetComponentInParent<MultipleTargetCamera>().targets.Remove(item);
         }
         InZone = false;
     }
