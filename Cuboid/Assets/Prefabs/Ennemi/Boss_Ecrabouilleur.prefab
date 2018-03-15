@@ -1110,6 +1110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CurrentNode: {fileID: 0}
   m_MovingRate: 3
+  m_MovingRate2: 0
   m_ExplosionEffect: {fileID: 0}
 --- !u!114 &114799483572031000
 MonoBehaviour:
@@ -1125,7 +1126,7 @@ MonoBehaviour:
   ennemiStats:
     vie: 200
     vieMax: 200
-    immortel: 0
+    immortel: 1
     m_JumpForce: 0
     speed: 1000
     maxSpeed: 5

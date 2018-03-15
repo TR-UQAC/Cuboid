@@ -109,9 +109,6 @@ public class boss : MonoBehaviour
             (m_Core.GetComponent<Ennemis>() as Ennemis).ennemiStats.immortel = false;
             bc.enabled = false;
             m_MovingRate = m_MovingRate2;
-            rb.bodyType = RigidbodyType2D.Dynamic;
-            rb.gravityScale = 1.0f;
-            rb.angularDrag = 0.0f;
         }
 
         if(m_lstEnnemis.Count == 0)
@@ -259,7 +256,8 @@ public class boss : MonoBehaviour
             return;
         }
 
-        bool descend = (tr.position.y - 1.0f > pos.y);
+        if (m_Phase2)
+            pos.y -= 5.0f;
 
         Sequence bouge = DOTween.Sequence();
 
