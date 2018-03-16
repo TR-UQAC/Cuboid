@@ -128,7 +128,7 @@ public class PlayerCharacter2D : Personnages {
 
         if (IsRunning)
         {
-            m_Anim.Play("RunFast");
+            //m_Anim.Play("RunFast");
             m_speed = joueurStats.maxSpeed*1.5f;
         }
         else
@@ -239,6 +239,11 @@ public class PlayerCharacter2D : Personnages {
             return true;
 
         return false;
+    }
+
+    public bool IsGrounded()
+    {
+        return m_Grounded;
     }
 
     public void WeaponSwitch()
