@@ -36,27 +36,30 @@ public class UpgradeItem : MonoBehaviour {
 
         //pc.ToggleUpgrade(UpgradeName);
 
-        switch (UpgradeName)
+        if (!pc.HasUpgrade(UpgradeName))
         {
-            case "MorphBall":
-                pc.ToggleUpgrade(UpgradeName);
-                pc.gameObject.AddComponent(typeof(MorphBall));
-            break;
-            case "MorphBomb":
-                pc.ToggleUpgrade(UpgradeName);
-            break;
-            case "GrappleBeam":
-                pc.ToggleUpgrade(UpgradeName);
-                //pc.AddWeapon("GrappleBeam");
-                pc.gameObject.GetComponent<GrappleBeam>().enabled = true;
-            break;
-            default:
-                Debug.Log("Upgrade non spécifié ou non reconnue");
-                pc.gameObject.AddComponent(typeof(TestUpgradeBehavior));
-            break;
-        }
+            switch (UpgradeName)
+            {
+                case "MorphBall":
+                    pc.ToggleUpgrade(UpgradeName);
+                    pc.gameObject.AddComponent(typeof(MorphBall));
+                    break;
+                case "MorphBomb":
+                    pc.ToggleUpgrade(UpgradeName);
+                    break;
+                case "GrappleBeam":
+                    pc.ToggleUpgrade(UpgradeName);
+                    pc.AddWeapon("GrappleBeam");
+                    pc.gameObject.GetComponent<GrappleBeam>().enabled = true;
+                    break;
+                default:
+                    Debug.Log("Upgrade non spécifiée ou non reconnue");
+                    pc.gameObject.AddComponent(typeof(TestUpgradeBehavior));
+                    break;
+            }
 
-        gameObject.GetComponent<Animator>().Play("Disapear");
+            gameObject.GetComponent<Animator>().Play("Disapear");
+        }
 
         Destroy(gameObject, 0.25f);
     }

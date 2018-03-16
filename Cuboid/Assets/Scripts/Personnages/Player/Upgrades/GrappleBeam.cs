@@ -14,14 +14,14 @@ public class GrappleBeam : MonoBehaviour {
     public LineRenderer grappleRenderer;
     public LayerMask grappleLayerMask;
 
-    public float climbSpeed = 5f;
+    public float climbSpeed = 10f;
     private bool isColliding;
 
     private float grappleMaxCastDistance = 50f;
     private List<Vector2> grapplePositions = new List<Vector2>();
 
     private bool distanceSet;
-    private bool isGrappleAttached;
+    public bool isGrappleAttached;
     private Vector2 playerPosition;
     private Rigidbody2D grappleHingeAnchorRb;
     private SpriteRenderer grappleHingeAnchorSprite;
@@ -39,14 +39,14 @@ public class GrappleBeam : MonoBehaviour {
         playerPosition = player.transform.position;
         //HandleInput();
         UpdateRopePosition();
-        HandleGrappleLength();
+        //HandleGrappleLength();
 	}
 
     public void UseGrapple()
     {
         if (!isGrappleAttached)
         {
-            Debug.Log("Tir le grappin");
+            //Debug.Log("Tir le grappin");
 
             //Empeche d'utiliser le grappin si on est deja attaché
             if (isGrappleAttached)
@@ -61,7 +61,7 @@ public class GrappleBeam : MonoBehaviour {
 
             if (hit.collider != null)
             {
-                Debug.Log("Raycast touche terrain");
+                //Debug.Log("Raycast touche terrain");
 
                 isGrappleAttached = true;
 
@@ -91,13 +91,13 @@ public class GrappleBeam : MonoBehaviour {
         }
     }
 
-    private void HandleGrappleLength()
+    public void HandleGrappleLength(float direction)
     {
-        if (Input.GetKey(KeyCode.W) && isGrappleAttached && !isColliding)
+        if ((direction > 0) && isGrappleAttached && !isColliding)
         {
             grappleJoint.distance -= Time.deltaTime * climbSpeed;
         }
-        else if (Input.GetKey(KeyCode.S))
+        else if (direction < 0)
         {
             grappleJoint.distance += Time.deltaTime * climbSpeed;
         }

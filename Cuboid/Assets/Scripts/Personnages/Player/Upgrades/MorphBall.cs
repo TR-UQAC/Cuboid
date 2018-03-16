@@ -26,6 +26,8 @@ public class MorphBall : MonoBehaviour {
             if (!ismorphed)
             {
                 //Change le sprite           
+                playergo.GetComponent<PlayerCharacter2D>().m_backSphere.transform.localScale = new Vector2(0.42f, 0.42f);
+
                // playergo.GetComponent<SpriteRenderer>().sprite = morphSprite;
 
                 //Disable/change l'animator
@@ -59,6 +61,7 @@ public class MorphBall : MonoBehaviour {
                 {
                     //playergo.GetComponent<SpriteRenderer>().sprite = standardSprite;
                     //playergo.GetComponent<Animator>().enabled = true;
+                    playergo.GetComponent<PlayerCharacter2D>().m_backSphere.transform.localScale = new Vector2(1.0f, 1.0f);
 
                     ismorphed = false;
                     playergo.GetComponent<PlayerCharacter2D>().SetMorph(ismorphed);

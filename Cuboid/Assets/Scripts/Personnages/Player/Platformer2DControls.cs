@@ -29,9 +29,25 @@ public class Platformer2DControls : MonoBehaviour
         m_Character.Move(h, false, m_Jump);
         m_Jump = false;
 
-        if (CrossPlatformInputManager.GetButtonDown("Fire1") || CrossPlatformInputManager.GetAxis("Fire1") != 0) {
+        if (CrossPlatformInputManager.GetButtonDown("Fire1") || CrossPlatformInputManager.GetAxis("Fire1") != 0)
+        {
             m_Character.UseWeapon();
         }
+
+        if (CrossPlatformInputManager.GetButtonDown("WeaponSelect"))
+        {
+            m_Character.WeaponSwitch();
+        }
+
+        //Rappel pour le grappin
+        if (CrossPlatformInputManager.GetAxis("Vertical") != 0)
+        {
+            if (m_Character.GetComponent<GrappleBeam>().isGrappleAttached)
+            {
+                m_Character.GetComponent<GrappleBeam>().HandleGrappleLength(CrossPlatformInputManager.GetAxis("Vertical"));
+            }
+        }
+        
 
         if (CrossPlatformInputManager.GetButtonDown("TriggerAction1")) {
             //m_Character.PrintAllUpgrade();
