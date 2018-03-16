@@ -178,7 +178,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1847836177881528}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -128.20903, y: 54.68505, z: 0}
+  m_LocalPosition: {x: 0.6, y: -1, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 4032282408151114}
@@ -310,7 +310,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.000809595, y: -0.06262399}
+  m_Offset: {x: 0, y: -0.063042}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -321,7 +321,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16843805, y: 0.27007362}
+  m_Size: {x: 0.14, y: 0.26608405}
   m_EdgeRadius: 0
 --- !u!95 &95851464698722604
 Animator:
@@ -412,7 +412,7 @@ MonoBehaviour:
   IsRunning: 0
   fallMaxSpeed: 35
   fallMultiplier: 7
-  lowJumpMultiplier: 10
+  lowJumpMultiplier: 15
   decelleration: 10
   dureeImmortel: 0.5
 --- !u!114 &114969830128781862
@@ -528,7 +528,7 @@ LineRenderer:
     alignment: 0
     textureMode: 2
     generateLightingData: 0
-  m_UseWorldSpace: 1
+  m_UseWorldSpace: 0
   m_Loop: 0
 --- !u!212 &212253876082755388
 SpriteRenderer:
