@@ -93,22 +93,25 @@ public class GrappleBeam : MonoBehaviour {
 
     public void HandleGrappleLength(float direction)
     {
-        if ((direction > 0) && isGrappleAttached && !isColliding)
+        bool underCeiling = player.IsUnderCeiling();
+        bool grounded = player.IsGrounded();
+
+        if ((direction > 0) && isGrappleAttached && !underCeiling)
         {
             grappleJoint.distance -= Time.deltaTime * climbSpeed;
         }
-        else if (direction < 0)
+        else if ((direction < 0) && isGrappleAttached && !grounded)
         {
-            grappleJoint.distance += Time.deltaTime * climbSpeed;
+            grappleJoint.distance += Time.deltaTime * climbSpeed;  
         }
     }
 
-    void OntriggerStay2D(Collider2D collider)
+    void OnCollisionStay2D(Collision2D collider)
     {
         isColliding = true;
     }
 
-    void OnTriggerExit2D(Collider2D collider)
+    void OnCollisionExit2D(Collision2D collider)
     {
         isColliding = false;
     }
