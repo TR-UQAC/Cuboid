@@ -84,5 +84,5 @@ MonoBehaviour:
   spawnPoint: {fileID: 4417390762397422}
   spawnPrefab: {fileID: 4947641083449498, guid: baaa42c1e8acd1d4ebeb978b66a2adf4,
     type: 2}
-  playerPrefab: {fileID: 4686034476788358, guid: e589d71cbb1ea8941bd568773b079766,
+  playerPrefab: {fileID: 4409764083206524, guid: 08f5393c2b7c96649959a69852a652d5,
     type: 2}
