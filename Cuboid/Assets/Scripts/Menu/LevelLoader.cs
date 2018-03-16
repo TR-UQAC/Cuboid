@@ -21,7 +21,7 @@ public class LevelLoader : MonoBehaviour {
 
     public void DemoUpgrade() {
         LoadLevel(3);
-        //SceneManager.LoadScene(2);
+        //SceneManager.LoadScene(3);
     }
 
     public void LoadLevel (int sceneIndex) {
