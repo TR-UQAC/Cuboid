@@ -56,6 +56,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1258965045446836
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4233956348978784}
+  - component: {fileID: 61011132233952242}
+  - component: {fileID: 114940220405876502}
+  m_Layer: 10
+  m_Name: BossShield
+  m_TagString: Shield
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
 --- !u!1 &1299050138978716
 GameObject:
   m_ObjectHideFlags: 0
@@ -269,7 +286,6 @@ GameObject:
   - component: {fileID: 114799483572031000}
   - component: {fileID: 114289551597073358}
   - component: {fileID: 58579076277630998}
-  - component: {fileID: 114426808199825508}
   m_Layer: 11
   m_Name: CoreEcrabouilleur
   m_TagString: Ennemi
@@ -337,7 +353,7 @@ Transform:
   m_Children:
   - {fileID: 4117977993718072}
   m_Father: {fileID: 4705907795443286}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!4 &4067678224431182
 Transform:
@@ -380,6 +396,19 @@ Transform:
   - {fileID: 4067678224431182}
   - {fileID: 4276523265155874}
   m_Father: {fileID: 4705907795443286}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4233956348978784
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1258965045446836}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4705907795443286}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4276523265155874
@@ -407,7 +436,7 @@ Transform:
   m_Children:
   - {fileID: 4860076488901412}
   m_Father: {fileID: 4705907795443286}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!4 &4392094440897996
 Transform:
@@ -421,7 +450,7 @@ Transform:
   m_Children:
   - {fileID: 4968356638106924}
   m_Father: {fileID: 4705907795443286}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!4 &4418494053184852
 Transform:
@@ -474,7 +503,7 @@ Transform:
   m_Children:
   - {fileID: 4833706893498080}
   m_Father: {fileID: 4705907795443286}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!4 &4705907795443286
 Transform:
@@ -482,14 +511,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1498822815742042}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -23.33, y: -170.2, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -19.5, y: 2.12, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 4418494053184852}
   - {fileID: 4604802581306574}
   - {fileID: 4004967252478618}
   - {fileID: 4610405136163340}
+  - {fileID: 4233956348978784}
   - {fileID: 4212421102996500}
   - {fileID: 4010176108526986}
   - {fileID: 4392094440897996}
@@ -670,19 +700,19 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1772866679855636}
-  m_BodyType: 1
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 5
 --- !u!58 &58579076277630998
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -722,6 +752,31 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.64, y: 0.6398155}
+  m_EdgeRadius: 0
+--- !u!61 &61011132233952242
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1258965045446836}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.3, y: 2.3}
   m_EdgeRadius: 0
 --- !u!61 &61104990118003072
 BoxCollider2D:
@@ -1050,25 +1105,6 @@ MonoBehaviour:
     degGlace: 0
     degPoison: 0
     degFoudre: 0
---- !u!114 &114426808199825508
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1772866679855636}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d42d3a3bc5a02cb4290bc4170f532630, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  direction: {x: -1, y: 0}
-  detectWhat:
-    serializedVersion: 2
-    m_Bits: 1024
-  lEC: {fileID: 4276523265155874}
-  edgeCheckRadius: 0.02
-  sightStart: {fileID: 4964598039828690}
-  sightEnd: {fileID: 4067678224431182}
 --- !u!114 &114711305094889270
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1110,7 +1146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CurrentNode: {fileID: 0}
   m_MovingRate: 3
-  m_MovingRate2: 0
+  m_MovingRate2: 3
   m_ExplosionEffect: {fileID: 0}
 --- !u!114 &114799483572031000
 MonoBehaviour:
@@ -1266,6 +1302,21 @@ MonoBehaviour:
   showContactDommage: 1
   showMouvement: 0
   showElements: 0
+--- !u!114 &114940220405876502
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1258965045446836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c269db9ed1eb0c46a64635c654d1ad9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NoHit:
+    serializedVersion: 2
+    m_Bits: 4294966015
+  m_dmg: 10
 --- !u!212 &212059743535118876
 SpriteRenderer:
   m_ObjectHideFlags: 1

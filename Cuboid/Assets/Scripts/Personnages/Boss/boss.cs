@@ -11,6 +11,8 @@ public class boss : MonoBehaviour
     private List<Transform> m_lstEnnemis;
     //  le core, qui est désactiver de base mais s'active quand les 4 autre sont mort
     private Transform m_Core;
+    //  Le shield, repousse les projectiles et est desactiver à la 2e phase
+    private Transform m_shield;
 
     //  si le joueur est au dela de cette distance, Désactivation
     static float distActivation = 100;
@@ -72,6 +74,11 @@ public class boss : MonoBehaviour
 
                 m_lstEnnemis.Add(child);
             }
+
+            if(child.tag == "Shield")
+            {
+                m_shield = child;
+            }
         }
 
         if (m_Player == null)
@@ -109,6 +116,11 @@ public class boss : MonoBehaviour
             (m_Core.GetComponent<Ennemis>() as Ennemis).ennemiStats.immortel = false;
             bc.enabled = false;
             m_MovingRate = m_MovingRate2;
+
+            Sequence sdown = DOTween.Sequence();
+
+            sdown.Append(m_shield.DOScale(0.1f, 2.0f).SetEase(Ease.InBounce));
+            m_shield.gameObject.SetActive(false);
         }
 
         if(m_lstEnnemis.Count == 0)

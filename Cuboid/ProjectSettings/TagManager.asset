@@ -10,6 +10,7 @@ TagManager:
   - HealthUI
   - Node
   - Boss
+  - Shield
   layers:
   - Default
   - TransparentFX
