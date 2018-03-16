@@ -138,23 +138,23 @@ public class boss : MonoBehaviour
 
             if (angle > 320 || angle < 40)
             {
-                bc.offset = new Vector2(0.0f, -0.2f);
-                bc.size = new Vector2(2.0f, 2.5f);
+                bc.offset = new Vector2(0.0f, -1.1f);
+                bc.size = new Vector2(2.0f, 0.6f);
             }
             else if (angle > 50 && angle < 130)
             {
-                bc.offset = new Vector2(-0.2f, 0.0f);
-                bc.size = new Vector2(2.5f, 2.0f);
+                bc.offset = new Vector2(-1.1f, 0.0f);
+                bc.size = new Vector2(0.6f, 2.0f);
             }
             else if (angle > 140 && angle < 220)
             {
-                bc.offset = new Vector2(0.0f, 0.2f);
-                bc.size = new Vector2(2.0f, 2.5f);
+                bc.offset = new Vector2(0.0f, 1.1f);
+                bc.size = new Vector2(2.0f, 0.6f);
             }
             else if (angle > 230 && angle < 310)
             {
-                bc.offset = new Vector2(0.2f, 0.0f);
-                bc.size = new Vector2(2.5f, 2.0f);
+                bc.offset = new Vector2(1.1f, 0.0f);
+                bc.size = new Vector2(0.6f, 2.0f);
             }
         }
     }

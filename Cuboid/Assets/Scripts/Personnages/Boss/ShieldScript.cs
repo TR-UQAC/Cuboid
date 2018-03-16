@@ -23,7 +23,7 @@ public class ShieldScript : MonoBehaviour {
 
         Debug.Log("ca ricoche");
 
-        if (balle.layer == 12)// le layer de bullet, si ça chie, vérifier si ces toujours le bon layer
+        /*if (balle.layer == 12)// le layer de bullet, si ça chie, vérifier si ces toujours le bon layer
         {
             Bullet ballSc = balle.GetComponent<Bullet>();
 
@@ -38,6 +38,6 @@ public class ShieldScript : MonoBehaviour {
 
             //Rigidbody2D rballe = balle.GetComponent<Rigidbody2D>() as Rigidbody2D;
             
-        }
+        }*/
     }
 }

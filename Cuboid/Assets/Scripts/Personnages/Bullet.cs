@@ -41,6 +41,12 @@ public class Bullet : MonoBehaviour {
         GameObject go = other.gameObject;
         if (noHit != (noHit | (1 << go.layer)))
         {
+            /*if(go.layer == 15)
+            {
+                Debug.Log("Ricoche dans trigger");
+                return;
+            }*/
+
             //if (statAttaque.ePower == 0 || statAttaque.eRadius == 0) {
             if (dommageHit == (dommageHit | (1 << go.gameObject.layer)))
             {
@@ -53,8 +59,8 @@ public class Bullet : MonoBehaviour {
                 Collider2D[] colliders = Physics2D.OverlapCircleAll(myTransform.position, statAttaque.eRadius, dommageHit);
                 foreach (Collider2D nerbyObject in colliders)
                 {
-                   // if (dommageHit == (dommageHit | (1 << nerbyObject.gameObject.layer)))
-                   // {
+                   if (dommageHit == (dommageHit | (1 << nerbyObject.gameObject.layer)))
+                   {
                         if (Rigidbody2DExt.AddExplosionForce(nerbyObject.GetComponent<Rigidbody2D>(), statAttaque.ePower, myTransform.position, statAttaque.eRadius, statAttaque.upwardsModifier))
                         {
                            // if (nerbyObject == other)
@@ -63,7 +69,7 @@ public class Bullet : MonoBehaviour {
                             Personnages en = nerbyObject.GetComponent<Personnages>() as Personnages;
                             en.DommagePerso(dmg);
                         }
-                   // }
+                   }
                 }
 
                 if (effetExplosion != null && statAttaque.eRadius != 0)
