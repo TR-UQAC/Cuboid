@@ -68,8 +68,10 @@ public class TriggerBossStage : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("dans trigger");
         if(collision.tag == "Player" && m_bossActive == false)
         {
+            Debug.Log("dans trigger qui start");
             m_boss.SetActive(true);
             m_boss.GetComponent<boss>().enabled = true;
             m_bossActive = true;
@@ -84,6 +86,15 @@ public class TriggerBossStage : MonoBehaviour {
         {
             //le boss est mort
             Debug.Log("LE BOSS EST MOURU");
+        }
+
+        if(collision.tag == "Player")
+        {
+            //m_boss.SetActive(false);
+            m_boss.GetComponent<boss>().enabled = false;
+            m_bossActive = false;
+            m_Porte.GetComponent<BoxCollider2D>().enabled = false;
+            m_boss.GetComponent<boss>().resetPV();
         }
     }
 }

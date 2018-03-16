@@ -24,14 +24,13 @@ public class boss : MonoBehaviour
     [Tooltip("le noeud actuelle où ce trouve le boss")]
     public Node m_CurrentNode;
 
+    private Node m_StartNode;
+
     [Tooltip("Temps en seconde entre 2 déplacement")]
     public float m_MovingRate;
 
     [Tooltip("Temps en seconde entre 2 déplacement à la 2e phase")]
     public float m_MovingRate2;
-
-    //Temps restant avant de pouvoir ce déplacer de nouveau
-    //private float m_CurrentWait;
 
     //  référence au joueur à poursuivre
     private GameObject m_Player;
@@ -61,6 +60,8 @@ public class boss : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
+        m_StartNode = m_CurrentNode;
+
         bc = GetComponent<BoxCollider2D>() as BoxCollider2D;
 
         m_lstEnnemis = new List<Transform>();
@@ -128,6 +129,15 @@ public class boss : MonoBehaviour
             //Instantiate(m_ExplosionEffect, transform.position, transform.rotation);
 
             GameMaster.KillBoss(this);
+        }
+
+        if (m_Player == null)
+        {
+            if (!searchingForPlayer)
+            {
+                searchingForPlayer = true;
+                StartCoroutine(SearchForPlayer());
+            }
         }
 
         //  ajustement du boxCollider2D pour qu'il écrase que si le joueur est en dessous
@@ -277,6 +287,19 @@ public class boss : MonoBehaviour
         bouge.Insert(0.1f, tr.DORotate(angle, 0.75f).SetEase(Ease.InOutQuart));
 
         bouge.Play();
+    }
+
+    //  reset les pv de chacune de ces partie à la mort du joueur
+    public void resetPV()
+    {
+        foreach (Transform item in m_lstEnnemis)
+        {
+            Ennemis pasFin = item.GetComponent<Ennemis>() as Ennemis;
+            pasFin.ennemiStats.vie = pasFin.ennemiStats.vieMax;
+        }
+
+        tr.position = m_StartNode.transform.position;
+        m_CurrentNode = m_StartNode;
     }
 
     #region Activation
