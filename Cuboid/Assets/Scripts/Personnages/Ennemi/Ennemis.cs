@@ -56,10 +56,6 @@ public class Ennemis : Personnages {
             myTransform.localScale = new Vector2(myTransform.localScale.x * -direction.x, myTransform.localScale.y);
         }
 
-        //if (GetComponent<SpriteRenderer>() != null)
-           // sprite = GetComponent<SpriteRenderer>();
-
-
         rb.gravityScale = (comp.deplacement == typeDeplac.Voler) ? 0 : rb.gravityScale;
         directionTir.x = (facingRight) ? 1 : -1;
 
@@ -186,7 +182,7 @@ public class Ennemis : Personnages {
 
         if (go.tag == "Player") {
             if (comp.contact)
-                weapon.Contact(comp.dmgContact, en, comp.statAttaque.ePower, comp.statAttaque.eRadius, comp.statAttaque.upwardsModifier);
+                weapon.Contact(comp.dmgContact, en, 10f);
 
             
             if (comp.attaque == typeAttaque.Kamikaze) {
@@ -203,18 +199,6 @@ public class Ennemis : Personnages {
     }
     #endregion
     #region Activation
-    //**** Désactivation des ennemis quand il ne sont pas vu ****//
-    /*
-    void OnBecameVisible() {
-        enabled = true;
-    }
-    */
-    /*
-    void OnBecameInvisible() {
-        enabled = false;
-    }
-    */
-
     //**** Activation/ Desactivation par rapport à la distance ****//
     IEnumerator CheckDistance() {
         if (en == null) {

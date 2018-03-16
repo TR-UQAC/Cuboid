@@ -8,18 +8,17 @@ public static class Rigidbody2DExt {
 
         var dir = (rb.transform.position - explosionPosition);
         float wearoff = 1 - (dir.magnitude / explosionRadius);
+        //Debug.Log(wearoff);
         if (wearoff <= 0)
             return false;
 
-        if (upwardsModifier != 0) {
-            upwardsModifier *= -1;
-            float upliftWearoff = 1 - upwardsModifier / explosionRadius;
-            Vector3 upliftForce = Vector2.up * explosionForce * upliftWearoff;
-            upliftForce.z = 0;
+        if (upwardsModifier > 0) {
+            Vector3 upliftForce = Vector2.up * upwardsModifier;
             rb.AddForce(upliftForce, mode);
         }
-        Vector3 baseForce = dir.normalized * (wearoff <= 0f ? 0f : explosionForce) * wearoff;
-        baseForce.x *= 8;
+
+        Vector3 baseForce = dir.normalized * explosionForce * wearoff;
+        //baseForce.x *= 8;
         baseForce.z = 0;
         rb.AddForce(baseForce, mode);
 

@@ -272,7 +272,7 @@ MonoBehaviour:
     statAttaque:
       ePower: 150
       eRadius: 5
-      upwardsModifier: 0
+      upwardsModifier: 1
       degGlace: 0
       degPoison: 0
       degFoudre: 0
