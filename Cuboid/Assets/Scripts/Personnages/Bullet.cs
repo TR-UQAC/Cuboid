@@ -28,11 +28,6 @@ public class Bullet : MonoBehaviour {
         
         m_Rigidbody2D = GetComponent<Rigidbody2D>() as Rigidbody2D;
         myTransform = transform;
-        /*
-        Vector3 theScale = myTransform.localScale;
-        theScale.x *= -1;
-        myTransform.localScale = theScale;
-        */
         var angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         var rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         transform.rotation = rotation;
@@ -46,7 +41,6 @@ public class Bullet : MonoBehaviour {
         GameObject go = other.gameObject;
         if (noHit != (noHit | (1 << go.layer)))
         {
-
             //if (statAttaque.ePower == 0 || statAttaque.eRadius == 0) {
             if (dommageHit == (dommageHit | (1 << go.gameObject.layer)))
             {
@@ -59,17 +53,17 @@ public class Bullet : MonoBehaviour {
                 Collider2D[] colliders = Physics2D.OverlapCircleAll(myTransform.position, statAttaque.eRadius, dommageHit);
                 foreach (Collider2D nerbyObject in colliders)
                 {
-                    if (dommageHit == (dommageHit | (1 << nerbyObject.gameObject.layer)))
-                    {
+                   // if (dommageHit == (dommageHit | (1 << nerbyObject.gameObject.layer)))
+                   // {
                         if (Rigidbody2DExt.AddExplosionForce(nerbyObject.GetComponent<Rigidbody2D>(), statAttaque.ePower, myTransform.position, statAttaque.eRadius, statAttaque.upwardsModifier))
                         {
-                            if (nerbyObject == other)
-                                continue;
+                           // if (nerbyObject == other)
+                               // continue;
 
                             Personnages en = nerbyObject.GetComponent<Personnages>() as Personnages;
                             en.DommagePerso(dmg);
                         }
-                    }
+                   // }
                 }
 
                 if (effetExplosion != null && statAttaque.eRadius != 0)

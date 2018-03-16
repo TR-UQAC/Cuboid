@@ -95,9 +95,17 @@ public class WeaponEnnemi : MonoBehaviour {
         }
     }
 
-    public void Contact(int dmg, PlayerCharacter2D pl, float f, float r, float upM) {
-            Rigidbody2DExt.AddExplosionForce(pl.GetComponent<Rigidbody2D>(), f, firePoint.position, r, upM, ForceMode2D.Force);
-            pl.DommagePerso(dmg);
+    public void Contact(int dmg, PlayerCharacter2D pl, float f) {
+        //Rigidbody2DExt.AddExplosionForce(pl.GetComponent<Rigidbody2D>(), f, firePoint.position, r, upM, ForceMode2D.Force);
+        var dir = (pl.transform.position - my_transform.position);
+        Debug.Log(dir);
+        dir.x *= 5;
+
+        Vector3 baseForce = dir.normalized * f;
+        
+        Debug.Log(baseForce);
+        pl.GetComponent<Rigidbody2D>().AddForce(baseForce, ForceMode2D.Impulse);
+        pl.DommagePerso(dmg);
     }
 
     private Vector2 CibleDirection() {
