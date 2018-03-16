@@ -11,9 +11,10 @@ public class parallaxing : MonoBehaviour {
     private Transform cam;
     private Vector3 m_previousCamPos;
 
-    void Awake()
-    {
-        cam = Camera.main.transform;
+    void Awake() {
+        cam = GameObject.Find("CameraHolder").transform;
+
+        //cam = Camera.main.GetComponentInParent<Transform>().transform;
     }
 
     // Use this for initialization
