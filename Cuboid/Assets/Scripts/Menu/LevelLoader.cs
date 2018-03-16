@@ -19,6 +19,11 @@ public class LevelLoader : MonoBehaviour {
         //SceneManager.LoadScene(2);
     }
 
+    public void DemoUpgrade() {
+        LoadLevel(3);
+        //SceneManager.LoadScene(2);
+    }
+
     public void LoadLevel (int sceneIndex) {
 
         StartCoroutine(LoadAsynchronously(sceneIndex));
