@@ -19,7 +19,7 @@ public class ShieldScript : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        GameObject balle = collision.gameObject;
+        //GameObject balle = collision.gameObject;
 
         Debug.Log("ca ricoche");
 
