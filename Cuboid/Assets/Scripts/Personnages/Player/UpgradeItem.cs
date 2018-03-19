@@ -51,6 +51,7 @@ public class UpgradeItem : MonoBehaviour {
                     pc.ToggleUpgrade(UpgradeName);
                     pc.AddWeapon("GrappleBeam");
                     pc.gameObject.GetComponent<GrappleBeam>().enabled = true;
+                    pc.gameObject.GetComponent<GrappleBeam>().UpdateGUI(false);
                     break;
                 default:
                     Debug.Log("Upgrade non spécifiée ou non reconnue");

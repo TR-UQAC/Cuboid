@@ -12,6 +12,8 @@ TagManager:
   - Boss
   - Shield
   - CameraHolder
+  - Destructible
+  - GrappleUI
   layers:
   - Default
   - TransparentFX
