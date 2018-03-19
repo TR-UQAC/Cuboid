@@ -7,6 +7,7 @@ public class MorphBomb : MonoBehaviour {
     public float explosionTimer = 1.5f;
     public int explosionForce = 5000;
     public float destroyRadius = 1.0f;
+    public GameObject explosionEffect;
     
     private float spawnTime = 0f;
     private List<Collider2D> listCollider = new List<Collider2D>();
@@ -36,6 +37,10 @@ public class MorphBomb : MonoBehaviour {
                     Destroy(col.gameObject);
                 }            
             }
+
+            GameObject clone = Instantiate(explosionEffect, transform.position, transform.rotation);
+            clone.GetComponent<ShockWaveForce>().radius = 2f;
+            Destroy(clone.gameObject, 1f);
 
             FindObjectOfType<AudioManager>().Play("BombExplosion");
 
