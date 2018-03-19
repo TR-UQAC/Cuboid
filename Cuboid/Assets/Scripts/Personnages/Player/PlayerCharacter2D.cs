@@ -255,6 +255,16 @@ public class PlayerCharacter2D : Personnages {
             selectedWeaponIndex = 0;
         }
 
+        switch (weaponList[selectedWeaponIndex])
+        {
+            case "GrappleBeam":
+                gameObject.GetComponent<GrappleBeam>().UpdateGUI(true);
+            break;
+            default:
+                gameObject.GetComponent<GrappleBeam>().UpdateGUI(false);
+            break;
+        }
+
         Debug.Log("Active Weapon: " + weaponList[selectedWeaponIndex]);
     }
     #endregion
@@ -379,9 +389,20 @@ public class PlayerCharacter2D : Personnages {
         }
     }
 
-    private void UpdateHealthBar(){
+    private void UpdateHealthBar()
+    {
         if(bar != null)
-            bar.GetComponent<HealthBar>().health = joueurStats.vie;   
+        {
+            if (joueurStats.vie < 0)
+            {
+                bar.GetComponent<HealthBar>().health = 0;
+
+            }
+            else
+            {
+                bar.GetComponent<HealthBar>().health = joueurStats.vie;
+            }           
+        }             
     }
 
     IEnumerator ChangeImmortel() {

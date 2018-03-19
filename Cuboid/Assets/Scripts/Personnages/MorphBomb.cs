@@ -6,7 +6,8 @@ public class MorphBomb : MonoBehaviour {
 
     public float explosionTimer = 1.5f;
     public int explosionForce = 5000;
-
+    public float destroyRadius = 1.0f;
+    
     private float spawnTime = 0f;
     private List<Collider2D> listCollider = new List<Collider2D>();
 
@@ -24,6 +25,16 @@ public class MorphBomb : MonoBehaviour {
             foreach (Collider2D item in listCollider)
             {
                 item.attachedRigidbody.AddForce(new Vector2(0, explosionForce));
+            }
+
+            //Trouve les objets destructibles
+            Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, destroyRadius);
+            foreach (Collider2D col in colliders)
+            {
+                if (col.gameObject.CompareTag("Destructible"))
+                {
+                    Destroy(col.gameObject);
+                }            
             }
 
             FindObjectOfType<AudioManager>().Play("BombExplosion");

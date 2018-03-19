@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System.Linq;
 
-public class GrappleBeam : MonoBehaviour {
+public class GrappleBeam : MonoBehaviour
+{
 
     public GameObject grappleHingeAnchor;
     public DistanceJoint2D grappleJoint;
@@ -25,6 +27,7 @@ public class GrappleBeam : MonoBehaviour {
     private Vector2 playerPosition;
     private Rigidbody2D grappleHingeAnchorRb;
     private SpriteRenderer grappleHingeAnchorSprite;
+    private GameObject grappleUI;
 
     void Awake()
     {
@@ -32,15 +35,39 @@ public class GrappleBeam : MonoBehaviour {
         playerPosition = transform.position;
         grappleHingeAnchorRb = grappleHingeAnchor.GetComponent<Rigidbody2D>();
         grappleHingeAnchorSprite = grappleHingeAnchor.GetComponent<SpriteRenderer>();
+
+        if (GameObject.FindGameObjectWithTag("GrappleUI"))
+        {
+            grappleUI = GameObject.FindGameObjectWithTag("GrappleUI");
+            grappleUI.SetActive(false);
+        }
+
     }
 
-	void Update ()
+    void Update()
     {
         playerPosition = player.transform.position;
         //HandleInput();
         UpdateRopePosition();
         //HandleGrappleLength();
-	}
+    }
+
+    public void UpdateGUI(bool on)
+    {
+        if (!grappleUI.activeSelf)
+        {
+            grappleUI.SetActive(true);
+        }
+
+        if (on)
+        {
+            grappleUI.GetComponent<Image>().color = new Vector4(1, 1, 0, 1);
+        }
+        else
+        {
+            grappleUI.GetComponent<Image>().color = new Vector4(1, 1, 0, 0.098f);
+        }
+    }
 
     public void UseGrapple()
     {
@@ -102,7 +129,7 @@ public class GrappleBeam : MonoBehaviour {
         }
         else if ((direction < 0) && isGrappleAttached && !grounded)
         {
-            grappleJoint.distance += Time.deltaTime * climbSpeed;  
+            grappleJoint.distance += Time.deltaTime * climbSpeed;
         }
     }
 
@@ -151,7 +178,7 @@ public class GrappleBeam : MonoBehaviour {
                         {
                             grappleJoint.distance = Vector2.Distance(transform.position, grapplePosition);
                         }
-                    }     
+                    }
                 }
                 else if (i - 1 == grapplePositions.IndexOf(grapplePositions.Last()))
                 {
