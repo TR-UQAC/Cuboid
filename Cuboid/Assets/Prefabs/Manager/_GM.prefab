@@ -86,3 +86,5 @@ MonoBehaviour:
     type: 2}
   playerPrefab: {fileID: 4409764083206524, guid: 08f5393c2b7c96649959a69852a652d5,
     type: 2}
+  itemPickupPrefab: {fileID: 1390633438923348, guid: b5bacfdb5f39323459b1d23678c215c7,
+    type: 2}

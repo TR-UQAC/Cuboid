@@ -406,6 +406,17 @@ public class PlayerCharacter2D : Personnages {
         }
     }
 
+    public override void SoinPerso(int valeur)
+    {
+        joueurStats.vie += valeur;
+        if (joueurStats.vie > joueurStats.vieMax)
+        {
+            joueurStats.vie = joueurStats.vieMax;
+        }
+
+        UpdateHealthBar();
+    }
+
     private void UpdateHealthBar()
     {
         if(bar != null)

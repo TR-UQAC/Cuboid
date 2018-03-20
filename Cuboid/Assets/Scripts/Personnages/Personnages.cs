@@ -51,4 +51,5 @@ abstract public class Personnages : MonoBehaviour {
     }
 
     abstract public void DommagePerso(int dommage);
+    abstract public void SoinPerso(int valeur);
 }
