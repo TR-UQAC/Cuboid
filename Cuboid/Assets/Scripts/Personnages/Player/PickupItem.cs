@@ -25,7 +25,8 @@ public class PickupItem : MonoBehaviour {
                     break;
             }
 
-            FindObjectOfType<AudioManager>().Play("PickupSound");
+            if(FindObjectOfType<AudioManager>())
+                FindObjectOfType<AudioManager>().Play("PickupSound");
             Destroy(gameObject);
         }
     }
