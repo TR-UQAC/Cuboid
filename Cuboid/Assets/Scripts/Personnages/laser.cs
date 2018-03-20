@@ -8,8 +8,14 @@ public class laser : Bullet {
     private LineRenderer lr;
     private ParticleSystem ps;
     private Transform target;
-    private CapsuleCollider2D cc;
+    //private CapsuleCollider2D cc;
     private bool m_lasActive = false;
+
+    // autre
+    RaycastHit2D hit;
+    float range = 100.0f;
+    LineRenderer line;
+    public Material lineMaterial;
 
     private void Update()
     {
@@ -17,17 +23,28 @@ public class laser : Bullet {
         {
             SetUpLaser();
         }
+
+        Debug.Log("dans l'update : " + transform.position.ToString() + target.position.ToString());
+        //Ray2D ray = new Ray2D(transform.position, target.position);
+        hit = Physics2D.Raycast(transform.position, target.position, range, dommageHit);
+        if (hit)
+        {
+            Debug.Log("A toucher le : " + hit.point.ToString());
+            line.enabled = true;
+            line.SetPosition(1, target.localPosition);
+        }
     }
 
 
     //  méthode qui sera appeler pour paramétré le laser
     private void SetUpLaser()
     {
+        Debug.Log("dans le setup");
         foreach (Transform child in transform)
         {
             if (child.name == "TrailLaser")
             {
-                lr = child.GetComponent<LineRenderer>() as LineRenderer;
+                line = child.GetComponent<LineRenderer>() as LineRenderer;
                 continue;
             }
 
@@ -44,10 +61,15 @@ public class laser : Bullet {
             }
         }
 
-        cc = GetComponent<CapsuleCollider2D>();
+        //cc = GetComponent<CapsuleCollider2D>();
+
+        line.positionCount = 2;
+        line.GetComponent<Renderer>().material = lineMaterial;
+        line.startWidth = 0.1f;
+        line.endWidth = 0.25f;
 
         m_lasActive = true;
-        AvanceLaser();
+        //AvanceLaser();
     }
 
     private void AvanceLaser()
@@ -58,11 +80,11 @@ public class laser : Bullet {
 
         //if(cc)
         //{
-            cc.size.Set(miDist, 0.0f);
+            //cc.size.Set(miDist, 0.0f);
         //}
 
         //movelas.Append(lr)
-        lr.SetPosition(lr.positionCount - 1, new Vector3(miDist / 3.33f, 0.0f));// target.localPosition);
+        lr.SetPosition(lr.positionCount - 1, new Vector3(miDist, 0.0f));// target.localPosition);
         //lr = target.position;
     }
 }

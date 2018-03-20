@@ -435,6 +435,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2048
   bulletPref: {fileID: 1670978521406608, guid: 75468c4e938724a4eab3fd69fbd9ddad, type: 2}
+  missilePref: {fileID: 1852720660180082, guid: 651f99f62a71e9d4f8452e4d0a4c412e,
+    type: 2}
   statAttaque:
     ePower: 4
     eRadius: 2
