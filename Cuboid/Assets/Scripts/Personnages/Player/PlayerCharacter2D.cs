@@ -226,6 +226,12 @@ public class PlayerCharacter2D : Personnages {
     public void AddWeapon(string weaponName)
     {
         weaponList.Add(weaponName);
+
+        if (weaponName == "Missile")
+        {
+            Weapon currentWeapon = (Weapon)transform.Find("Weapon").gameObject.GetComponent(typeof(Weapon));
+            currentWeapon.UpdateGUI(false);
+        }
     }
 
     public void SetMorph(bool morph)
@@ -265,6 +271,8 @@ public class PlayerCharacter2D : Personnages {
 
     public void WeaponSwitch()
     {
+        string previousWeapon = weaponList[selectedWeaponIndex];
+
         selectedWeaponIndex++;
 
         if (selectedWeaponIndex == weaponList.Count)
@@ -272,13 +280,37 @@ public class PlayerCharacter2D : Personnages {
             selectedWeaponIndex = 0;
         }
 
+        Weapon currentWeapon = (Weapon)transform.Find("Weapon").gameObject.GetComponent(typeof(Weapon));
+
         switch (weaponList[selectedWeaponIndex])
         {
+            case "BasicBeam":
+                if (previousWeapon == "GrappleBeam")
+                {
+                    gameObject.GetComponent<GrappleBeam>().UpdateGUI(false);
+                }
+                else if(previousWeapon == "Missile")
+                {
+                    currentWeapon.UseMissile(false);
+                    currentWeapon.UpdateGUI(false);
+                }
+            break;
             case "GrappleBeam":
+                if (previousWeapon == "Missile")
+                {
+                    currentWeapon.UseMissile(false);
+                    currentWeapon.UpdateGUI(false);
+                }
                 gameObject.GetComponent<GrappleBeam>().UpdateGUI(true);
+            break;
+            case "Missile":
+                currentWeapon.UseMissile(true);
+                currentWeapon.UpdateGUI(true);
             break;
             default:
                 gameObject.GetComponent<GrappleBeam>().UpdateGUI(false);
+                currentWeapon.UseMissile(false);
+                currentWeapon.UpdateGUI(false);
             break;
         }
 
