@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Weapon : MonoBehaviour
 {
@@ -11,7 +12,10 @@ public class Weapon : MonoBehaviour
     public LayerMask dommageHit;
 
     public GameObject bulletPref;
+    public GameObject missilePref;
+    private GameObject activeBullet;
     private Transform firePoint;
+    private GameObject missileUI;
 
     //Les parametres pour les explosion
     public DegatAttaque statAttaque;
@@ -23,10 +27,18 @@ public class Weapon : MonoBehaviour
     */
     void Awake()
     {
+        activeBullet = bulletPref;
+
         firePoint = transform.Find("FirePoint");
         if (firePoint == null)
         {
             Debug.LogError("FirePoint not found!");
+        }
+
+        if (GameObject.FindGameObjectWithTag("MissileUI"))
+        {
+            missileUI = GameObject.FindGameObjectWithTag("MissileUI");
+            missileUI.SetActive(false);
         }
     }
 
@@ -35,10 +47,39 @@ public class Weapon : MonoBehaviour
     {
     }
 
+    public void UpdateGUI(bool on)
+    {
+        if (!missileUI.activeSelf)
+        {
+            missileUI.SetActive(true);
+        }
+
+        if (on)
+        {
+            missileUI.GetComponent<Image>().color = new Vector4(1, 1, 0, 1);
+        }
+        else
+        {
+            missileUI.GetComponent<Image>().color = new Vector4(1, 1, 0, 0.098f);
+        }
+    }
+
+    public void UseMissile(bool on)
+    {
+        if (on)
+        {
+            activeBullet = missilePref;
+        }
+        else
+        {
+            activeBullet = bulletPref;
+        }
+    }
+
     public void Shoot(bool facingRight)
     {
         //TODO: Effet particule de tir
-        Bullet bul = Instantiate(bulletPref, firePoint.position, firePoint.rotation).GetComponent<Bullet>();
+        Bullet bul = Instantiate(activeBullet, firePoint.position, firePoint.rotation).GetComponent<Bullet>();
         bul.direction.x = (facingRight) ? 1 : -1;
 
         bul.noHit = noHit;

@@ -108,6 +108,11 @@ public class Ennemis : Personnages {
         }
     }
 
+    public override void SoinPerso(int valeur)
+    {
+        throw new NotImplementedException();
+    }
+
     public void Attaque() {
         switch (comp.attaque) {
             case typeAttaque.Tirer:
