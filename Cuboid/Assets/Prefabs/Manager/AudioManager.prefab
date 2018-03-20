@@ -54,28 +54,28 @@ MonoBehaviour:
   sounds:
   - name: Die
     clip: {fileID: 8300000, guid: fcd539c4cdfd91640a5bccc9234767d6, type: 3}
-    output: {fileID: 0}
+    output: {fileID: 24300002, guid: 68739206651769c479cf85faf1a0876d, type: 2}
     volume: 0.5
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Shoot
     clip: {fileID: 8300000, guid: 8c5f354d8f78b0b43a7f4c8020c1f6f1, type: 3}
-    output: {fileID: 0}
-    volume: 0.25
+    output: {fileID: 24300002, guid: 68739206651769c479cf85faf1a0876d, type: 2}
+    volume: 0.2
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: ItemPickup
     clip: {fileID: 8300000, guid: 1843ffcd84e5d3243966505cfc0fd8de, type: 3}
-    output: {fileID: 0}
+    output: {fileID: 24300002, guid: 68739206651769c479cf85faf1a0876d, type: 2}
     volume: 0.25
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: temp_UseItem
     clip: {fileID: 8300000, guid: 55a95a5ccda45f14c814ddc87477ec9b, type: 3}
-    output: {fileID: 0}
+    output: {fileID: 24300002, guid: 68739206651769c479cf85faf1a0876d, type: 2}
     volume: 0.25
     pitch: 1
     loop: 0

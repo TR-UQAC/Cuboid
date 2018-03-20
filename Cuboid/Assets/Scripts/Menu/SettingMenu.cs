@@ -11,13 +11,15 @@ public class SettingMenu : MonoBehaviour {
 
     public TMP_Dropdown resolutionDropDown;
 
+    public Slider volSlider;
+
     Resolution[] resolutions;
 
     void Start() {
         if (audioMixer != null) {
             float vol;
             if(audioMixer.GetFloat("volume", out vol))
-                SetVolume(vol);
+                volSlider.value = vol;
         }
             
 
@@ -44,14 +46,18 @@ public class SettingMenu : MonoBehaviour {
         resolutionDropDown.AddOptions(options);
         resolutionDropDown.value = currentResolutionIndex;
         resolutionDropDown.RefreshShownValue();
+
+       
     }
 
     public void SetVolume(float volume) {
         audioMixer.SetFloat("volume", volume);
+
+        if (FindObjectOfType<AudioManager>() != null)
+            FindObjectOfType<AudioManager>().Play("Shoot");
     }
 
-    public void SerQuality(int qualityIndex) {
-
+    public void SetQuality(int qualityIndex) {
         QualitySettings.SetQualityLevel(qualityIndex);
     }
 
