@@ -15,6 +15,7 @@ public class GameMaster : MonoBehaviour {
     public Transform playerPrefab;
     public GameObject itemPickupPrefab;
 
+    private GameObject tmpPlayer;
 
     void Awake() {
         Cursor.visible = false;
@@ -31,12 +32,17 @@ public class GameMaster : MonoBehaviour {
         DontDestroyOnLoad(gameObject);
     }
 
-    public IEnumerator RespawnPlayer() {
+    public IEnumerator RespawnPlayer(PlayerCharacter2D perso) {
         //TODO: Ajout d'un son pour l'attente
         yield return new WaitForSeconds(spawnDelay);
-       
-        if(playerPrefab != null)
-            Instantiate(playerPrefab, spawnPoint.position, Quaternion.identity);
+
+        perso.gameObject.transform.position = spawnPoint.position;
+        perso.gameObject.transform.rotation = spawnPoint.rotation;
+        perso.SoinPerso(999999);
+        perso.gameObject.SetActive(true);
+
+        if (playerPrefab != null)
+            //Instantiate(playerPrefab, spawnPoint.position, Quaternion.identity);
         if (spawnPrefab != null) {
             Transform clone = Instantiate(spawnPrefab, spawnPoint.position, spawnPoint.rotation) as Transform;
             Destroy(clone.gameObject, 3f);
@@ -54,9 +60,18 @@ public class GameMaster : MonoBehaviour {
         }  
     }
 
-    public static void KillJoueur(PlayerCharacter2D perso) {
+    private void DestroyPlayer(PlayerCharacter2D perso)
+    {
         Destroy(perso.gameObject);
-        instance.StartCoroutine(instance.RespawnPlayer());
+    }
+
+    public static void KillJoueur(PlayerCharacter2D perso)
+    {
+        //instance.DestroyPlayer(perso);
+        //Destroy(perso.gameObject);
+        perso.gameObject.SetActive(false);
+        //instance.RespawnPlayer(perso);
+        instance.StartCoroutine(instance.RespawnPlayer(perso));
     }
 
     public static void SetSpawnPlayer(Transform spawn) {
