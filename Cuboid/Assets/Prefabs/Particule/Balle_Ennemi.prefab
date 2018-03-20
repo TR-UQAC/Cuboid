@@ -179,7 +179,7 @@ TrailRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
-  m_DynamicOccludee: 0
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
@@ -257,11 +257,11 @@ TrailRenderer:
       m_NumAlphaKeys: 2
     numCornerVertices: 0
     numCapVertices: 0
-    alignment: 1
+    alignment: 0
     textureMode: 0
     generateLightingData: 0
   m_MinVertexDistance: 0.3
-  m_Autodestruct: 1
+  m_Autodestruct: 0
 --- !u!114 &114034751592981238
 MonoBehaviour:
   m_ObjectHideFlags: 1

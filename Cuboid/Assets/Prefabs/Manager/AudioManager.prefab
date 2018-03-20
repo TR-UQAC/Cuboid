@@ -80,10 +80,3 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: StompBoss
-    clip: {fileID: 8300000, guid: 12e07761c898e3e439fcdc2478bd0dbe, type: 3}
-    output: {fileID: 0}
-    volume: 0.25
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}

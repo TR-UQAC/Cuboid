@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
-using UnityEngine.EventSystems;
 
 public class Platformer2DControls : MonoBehaviour
 {
@@ -30,7 +29,6 @@ public class Platformer2DControls : MonoBehaviour
         m_Character.Move(h, false, m_Jump);
         m_Jump = false;
 
-        
         if (CrossPlatformInputManager.GetButtonDown("Fire1") || CrossPlatformInputManager.GetAxis("Fire1") != 0)
         {
             m_Character.UseWeapon();
