@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using EZCameraShake;
 
 [DisallowMultipleComponent]
 [RequireComponent(typeof(Rigidbody2D))]
@@ -121,7 +122,12 @@ public class boss : MonoBehaviour
             Sequence sdown = DOTween.Sequence();
 
             sdown.Append(m_shield.DOScale(0.1f, 2.0f).SetEase(Ease.InBounce));
-            m_shield.gameObject.SetActive(false);
+            sdown.AppendCallback(() =>
+            {
+                m_shield.gameObject.SetActive(false);
+                //  !*! run son shield down
+            });
+            
         }
 
         if(m_lstEnnemis.Count == 0)
@@ -286,7 +292,22 @@ public class boss : MonoBehaviour
         bouge.Append(tr.DOJump(pos, 8.0f, 1, 0.8f).SetEase(Ease.InOutQuad));
         bouge.Insert(0.1f, tr.DORotate(angle, 0.75f).SetEase(Ease.InOutQuart));
 
+        if (m_Phase2 == false)
+        {
+            bouge.AppendCallback(() =>
+            {
+                CameraShaker.Instance.ShakeOnce(3f, 2f, .1f, 1.0f);
+                if (FindObjectOfType<AudioManager>() != null)
+                {
+                    FindObjectOfType<AudioManager>().Play("StompBoss");
+                }
+                //  !*! run son STOMP
+            });
+        }
+
         bouge.Play();
+
+        
     }
 
     //  reset les pv de chacune de ces partie à la mort du joueur
@@ -298,8 +319,10 @@ public class boss : MonoBehaviour
             pasFin.ennemiStats.vie = pasFin.ennemiStats.vieMax;
         }
 
-        tr.position = m_StartNode.transform.position;
-        m_CurrentNode = m_StartNode;
+        //tr.position = m_StartNode.transform.position;
+        m_CurrentNode = m_StartNode.m_VoisinGauche;
+
+        jumpRot(false);
     }
 
     #region Activation
