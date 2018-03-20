@@ -31,6 +31,8 @@ public class WeaponEnnemi : MonoBehaviour {
         if (firePoint == null) {
             Debug.LogError("FirePoint not found!");
         }
+
+        attaqueCooldown = 0.1f;
     }
 
     void Update () {

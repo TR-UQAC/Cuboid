@@ -212,7 +212,8 @@ public class Ennemis : Personnages {
         if ((en.transform.position - myTransform.position).sqrMagnitude < distActivation * distActivation)
             enabled = true;
         else {
-            rb.velocity = new Vector2(0,0);
+            if(rb.bodyType == RigidbodyType2D.Dynamic)
+                rb.velocity = new Vector2(0,0);
             enabled = false;
         }
 
