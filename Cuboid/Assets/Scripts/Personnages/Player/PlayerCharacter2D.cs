@@ -231,6 +231,23 @@ public class PlayerCharacter2D : Personnages {
     public void SetMorph(bool morph)
     {
         isPlayerMorphed = morph;
+
+        Weapon currentWeapon = (Weapon)transform.Find("Weapon").gameObject.GetComponent(typeof(Weapon));
+        if (currentWeapon == null)
+        {
+            Debug.LogError("Failed to find active weapon!");
+        }
+        else
+        {
+            if (morph)
+            {
+                currentWeapon.fireCooldown /= 2;
+            }
+            else
+            {
+                currentWeapon.fireCooldown *= 2;
+            }        
+        }
     }
 
     public bool IsUnderCeiling()
