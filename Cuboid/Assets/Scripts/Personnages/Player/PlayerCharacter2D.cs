@@ -423,6 +423,7 @@ public class PlayerCharacter2D : Personnages {
     #region Dommage
 
     public override void DommagePerso(int dommage){
+        //Debug.Log("Dommage");
         if (!joueurStats.immortel && joueurStats.vie > 0) {
 
             joueurStats.immortel = true;

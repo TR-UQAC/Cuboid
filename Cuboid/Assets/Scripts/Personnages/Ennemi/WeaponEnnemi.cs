@@ -97,14 +97,21 @@ public class WeaponEnnemi : MonoBehaviour {
 
     public void Contact(int dmg, PlayerCharacter2D pl, float f) {
         //Rigidbody2DExt.AddExplosionForce(pl.GetComponent<Rigidbody2D>(), f, firePoint.position, r, upM, ForceMode2D.Force);
-        var dir = (pl.transform.position - my_transform.position);
-        Debug.Log(dir);
-        dir.x *= 5;
+        var dir = my_transform.position - pl.transform.position;
+        //Debug.Log(dir);
+        Vector3 baseForce = -dir.normalized*f;
 
-        Vector3 baseForce = dir.normalized * f;
-        
-        Debug.Log(baseForce);
-        pl.GetComponent<Rigidbody2D>().AddForce(baseForce, ForceMode2D.Impulse);
+        baseForce.x *= 2f;
+        //baseForce.x += Mathf.Sign(baseForce.x)*10f;
+
+        if (dir.y > -0.9f && dir.y < 0.9f) {
+            Vector2 upp = Vector2.up * 10f;
+            pl.GetComponent<Rigidbody2D>().AddForce(upp, ForceMode2D.Impulse);
+            baseForce.y = 0;
+        }
+
+        //Debug.Log(baseForce);
+        pl.GetComponent<Rigidbody2D>().AddForce(baseForce);
         pl.DommagePerso(dmg);
     }
 

@@ -187,7 +187,7 @@ public class Ennemis : Personnages {
 
         if (go.tag == "Player") {
             if (comp.contact)
-                weapon.Contact(comp.dmgContact, en, 10f);
+                weapon.Contact(comp.dmgContact, en, 500f);
 
             
             if (comp.attaque == typeAttaque.Kamikaze) {

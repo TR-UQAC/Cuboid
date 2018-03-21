@@ -15,9 +15,12 @@ public class SettingMenu : MonoBehaviour {
 
     Resolution[] resolutions;
 
-    private bool first = true;
+    private float soundCooldown;
+    public float testSoundRate = 0.2f;
 
     void Start() {
+        soundCooldown = 0.1f;
+
         if (audioMixer != null) {
             float vol;
             if(audioMixer.GetFloat("volume", out vol))
@@ -52,13 +55,19 @@ public class SettingMenu : MonoBehaviour {
        
     }
 
+    private void Update() {
+        if (soundCooldown > 0) {
+            soundCooldown -= Time.unscaledDeltaTime;
+        }
+    }
     public void SetVolume(float volume) {
         audioMixer.SetFloat("volume", volume);
 
-        if (FindObjectOfType<AudioManager>() != null && !first)
+        if (FindObjectOfType<AudioManager>() != null && CanPlaySound) {
             FindObjectOfType<AudioManager>().Play("Shoot");
+            soundCooldown = testSoundRate;
+        }
 
-        first = false;
     }
 
     public void SetQuality(int qualityIndex) {
@@ -73,5 +82,11 @@ public class SettingMenu : MonoBehaviour {
     public void SetResolution(int resolutionIndex) {
         Resolution resolution = resolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+    }
+
+    private bool CanPlaySound {
+        get {
+            return soundCooldown <= 0f;
+        }
     }
 }
