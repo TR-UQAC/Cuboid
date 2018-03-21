@@ -14,8 +14,24 @@ public class PauseMenu : MonoBehaviour {
     private EventSystem ES;
     public GameObject storeSelected;
 
+    private void Start() {
+        ES = FindObjectOfType<EventSystem>();
+
+        storeSelected = ES.firstSelectedGameObject;
+    }
     // Update is called once per frame
     void Update () {
+
+        /*
+        if (ES.currentSelectedGameObject != storeSelected) {
+            if (ES.currentSelectedGameObject == null)
+                ES.SetSelectedGameObject(storeSelected);
+
+            else
+                storeSelected = ES.currentSelectedGameObject;
+        }
+        */
+
         if (CrossPlatformInputManager.GetButtonDown("Cancel")) {
             if (GameIsPaused)
                 Resume();
@@ -39,17 +55,10 @@ public class PauseMenu : MonoBehaviour {
                     if (GameObject.Find("Blocker"))
                         Destroy(GameObject.Find("Blocker"));
 
-                } else {
-                    pauseMenuUI.SetActive(true);
-                    settingMenuUI.SetActive(false);
-
-                    ES = FindObjectOfType<EventSystem>();
-                    ES.SetSelectedGameObject(storeSelected);
-                }
+                } else 
+                    ChangeMenu(settingMenuUI);
             }
-
         }
-
     }
 
     public void Resume() {
@@ -64,13 +73,11 @@ public class PauseMenu : MonoBehaviour {
         pauseMenuUI.SetActive(false);
         settingMenuUI.SetActive(false);
 
-
         Time.timeScale = 1f;
     }
 
     void Pause() {
         Cursor.visible = true;
-        ES = FindObjectOfType<EventSystem>();
         GameIsPaused = true;
         ES.SetSelectedGameObject(storeSelected);
 
@@ -91,5 +98,13 @@ public class PauseMenu : MonoBehaviour {
     public void QuitGame() {
         Debug.Log("Quit");
         Application.Quit();
+    }
+
+    private void ChangeMenu(GameObject menu) {
+        pauseMenuUI.SetActive(true);
+        menu.SetActive(false);
+
+        ES = FindObjectOfType<EventSystem>();
+        ES.SetSelectedGameObject(storeSelected);
     }
 }

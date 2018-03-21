@@ -49,8 +49,6 @@ public class ScrollRectAutoScroll : MonoBehaviour, IPointerEnterHandler, IPointe
                 ScrollToSelected(true);
             }
         }
-
-        Debug.Log(CrossPlatformInputManager.GetAxis("Vertical"));
     }
     void ScrollToSelected(bool quickScroll) {
         int selectedIndex = -1;
@@ -68,8 +66,6 @@ public class ScrollRectAutoScroll : MonoBehaviour, IPointerEnterHandler, IPointe
                 m_NextScrollPosition = new Vector2(0, 1 - (selectedIndex / ((float)m_Selectables.Count - 1)));
             }
         }
-
-        Debug.Log(m_ScrollRect.normalizedPosition.y);
     }
     public void OnPointerEnter(PointerEventData eventData) {
         mouseOver = true;

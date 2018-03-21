@@ -15,6 +15,8 @@ public class SettingMenu : MonoBehaviour {
 
     Resolution[] resolutions;
 
+    private bool first = true;
+
     void Start() {
         if (audioMixer != null) {
             float vol;
@@ -53,8 +55,10 @@ public class SettingMenu : MonoBehaviour {
     public void SetVolume(float volume) {
         audioMixer.SetFloat("volume", volume);
 
-        if (FindObjectOfType<AudioManager>() != null)
+        if (FindObjectOfType<AudioManager>() != null && !first)
             FindObjectOfType<AudioManager>().Play("Shoot");
+
+        first = false;
     }
 
     public void SetQuality(int qualityIndex) {
