@@ -19,7 +19,7 @@ public class MainMenu : MonoBehaviour {
     }
 
     private void Update() {
-        /*
+        
         if (ES.currentSelectedGameObject != storeSelected) {
             if (ES.currentSelectedGameObject == null)
                 ES.SetSelectedGameObject(storeSelected);
@@ -27,7 +27,7 @@ public class MainMenu : MonoBehaviour {
             else
                 storeSelected = ES.currentSelectedGameObject;
         }
-        */
+        
         if (CrossPlatformInputManager.GetButtonDown("Fire2")) {
             if (settingMenuUI.activeSelf) {
                 if (GameObject.Find("Dropdown List")) {
@@ -58,6 +58,6 @@ public class MainMenu : MonoBehaviour {
         menu.SetActive(false);
 
         ES = FindObjectOfType<EventSystem>();
-        ES.SetSelectedGameObject(storeSelected);
+        ES.SetSelectedGameObject(ES.firstSelectedGameObject);
     }
 }

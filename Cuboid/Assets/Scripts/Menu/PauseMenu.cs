@@ -22,7 +22,6 @@ public class PauseMenu : MonoBehaviour {
     // Update is called once per frame
     void Update () {
 
-        /*
         if (ES.currentSelectedGameObject != storeSelected) {
             if (ES.currentSelectedGameObject == null)
                 ES.SetSelectedGameObject(storeSelected);
@@ -30,7 +29,7 @@ public class PauseMenu : MonoBehaviour {
             else
                 storeSelected = ES.currentSelectedGameObject;
         }
-        */
+        
 
         if (CrossPlatformInputManager.GetButtonDown("Cancel")) {
             if (GameIsPaused)
@@ -79,7 +78,7 @@ public class PauseMenu : MonoBehaviour {
     void Pause() {
         Cursor.visible = true;
         GameIsPaused = true;
-        ES.SetSelectedGameObject(storeSelected);
+        ES.SetSelectedGameObject(ES.firstSelectedGameObject);
 
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
@@ -103,8 +102,9 @@ public class PauseMenu : MonoBehaviour {
     private void ChangeMenu(GameObject menu) {
         pauseMenuUI.SetActive(true);
         menu.SetActive(false);
-
+        
         ES = FindObjectOfType<EventSystem>();
-        ES.SetSelectedGameObject(storeSelected);
+        ES.SetSelectedGameObject(ES.firstSelectedGameObject);
+        
     }
 }
