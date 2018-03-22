@@ -5,86 +5,193 @@ using DG.Tweening;
 
 public class laser : Bullet {
 
-    private LineRenderer lr;
+    private SpriteRenderer m_sCorps;
+    private SpriteRenderer m_sImpact;
     private ParticleSystem ps;
-    private Transform target;
-    //private CapsuleCollider2D cc;
-    private bool m_lasActive = false;
+    private ParticleSystem loadPS;
+    private Transform m_impact;
+    private Transform m_effet;
+    private Transform m_corps;
+    private bool m_charge = false;
 
     // autre
     RaycastHit2D hit;
     float range = 100.0f;
-    LineRenderer line;
-    public Material lineMaterial;
+
+    public LayerMask m_RayCastHit;
 
     private void Update()
     {
-        if (m_lasActive == false)
-        {
-            SetUpLaser();
-        }
 
-        Debug.Log("dans l'update : " + transform.position.ToString() + target.position.ToString());
-        //Ray2D ray = new Ray2D(transform.position, target.position);
-        hit = Physics2D.Raycast(transform.position, target.position, range, dommageHit);
+        //hit = Physics2D.Raycast(transform.position, direction, range, m_RayCastHit);
+        hit = Physics2D.CircleCast(transform.position, 0.5f, direction, range, m_RayCastHit);
         if (hit)
         {
-            Debug.Log("A toucher le : " + hit.point.ToString());
-            line.enabled = true;
-            line.SetPosition(1, target.localPosition);
+            float dist = hit.distance + 0.5f;
+
+            var m = ps.main;
+            m.startLifetime = dist / 4.0f;
+
+            m_effet.localPosition = new Vector3(dist - 1.6f, 0.0f);
+
+            m_sCorps.size = new Vector2(dist, 2.5f);
+            m_impact.localPosition = new Vector3(dist - 1.6f, 0.0f);
+            if (hit.transform.tag == "Player" && m_charge == true)
+            {
+                OnTriggerEnter2D(hit.collider);
+            }
         }
     }
 
 
     //  méthode qui sera appeler pour paramétré le laser
-    private void SetUpLaser()
+    protected override void SetUpLaser()
     {
-        Debug.Log("dans le setup");
         foreach (Transform child in transform)
         {
-            if (child.name == "TrailLaser")
-            {
-                line = child.GetComponent<LineRenderer>() as LineRenderer;
-                continue;
-            }
-
             if (child.name == "sparkLaser")
             {
+                m_effet = child;
                 ps = child.GetComponent<ParticleSystem>() as ParticleSystem;
                 continue;
             }
 
-            if(child.name == "EndLaser")
+            if(child.name == "Corps")
             {
-                target = child;
+                m_corps = child;
+                m_sCorps = child.GetComponent<SpriteRenderer>() as SpriteRenderer;
+                continue;
+            }
+
+            if(child.name == "Impact")
+            {
+                m_impact = child;
+                m_sImpact = child.GetComponent<SpriteRenderer>() as SpriteRenderer;
+                continue;
+            }
+
+            if(child.name == "LoadLaser")
+            {
+                loadPS = child.GetComponent<ParticleSystem>() as ParticleSystem;
                 continue;
             }
         }
 
-        //cc = GetComponent<CapsuleCollider2D>();
+        hit = Physics2D.CircleCast(transform.position, 0.5f, direction, range, m_RayCastHit);
+        if (hit)
+        {
+            float dist = hit.distance + 0.5f;
 
-        line.positionCount = 2;
-        line.GetComponent<Renderer>().material = lineMaterial;
-        line.startWidth = 0.1f;
-        line.endWidth = 0.25f;
+            var m = ps.main;
+            m.startLifetime = dist / 4.0f;
 
-        m_lasActive = true;
-        //AvanceLaser();
+            m_effet.localPosition = new Vector3(dist - 1.6f, 0.0f);
+
+            m_sCorps.size = new Vector2(dist, 2.5f);
+            m_impact.localPosition = new Vector3(dist - 1.6f, 0.0f);
+        }
+
+        Sequence charge = DOTween.Sequence();
+
+        charge.Append(m_sCorps.DOFade(1.0f, 2.0f).SetEase(Ease.InExpo));
+        charge.Insert(0.0f, m_sImpact.DOFade(1.0f, 2.0f).SetEase(Ease.InExpo));
+        charge.InsertCallback(0.0f, () =>
+        {
+            FindObjectOfType<AudioManager>().Play("LaserBossStart");
+        });
+        charge.InsertCallback(1.0f, () =>
+        {
+            m_charge = true;
+            m_effet.gameObject.SetActive(true);
+        });
+        charge.InsertCallback(3.0f, () =>
+        {
+            FindObjectOfType<AudioManager>().Play("LaserBossMilieu");
+        });
+        charge.InsertCallback(8.5f, () =>
+        {
+            FindObjectOfType<AudioManager>().Play("LaserBossFin");
+        });
+
+
+        charge.Play();
+
+        Invoke("Disparait", maxTimeToLive - 2.0f);
     }
 
-    private void AvanceLaser()
+    protected override void OnTriggerEnter2D(Collider2D other)
     {
-        //Sequence movelas = DOTween.Sequence();
+        GameObject go = other.gameObject;
+        if (noHit != (noHit | (1 << go.layer)))
+        {
+            /*if(go.layer == 15)
+            {
+                Debug.Log("Ricoche dans trigger");
+                return;
+            }*/
 
-        float miDist = target.localPosition.x;
+            //if (statAttaque.ePower == 0 || statAttaque.eRadius == 0) {
+            if (dommageHit == (dommageHit | (1 << go.gameObject.layer)))
+            {
+                Personnages en = go.GetComponent<Personnages>() as Personnages;
+                en.DommagePerso(dmg);
+            }
+            //}else if
+            if (myTransform != null)
+            {
+                Collider2D[] colliders = Physics2D.OverlapCircleAll(myTransform.position, statAttaque.eRadius, dommageHit);
+                foreach (Collider2D nerbyObject in colliders)
+                {
+                    if (dommageHit == (dommageHit | (1 << nerbyObject.gameObject.layer)))
+                    {
+                        if (Rigidbody2DExt.AddExplosionForce(nerbyObject.GetComponent<Rigidbody2D>(), statAttaque.ePower, myTransform.position, statAttaque.eRadius, statAttaque.upwardsModifier))
+                        {
+                            // if (nerbyObject == other)
+                            // continue;
 
-        //if(cc)
-        //{
-            //cc.size.Set(miDist, 0.0f);
-        //}
+                            Personnages en = nerbyObject.GetComponent<Personnages>() as Personnages;
+                            en.DommagePerso(dmg);
+                        }
+                    }
+                }
 
-        //movelas.Append(lr)
-        lr.SetPosition(lr.positionCount - 1, new Vector3(miDist, 0.0f));// target.localPosition);
-        //lr = target.position;
+                if (effetExplosion != null && statAttaque.eRadius != 0)
+                {
+                    Transform clone = Instantiate(effetExplosion, myTransform.position, myTransform.rotation) as Transform;
+                    ShockWaveForce wave = clone.GetComponent<ShockWaveForce>();
+                    wave.radius = statAttaque.eRadius * 1.3f;
+                    Destroy(clone.gameObject, 1f);
+                }
+            }
+
+            //TODO: Effet particule de contact
+            //Destroy(gameObject);
+        }
     }
+
+
+    private void Disparait()
+    {
+        Sequence die = DOTween.Sequence();
+
+        die.Append(transform.DOScaleY(0.2f, 2.0f));
+        die.Insert(0.0f, m_sCorps.DOFade(0.0f, 2.0f).SetEase(Ease.InExpo));
+        die.Insert(0.0f, m_sImpact.DOFade(0.0f, 2.0f).SetEase(Ease.InExpo));
+        die.InsertCallback(1.0f, (() =>
+        {
+            ps.Stop();
+            loadPS.Stop();
+
+            //m_effet.gameObject.SetActive(false);
+            //  !*! run son laser down
+        }));
+
+        die.Play();
+    }
+
+    /*
+     * no hit normal = tout cocher sauf player et obstable
+     * Dommage hit = player
+     * 
+     * */
 }

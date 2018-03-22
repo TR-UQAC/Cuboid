@@ -301,7 +301,6 @@ public class boss : MonoBehaviour
                 {
                     FindObjectOfType<AudioManager>().Play("StompBoss");
                 }
-                //  !*! run son STOMP
             });
         }
 

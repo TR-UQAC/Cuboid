@@ -18,7 +18,7 @@ public class Bullet : MonoBehaviour {
     private Rigidbody2D m_Rigidbody2D;
 
     public DegatAttaque statAttaque;
-    private Transform myTransform;
+    protected Transform myTransform;
 
     public Transform effetExplosion;
 #endregion
@@ -35,9 +35,10 @@ public class Bullet : MonoBehaviour {
         m_Rigidbody2D.velocity = speed * direction.normalized;
 
         Destroy(gameObject, maxTimeToLive);
+        SetUpLaser();
     }
 
-    private void OnTriggerEnter2D(Collider2D other) {
+    protected virtual void OnTriggerEnter2D(Collider2D other) {
         GameObject go = other.gameObject;
         if (noHit != (noHit | (1 << go.layer)))
         {
@@ -85,4 +86,8 @@ public class Bullet : MonoBehaviour {
             Destroy(gameObject);
         }
     }
+
+    //  méthode qui sera appeler pour paramétré le laser
+    protected virtual void SetUpLaser()
+    { }
 }

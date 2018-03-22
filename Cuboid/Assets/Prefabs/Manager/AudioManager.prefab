@@ -82,7 +82,28 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: StompBoss
     clip: {fileID: 8300000, guid: 12e07761c898e3e439fcdc2478bd0dbe, type: 3}
-    output: {fileID: 0}
+    output: {fileID: 24300002, guid: 68739206651769c479cf85faf1a0876d, type: 2}
+    volume: 0.25
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: LaserBossStart
+    clip: {fileID: 8300000, guid: 586bffde714ffae45ac5f92422886851, type: 3}
+    output: {fileID: 24300002, guid: 68739206651769c479cf85faf1a0876d, type: 2}
+    volume: 0.25
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: LaserBossMilieu
+    clip: {fileID: 8300000, guid: bb4d489129f87f844af46bb64b6338e5, type: 3}
+    output: {fileID: 24300002, guid: 68739206651769c479cf85faf1a0876d, type: 2}
+    volume: 0.25
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: LaserBossFin
+    clip: {fileID: 8300000, guid: 2adf389b0b572f74698a8f39a13b60cd, type: 3}
+    output: {fileID: 24300002, guid: 68739206651769c479cf85faf1a0876d, type: 2}
     volume: 0.25
     pitch: 1
     loop: 0
