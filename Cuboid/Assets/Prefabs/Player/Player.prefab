@@ -178,7 +178,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1847836177881528}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.6, y: -1, z: 0}
+  m_LocalPosition: {x: -129.08, y: 54.68505, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 4032282408151114}
@@ -458,7 +458,7 @@ LineRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7bc9480846cf01f43b3429a868b98d2e, type: 2}
+  - {fileID: 2100000, guid: 25a94aa03c7673c4b95ea2af6726f677, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -488,14 +488,20 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 2
-        time: 0
+        time: 0.2912922
         value: 1
-        inSlope: 0
-        outSlope: 0
+        inSlope: -26.404238
+        outSlope: -26.404238
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.7056946
+        value: 1
+        inSlope: 10.945609
+        outSlope: 10.945609
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
-      m_RotationOrder: 4
+      m_RotationOrder: 0
     colorGradient:
       serializedVersion: 2
       key0: {r: 0.09558821, g: 0.9625764, b: 1, a: 1}
@@ -530,8 +536,8 @@ LineRenderer:
     alignment: 0
     textureMode: 2
     generateLightingData: 0
-  m_UseWorldSpace: 0
-  m_Loop: 0
+  m_UseWorldSpace: 1
+  m_Loop: 1
 --- !u!212 &212253876082755388
 SpriteRenderer:
   m_ObjectHideFlags: 1
