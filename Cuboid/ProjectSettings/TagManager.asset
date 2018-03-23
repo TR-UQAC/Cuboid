@@ -15,6 +15,7 @@ TagManager:
   - Destructible
   - GrappleUI
   - MissileUI
+  - laserBoss
   layers:
   - Default
   - TransparentFX

@@ -33,6 +33,8 @@ public class boss : MonoBehaviour
     [Tooltip("Temps en seconde entre 2 déplacement à la 2e phase")]
     public float m_MovingRate2;
 
+    private float m_currentWait;
+
     //  référence au joueur à poursuivre
     private GameObject m_Player;
     private float m_ScaleY = 1.0f;
@@ -91,20 +93,17 @@ public class boss : MonoBehaviour
                 StartCoroutine(SearchForPlayer());
             }
         }
-        //m_CurrentWait = m_MovingRate;
 
-        //  lancé l'intro du boss
-
-        //jumpRot();
-
-        InvokeRepeating("directionBoss", m_MovingRate, m_MovingRate);
+        // !*!  lancé l'intro du boss
 
 
+        Invoke("directionBoss", m_MovingRate);
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
+        
         for (int i = 0; i < m_lstEnnemis.Count; i++)
         {
             if (m_lstEnnemis[i] == null)
@@ -112,10 +111,15 @@ public class boss : MonoBehaviour
         }
 
         //  Paramètrage pour la 2e phase
-        if(m_lstEnnemis.Count == 1 && m_Phase2 == false)
+        if (m_lstEnnemis.Count == 1 && m_Phase2 == false)
         {
             m_Phase2 = true;
-            (m_Core.GetComponent<Ennemis>() as Ennemis).ennemiStats.immortel = false;
+
+            Ennemis core = m_Core.GetComponent<Ennemis>() as Ennemis;
+            core.ennemiStats.immortel = false;
+            core.enabled = true;
+            
+
             bc.enabled = false;
             m_MovingRate = m_MovingRate2;
 
@@ -127,7 +131,7 @@ public class boss : MonoBehaviour
                 m_shield.gameObject.SetActive(false);
                 //  !*! run son shield down
             });
-            
+
         }
 
         if(m_lstEnnemis.Count == 0)
@@ -185,6 +189,8 @@ public class boss : MonoBehaviour
             else
                 jumpRot(false);
         }
+
+        Invoke("directionBoss", m_MovingRate);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -303,6 +309,18 @@ public class boss : MonoBehaviour
                 }
             });
         }
+        else
+        {
+            bouge.AppendCallback(() =>
+            {
+
+                WeaponEnnemi canon = m_Core.GetComponent<WeaponEnnemi>();
+
+                canon.Tirer(new Vector2(1.0f, 0.0f), 10, 0.0f);
+                canon.Tirer(new Vector2(0.0f, 1.0f), 10, 0.0f);
+                canon.Tirer(new Vector2(-1.0f, 0.0f), 10, 0.0f);
+            });
+        }
 
         bouge.Play();
 
@@ -322,6 +340,19 @@ public class boss : MonoBehaviour
         m_CurrentNode = m_StartNode.m_VoisinGauche;
 
         jumpRot(false);
+    }
+
+    public void CheatLifeBoss()
+    {
+        //  !*! à enlever
+        for (int i = 0; i < m_lstEnnemis.Count; i++)
+        {
+            if (m_lstEnnemis[i] == null)
+                continue;
+
+            Ennemis pasFin = m_lstEnnemis[i].GetComponent<Ennemis>() as Ennemis;
+            pasFin.ennemiStats.vie = 1;
+        }
     }
 
     #region Activation

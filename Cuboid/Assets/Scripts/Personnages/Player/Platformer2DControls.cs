@@ -62,7 +62,7 @@ public class Platformer2DControls : MonoBehaviour
                 m_Character.GetComponent<GrappleBeam>().HandleGrappleLength(CrossPlatformInputManager.GetAxis("Vertical"));
             }
         }
-        
+
 
         if (CrossPlatformInputManager.GetButtonDown("TriggerAction1")) {
             //m_Character.PrintAllUpgrade();
@@ -74,7 +74,7 @@ public class Platformer2DControls : MonoBehaviour
             m_Character.IsRunning = false;
         }
 
-        if (!m_Jump){
+        if (!m_Jump) {
             // Read the jump input in Update so button presses aren't missed.
             m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
         }
@@ -85,6 +85,12 @@ public class Platformer2DControls : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.K)) {
             GameMaster.KillJoueur(m_Character);
+        }
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            boss bo = GameObject.Find("Boss_Ecrabouilleur").GetComponent<boss>();
+            bo.CheatLifeBoss();
         }
     }
 }
