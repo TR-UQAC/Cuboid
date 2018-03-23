@@ -19,22 +19,23 @@ public class laser : Bullet {
     float range = 100.0f;
 
     public LayerMask m_RayCastHit;
+    public float m_LargeurLaser = 2.0f;
 
     private void Update()
     {
 
         //hit = Physics2D.Raycast(transform.position, direction, range, m_RayCastHit);
-        hit = Physics2D.CircleCast(transform.position, 0.5f, direction, range, m_RayCastHit);
+        hit = Physics2D.CircleCast(transform.position, 0.4f, direction, range, m_RayCastHit);
         if (hit)
         {
             float dist = hit.distance + 0.5f;
 
             var m = ps.main;
-            m.startLifetime = dist / 4.0f;
+            m.startLifetime = dist / 8.5f;
 
-            m_effet.localPosition = new Vector3(dist - 1.6f, 0.0f);
+            //m_effet.localPosition = new Vector3(dist - 1.6f, 0.0f);
 
-            m_sCorps.size = new Vector2(dist, 2.5f);
+            m_sCorps.size = new Vector2(dist, m_LargeurLaser);
             m_impact.localPosition = new Vector3(dist - 1.6f, 0.0f);
             if (hit.transform.tag == "Player" && m_charge == true)
             {
@@ -77,17 +78,19 @@ public class laser : Bullet {
             }
         }
 
-        hit = Physics2D.CircleCast(transform.position, 0.5f, direction, range, m_RayCastHit);
+        hit = Physics2D.CircleCast(transform.position, 0.4f, direction, range, m_RayCastHit);
         if (hit)
         {
             float dist = hit.distance + 0.5f;
 
             var m = ps.main;
-            m.startLifetime = dist / 4.0f;
+            m.startLifetime = dist / 8.5f;
+            
 
-            m_effet.localPosition = new Vector3(dist - 1.6f, 0.0f);
 
-            m_sCorps.size = new Vector2(dist, 2.5f);
+            //m_effet.localPosition = new Vector3(dist - 1.6f, 0.0f);
+
+            m_sCorps.size = new Vector2(dist, m_LargeurLaser);
             m_impact.localPosition = new Vector3(dist - 1.6f, 0.0f);
         }
 
@@ -101,11 +104,11 @@ public class laser : Bullet {
         });
         charge.InsertCallback(1.0f, () =>
         {
-            m_charge = true;
             m_effet.gameObject.SetActive(true);
         });
         charge.InsertCallback(3.0f, () =>
         {
+            m_charge = true;
             FindObjectOfType<AudioManager>().Play("LaserBossMilieu");
         });
         charge.InsertCallback(8.5f, () =>
@@ -170,7 +173,7 @@ public class laser : Bullet {
     }
 
 
-    private void Disparait()
+    public void Disparait()
     {
         Sequence die = DOTween.Sequence();
 

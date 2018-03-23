@@ -27,6 +27,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1393581498211956
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4733654890684830}
+  m_Layer: 12
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: -1577725955494882426, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1637108826662698
 GameObject:
   m_ObjectHideFlags: 0
@@ -52,12 +67,11 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4690502809582122}
-  - component: {fileID: 114607528175919568}
   - component: {fileID: 50086442033303326}
   - component: {fileID: 114566245948616876}
   m_Layer: 12
   m_Name: LaserBoss
-  m_TagString: Untagged
+  m_TagString: laserBoss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -129,15 +143,29 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1753250106531720}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -23.53, y: 0.96, z: 1}
+  m_LocalPosition: {x: -35.4, y: -4.05, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4789257899055124}
   - {fileID: 4271256483498626}
   - {fileID: 4326236004376772}
   - {fileID: 4966271230388302}
+  - {fileID: 4733654890684830}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4733654890684830
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1393581498211956}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4690502809582122}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4789257899055124
 Transform:
@@ -145,13 +173,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1944772606643024}
-  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 3.98, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4690502809582122}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4966271230388302
 Transform:
   m_ObjectHideFlags: 1
@@ -236,37 +264,7 @@ MonoBehaviour:
   m_RayCastHit:
     serializedVersion: 2
     m_Bits: 1280
---- !u!114 &114607528175919568
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1753250106531720}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66b85362c981a6e4fb3a5632ee14ddec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
-  maxTimeToLive: 5
-  facingRight: 0
-  dmg: 0
-  direction: {x: 1, y: 0}
-  noHit:
-    serializedVersion: 2
-    m_Bits: 4096
-  dommageHit:
-    serializedVersion: 2
-    m_Bits: 0
-  statAttaque:
-    ePower: 0
-    eRadius: 0
-    upwardsModifier: 0
-    degGlace: 0
-    degPoison: 0
-    degFoudre: 0
-  effetExplosion: {fileID: 4793239945891142, guid: 2f080beb01f61df4a86c8847a84e0313,
-    type: 2}
+  m_LargeurLaser: 2
 --- !u!198 &198557480950658282
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -275,7 +273,7 @@ ParticleSystem:
   m_GameObject: {fileID: 1944772606643024}
   serializedVersion: 5
   lengthInSec: 2
-  simulationSpeed: 8
+  simulationSpeed: 10
   stopAction: 0
   looping: 1
   prewarm: 0
@@ -327,14 +325,14 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 511342999
+  randomSeed: 2037469797
   InitialModule:
     serializedVersion: 3
     enabled: 1
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2
+      scalar: 1
       minScalar: 2
       maxCurve:
         serializedVersion: 2
@@ -966,53 +964,8 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    m_BurstCount: 1
-    m_Bursts:
-    - serializedVersion: 2
-      time: 0
-      countCurve:
-        serializedVersion: 2
-        minMaxState: 0
-        scalar: 30
-        minScalar: 0
-        maxCurve:
-          serializedVersion: 2
-          m_Curve:
-          - serializedVersion: 2
-            time: 0
-            value: 1
-            inSlope: 0
-            outSlope: 0
-            tangentMode: 0
-          - serializedVersion: 2
-            time: 1
-            value: 1
-            inSlope: 0
-            outSlope: 0
-            tangentMode: 0
-          m_PreInfinity: 2
-          m_PostInfinity: 2
-          m_RotationOrder: 0
-        minCurve:
-          serializedVersion: 2
-          m_Curve:
-          - serializedVersion: 2
-            time: 0
-            value: 1
-            inSlope: 0
-            outSlope: 0
-            tangentMode: 0
-          - serializedVersion: 2
-            time: 1
-            value: 1
-            inSlope: 0
-            outSlope: 0
-            tangentMode: 0
-          m_PreInfinity: 2
-          m_PostInfinity: 2
-          m_RotationOrder: 0
-      cycleCount: 1
-      repeatInterval: 0.01
+    m_BurstCount: 0
+    m_Bursts: []
   SizeModule:
     enabled: 0
     curve:
@@ -1554,7 +1507,7 @@ ParticleSystem:
     speedModifier:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2
+      scalar: 4
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -7225,7 +7178,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
-  m_Size: {x: 5, y: 2.5}
+  m_Size: {x: 5, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

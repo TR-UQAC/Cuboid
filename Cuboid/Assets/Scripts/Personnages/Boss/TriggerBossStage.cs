@@ -86,12 +86,18 @@ public class TriggerBossStage : MonoBehaviour {
         {
             //le boss est mort
             Debug.Log("LE BOSS EST MOURU");
+            List<GameObject> lstLaser = new List<GameObject>(GameObject.FindGameObjectsWithTag("laserBoss"));
+            foreach (GameObject ls in lstLaser)
+            {
+                ls.GetComponent<laser>().Disparait();
+            }
         }
 
         if(collision.tag == "Player" && m_bossFin == false)
         {
             //m_boss.SetActive(false);
             m_boss.GetComponent<boss>().resetPV();
+            Debug.Log("le joueur est mouru");
 
             m_boss.GetComponent<boss>().enabled = false;
             m_bossActive = false;
