@@ -31,7 +31,9 @@ public class PlayerCharacter2D : Personnages {
 
     private Animator m_Anim;            // Reference to the player's animator component.
     private Rigidbody2D m_Rigidbody2D;
+    private SpriteRenderer spriteR;
     private GameObject bar;
+    private Weapon currentWeapon;
 
     private bool m_FacingRight = true;  // For determining which way the player is currently facing.
     private float shootTimer = 0;
@@ -70,6 +72,16 @@ public class PlayerCharacter2D : Personnages {
         if(GameObject.FindGameObjectWithTag("HealthUI"))
             bar = GameObject.FindGameObjectWithTag("HealthUI");
 
+
+        spriteR = gameObject.GetComponent<SpriteRenderer>();
+
+        currentWeapon = (Weapon)transform.Find("Weapon").gameObject.GetComponent(typeof(Weapon));
+
+        currentWeapon.M_FacingRight = spriteR.flipX;
+
+        if(m_backSphere != null)
+            m_backSphere.GetComponent<SpriteRenderer>().flipX = spriteR.flipX;
+
         UpdateHealthBar();
     }
     
@@ -78,20 +90,6 @@ public class PlayerCharacter2D : Personnages {
     }
 
     void Update() {
-        /*
-        // Sert à limiter la vélocité
-        Vector2 n_velo = Vector2.zero;
-        
-        if (Mathf.Abs(m_Rigidbody2D.velocity.x) > m_speed)
-            n_velo.x = LimitVelo(m_Rigidbody2D.velocity.x, m_speed);
-
-        if (Mathf.Abs(m_Rigidbody2D.velocity.y) > fallMaxSpeed)
-            n_velo.y = LimitVelo(m_Rigidbody2D.velocity.y, fallMaxSpeed);
-
-        if(!PauseMenu.GameIsPaused)
-            m_Rigidbody2D.AddForce(-n_velo);
-*/
-        
         Vector3 clampVel = m_Rigidbody2D.velocity;
         clampVel.x = Mathf.Clamp(clampVel.x, -m_speed, m_speed);
         clampVel.y = Mathf.Clamp(clampVel.y, -fallMaxSpeed, fallMaxSpeed);
@@ -101,7 +99,8 @@ public class PlayerCharacter2D : Personnages {
 
         //  section qui gère la rotation de la partie arrière de la sphere, ne pas enlever
         if (m_backSphere != null && (m_Rigidbody2D.velocity.x > 0.1f || m_Rigidbody2D.velocity.x < -0.1f))
-            m_backSphere.transform.Rotate(0.0f, 0.0f, -Mathf.Abs(m_Rigidbody2D.velocity.x / 2));
+            m_backSphere.transform.Rotate(0.0f, 0.0f, -m_Rigidbody2D.velocity.x / 2);
+
     }
 
     private void FixedUpdate()
@@ -148,7 +147,7 @@ public class PlayerCharacter2D : Personnages {
         if (m_enableInput == false)
             return;
 
-        Weapon currentWeapon = (Weapon)transform.Find("Weapon").gameObject.GetComponent(typeof(Weapon));
+        //Weapon currentWeapon = (Weapon)transform.Find("Weapon").gameObject.GetComponent(typeof(Weapon));
         if (currentWeapon == null)
         {
             Debug.LogError("Failed to find active weapon!");
@@ -174,7 +173,7 @@ public class PlayerCharacter2D : Personnages {
                     }
                     else
                     {                        
-                        currentWeapon.Shoot(m_FacingRight);
+                        currentWeapon.Shoot();
                     }
 
                     shootTimer = 0;
@@ -188,7 +187,6 @@ public class PlayerCharacter2D : Personnages {
     {
         m_enableInput = v;
     }
-
     #endregion
 
     #region Upgrade
@@ -370,7 +368,7 @@ public class PlayerCharacter2D : Personnages {
             m_Rigidbody2D.AddForce(n_Force);
             
             // If the input is moving the player right and the player is facing left...
-            if ((move > 0 && !m_FacingRight) || (move < 0 && m_FacingRight))
+            if ((move > 0 && spriteR.flipX) || (move < 0 && !spriteR.flipX))
                 Flip();
 
         }
@@ -410,13 +408,24 @@ public class PlayerCharacter2D : Personnages {
 
     private void Flip()
     {
+        spriteR.flipX = !spriteR.flipX;
+
+        m_backSphere.GetComponent<SpriteRenderer>().flipX = spriteR.flipX;
+        
         // Switch the way the player is labelled as facing.
         m_FacingRight = !m_FacingRight;
 
+        /*
         // Multiply the player's x local scale by -1.
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
+        */
+
+
+        //Weapon currentWeapon = (Weapon)transform.Find("Weapon").gameObject.GetComponent(typeof(Weapon));
+
+        currentWeapon.M_FacingRight = spriteR.flipX;
     }
     #endregion
 

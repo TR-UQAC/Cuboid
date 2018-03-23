@@ -14,10 +14,14 @@ public class PauseMenu : MonoBehaviour {
     private EventSystem ES;
     public GameObject storeSelected;
 
+    public GameObject firstMenuButton;
+    public GameObject firtsButtonSetting;
+
+
     private void Start() {
         ES = FindObjectOfType<EventSystem>();
 
-        storeSelected = ES.firstSelectedGameObject;
+        //storeSelected = ES.firstSelectedGameObject;
     }
     // Update is called once per frame
     void Update () {
@@ -78,14 +82,17 @@ public class PauseMenu : MonoBehaviour {
     void Pause() {
         Cursor.visible = true;
         GameIsPaused = true;
-        ES.SetSelectedGameObject(ES.firstSelectedGameObject);
-
         pauseMenuUI.SetActive(true);
+
         Time.timeScale = 0f;
+        ES.SetSelectedGameObject(firstMenuButton);
     }
 
     public void OptionMenu() {
-        Debug.Log("OptionMenu");
+        pauseMenuUI.SetActive(false);
+        settingMenuUI.SetActive(true);
+
+        ES.SetSelectedGameObject(firtsButtonSetting);
     }
 
     public void MainMenu() {
@@ -99,12 +106,12 @@ public class PauseMenu : MonoBehaviour {
         Application.Quit();
     }
 
-    private void ChangeMenu(GameObject menu) {
+    public void ChangeMenu(GameObject menuToClose) {
         pauseMenuUI.SetActive(true);
-        menu.SetActive(false);
+        menuToClose.SetActive(false);
         
         ES = FindObjectOfType<EventSystem>();
-        ES.SetSelectedGameObject(ES.firstSelectedGameObject);
+        ES.SetSelectedGameObject(firstMenuButton);
         
     }
 }

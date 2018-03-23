@@ -18,7 +18,7 @@ public class GameMaster : MonoBehaviour {
     private GameObject tmpPlayer;
 
     void Awake() {
-        Cursor.visible = false;
+        //Cursor.visible = false;
         
         if (instance == null)
             instance = this;
