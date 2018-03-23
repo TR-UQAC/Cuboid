@@ -20,7 +20,7 @@ public class Weapon : MonoBehaviour
     //Les parametres pour les explosion
     public DegatAttaque statAttaque;
 
-    public bool vise = false;
+    public bool M_viser { get; set; }
 
     private Transform myTransform;
     public bool M_FacingRight { get; set; }
@@ -55,9 +55,9 @@ public class Weapon : MonoBehaviour
 
         //float y = CrossPlatformInputManager.GetAxis("Mouse Y");
 
-        if (vise) {
+        if (M_viser) {
 
-            direction.x = -x;
+            direction.x = x;
             direction.y = y;
             //direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - myTransform.position;
 

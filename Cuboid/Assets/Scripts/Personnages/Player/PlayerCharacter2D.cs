@@ -35,7 +35,7 @@ public class PlayerCharacter2D : Personnages {
     private GameObject bar;
     private Weapon currentWeapon;
 
-    private bool m_FacingRight = true;  // For determining which way the player is currently facing.
+    //private bool m_FacingRight = true;  // For determining which way the player is currently facing.
     private float shootTimer = 0;
 
     public bool IsRunning = false;
@@ -78,8 +78,9 @@ public class PlayerCharacter2D : Personnages {
         currentWeapon = (Weapon)transform.Find("Weapon").gameObject.GetComponent(typeof(Weapon));
 
         currentWeapon.M_FacingRight = spriteR.flipX;
+        currentWeapon.M_viser = false;
 
-        if(m_backSphere != null)
+        if (m_backSphere != null)
             m_backSphere.GetComponent<SpriteRenderer>().flipX = spriteR.flipX;
 
         UpdateHealthBar();
@@ -125,11 +126,10 @@ public class PlayerCharacter2D : Personnages {
         BetterJumpPhysic();
         shootTimer += Time.deltaTime;
 
-        if (IsRunning)
-        {
-            //m_Anim.Play("RunFast");
+        if (currentWeapon.M_viser)
+            m_speed = 5f;
+        else if (IsRunning)
             m_speed = joueurStats.maxSpeed*1.5f;
-        }
         else
             m_speed = joueurStats.maxSpeed;
     }
@@ -180,6 +180,10 @@ public class PlayerCharacter2D : Personnages {
                 }
             }
         }
+    }
+
+    public void Viser() {
+        currentWeapon.M_viser = !currentWeapon.M_viser;
     }
 
     //  changer la valeur de m_enableInput qui désactive les mouvement et le tir du joueur
@@ -420,7 +424,7 @@ public class PlayerCharacter2D : Personnages {
         m_backSphere.GetComponent<SpriteRenderer>().flipX = spriteR.flipX;
         
         // Switch the way the player is labelled as facing.
-        m_FacingRight = !m_FacingRight;
+        //m_FacingRight = !m_FacingRight;
 
         currentWeapon.M_FacingRight = spriteR.flipX;
     }

@@ -9,7 +9,9 @@ public class Platformer2DControls : MonoBehaviour
     //[RequireComponent(typeof(PlayerCharacter2D))]
 
     private PlayerCharacter2D m_Character;
+    private bool m_isAxisInUse = false;
     private bool m_Jump;
+
 
 
     private void Awake()
@@ -32,6 +34,19 @@ public class Platformer2DControls : MonoBehaviour
         if (CrossPlatformInputManager.GetButtonDown("Fire1") || CrossPlatformInputManager.GetAxis("Fire1") != 0)
         {
             m_Character.UseWeapon();
+        }
+        
+        if (Input.GetAxisRaw("Fire3") != 0) {
+            if (m_isAxisInUse == false) {
+                m_Character.Viser();
+                m_isAxisInUse = true;
+            }
+        }
+        if (Input.GetAxisRaw("Fire3") == 0) {
+            if(m_isAxisInUse)
+                m_Character.Viser();
+
+            m_isAxisInUse = false;
         }
 
         if (CrossPlatformInputManager.GetButtonDown("WeaponSelect"))
