@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class Weapon : MonoBehaviour
 {
@@ -23,7 +24,7 @@ public class Weapon : MonoBehaviour
 
     private Transform myTransform;
     public bool M_FacingRight { get; set; }
-    private Vector2 direction;
+    public Vector2 direction;
 
     void Awake()
     {
@@ -45,26 +46,47 @@ public class Weapon : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         //Changer la position de la sourir pour la position d'un objet qui tourne autour du jouer selon le déplacement de la sourie ou du joystick de la manette
-        if (vise)
-            direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - myTransform.position;
-        else
-            direction = Vector2.right;
 
-        direction.Normalize();
+        float x = CrossPlatformInputManager.GetAxis("Horizontal2");
+        float y = CrossPlatformInputManager.GetAxis("Vertical2");
 
-        if (M_FacingRight) {
-            if (direction.x > 0)
+        //float y = CrossPlatformInputManager.GetAxis("Mouse Y");
+
+        if (vise) {
+
+            direction.x = -x;
+            direction.y = y;
+            //direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - myTransform.position;
+
+            if (direction == Vector2.zero)
+                direction = M_FacingRight ? Vector2.left : Vector2.right;
+
+            direction.Normalize();
+            /*
+            if (M_FacingRight) {
+                if (direction.x > 0)
+                    direction.x *= -1;
+            } else if (direction.x < 0)
                 direction.x *= -1;
-        }
-        else if(direction.x < 0)
-            direction.x *= -1;
+                */
+        } else 
+            direction = M_FacingRight ? Vector2.left : Vector2.right;
+
+    
 
         float rotZ = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
         myTransform.rotation = Quaternion.Euler(0f, 0f, rotZ);
+    }
+
+    private float Direction(float x) {
+        if (x != 0)
+            return Mathf.Sign(x);
+        else
+           return 0;
     }
 
     public void UpdateGUI(bool on)
