@@ -118,6 +118,33 @@ public class GrappleBeam : MonoBehaviour
         }
     }
 
+    public Vector2 GetSwingDirection(Vector2 dir)
+    {
+        if (isGrappleAttached)
+        {
+            Vector2 grappleHookPos = new Vector2();
+            var playerToHookDir = (grappleHookPos - (Vector2)transform.position).normalized;
+            Vector2 perpDirection = new Vector2();
+
+            if (dir.x < 0)
+            {
+                perpDirection = new Vector2(-playerToHookDir.y, playerToHookDir.x);
+                var leftPerpPos = (Vector2)transform.position - perpDirection * -2f;
+                Debug.DrawLine(transform.position, leftPerpPos, Color.green, 0f);
+            }
+            else if (dir.x > 0)
+            {
+                perpDirection = new Vector2(-playerToHookDir.y, -playerToHookDir.x);
+                var rightPerpPos = (Vector2)transform.position + perpDirection * 2f;
+                Debug.DrawLine(transform.position, rightPerpPos, Color.green, 0f);
+            }
+
+            return new Vector2(perpDirection.x, perpDirection.y);
+        }
+
+        return new Vector2(1,1);
+    }
+
     public void HandleGrappleLength(float direction)
     {
         bool underCeiling = player.IsUnderCeiling();

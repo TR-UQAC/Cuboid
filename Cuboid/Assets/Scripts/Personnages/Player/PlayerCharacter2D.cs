@@ -342,12 +342,19 @@ public class PlayerCharacter2D : Personnages {
             move = (crouch ? move * m_CrouchSpeed : move);
 
             //Ajuste la décélération selon l'emplitude du mouvement du joueur
-            if (Mathf.Abs(move) < 0.5f)
-                decelleration = 30f;
-            else if (Mathf.Abs(move) > 0.9f)
-                decelleration = 10f;
+            if (!GetComponent<GrappleBeam>().isGrappleAttached)
+            {
+                if (Mathf.Abs(move) < 0.5f)
+                    decelleration = 30f;
+                else if (Mathf.Abs(move) > 0.9f)
+                    decelleration = 10f;
+                else
+                    decelleration = Mathf.Lerp(decelleration, 10f, Time.deltaTime * 2f * Mathf.Abs(move));
+            }
             else
-                decelleration = Mathf.Lerp(decelleration, 10f, Time.deltaTime * 2f * Mathf.Abs(move));
+            {
+                decelleration = 0f;
+            }           
                 
             // The Speed animator parameter is set to the absolute value of the horizontal input.
             m_Anim.SetFloat("Speed", Mathf.Abs(move));
