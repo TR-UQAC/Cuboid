@@ -19,6 +19,8 @@ public class Weapon : MonoBehaviour
     //Les parametres pour les explosion
     public DegatAttaque statAttaque;
 
+    public bool vise = false;
+
     private Transform myTransform;
     public bool M_FacingRight { get; set; }
     private Vector2 direction;
@@ -46,7 +48,11 @@ public class Weapon : MonoBehaviour
     void Update()
     {
         //Changer la position de la sourir pour la position d'un objet qui tourne autour du jouer selon le déplacement de la sourie ou du joystick de la manette
-        direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - myTransform.position;
+        if (vise)
+            direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - myTransform.position;
+        else
+            direction = Vector2.right;
+
         direction.Normalize();
 
         if (M_FacingRight) {
