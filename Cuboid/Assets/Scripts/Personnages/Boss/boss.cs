@@ -291,7 +291,7 @@ public class boss : MonoBehaviour
         }
 
         if (m_Phase2)
-            pos.y -= 5.0f;
+            pos.y -= 6.0f;
 
         Sequence bouge = DOTween.Sequence();
         //12
