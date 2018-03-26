@@ -89,20 +89,34 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: LaserBossStart
     clip: {fileID: 8300000, guid: 586bffde714ffae45ac5f92422886851, type: 3}
-    output: {fileID: 24300002, guid: 68739206651769c479cf85faf1a0876d, type: 2}
+    output: {fileID: 243226447532772744, guid: 68739206651769c479cf85faf1a0876d, type: 2}
     volume: 0.25
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: LaserBossMilieu
     clip: {fileID: 8300000, guid: bb4d489129f87f844af46bb64b6338e5, type: 3}
-    output: {fileID: 24300002, guid: 68739206651769c479cf85faf1a0876d, type: 2}
+    output: {fileID: 243226447532772744, guid: 68739206651769c479cf85faf1a0876d, type: 2}
     volume: 0.25
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: LaserBossFin
     clip: {fileID: 8300000, guid: 2adf389b0b572f74698a8f39a13b60cd, type: 3}
+    output: {fileID: 24300002, guid: 68739206651769c479cf85faf1a0876d, type: 2}
+    volume: 0.25
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ShieldBossDown
+    clip: {fileID: 8300000, guid: c069ffee81038514d93164afa69f4853, type: 3}
+    output: {fileID: 24300002, guid: 68739206651769c479cf85faf1a0876d, type: 2}
+    volume: 0.25
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ExplosionBoss
+    clip: {fileID: 8300000, guid: 6308d0381fb105b45afa8852b4855455, type: 3}
     output: {fileID: 24300002, guid: 68739206651769c479cf85faf1a0876d, type: 2}
     volume: 0.25
     pitch: 1

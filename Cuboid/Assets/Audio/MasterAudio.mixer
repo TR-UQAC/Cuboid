@@ -15,11 +15,14 @@ AudioMixerController:
   m_EnableSuspend: 1
   m_UpdateMode: 0
   m_ExposedParameters:
+  - guid: b6b9c5c8acc346c45a4d42e9d7069ae9
+    name: laserVolume
   - guid: 2353e2ba862c9554cb2c07d7d0c6ba29
     name: volume
   m_AudioMixerGroupViews:
   - guids:
     - c6b1322bdc8fc4b4db67771866fd059a
+    - 4c4b60812fb255b46a53863bc1db4e29
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -31,7 +34,8 @@ AudioMixerGroupController:
   m_Name: Master
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: c6b1322bdc8fc4b4db67771866fd059a
-  m_Children: []
+  m_Children:
+  - {fileID: 243226447532772744}
   m_Volume: 2353e2ba862c9554cb2c07d7d0c6ba29
   m_Pitch: cfb85a7ff086bc446afaa6b1a66fa7dc
   m_Effects:
@@ -64,3 +68,33 @@ AudioMixerSnapshotController:
   m_FloatValues:
     2353e2ba862c9554cb2c07d7d0c6ba29: 0.04171297
   m_TransitionOverrides: {}
+--- !u!243 &243226447532772744
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: LaserEffect
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 4c4b60812fb255b46a53863bc1db4e29
+  m_Children: []
+  m_Volume: b6b9c5c8acc346c45a4d42e9d7069ae9
+  m_Pitch: dac27fa04204cb84493fb1568f86d68f
+  m_Effects:
+  - {fileID: 244527068486604170}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!244 &244527068486604170
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_EffectID: 60b48a7db99a0994e958f81141de1bdf
+  m_EffectName: Attenuation
+  m_MixLevel: a813d455009bd724f8fcbd357ed36d4a
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0

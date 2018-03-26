@@ -143,7 +143,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1753250106531720}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -35.4, y: -4.05, z: 1}
+  m_LocalPosition: {x: -22.36, y: -3.05, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4789257899055124}
@@ -242,7 +242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  maxTimeToLive: 10
+  maxTimeToLive: 7.5
   facingRight: 0
   dmg: 10
   direction: {x: 1, y: 0}
@@ -264,7 +264,9 @@ MonoBehaviour:
   m_RayCastHit:
     serializedVersion: 2
     m_Bits: 1280
-  m_LargeurLaser: 2
+  m_LargeurLaser: 1.6
+  m_TempsLoad: 2
+  m_TempsTire: 3
 --- !u!198 &198557480950658282
 ParticleSystem:
   m_ObjectHideFlags: 1

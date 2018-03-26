@@ -112,7 +112,7 @@ public class Ennemis : Personnages {
                 //TimeManager.DoSlowMotion();
             }
 
-            Debug.Log("pourcentage de vie restant = " + ((float)ennemiStats.vie / (float)ennemiStats.vieMax));
+            //Debug.Log("pourcentage de vie restant = " + ((float)ennemiStats.vie / (float)ennemiStats.vieMax));
 
             m_mask.alphaCutoff = ((float)ennemiStats.vie / (float)ennemiStats.vieMax);
         }

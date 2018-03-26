@@ -126,17 +126,38 @@ public class boss : MonoBehaviour
             Sequence sdown = DOTween.Sequence();
 
             sdown.Append(m_shield.DOScale(0.1f, 2.0f).SetEase(Ease.InBounce));
+            sdown.InsertCallback(0.5f, () =>
+            {
+                FindObjectOfType<AudioManager>().Play("ShieldBossDown");
+            });
             sdown.AppendCallback(() =>
             {
                 m_shield.gameObject.SetActive(false);
-                //  !*! run son shield down
+                
             });
 
         }
 
         if(m_lstEnnemis.Count == 0)
         {
-            //Instantiate(m_ExplosionEffect, transform.position, transform.rotation);
+            //  le boss est mort
+
+            GameObject ex = Instantiate(m_ExplosionEffect, transform.position, transform.rotation);
+            FindObjectOfType<AudioManager>().Play("ExplosionBoss");
+
+            Sequence bossKill = DOTween.Sequence();
+            bossKill.SetDelay(2.0f);
+            bossKill.AppendCallback(() =>
+            {
+                Destroy(ex);
+            });
+
+            List<GameObject> lstLaser = new List<GameObject>(GameObject.FindGameObjectsWithTag("laserBoss"));
+            foreach (GameObject las in lstLaser)
+            {
+                las.GetComponent<laser>().Disparait();
+            }
+            FindObjectOfType<AudioManager>().Mute("LaserBossMilieu");
 
             GameMaster.KillBoss(this);
         }
@@ -344,7 +365,6 @@ public class boss : MonoBehaviour
 
     public void CheatLifeBoss()
     {
-        //  !*! à enlever
         for (int i = 0; i < m_lstEnnemis.Count; i++)
         {
             if (m_lstEnnemis[i] == null)

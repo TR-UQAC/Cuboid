@@ -13,19 +13,25 @@ public class laser : Bullet {
     private Transform m_effet;
     private Transform m_corps;
     private bool m_charge = false;
+    private Sequence die;
+    private Sequence charge;
 
     // autre
     RaycastHit2D hit;
     float range = 100.0f;
 
     public LayerMask m_RayCastHit;
-    public float m_LargeurLaser = 2.0f;
+    public float m_LargeurLaser = 1.8f;
+    [Tooltip("Temps que met le laser pour charge son tir avant de faire des degat")]
+    public float m_TempsLoad = 2.0f;
+    [Tooltip("Temps de tire une fois le laser chargé, tout de suite après TempsLoad")]
+    public float m_TempsTire = 5.5f;
 
     private void Update()
     {
 
         //hit = Physics2D.Raycast(transform.position, direction, range, m_RayCastHit);
-        hit = Physics2D.CircleCast(transform.position, 0.4f, direction, range, m_RayCastHit);
+        hit = Physics2D.CircleCast(transform.position, (m_LargeurLaser/2.0f), direction, range, m_RayCastHit);
         if (hit)
         {
             float dist = hit.distance + 0.5f;
@@ -78,7 +84,7 @@ public class laser : Bullet {
             }
         }
 
-        hit = Physics2D.CircleCast(transform.position, 0.4f, direction, range, m_RayCastHit);
+        hit = Physics2D.CircleCast(transform.position, (m_LargeurLaser / 2.0f), direction, range, m_RayCastHit);
         if (hit)
         {
             float dist = hit.distance + 0.5f;
@@ -94,32 +100,9 @@ public class laser : Bullet {
             m_impact.localPosition = new Vector3(dist - 1.6f, 0.0f);
         }
 
-        Sequence charge = DOTween.Sequence();
+        ChargeLaser();
 
-        charge.Append(m_sCorps.DOFade(1.0f, 2.0f).SetEase(Ease.InExpo));
-        charge.Insert(0.0f, m_sImpact.DOFade(1.0f, 2.0f).SetEase(Ease.InExpo));
-        charge.InsertCallback(0.0f, () =>
-        {
-            FindObjectOfType<AudioManager>().Play("LaserBossStart");
-        });
-        charge.InsertCallback(1.0f, () =>
-        {
-            m_effet.gameObject.SetActive(true);
-        });
-        charge.InsertCallback(3.0f, () =>
-        {
-            m_charge = true;
-            FindObjectOfType<AudioManager>().Play("LaserBossMilieu");
-        });
-        charge.InsertCallback(8.5f, () =>
-        {
-            FindObjectOfType<AudioManager>().Play("LaserBossFin");
-        });
-
-
-        charge.Play();
-
-        Invoke("Disparait", maxTimeToLive - 2.0f);
+        //Invoke("Disparait", maxTimeToLive - 2.0f);
     }
 
     protected override void OnTriggerEnter2D(Collider2D other)
@@ -173,28 +156,68 @@ public class laser : Bullet {
     }
 
 
+    
+
+    private void ChargeLaser()
+    {
+        charge = DOTween.Sequence();
+
+        charge.Append(m_sCorps.DOFade(1.0f, m_TempsLoad).SetEase(Ease.InExpo));
+        charge.Insert(0.0f, m_sImpact.DOFade(1.0f, m_TempsLoad).SetEase(Ease.InExpo));
+        charge.InsertCallback(0.0f, () =>
+        {
+            //  la durée du son m_TempsLoad
+            FindObjectOfType<AudioManager>().Play("LaserBossStart");
+        });
+        charge.InsertCallback(1.0f, () =>
+        {
+            m_effet.gameObject.SetActive(true);
+        });
+        charge.InsertCallback(3.0f, () =>
+        {
+            m_charge = true;
+            //  la durée du son m_TempsTire
+            FindObjectOfType<AudioManager>().Play("LaserBossMilieu");
+        });
+        charge.InsertCallback((maxTimeToLive - 2.0f), () =>
+        {
+            Disparait();
+            //  la durée du son
+            //FindObjectOfType<AudioManager>().Play("LaserBossFin");
+        });
+
+
+        charge.Play();
+    }
+
+    private void FullLaser()
+    {
+
+    }
+
     public void Disparait()
     {
-        Sequence die = DOTween.Sequence();
+        die = DOTween.Sequence();
 
         die.Append(transform.DOScaleY(0.2f, 2.0f));
         die.Insert(0.0f, m_sCorps.DOFade(0.0f, 2.0f).SetEase(Ease.InExpo));
         die.Insert(0.0f, m_sImpact.DOFade(0.0f, 2.0f).SetEase(Ease.InExpo));
+        die.InsertCallback(0.0f, (() =>
+        {
+            FindObjectOfType<AudioManager>().Mute("LaserBossMilieu");
+
+            FindObjectOfType<AudioManager>().Play("LaserBossFin");
+        }));
         die.InsertCallback(1.0f, (() =>
         {
             ps.Stop();
             loadPS.Stop();
 
             //m_effet.gameObject.SetActive(false);
-            //  !*! run son laser down
         }));
+
+        charge.Kill();
 
         die.Play();
     }
-
-    /*
-     * no hit normal = tout cocher sauf player et obstable
-     * Dommage hit = player
-     * 
-     * */
 }

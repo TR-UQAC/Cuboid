@@ -8,6 +8,7 @@ public class TriggerBossStage : MonoBehaviour {
     public GameObject m_boss;
     public GameObject m_Porte;
     public GameObject m_upgrade;
+    public GameObject m_bossCam;
 
     private bool m_bossActive = false;
     private bool m_bossFin = false;
@@ -27,10 +28,13 @@ public class TriggerBossStage : MonoBehaviour {
 	void Update () {
 		if(m_boss == null && m_bossFin == false)
         {
+            //le boss est mort
+
             m_bossFin = true;
             m_bossActive = false;
-            //le boss est mort
-            Debug.Log("LE BOSS EST MOURU");
+
+            if(m_bossCam)
+                m_bossCam.SetActive(false);
 
             m_Porte.GetComponent<BoxCollider2D>().enabled = false;
             //  animation d'ouverture de porte
@@ -68,10 +72,8 @@ public class TriggerBossStage : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("dans trigger");
         if(collision.tag == "Player" && m_bossActive == false && m_bossFin == false)
         {
-            Debug.Log("dans trigger qui start");
             m_boss.SetActive(true);
             m_boss.GetComponent<boss>().enabled = true;
             m_bossActive = true;
@@ -82,22 +84,13 @@ public class TriggerBossStage : MonoBehaviour {
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "Boss")
-        {
-            //le boss est mort
-            Debug.Log("LE BOSS EST MOURU");
-            List<GameObject> lstLaser = new List<GameObject>(GameObject.FindGameObjectsWithTag("laserBoss"));
-            foreach (GameObject ls in lstLaser)
-            {
-                ls.GetComponent<laser>().Disparait();
-            }
-        }
 
         if(collision.tag == "Player" && m_bossFin == false)
         {
+            Debug.Log("le joueur est mouru");
+
             //m_boss.SetActive(false);
             m_boss.GetComponent<boss>().resetPV();
-            Debug.Log("le joueur est mouru");
 
             m_boss.GetComponent<boss>().enabled = false;
             m_bossActive = false;
