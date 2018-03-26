@@ -78,10 +78,12 @@ public class PlayerCharacter2D : Personnages {
         currentWeapon = (Weapon)transform.Find("Weapon").gameObject.GetComponent(typeof(Weapon));
 
         currentWeapon.M_FacingRight = spriteR.flipX;
+        currentWeapon.spriteR.flipX = spriteR.flipX;
         currentWeapon.M_viser = false;
 
         if (m_backSphere != null)
             m_backSphere.GetComponent<SpriteRenderer>().flipX = spriteR.flipX;
+
 
         UpdateHealthBar();
     }
@@ -184,6 +186,9 @@ public class PlayerCharacter2D : Personnages {
 
     public void Viser() {
         currentWeapon.M_viser = !currentWeapon.M_viser;
+
+        if (currentWeapon.GetComponent<LineRenderer>())
+            currentWeapon.GetComponent<LineRenderer>().enabled = currentWeapon.M_viser;
     }
 
     //  changer la valeur de m_enableInput qui désactive les mouvement et le tir du joueur
@@ -420,13 +425,14 @@ public class PlayerCharacter2D : Personnages {
     private void Flip()
     {
         spriteR.flipX = !spriteR.flipX;
+        currentWeapon.M_FacingRight = spriteR.flipX;
+        currentWeapon.spriteR.flipX = spriteR.flipX;
 
         m_backSphere.GetComponent<SpriteRenderer>().flipX = spriteR.flipX;
         
         // Switch the way the player is labelled as facing.
         //m_FacingRight = !m_FacingRight;
 
-        currentWeapon.M_FacingRight = spriteR.flipX;
     }
     #endregion
 

@@ -101,8 +101,8 @@ public class EnnemisEditor : Editor {
                 ennemi.showContactDommage = EditorGUILayout.Foldout(ennemi.showContactDommage, "Contacte Explosion", true);
                 if (ennemi.showContactDommage) {
                     EditorGUILayout.PropertyField(ePower, new GUIContent("Force répulsion"));
-                    EditorGUILayout.PropertyField(eRadius, new GUIContent("Rayon répultion"));
-                    EditorGUILayout.PropertyField(upwardsModifier, new GUIContent("Upwards Modifier"));
+                    //EditorGUILayout.PropertyField(eRadius, new GUIContent("Rayon répultion"));
+                    //EditorGUILayout.PropertyField(upwardsModifier, new GUIContent("Upwards Modifier"));
 
                     EditorGUILayout.PropertyField(glace, new GUIContent("Glace"));
                     EditorGUILayout.PropertyField(poison, new GUIContent("Poison"));
