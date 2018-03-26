@@ -85,14 +85,14 @@ public class boss : MonoBehaviour
             }
         }
 
-        if (m_Player == null)
+        /*if (m_Player == null)
         {
             if (!searchingForPlayer)
             {
                 searchingForPlayer = true;
                 StartCoroutine(SearchForPlayer());
             }
-        }
+        }*/
 
         // !*!  lancé l'intro du boss
 
@@ -128,6 +128,9 @@ public class boss : MonoBehaviour
             sdown.Append(m_shield.DOScale(0.1f, 2.0f).SetEase(Ease.InBounce));
             sdown.InsertCallback(0.5f, () =>
             {
+                Transform eff = m_shield.GetChild(1);
+                eff.gameObject.SetActive(false);
+
                 FindObjectOfType<AudioManager>().Play("ShieldBossDown");
             });
             sdown.AppendCallback(() =>
@@ -162,14 +165,14 @@ public class boss : MonoBehaviour
             GameMaster.KillBoss(this);
         }
 
-        if (m_Player == null)
+        /*if (m_Player == null)
         {
             if (!searchingForPlayer)
             {
                 searchingForPlayer = true;
                 StartCoroutine(SearchForPlayer());
             }
-        }
+        }*/
 
         //  ajustement du boxCollider2D pour qu'il écrase que si le joueur est en dessous
         //  Quelque soit l'angle
@@ -330,7 +333,7 @@ public class boss : MonoBehaviour
                 }
             });
         }
-        else
+        else if (m_Player != null)
         {
             bouge.AppendCallback(() =>
             {
@@ -348,21 +351,6 @@ public class boss : MonoBehaviour
         
     }
 
-    //  reset les pv de chacune de ces partie à la mort du joueur
-    public void resetPV()
-    {
-        foreach (Transform item in m_lstEnnemis)
-        {
-            Ennemis pasFin = item.GetComponent<Ennemis>() as Ennemis;
-            pasFin.ennemiStats.vie = pasFin.ennemiStats.vieMax;
-        }
-
-        //tr.position = m_StartNode.transform.position;
-        m_CurrentNode = m_StartNode.m_VoisinGauche;
-
-        jumpRot(false);
-    }
-
     public void CheatLifeBoss()
     {
         for (int i = 0; i < m_lstEnnemis.Count; i++)
@@ -377,6 +365,49 @@ public class boss : MonoBehaviour
 
     #region Activation
     //**** Activation/ Desactivation par rapport à la distance ****//
+
+    //  reset les pv de chacune de ces partie à la mort du joueur
+    public void resetPV()
+    {
+        m_Player = null;
+
+        foreach (Transform item in m_lstEnnemis)
+        {
+            Ennemis pasFin = item.GetComponent<Ennemis>() as Ennemis;
+            pasFin.ennemiStats.vie = pasFin.ennemiStats.vieMax;
+        }
+
+        List<GameObject> lstLaser = new List<GameObject>(GameObject.FindGameObjectsWithTag("laserBoss"));
+        foreach (GameObject las in lstLaser)
+        {
+            las.GetComponent<laser>().Disparait();
+        }
+        FindObjectOfType<AudioManager>().Mute("LaserBossMilieu");
+
+        searchingForPlayer = true;
+        Sequence retour = DOTween.Sequence();
+
+        retour.AppendCallback(() =>
+        {
+            m_CurrentNode = m_StartNode.m_VoisinGauche;
+
+            jumpRot(false);
+        });
+        retour.AppendCallback(() =>
+        {
+            enabled = false;
+        });
+        retour.Play();
+    }
+
+    public void ActiveBoss(GameObject p)
+    {
+        m_Player = p;
+        m_ScaleY = p.transform.lossyScale.y;
+        searchingForPlayer = false;
+        m_arreter = false;
+    }
+
 
     IEnumerator SearchForPlayer()
     {

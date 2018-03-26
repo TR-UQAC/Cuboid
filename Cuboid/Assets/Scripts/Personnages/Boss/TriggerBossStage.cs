@@ -36,15 +36,20 @@ public class TriggerBossStage : MonoBehaviour {
             if(m_bossCam)
                 m_bossCam.SetActive(false);
 
-            m_Porte.GetComponent<BoxCollider2D>().enabled = false;
+            if (m_Porte)
+                m_Porte.GetComponent<BoxCollider2D>().enabled = false;
             //  animation d'ouverture de porte
 
             //  faire pop l'upgrade
-            Sequence loot = DOTween.Sequence();
 
-            loot.Append(m_upgrade.transform.DOMove(m_lastPosBoss, 0.01f));
-            loot.Append(m_upgrade.transform.DOShakePosition(5.0f, new Vector3(0.0f, -0.05f, 0.0f), 2, 40.0f, false, false).SetLoops(1000));
-            loot.Play();
+            if (m_upgrade)
+            {
+                Sequence loot = DOTween.Sequence();
+
+                loot.Append(m_upgrade.transform.DOMove(m_lastPosBoss, 0.01f));
+                loot.Append(m_upgrade.transform.DOShakePosition(5.0f, new Vector3(0.0f, -0.05f, 0.0f), 2, 40.0f, false, false).SetLoops(1000));
+                loot.Play();
+            }
 
             
         }
@@ -74,10 +79,13 @@ public class TriggerBossStage : MonoBehaviour {
     {
         if(collision.tag == "Player" && m_bossActive == false && m_bossFin == false)
         {
+            //  Le joueur entre dans la pièce
             m_boss.SetActive(true);
             m_boss.GetComponent<boss>().enabled = true;
+            m_boss.GetComponent<boss>().ActiveBoss(collision.gameObject);
             m_bossActive = true;
-            m_Porte.GetComponent<BoxCollider2D>().enabled = true;
+            if(m_Porte)
+                m_Porte.GetComponent<BoxCollider2D>().enabled = true;
             //m_Porte.PlayAnimation()
         }
     }
@@ -89,12 +97,12 @@ public class TriggerBossStage : MonoBehaviour {
         {
             Debug.Log("le joueur est mouru");
 
-            //m_boss.SetActive(false);
             m_boss.GetComponent<boss>().resetPV();
 
             m_boss.GetComponent<boss>().enabled = false;
             m_bossActive = false;
-            m_Porte.GetComponent<BoxCollider2D>().enabled = false;
+            if (m_Porte)
+                m_Porte.GetComponent<BoxCollider2D>().enabled = false;
         }
     }
 }
