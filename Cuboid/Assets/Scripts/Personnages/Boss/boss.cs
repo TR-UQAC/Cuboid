@@ -160,7 +160,7 @@ public class boss : MonoBehaviour
             {
                 las.GetComponent<laser>().Disparait();
             }
-            FindObjectOfType<AudioManager>().Mute("LaserBossMilieu");
+            //FindObjectOfType<AudioManager>().Mute("LaserBossMilieu");
 
             GameMaster.KillBoss(this);
         }
@@ -382,7 +382,7 @@ public class boss : MonoBehaviour
         {
             las.GetComponent<laser>().Disparait();
         }
-        FindObjectOfType<AudioManager>().Mute("LaserBossMilieu");
+        //FindObjectOfType<AudioManager>().Mute("LaserBossMilieu");
 
         searchingForPlayer = true;
         Sequence retour = DOTween.Sequence();

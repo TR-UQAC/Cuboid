@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using DG.Tweening;
 
 public class laser : Bullet {
@@ -26,6 +27,7 @@ public class laser : Bullet {
     public float m_TempsLoad = 2.0f;
     [Tooltip("Temps de tire une fois le laser chargé, tout de suite après TempsLoad")]
     public float m_TempsTire = 5.5f;
+    public AudioMixerGroup m_GroupeAudioLaser;
 
     private void Update()
     {
@@ -167,6 +169,7 @@ public class laser : Bullet {
         charge.InsertCallback(0.0f, () =>
         {
             //  la durée du son m_TempsLoad
+            m_GroupeAudioLaser.audioMixer.SetFloat("laserVolume", 0.0f);
             FindObjectOfType<AudioManager>().Play("LaserBossStart");
         });
         charge.InsertCallback(1.0f, () =>
@@ -204,7 +207,8 @@ public class laser : Bullet {
         die.Insert(0.0f, m_sImpact.DOFade(0.0f, 2.0f).SetEase(Ease.InExpo));
         die.InsertCallback(0.0f, (() =>
         {
-            FindObjectOfType<AudioManager>().Mute("LaserBossMilieu");
+            //FindObjectOfType<AudioManager>().Mute("LaserBossMilieu");
+            m_GroupeAudioLaser.audioMixer.SetFloat("laserVolume", -80.0f);
 
             FindObjectOfType<AudioManager>().Play("LaserBossFin");
         }));

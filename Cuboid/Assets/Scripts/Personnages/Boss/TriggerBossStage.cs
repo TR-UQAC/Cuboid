@@ -95,6 +95,9 @@ public class TriggerBossStage : MonoBehaviour {
 
         if(collision.tag == "Player" && m_bossFin == false)
         {
+            if (collision.gameObject.activeSelf == true)
+                return;
+
             Debug.Log("le joueur est mouru");
 
             m_boss.GetComponent<boss>().resetPV();
