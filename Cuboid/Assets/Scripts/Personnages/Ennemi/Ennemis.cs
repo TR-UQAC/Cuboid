@@ -37,6 +37,7 @@ public class Ennemis : Personnages {
     public bool tirerSurJoueur = false;
 
     public float decelleration = 2f;
+
     #endregion
     #region Corps
     private void Start() {
@@ -112,9 +113,14 @@ public class Ennemis : Personnages {
                 //TimeManager.DoSlowMotion();
             }
 
+            if (GetComponent<Dommage_Shader>() != null)
+                GetComponent<Dommage_Shader>().CouleurDommage();
+            else
+                m_mask.alphaCutoff = ((float)ennemiStats.vie / (float)ennemiStats.vieMax);
+
             //Debug.Log("pourcentage de vie restant = " + ((float)ennemiStats.vie / (float)ennemiStats.vieMax));
 
-            m_mask.alphaCutoff = ((float)ennemiStats.vie / (float)ennemiStats.vieMax);
+            //m_mask.alphaCutoff = ((float)ennemiStats.vie / (float)ennemiStats.vieMax);
         }
     }
 
