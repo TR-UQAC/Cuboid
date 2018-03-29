@@ -55,7 +55,7 @@ public class Ennemis : Personnages {
         if (GetComponent<PatrolControl>() != null) {
             control = GetComponent<PatrolControl>() as PatrolControl;
             direction.x = control.direction.x;
-            myTransform.localScale = new Vector2(myTransform.localScale.x * -direction.x, myTransform.localScale.y);
+            //myTransform.localScale = new Vector2(myTransform.localScale.x * -direction.x, myTransform.localScale.y);
         }
 
         if(GetComponent<SpriteMask>() != null)
@@ -110,7 +110,7 @@ public class Ennemis : Personnages {
 
             if (ennemiStats.vie <= 0) {
                 GameMaster.KillEnnemi(this);
-                //TimeManager.DoSlowMotion();
+                return;
             }
 
             if (GetComponent<Dommage_Shader>() != null)

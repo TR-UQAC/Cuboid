@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 114703217526474944}
   - component: {fileID: 58755083468427728}
   - component: {fileID: 331420751219616322}
+  - component: {fileID: 114812857428648492}
   m_Layer: 11
   m_Name: Ennemi_Vide
   m_TagString: Ennemi
@@ -54,8 +55,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1314151440095458}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.864, y: 3.973, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 13.92, y: 3.829, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 4398528256962564}
@@ -162,6 +163,19 @@ MonoBehaviour:
     degGlace: 0
     degPoison: 0
     degFoudre: 0
+--- !u!114 &114812857428648492
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1314151440095458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b217ba67d1c5304b9da261701c6609d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duree: 0.995
+  dommageLightColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!114 &114875319741160712
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -242,8 +256,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 657130307
+  m_SortingLayer: 2
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: a738c73fafa9567459008035f20c0347, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

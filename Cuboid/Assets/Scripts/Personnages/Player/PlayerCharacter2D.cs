@@ -85,10 +85,6 @@ public class PlayerCharacter2D : Personnages {
 
         UpdateHealthBar();
     }
-    
-    private float LimitVelo(float velo, float max) {
-        return max * Mathf.Sign(velo) * (Mathf.Abs(velo) - max);
-    }
 
     void Update() {
         Vector3 clampVel = m_Rigidbody2D.velocity;

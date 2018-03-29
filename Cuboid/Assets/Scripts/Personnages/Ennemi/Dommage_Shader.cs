@@ -10,6 +10,7 @@ public class Dommage_Shader : MonoBehaviour {
     //Variable pour les matériaux avec le shader grid_ennemi
     private Renderer rend; // Le renderer
     private Color lightColor; //couleur de base des flash
+    private Tweener tweener;
 
     [Range(0f,2f)]
     public float duree; // Le temps avant de revenir à la couleur de base
@@ -17,7 +18,6 @@ public class Dommage_Shader : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-
         rend = GetComponent<SpriteRenderer>();
         rend.material.shader = Shader.Find("Unlit/grid_ennemi");
 
@@ -26,9 +26,13 @@ public class Dommage_Shader : MonoBehaviour {
 
     // Appeler à partir de la fonction DommagePerso du script Ennemis
     public void CouleurDommage() {
-        DOTween.KillAll();
+
+        if (tweener != null)
+            tweener.Restart();
+
         rend.material.SetColor("_LightColor", dommageLightColor);
-        rend.material.DOColor(lightColor, "_LightColor", duree).SetEase(Ease.InExpo);
+        tweener=rend.material.DOColor(lightColor, "_LightColor", duree).SetEase(Ease.InExpo);
+
     }
 
 }

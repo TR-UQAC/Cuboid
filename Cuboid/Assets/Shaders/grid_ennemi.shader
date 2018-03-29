@@ -57,8 +57,8 @@ uniform vec3 baseColor;*/
 			
 			float2 circuit(float2 p) {
 				p = frac(p);
-				float r = 0.3;
-				float v = 0.0, g = 1.02;
+				float r = 0.01;
+				float v = 0.0, g = 1.0;
 				float d;
 
 				const int iter = 7;
