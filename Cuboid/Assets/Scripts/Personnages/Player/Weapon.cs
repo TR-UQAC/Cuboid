@@ -29,7 +29,7 @@ public class Weapon : MonoBehaviour
     public bool M_FacingRight { get; set; }
     public Vector2 direction;
 
-    void Awake()
+    void Start()
     {
         activeBullet = bulletPref;
 
