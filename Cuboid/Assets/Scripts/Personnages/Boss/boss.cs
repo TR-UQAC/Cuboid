@@ -50,6 +50,8 @@ public class boss : MonoBehaviour
 
     public GameObject m_ExplosionEffect;
 
+    private Sequence m_bouger;
+
     //  set les variable avant d'être actif
     private void Awake()
     {
@@ -84,15 +86,6 @@ public class boss : MonoBehaviour
                 m_shield = child;
             }
         }
-
-        /*if (m_Player == null)
-        {
-            if (!searchingForPlayer)
-            {
-                searchingForPlayer = true;
-                StartCoroutine(SearchForPlayer());
-            }
-        }*/
 
         // !*!  lancé l'intro du boss
 
@@ -226,6 +219,10 @@ public class boss : MonoBehaviour
             //  désactive les controle
             PlayerCharacter2D p = coll.GetComponent<PlayerCharacter2D>();
 
+            Rigidbody2D rbp = m_Player.GetComponent<Rigidbody2D>() as Rigidbody2D;
+            rbp.collisionDetectionMode = CollisionDetectionMode2D.Discrete;
+            //rbp.constraints = RigidbodyConstraints2D.FreezeAll;
+
             if (p)
                 p.setEnableInput(false);
 
@@ -233,7 +230,7 @@ public class boss : MonoBehaviour
             Sequence ecrase = DOTween.Sequence();
 
             ecrase.Append(m_Player.transform.DOScaleY(1.0f, 0.2f));
-            //ecrase.Insert(m_MovingRate - 0.2f, m_Player.transform.DOScaleY(m_ScaleY, 0.2f));
+            ecrase.Insert(0.0f, m_Player.transform.DOMoveY(m_Player.transform.position.y - 0.4f, 0.2f));
             ecrase.Play();
             //Invoke("p.setEnableInput(false)", m_MovingRate + 0.1f);
         }
@@ -248,14 +245,18 @@ public class boss : MonoBehaviour
             //  désactive les controle
             PlayerCharacter2D p = coll.GetComponent<PlayerCharacter2D>();
 
+            Rigidbody2D rbp = m_Player.GetComponent<Rigidbody2D>() as Rigidbody2D;
+            rbp.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+            //rbp.constraints = RigidbodyConstraints2D.FreezeRotation;
+
             if (p)
                 p.setEnableInput(true);
 
             //  agrandir le joueur
             Sequence decrase = DOTween.Sequence();
-
             decrase.Append(m_Player.transform.DOScaleY(m_ScaleY, 0.2f));
-            
+            //decrase.Insert(0.0f, m_Player.transform.DOMoveY(m_Player.transform.position.y + 0.4f, 0.2f));
+
             decrase.Play();
         }
     }
@@ -318,7 +319,7 @@ public class boss : MonoBehaviour
             pos.y -= 6.0f;
 
         Sequence bouge = DOTween.Sequence();
-        //12
+
         bouge.Append(tr.DOJump(pos, 8.0f, 1, 0.8f).SetEase(Ease.InOutQuad));
         bouge.Insert(0.1f, tr.DORotate(angle, 0.75f).SetEase(Ease.InOutQuart));
 
@@ -347,8 +348,6 @@ public class boss : MonoBehaviour
         }
 
         bouge.Play();
-
-        
     }
 
     public void CheatLifeBoss()
@@ -375,6 +374,7 @@ public class boss : MonoBehaviour
         {
             Ennemis pasFin = item.GetComponent<Ennemis>() as Ennemis;
             pasFin.ennemiStats.vie = pasFin.ennemiStats.vieMax;
+            item.GetComponent<SpriteMask>().alphaCutoff = 1.0f;
         }
 
         List<GameObject> lstLaser = new List<GameObject>(GameObject.FindGameObjectsWithTag("laserBoss"));
@@ -390,9 +390,8 @@ public class boss : MonoBehaviour
         retour.AppendCallback(() =>
         {
             m_CurrentNode = m_StartNode.m_VoisinGauche;
-
             jumpRot(false);
-        });
+        }).SetDelay(0.9f);
         retour.AppendCallback(() =>
         {
             enabled = false;

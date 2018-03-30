@@ -1143,6 +1143,16 @@ Prefab:
       propertyPath: m_LocalPosition.x
       value: -17.16
       objectReference: {fileID: 0}
+    - target: {fileID: 114850916051190414, guid: 156b0a46637a80f48ae1811fe561f00d,
+        type: 2}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 1983445595}
+    - target: {fileID: 61032406156121382, guid: 156b0a46637a80f48ae1811fe561f00d,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 156b0a46637a80f48ae1811fe561f00d, type: 2}
   m_IsPrefabParent: 0
@@ -7151,6 +7161,11 @@ Prefab:
       propertyPath: m_bossCam
       value: 
       objectReference: {fileID: 1838876339}
+    - target: {fileID: 61452710962489480, guid: 99df0a70e65675b4686c3ddc1fe0df5c,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 99df0a70e65675b4686c3ddc1fe0df5c, type: 2}
   m_IsPrefabParent: 0
@@ -7395,6 +7410,8 @@ MonoBehaviour:
   ennemiStats:
     vie: 200
     vieMax: 200
+    nbMissile: 5
+    nbMissileMax: 5
     immortel: 1
     m_JumpForce: 0
     speed: 1000
@@ -7630,11 +7647,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4705907795443286, guid: 545acdd60927976478a32048ad0148a8, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -19.5
+      value: -5.5
       objectReference: {fileID: 0}
     - target: {fileID: 4705907795443286, guid: 545acdd60927976478a32048ad0148a8, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.12
+      value: 9.12
       objectReference: {fileID: 0}
     - target: {fileID: 4705907795443286, guid: 545acdd60927976478a32048ad0148a8, type: 2}
       propertyPath: m_LocalPosition.z
@@ -7664,10 +7681,19 @@ Prefab:
         type: 2}
       propertyPath: m_CurrentNode
       value: 
-      objectReference: {fileID: 854315178}
+      objectReference: {fileID: 2033176023}
+    - target: {fileID: 1498822815742042, guid: 545acdd60927976478a32048ad0148a8, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 545acdd60927976478a32048ad0148a8, type: 2}
   m_IsPrefabParent: 0
+--- !u!20 &1983445595 stripped
+Camera:
+  m_PrefabParentObject: {fileID: 20336516676170988, guid: 24a3485e869566349a39a8cba246bd1e,
+    type: 2}
+  m_PrefabInternal: {fileID: 855968137}
 --- !u!1 &1993230419
 GameObject:
   m_ObjectHideFlags: 0
