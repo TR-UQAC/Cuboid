@@ -160,7 +160,6 @@ public class PlayerCharacter2D : Personnages {
             {
                 if (shootTimer > currentWeapon.fireCooldown)
                 {
-                    //TODO: fix le cooldown pour les bombs sinon 2BJ est impossible
                     Instantiate(morphBombPrefab, m_Rigidbody2D.position, Quaternion.identity);
                     shootTimer = 0;
                 }
@@ -174,8 +173,24 @@ public class PlayerCharacter2D : Personnages {
                         gameObject.GetComponent<GrappleBeam>().UseGrapple();
                     }
                     else
-                    {                        
-                        currentWeapon.Shoot();
+                    {
+                        if (weaponList[selectedWeaponIndex] == "Missile")
+                        {
+                            if (joueurStats.nbMissile > 0)
+                            {
+                                currentWeapon.Shoot();
+                                joueurStats.nbMissile--;
+                                currentWeapon.UpdateGUI(true);
+                            }
+                            else
+                            {
+                                //jouer un son
+                            }
+                        }
+                        else
+                        {
+                            currentWeapon.Shoot();
+                        }
                     }
 
                     shootTimer = 0;
@@ -466,18 +481,23 @@ public class PlayerCharacter2D : Personnages {
         UpdateHealthBar();
     }
 
-    private void UpdateHealthBar()
+    public void UpdateMissileUI()
+    {
+        currentWeapon.UpdateGUI(null);
+    }
+
+    public void UpdateHealthBar()
     {
         if(bar != null)
         {
             if (joueurStats.vie < 0)
             {
                 bar.GetComponent<HealthBar>().health = 0;
-
             }
             else
             {
                 bar.GetComponent<HealthBar>().health = joueurStats.vie;
+                bar.GetComponent<HealthBar>().maxHealth = joueurStats.vieMax;
             }           
         }             
     }

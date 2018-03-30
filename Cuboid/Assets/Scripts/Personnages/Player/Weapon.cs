@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 using UnityStandardAssets.CrossPlatformInput;
 
 public class Weapon : MonoBehaviour
@@ -99,14 +100,29 @@ public class Weapon : MonoBehaviour
            return 0;
     }
 
-    public void UpdateGUI(bool on)
+    public void UpdateGUI(bool? on)
     {
         if (!missileUI.activeSelf)
         {
             missileUI.SetActive(true);
         }
 
-        if (on)
+        PlayerCharacter2D pc = FindObjectOfType<PlayerCharacter2D>();
+        if (pc == null)
+        {
+            Debug.Log("Pas trouve le joueur en updatant le UI");
+        }
+        else
+        {
+            missileUI.GetComponentInChildren<TextMeshProUGUI>().text = pc.joueurStats.nbMissile + " / " + pc.joueurStats.nbMissileMax;
+        }
+
+        if (on == null)
+        {
+            return;
+        }
+
+        if ((bool)on)
         {
             missileUI.GetComponent<Image>().color = new Vector4(1, 1, 0, 1);
         }
@@ -121,10 +137,14 @@ public class Weapon : MonoBehaviour
         if (on)
         {
             activeBullet = missilePref;
+            dmg *= 2;
+            statAttaque.eRadius *= 2;
         }
         else
         {
             activeBullet = bulletPref;
+            dmg /= 2;
+            statAttaque.eRadius /= 2;
         }
     }
 
@@ -141,7 +161,6 @@ public class Weapon : MonoBehaviour
 
         if (FindObjectOfType<AudioManager>() != null)
             FindObjectOfType<AudioManager>().Play("Shoot");
-        
     }
 }
 

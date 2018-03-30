@@ -12,6 +12,7 @@ public class Platformer2DControls : MonoBehaviour
     private bool m_isAxisInUse = false;
     private bool m_Jump;
 
+    private bool upgradeCheatFlag = false; //garde un check pcq si on active tous les upgrades plusieurs fois, ca risque de faire n'importe quoi
 
 
     private void Awake()
@@ -63,6 +64,38 @@ public class Platformer2DControls : MonoBehaviour
             }
         }
 
+        if (CrossPlatformInputManager.GetButtonDown("UpgradeCheat"))
+        {
+            if (!upgradeCheatFlag)
+            {
+                Debug.Log("All upgrade active");
+                m_Character.ToggleUpgrade("MorphBall");
+                m_Character.gameObject.AddComponent(typeof(MorphBall));
+
+                m_Character.ToggleUpgrade("MorphBomb");
+
+                m_Character.ToggleUpgrade("Missile");
+                m_Character.AddWeapon("Missile");
+
+                m_Character.ToggleUpgrade("GrappleBeam");
+                m_Character.AddWeapon("GrappleBeam");
+                m_Character.gameObject.GetComponent<GrappleBeam>().enabled = true;
+                m_Character.gameObject.GetComponent<GrappleBeam>().UpdateGUI(false);
+
+                m_Character.joueurStats.nbMissileMax += 5;
+                m_Character.joueurStats.nbMissile = m_Character.joueurStats.nbMissileMax;
+                m_Character.UpdateMissileUI();
+
+                m_Character.joueurStats.vieMax += 100;
+                m_Character.joueurStats.vie = m_Character.joueurStats.vieMax;
+                m_Character.UpdateHealthBar();
+                upgradeCheatFlag = true;
+            }
+            else
+            {
+                Debug.Log("Upgrade cheat deja activé");
+            }
+        }
 
         if (CrossPlatformInputManager.GetButtonDown("TriggerAction1")) {
             //m_Character.PrintAllUpgrade();

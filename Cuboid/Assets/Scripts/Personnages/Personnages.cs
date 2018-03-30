@@ -11,6 +11,8 @@ abstract public class Personnages : MonoBehaviour {
 #endif
         public int vie = 100;
         public int vieMax = 100;
+        public int nbMissile = 5;
+        public int nbMissileMax = 5;
         public bool immortel;
 
 

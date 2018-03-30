@@ -19,7 +19,12 @@ public class PickupItem : MonoBehaviour {
                     pc.SoinPerso(Valeur);
                 break;
                 case "Missile":
-                    //pc.AddMunition(Valeur);
+                    pc.joueurStats.nbMissile += Valeur;
+                    if (pc.joueurStats.nbMissile > pc.joueurStats.nbMissileMax)
+                    {
+                        pc.joueurStats.nbMissile = pc.joueurStats.nbMissileMax;
+                    }
+                    pc.UpdateMissileUI();
                 break;
                 default:
                     break;

@@ -49,6 +49,7 @@ public class MorphBall : MonoBehaviour {
                 }
 
                 playergo.GetComponent<BoxCollider2D>().enabled = false;
+                playergo.transform.Find("Weapon").gameObject.SetActive(false);
 
                 ismorphed = true;
                 playergo.GetComponent<PlayerCharacter2D>().SetMorph(ismorphed);
@@ -62,6 +63,7 @@ public class MorphBall : MonoBehaviour {
                     //playergo.GetComponent<SpriteRenderer>().sprite = standardSprite;
                     //playergo.GetComponent<Animator>().enabled = true;
                     playergo.GetComponent<PlayerCharacter2D>().m_backSphere.transform.localScale = new Vector2(1.0f, 1.0f);
+                    playergo.transform.Find("Weapon").gameObject.SetActive(true);
 
                     ismorphed = false;
                     playergo.GetComponent<PlayerCharacter2D>().SetMorph(ismorphed);

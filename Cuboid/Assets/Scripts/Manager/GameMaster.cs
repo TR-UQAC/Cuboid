@@ -54,9 +54,25 @@ public class GameMaster : MonoBehaviour {
         float result = Random.Range(1, 100);
         if (result/100 > 0.5f)
         {
-            GameObject clone = Instantiate(itemPickupPrefab, perso.transform.position, perso.transform.rotation);
-            clone.GetComponent<PickupItem>().PickupType = "Health";
-            clone.GetComponent<PickupItem>().Valeur = 10;
+            result = Random.Range(1, 100);
+            if (result/100 > 0.5f)          //1-50: Missile, 51-100: Health
+            {
+                PlayerCharacter2D pc = FindObjectOfType<PlayerCharacter2D>();
+                if (pc.HasUpgrade("Missile"))
+                {
+                    GameObject clone = Instantiate(itemPickupPrefab, perso.transform.position, perso.transform.rotation);
+                    clone.GetComponent<PickupItem>().PickupType = "Missile";
+                    clone.GetComponent<PickupItem>().Valeur = 5;
+                    Debug.Log("missile drop");
+                }
+            }
+            else
+            {
+                Debug.Log("health drop");
+                GameObject clone = Instantiate(itemPickupPrefab, perso.transform.position, perso.transform.rotation);
+                clone.GetComponent<PickupItem>().PickupType = "Health";
+                clone.GetComponent<PickupItem>().Valeur = 10;
+            }
         }  
     }
 

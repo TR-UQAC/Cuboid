@@ -22,7 +22,8 @@ public class UpgradeItem : MonoBehaviour {
 
     void Pickup(Collider2D player)
     {
-        //feedback de pickup
+        //Desactive le collider pour empêcher le double pickup
+        gameObject.GetComponent<CircleCollider2D>().enabled = false;
 
         //fait de quoi sur le player
         GameObject monjoueur = GameObject.FindGameObjectWithTag("Player");
@@ -56,6 +57,16 @@ public class UpgradeItem : MonoBehaviour {
                 case "Missile":
                     pc.ToggleUpgrade(UpgradeName);
                     pc.AddWeapon("Missile");                 
+                    break;
+                case "MissileExpansion":
+                    pc.joueurStats.nbMissileMax += 5;
+                    pc.joueurStats.nbMissile = pc.joueurStats.nbMissileMax;
+                    pc.UpdateMissileUI();
+                    break;
+                case "HealthExpansion":
+                    pc.joueurStats.vieMax += 100;
+                    pc.joueurStats.vie = pc.joueurStats.vieMax;
+                    pc.UpdateHealthBar();
                     break;
                 default:
                     Debug.Log("Upgrade non spécifiée ou non reconnue");
