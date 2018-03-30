@@ -75,21 +75,15 @@ public class PlayerCharacter2D : Personnages {
 
         spriteR = gameObject.GetComponent<SpriteRenderer>();
 
+        StartCoroutine(LateStart(0.1f));
+        
         currentWeapon = (Weapon)transform.Find("Weapon").gameObject.GetComponent(typeof(Weapon));
-
-        currentWeapon.M_FacingRight = spriteR.flipX;
-        currentWeapon.spriteR.flipX = spriteR.flipX;
-        currentWeapon.M_viser = false;
 
         if (m_backSphere != null)
             m_backSphere.GetComponent<SpriteRenderer>().flipX = spriteR.flipX;
 
 
         UpdateHealthBar();
-    }
-    
-    private float LimitVelo(float velo, float max) {
-        return max * Mathf.Sign(velo) * (Mathf.Abs(velo) - max);
     }
 
     void Update() {
@@ -210,6 +204,14 @@ public class PlayerCharacter2D : Personnages {
     public void setEnableInput(bool v)
     {
         m_enableInput = v;
+    }
+
+    IEnumerator LateStart(float waitTime) {
+        yield return new WaitForSeconds(waitTime);
+
+        currentWeapon.M_FacingRight = spriteR.flipX;
+        currentWeapon.spriteR.flipX = spriteR.flipX;
+        currentWeapon.M_viser = false;
     }
     #endregion
 

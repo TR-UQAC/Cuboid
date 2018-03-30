@@ -14,7 +14,7 @@ public class EnnemisEditor : Editor {
         attaque, dmgAttaque, fireRate,
         tirerSurJoueur,
 
-        ePower, eRadius, upwardsModifier,
+        ePower,// eRadius, upwardsModifier,
 
         deplacement,
         speed, maxSpeed, hauteurSaut, fMode,
@@ -40,8 +40,8 @@ public class EnnemisEditor : Editor {
         tirerSurJoueur = serializedObject.FindProperty("tirerSurJoueur");
 
         ePower          = serializedObject.FindProperty("comp.statAttaque.ePower");
-        eRadius         = serializedObject.FindProperty("comp.statAttaque.eRadius");
-        upwardsModifier = serializedObject.FindProperty("comp.statAttaque.upwardsModifier");
+        //eRadius         = serializedObject.FindProperty("comp.statAttaque.eRadius");
+        //upwardsModifier = serializedObject.FindProperty("comp.statAttaque.upwardsModifier");
 
         glace = serializedObject.FindProperty("comp.statAttaque.degGlace");
         poison = serializedObject.FindProperty("comp.statAttaque.degPoison");

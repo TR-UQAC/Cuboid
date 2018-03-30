@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 114721889817618374}
   - component: {fileID: 114959276131356708}
   - component: {fileID: 331631026248557350}
+  - component: {fileID: 114160705869437978}
   m_Layer: 11
   m_Name: Petit_Cube
   m_TagString: Ennemi
@@ -223,6 +224,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.64, y: 0.5346554}
   m_EdgeRadius: 0
+--- !u!114 &114160705869437978
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1362764826406958}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b217ba67d1c5304b9da261701c6609d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duree: 0
+  dommageLightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &114703397968577338
 MonoBehaviour:
   m_ObjectHideFlags: 1

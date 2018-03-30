@@ -47,24 +47,9 @@ public class AudioManager : MonoBehaviour {
 
         if(s.source != null)
         {
-            if(s.source.outputAudioMixerGroup.name == "LaserEffect")
-                s.source.outputAudioMixerGroup.audioMixer.SetFloat("laserVolume", 0.0f);
+            //if(s.source.outputAudioMixerGroup.name == "LaserEffect")
+                //s.source.outputAudioMixerGroup.audioMixer.SetFloat("laserVolume", 0.0f);
             s.source.Play();
         }
-    }
-
-    //  mute d'un son en particulier
-    public void Mute(string name)
-    {
-        Sound s = Array.Find(sounds, sound => sound.name == name);
-
-        if (s == null)
-        {
-            Debug.LogWarning("Le son " + name + " n'a pas été trouvé!");
-            return;
-        }
-
-        if (s.source != null)
-            s.source.outputAudioMixerGroup.audioMixer.SetFloat("laserVolume", -80.0f);
     }
 }

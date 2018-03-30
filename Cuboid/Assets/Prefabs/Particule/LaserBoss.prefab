@@ -267,6 +267,8 @@ MonoBehaviour:
   m_LargeurLaser: 1.6
   m_TempsLoad: 2
   m_TempsTire: 3
+  m_GroupeAudioLaser: {fileID: 243226447532772744, guid: 68739206651769c479cf85faf1a0876d,
+    type: 2}
 --- !u!198 &198557480950658282
 ParticleSystem:
   m_ObjectHideFlags: 1

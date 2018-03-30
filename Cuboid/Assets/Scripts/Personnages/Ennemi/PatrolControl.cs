@@ -27,15 +27,36 @@ public class PatrolControl : MonoBehaviour {
         sightEnd = transform.Find("sightEnd");
 
         lEC = transform.Find("leftEdgeCheck");
+
+        if (direction.x > 0)
+            ChangeDirection();
     }
 	
+    private Vector3 ChangeVectorX(Vector3 v) {
+        v.x *= -1; 
+        return v;
+    }
+
 	public Vector2 checkDirection() {
-            if (detectColH() || !detectEdge() && rb.gravityScale != 0) {
-                myTransform.localScale = new Vector2(myTransform.localScale.x*-1, myTransform.localScale.y);
-                rb.velocity = new Vector2(-rb.velocity.x/2, rb.velocity.y);
+        if (detectColH() || !detectEdge() && rb.gravityScale != 0) {
+            ChangeDirection();
+            //myTransform.localScale = new Vector2(myTransform.localScale.x*-1, myTransform.localScale.y);
+            /*
+            sightStart.localPosition = ChangeVectorX(sightStart.localPosition);
+            sightEnd.localPosition = ChangeVectorX(sightEnd.localPosition);
+            lEC.localPosition = ChangeVectorX(lEC.localPosition);
+            */
+            rb.velocity = new Vector2(-rb.velocity.x/2, rb.velocity.y);
                 direction.x *= -1;
+                
         }
         return direction;
+    }
+
+    private void ChangeDirection() {
+        sightStart.localPosition = ChangeVectorX(sightStart.localPosition);
+        sightEnd.localPosition = ChangeVectorX(sightEnd.localPosition);
+        lEC.localPosition = ChangeVectorX(lEC.localPosition);
     }
 
     bool detectColH() {

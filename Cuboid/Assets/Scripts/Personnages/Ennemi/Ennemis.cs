@@ -37,6 +37,7 @@ public class Ennemis : Personnages {
     public bool tirerSurJoueur = false;
 
     public float decelleration = 2f;
+
     #endregion
     #region Corps
     private void Start() {
@@ -54,7 +55,7 @@ public class Ennemis : Personnages {
         if (GetComponent<PatrolControl>() != null) {
             control = GetComponent<PatrolControl>() as PatrolControl;
             direction.x = control.direction.x;
-            myTransform.localScale = new Vector2(myTransform.localScale.x * -direction.x, myTransform.localScale.y);
+            //myTransform.localScale = new Vector2(myTransform.localScale.x * -direction.x, myTransform.localScale.y);
         }
 
         if(GetComponent<SpriteMask>() != null)
@@ -109,12 +110,17 @@ public class Ennemis : Personnages {
 
             if (ennemiStats.vie <= 0) {
                 GameMaster.KillEnnemi(this);
-                //TimeManager.DoSlowMotion();
+                return;
             }
+
+            if (GetComponent<Dommage_Shader>() != null)
+                GetComponent<Dommage_Shader>().CouleurDommage();
+            else
+                m_mask.alphaCutoff = ((float)ennemiStats.vie / (float)ennemiStats.vieMax);
 
             //Debug.Log("pourcentage de vie restant = " + ((float)ennemiStats.vie / (float)ennemiStats.vieMax));
 
-            m_mask.alphaCutoff = ((float)ennemiStats.vie / (float)ennemiStats.vieMax);
+            //m_mask.alphaCutoff = ((float)ennemiStats.vie / (float)ennemiStats.vieMax);
         }
     }
 

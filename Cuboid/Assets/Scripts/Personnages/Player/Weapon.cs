@@ -30,7 +30,7 @@ public class Weapon : MonoBehaviour
     public bool M_FacingRight { get; set; }
     public Vector2 direction;
 
-    void Awake()
+    void Start()
     {
         activeBullet = bulletPref;
 
@@ -72,9 +72,6 @@ public class Weapon : MonoBehaviour
 
             direction.Normalize();
 
-            float rotZ = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-
-            myTransform.rotation = Quaternion.Euler(0f, 0f, rotZ);
 
             /*
             if (M_FacingRight) {
@@ -87,10 +84,10 @@ public class Weapon : MonoBehaviour
             direction = M_FacingRight ? Vector2.left : Vector2.right;
 
     
-        /*
+        
         float rotZ = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-        myTransform.rotation = Quaternion.Euler(0f, 0f, rotZ);*/
+        myTransform.rotation = Quaternion.Euler(0f, 0f, rotZ);
     }
 
     private float Direction(float x) {
