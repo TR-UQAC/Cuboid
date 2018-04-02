@@ -247,7 +247,6 @@ public class boss : MonoBehaviour
 
             Rigidbody2D rbp = m_Player.GetComponent<Rigidbody2D>() as Rigidbody2D;
             rbp.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
-            //rbp.constraints = RigidbodyConstraints2D.FreezeRotation;
 
             if (p)
                 p.setEnableInput(true);

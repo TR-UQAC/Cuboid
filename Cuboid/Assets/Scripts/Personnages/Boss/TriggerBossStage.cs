@@ -34,7 +34,10 @@ public class TriggerBossStage : MonoBehaviour {
             m_bossActive = false;
 
             if(m_bossCam)
+            {
+                m_bossCam.GetComponent<TriggerBoxMultiCam>().DeactivateCam();
                 m_bossCam.SetActive(false);
+            }
 
             if (m_Porte)
                 m_Porte.GetComponent<BoxCollider2D>().enabled = false;

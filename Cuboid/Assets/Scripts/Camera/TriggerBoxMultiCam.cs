@@ -65,5 +65,17 @@ public class TriggerBoxMultiCam : MonoBehaviour {
         InZone = false;
     }
 
+    //  désactive la camera manuellement
+    public void DeactivateCam()
+    {
+        foreach (Transform item in transform)
+        {
+            if (item != null)
+                cam.GetComponentInParent<MultipleTargetCamera>().targets.Remove(item);
+        }
+
+        InZone = false;
+    }
+
 
 }
