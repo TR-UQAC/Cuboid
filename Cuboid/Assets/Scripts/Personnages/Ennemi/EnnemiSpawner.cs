@@ -5,15 +5,15 @@ using UnityEngine;
 public class EnnemiSpawner : MonoBehaviour {
 
     public Transform ennemi;
-    public float rate;
+    public Ennemis thisEnnemi;
 
 	// Use this for initialization
 	void Start () {
-		
-	}
+        SpawnEnnemi();
+    }
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	public void SpawnEnnemi() {
+        if(thisEnnemi == null && ennemi != null)
+            thisEnnemi = Instantiate(ennemi, transform.position, transform.rotation).GetComponent<Ennemis>();
+    }
 }

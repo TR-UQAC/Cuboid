@@ -12,7 +12,7 @@ public class Ennemis : Personnages {
     public enum typeAttaque { Rien = 0, Tirer = 1, Kamikaze = 2, Explosion = 3}
     public enum typeDeplac { Immobile = 0, Voler = 1, Glisser = 2 }
 
-    static float distActivation = 100;
+    static float distActivation = 50;
 
     private PlayerCharacter2D en;
     private bool searchingForPlayer = false;
@@ -238,7 +238,7 @@ public class Ennemis : Personnages {
             enabled = false;
         }
 
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(1f);
         StartCoroutine(CheckDistance());
     }
     #endregion
