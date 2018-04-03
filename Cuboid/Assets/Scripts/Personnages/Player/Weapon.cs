@@ -92,7 +92,15 @@ public class Weapon : MonoBehaviour
         } else 
             direction = M_FacingRight ? Vector2.left : Vector2.right;
 
-    
+
+        if (!M_FacingRight)
+        {
+            transform.localPosition = new Vector3(-0.1f, transform.localPosition.y, transform.localPosition.z);
+        }
+        else
+        {
+            transform.localPosition = new Vector3(0.1f, transform.localPosition.y, transform.localPosition.z);
+        }
         
         float rotZ = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
