@@ -443,7 +443,7 @@ public class PlayerCharacter2D : Personnages {
     {
         spriteR.flipX = !spriteR.flipX;
         currentWeapon.M_FacingRight = spriteR.flipX;
-        currentWeapon.spriteR.flipX = spriteR.flipX;
+        //currentWeapon.spriteR.flipX = spriteR.flipX;
 
         m_backSphere.GetComponent<SpriteRenderer>().flipX = spriteR.flipX;
         
