@@ -54,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1624414363356482}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 16.02, y: 20.42193, z: 0}
   m_LocalScale: {x: 1, y: 0.5, z: 1}
   m_Children:
   - {fileID: 4566112320573526}
@@ -143,7 +143,7 @@ MonoBehaviour:
   statAttaque:
     ePower: 30
     eRadius: 5
-    upwardsModifier: 1
+    upwardsModifier: 10
     degGlace: 0
     degPoison: 0
     degFoudre: 0
@@ -161,6 +161,8 @@ MonoBehaviour:
   ennemiStats:
     vie: 10
     vieMax: 100
+    nbMissile: 5
+    nbMissileMax: 5
     immortel: 0
     m_JumpForce: 1000
     speed: 250
@@ -210,7 +212,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 3a1c115f38e20bb4b8e713a1794338a9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

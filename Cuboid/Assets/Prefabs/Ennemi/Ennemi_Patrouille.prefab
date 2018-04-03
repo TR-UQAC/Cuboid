@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 58598297992603458}
   - component: {fileID: 114916545814430656}
   - component: {fileID: 331577821604116580}
+  - component: {fileID: 114636004547521964}
   m_Layer: 11
   m_Name: Ennemi_Patrouille
   m_TagString: Ennemi
@@ -79,7 +80,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1931477831523324
 GameObject:
   m_ObjectHideFlags: 0
@@ -129,8 +130,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1171337023374186}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.1, y: -4.96, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 52.440567, y: 20.824501, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 4434892804643306}
@@ -294,6 +295,8 @@ MonoBehaviour:
   ennemiStats:
     vie: 100
     vieMax: 100
+    nbMissile: 5
+    nbMissileMax: 5
     immortel: 0
     m_JumpForce: 1000
     speed: 2000
@@ -329,6 +332,19 @@ MonoBehaviour:
   showContactDommage: 0
   showMouvement: 1
   showElements: 0
+--- !u!114 &114636004547521964
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1171337023374186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b217ba67d1c5304b9da261701c6609d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duree: 1
+  dommageLightColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!114 &114916545814430656
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -362,7 +378,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 075ffc3ee11bdf04a9c5f971981b0841, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -398,7 +414,7 @@ SpriteRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1548643118938430}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1

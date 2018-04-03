@@ -17,11 +17,9 @@ public class PatrolControl : MonoBehaviour {
     public Transform sightStart;
     public Transform sightEnd;
 
-    private Transform myTransform;
 
     void Start () {
         rb = this.GetComponent<Rigidbody2D>() as Rigidbody2D;
-        myTransform = transform;
 
         sightStart = transform.Find("sightStart");
         sightEnd = transform.Find("sightEnd");
@@ -40,12 +38,6 @@ public class PatrolControl : MonoBehaviour {
 	public Vector2 checkDirection() {
         if (detectColH() || !detectEdge() && rb.gravityScale != 0) {
             ChangeDirection();
-            //myTransform.localScale = new Vector2(myTransform.localScale.x*-1, myTransform.localScale.y);
-            /*
-            sightStart.localPosition = ChangeVectorX(sightStart.localPosition);
-            sightEnd.localPosition = ChangeVectorX(sightEnd.localPosition);
-            lEC.localPosition = ChangeVectorX(lEC.localPosition);
-            */
             rb.velocity = new Vector2(-rb.velocity.x/2, rb.velocity.y);
                 direction.x *= -1;
                 

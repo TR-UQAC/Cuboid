@@ -17,6 +17,7 @@ public class Weapon : MonoBehaviour
     private GameObject activeBullet;
     private Transform firePoint;
     private GameObject missileUI;
+    private LineRenderer viseur;
 
     //Les parametres pour les explosion
     public DegatAttaque statAttaque;
@@ -30,21 +31,23 @@ public class Weapon : MonoBehaviour
     public bool M_FacingRight { get; set; }
     public Vector2 direction;
 
-    void Start()
-    {
+    static bool manette = false;
+
+    void Start() {
         activeBullet = bulletPref;
 
         firePoint = transform.Find("FirePoint");
-        if (firePoint == null)
-        {
+        if (firePoint == null) {
             Debug.LogError("FirePoint not found!");
         }
 
-        if (GameObject.FindGameObjectWithTag("MissileUI"))
-        {
+        if (GameObject.FindGameObjectWithTag("MissileUI")) {
             missileUI = GameObject.FindGameObjectWithTag("MissileUI");
             missileUI.SetActive(false);
         }
+
+        if (GameObject.FindObjectOfType<LineRenderer>() != null)
+            viseur = GameObject.FindObjectOfType<LineRenderer>();
 
         spriteR = gameObject.GetComponent<SpriteRenderer>();
 
@@ -59,19 +62,25 @@ public class Weapon : MonoBehaviour
         float x = CrossPlatformInputManager.GetAxis("Horizontal2");
         float y = CrossPlatformInputManager.GetAxis("Vertical2");
 
-        //float y = CrossPlatformInputManager.GetAxis("Mouse Y");
+        if (x != 0 || y != 0)
+            manette = true;
 
         if (M_viser) {
 
-            direction.x = x;
-            direction.y = y;
-            //direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - myTransform.position;
+            if (manette) {
+                direction.x = x;
+                direction.y = y;
+            }
+            else
+                direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - myTransform.position;
 
             if (direction == Vector2.zero)
                 direction = M_FacingRight ? Vector2.left : Vector2.right;
 
             direction.Normalize();
 
+            if (viseur != null)
+                ViseurDistance();
 
             /*
             if (M_FacingRight) {
@@ -88,6 +97,16 @@ public class Weapon : MonoBehaviour
         float rotZ = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
         myTransform.rotation = Quaternion.Euler(0f, 0f, rotZ);
+
+    }
+
+    void ViseurDistance() {
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, 100.0f, ~noHit);
+
+            if (hit.collider != null)
+                viseur.SetPosition(1, Vector3.right * hit.distance);
+            else
+                viseur.SetPosition(1, Vector3.right * 100.0f);
     }
 
     private float Direction(float x) {

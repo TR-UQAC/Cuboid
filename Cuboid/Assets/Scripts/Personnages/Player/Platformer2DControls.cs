@@ -122,8 +122,10 @@ public class Platformer2DControls : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.P))
         {
-            boss bo = GameObject.Find("Boss_Ecrabouilleur").GetComponent<boss>();
-            bo.CheatLifeBoss();
+            if (GameObject.Find("Boss_Ecrabouilleur") != null) {
+                boss bo = GameObject.Find("Boss_Ecrabouilleur").GetComponent<boss>();
+                bo.CheatLifeBoss();
+            }
         }
     }
 }

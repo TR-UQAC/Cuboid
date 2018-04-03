@@ -16,6 +16,9 @@ public class DialogueTrigger : MonoBehaviour {
     }
 
     public void TriggerDialogue() {
-        DialogUI.GetComponent<DialogueManager>().StartDialogue(dialogue);
+        if (DialogUI != null)
+            DialogUI.GetComponent<DialogueManager>().StartDialogue(dialogue);
+        else
+            Debug.LogWarning("Pas dialog UI disponible");
     }
 }

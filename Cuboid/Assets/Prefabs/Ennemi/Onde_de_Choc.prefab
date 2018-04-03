@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 114563479623651522}
   - component: {fileID: 114302346917831590}
   - component: {fileID: 331700319215308332}
+  - component: {fileID: 114867287559808054}
   m_Layer: 11
   m_Name: Onde_de_Choc
   m_TagString: Ennemi
@@ -67,7 +68,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1675349826042032}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.5223923, y: 20.5, z: 0}
+  m_LocalPosition: {x: 4.5223923, y: 22.95, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4453987842306016}
@@ -141,7 +142,7 @@ MonoBehaviour:
   effetAttaquePrefab: {fileID: 4842071856983680, guid: b719e3c3977c4454f84f5b2c72992769,
     type: 2}
   statAttaque:
-    ePower: 20
+    ePower: 40
     eRadius: 5
     upwardsModifier: 5
     degGlace: 0
@@ -161,6 +162,8 @@ MonoBehaviour:
   ennemiStats:
     vie: 100
     vieMax: 100
+    nbMissile: 5
+    nbMissileMax: 5
     immortel: 0
     m_JumpForce: 1000
     speed: 250
@@ -196,6 +199,19 @@ MonoBehaviour:
   showContactDommage: 0
   showMouvement: 0
   showElements: 0
+--- !u!114 &114867287559808054
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1675349826042032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b217ba67d1c5304b9da261701c6609d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duree: 1
+  dommageLightColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!212 &212540069194254886
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -210,7 +226,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: e93e92bd72178d245a9287fdedc7f0d0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
