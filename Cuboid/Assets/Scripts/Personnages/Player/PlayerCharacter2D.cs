@@ -402,7 +402,7 @@ public class PlayerCharacter2D : Personnages {
             
             // If the input is moving the player right and the player is facing left...
             if ((move > 0 && spriteR.flipX) || (move < 0 && !spriteR.flipX))
-                Flip();
+                Flip(move);
 
         }
                
@@ -439,11 +439,13 @@ public class PlayerCharacter2D : Personnages {
             m_Rigidbody2D.gravityScale = 4f;
     }
 
-    private void Flip()
+    private void Flip(float move)
     {
         spriteR.flipX = !spriteR.flipX;
         currentWeapon.M_FacingRight = spriteR.flipX;
-        currentWeapon.spriteR.flipX = spriteR.flipX;
+        //currentWeapon.spriteR.flipX = spriteR.flipX;
+      
+        //currentWeapon.transform.localPosition = new Vector3(currentWeapon.transform.localPosition.x * -(Mathf.Sign(move)), currentWeapon.transform.localPosition.y, currentWeapon.transform.localPosition.z);
 
         m_backSphere.GetComponent<SpriteRenderer>().flipX = spriteR.flipX;
         
