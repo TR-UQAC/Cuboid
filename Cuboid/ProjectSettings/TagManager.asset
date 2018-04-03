@@ -16,6 +16,7 @@ TagManager:
   - GrappleUI
   - MissileUI
   - laserBoss
+  - UpgradeDialogUI
   layers:
   - Default
   - TransparentFX

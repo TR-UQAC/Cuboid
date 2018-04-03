@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class DialogueManager : MonoBehaviour {
 
@@ -19,10 +20,23 @@ public class DialogueManager : MonoBehaviour {
         sentences = new Queue<string>();
 	}
 
+    void Update()
+    {
+        if (Input.anyKeyDown)
+        {
+            EndDialogue();
+        }
+    }
+
     public void StartDialogue(Dialogue dialogue) {
         //TODO: arrêter le temps au début du dialogue
         animator.SetBool("IsOpen", true);
         nameText.text = dialogue.name;
+
+        if (sentences == null)
+        {
+            sentences = new Queue<string>();
+        }
 
         sentences.Clear();
 
@@ -58,5 +72,11 @@ public class DialogueManager : MonoBehaviour {
     void EndDialogue() {
         //TODO: Reprendre le temps quand le dialogue est terminer
         animator.SetBool("IsOpen", false);
+
+    }
+
+    public bool GetDialogStatus()
+    {
+        return animator.GetBool("IsOpen");
     }
 }

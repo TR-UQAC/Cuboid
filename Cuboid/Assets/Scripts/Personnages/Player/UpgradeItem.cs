@@ -77,6 +77,8 @@ public class UpgradeItem : MonoBehaviour {
             gameObject.GetComponent<Animator>().Play("Disapear");
         }
 
+        GetComponent<DialogueTrigger>().TriggerDialogue();
+
         Destroy(gameObject, 0.25f);
     }
 }

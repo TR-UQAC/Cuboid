@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114252315261728922}
   - component: {fileID: 58895381163596900}
   - component: {fileID: 95929172391453830}
+  - component: {fileID: 114286822925834682}
   m_Layer: 0
   m_Name: PowerUpSphere
   m_TagString: Untagged
@@ -37,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1184378676568638}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.74, y: 1.36, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -87,6 +88,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UpgradeName: 
+--- !u!114 &114286822925834682
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1184378676568638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02374f22b05fdfa46a720c31f7c8f63c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Upgrade Name
+    sentences:
+    - Hi, I'm an upgrade. I have no text set. Press some button to use me, idk.
 --- !u!212 &212419023144120026
 SpriteRenderer:
   m_ObjectHideFlags: 1

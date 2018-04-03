@@ -25,7 +25,10 @@ public class MorphBomb : MonoBehaviour {
             //Applique la force de jump au player
             foreach (Collider2D item in listCollider)
             {
-                item.attachedRigidbody.AddForce(new Vector2(0, explosionForce));
+                if (item.CompareTag("Player"))
+                {
+                    item.attachedRigidbody.AddForce(new Vector2(0, explosionForce));
+                }    
             }
 
             //Trouve les objets destructibles
