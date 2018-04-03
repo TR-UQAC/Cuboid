@@ -67,7 +67,7 @@ uniform vec3 baseColor;*/
 					g += pow(saturate(1.0 - abs(d)), 200.0);
 
 					if (d > 0.0) {
-						p.x = (p.x - r) / (1.8 - r);
+						p.x = (p.x - r) / (2.0 - r);
 					} else {
 						p.x = p.x;
 					}

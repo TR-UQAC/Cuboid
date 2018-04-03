@@ -183,7 +183,7 @@ public class GrappleBeam : MonoBehaviour
         {
             if (i != grappleRenderer.positionCount - 1)
             {
-                grappleRenderer.SetPosition(i, grapplePositions[i]);
+                grappleRenderer.SetPosition(i, (grapplePositions[i] -(Vector2)transform.position) / transform.localScale.x);
 
                 if (i == grapplePositions.Count - 1 || grapplePositions.Count == 1)
                 {
@@ -220,7 +220,7 @@ public class GrappleBeam : MonoBehaviour
             }
             else
             {
-                grappleRenderer.SetPosition(i, transform.position);
+                grappleRenderer.SetPosition(i, Vector3.zero);
             }
         }
     }
