@@ -17,6 +17,7 @@ TagManager:
   - MissileUI
   - laserBoss
   - UpgradeDialogUI
+  - Spawner_Ennemi
   layers:
   - Default
   - TransparentFX

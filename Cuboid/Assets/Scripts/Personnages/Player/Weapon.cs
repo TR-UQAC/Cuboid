@@ -49,6 +49,7 @@ public class Weapon : MonoBehaviour
         if (GameObject.FindObjectOfType<LineRenderer>() != null)
             viseur = GameObject.FindObjectOfType<LineRenderer>();
 
+
         spriteR = gameObject.GetComponent<SpriteRenderer>();
 
         myTransform = transform;
@@ -109,6 +110,7 @@ public class Weapon : MonoBehaviour
     }
 
     void ViseurDistance() {
+
             RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, 100.0f, ~noHit);
 
             if (hit.collider != null)

@@ -135,6 +135,8 @@ MonoBehaviour:
   ennemiStats:
     vie: 100
     vieMax: 100
+    nbMissile: 5
+    nbMissileMax: 5
     immortel: 0
     m_JumpForce: 1000
     speed: 1000
@@ -165,7 +167,7 @@ MonoBehaviour:
   facingRight: 0
   tirerSurJoueur: 0
   decelleration: 2
-  showVie: 1
+  showVie: 0
   showDommage: 1
   showContactDommage: 0
   showMouvement: 0
@@ -252,7 +254,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 077869138827e704fbde41ce5a376233, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

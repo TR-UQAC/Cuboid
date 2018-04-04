@@ -127,5 +127,12 @@ public class Platformer2DControls : MonoBehaviour
                 bo.CheatLifeBoss();
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.R)) {
+            if (GameObject.Find("Spawn_Folder") != null) {
+                AllSpawners all = GameObject.Find("Spawn_Folder").GetComponent<AllSpawners>();
+                all.SpawnAllEnnemis();
+            }
+        }
     }
 }

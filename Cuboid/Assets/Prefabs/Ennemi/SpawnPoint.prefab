@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 114597382674313672}
   m_Layer: 0
   m_Name: SpawnPoint
-  m_TagString: Untagged
+  m_TagString: Spawner_Ennemi
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51,5 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ee76fb91ef11554eaf30ae800a88d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnPrefab: {fileID: 4947641083449498, guid: 061d804a3efdd054398e9118ed8ea77a,
+    type: 2}
   ennemi: {fileID: 0}
-  rate: 0
+  thisEnnemi: {fileID: 0}

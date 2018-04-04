@@ -115,7 +115,7 @@ public class Ennemis : Personnages {
 
             if (GetComponent<Dommage_Shader>() != null)
                 GetComponent<Dommage_Shader>().CouleurDommage();
-            else
+            else if(m_mask != null)
                 m_mask.alphaCutoff = ((float)ennemiStats.vie / (float)ennemiStats.vieMax);
 
             //Debug.Log("pourcentage de vie restant = " + ((float)ennemiStats.vie / (float)ennemiStats.vieMax));
@@ -126,7 +126,14 @@ public class Ennemis : Personnages {
 
     public override void SoinPerso(int valeur)
     {
-        throw new NotImplementedException();
+        ennemiStats.vie += valeur;
+
+        if (ennemiStats.vie > ennemiStats.vieMax)
+            ennemiStats.vie = ennemiStats.vieMax;
+
+        if (m_mask != null)
+            m_mask.alphaCutoff = ((float)ennemiStats.vie / (float)ennemiStats.vieMax);
+        //throw new NotImplementedException();
     }
 
     public void Attaque() {
