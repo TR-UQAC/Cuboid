@@ -15,9 +15,6 @@ public class PresseTrap : MonoBehaviour {
     [Tooltip("Le temps en seconde avant de rebouger")]
     public float m_Wait = 5.0f;
 
-    [Tooltip("Le temps en seconde de mouvement, plus il est grand, plus il descend longtemps")]
-    public float m_TempsDescend = 2.0f;
-
     [Tooltip("multiplie le déplacement effectuer à chaque instant")]
     public float m_MultipleVitesse = 1.0f;
 
@@ -29,12 +26,14 @@ public class PresseTrap : MonoBehaviour {
 
     // true = est en train de descendre / false = en train de monté
     private bool m_descend = true;
-    private bool m_start = false;
     private bool m_getScale = false;
 
     private SpriteRenderer sr;
 
     private float m_currentDelay;
+
+    //  ancre qui indique où la presse doit arreter de descendre
+    private float m_longueur;
 
     #endregion
 
@@ -47,33 +46,46 @@ public class PresseTrap : MonoBehaviour {
 
         m_currentDelay = m_DelayStart;
 
+        foreach (Transform tr in transform)
+        {
+            if(tr.name == "AncreStop")
+            {
+                m_longueur = Mathf.Abs(tr.localPosition.y);
+                break;
+            }
+        }
         
         //Invoke("ToggleDescente", m_DelayStart);
 	}
-	
-	// Update is called once per frame
-	void Update () {
-        m_currentDelay -= Time.deltaTime;
 
-        if(m_currentDelay <= 0.0f)
+    private void FixedUpdate()
+    {
+        if (m_currentDelay > 0.0f)
         {
-            ToggleDescente();
+            m_currentDelay -= Time.fixedDeltaTime;
         }
-
-        if (m_start == false)
-            return;
-
-        if (m_currentDelay > m_Wait)
+        else
         {
             float y = sr.size.y;
             if (m_descend == true)
             {
                 y -= Time.deltaTime * m_MultipleVitesse;
                 if (y < 4.0f)
+                {
                     y = 4.0f;
+                    ToggleDescente();
+                }
             }
             else
+            {
                 y += Time.deltaTime * m_MultipleVitesse;
+                if (y > m_longueur)
+                {
+                    y = m_longueur;
+                    //FindObjectOfType<AudioManager>().Play("StompBoss");
+                    ToggleDescente();
+                }
+            }
 
             sr.size = new Vector2(sr.size.x, y);
         }
@@ -82,7 +94,7 @@ public class PresseTrap : MonoBehaviour {
     //  baisse ou monte la presse
     private void ToggleDescente()
     {
-        m_currentDelay = m_Wait + m_TempsDescend;
+        m_currentDelay = m_Wait;
 
         //FindObjectOfType<AudioManager>().Play("PressTrapDown");
 
@@ -90,8 +102,6 @@ public class PresseTrap : MonoBehaviour {
             m_descend = true;
         else
             m_descend = false;
-
-        m_start = true;
     }
 
     #region TriggerEcrase
@@ -114,7 +124,7 @@ public class PresseTrap : MonoBehaviour {
                 en.DommagePerso(m_dmg);
             }
 
-            if (m_descend == false && (m_currentDelay - m_Wait) < m_TempsDescend / 2)
+            if (m_descend == false)
             {
                 //  désactive les controle
                 PlayerCharacter2D p = coll.GetComponent<PlayerCharacter2D>();
