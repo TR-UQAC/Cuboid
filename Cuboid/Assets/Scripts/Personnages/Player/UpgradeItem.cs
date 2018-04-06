@@ -7,6 +7,12 @@ public class UpgradeItem : MonoBehaviour {
 
     public string UpgradeName;
 
+    void Awake()
+    {
+        Animator anim = GetComponent<Animator>();
+        anim.Play(UpgradeName);
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
