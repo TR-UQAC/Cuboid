@@ -46,8 +46,8 @@ public class Weapon : MonoBehaviour
             missileUI.SetActive(false);
         }
 
-        if (GameObject.FindObjectOfType<LineRenderer>() != null)
-            viseur = GameObject.FindObjectOfType<LineRenderer>();
+        if (GetComponent<LineRenderer>() != null)
+            viseur = GetComponent<LineRenderer>();
 
 
         spriteR = gameObject.GetComponent<SpriteRenderer>();
@@ -110,6 +110,10 @@ public class Weapon : MonoBehaviour
     }
 
     void ViseurDistance() {
+
+        
+
+        //viseur.SetPosition(0, tmp);
 
             RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, 100.0f, ~noHit);
 
