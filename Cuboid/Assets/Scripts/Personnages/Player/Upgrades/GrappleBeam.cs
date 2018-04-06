@@ -20,6 +20,7 @@ public class GrappleBeam : MonoBehaviour
     private bool isColliding;
 
     private float grappleMaxCastDistance = 50f;
+    private float grappleMaxLength = 20f;
     private List<Vector2> grapplePositions = new List<Vector2>();
 
     private bool distanceSet;
@@ -157,6 +158,10 @@ public class GrappleBeam : MonoBehaviour
         else if ((direction < 0) && isGrappleAttached && !grounded)
         {
             grappleJoint.distance += Time.deltaTime * climbSpeed;
+            if (grappleJoint.distance > grappleMaxLength)
+            {
+                grappleJoint.distance = grappleMaxLength;
+            }
         }
     }
 

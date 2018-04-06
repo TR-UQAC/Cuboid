@@ -23,6 +23,11 @@ public class MorphBall : MonoBehaviour {
         {
             GameObject playergo = transform.root.gameObject;
 
+            if (playergo.GetComponent<GrappleBeam>().isGrappleAttached)
+            {
+                return;
+            }
+
             if (!ismorphed)
             {
                 //Change le sprite           
