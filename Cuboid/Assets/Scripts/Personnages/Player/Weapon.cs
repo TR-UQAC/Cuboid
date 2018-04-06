@@ -111,10 +111,6 @@ public class Weapon : MonoBehaviour
 
     void ViseurDistance() {
 
-        
-
-        //viseur.SetPosition(0, tmp);
-
             RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, 100.0f, ~noHit);
 
             if (hit.collider != null)
