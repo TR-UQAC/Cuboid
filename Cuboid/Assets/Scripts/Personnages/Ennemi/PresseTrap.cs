@@ -12,8 +12,11 @@ public class PresseTrap : MonoBehaviour {
     [Tooltip("Le délais en seconde avant de commencer, pour synchroniser les départ")]
     public float m_DelayStart = 0.0f;
 
-    [Tooltip("Le temps en seconde avant de rebouger")]
-    public float m_Wait = 5.0f;
+    [Tooltip("Le temps en seconde avant de Monter")]
+    public float m_WaitUp = 5.0f;
+
+    [Tooltip("Le temps en seconde avant de descendre")]
+    public float m_WaitDown = 5.0f;
 
     [Tooltip("multiplie le déplacement effectuer à chaque instant")]
     public float m_MultipleVitesse = 1.0f;
@@ -69,6 +72,7 @@ public class PresseTrap : MonoBehaviour {
             float y = sr.size.y;
             if (m_descend == true)
             {
+                // remonte
                 y -= Time.deltaTime * m_MultipleVitesse;
                 if (y < 4.0f)
                 {
@@ -78,11 +82,12 @@ public class PresseTrap : MonoBehaviour {
             }
             else
             {
+                //  descend
                 y += Time.deltaTime * m_MultipleVitesse;
                 if (y > m_longueur)
                 {
                     y = m_longueur;
-                    //FindObjectOfType<AudioManager>().Play("StompBoss");
+                    FindObjectOfType<AudioManager>().Play("StompBoss");
                     ToggleDescente();
                 }
             }
@@ -94,14 +99,20 @@ public class PresseTrap : MonoBehaviour {
     //  baisse ou monte la presse
     private void ToggleDescente()
     {
-        m_currentDelay = m_Wait;
+        
 
         //FindObjectOfType<AudioManager>().Play("PressTrapDown");
 
         if (m_descend == false)
+        {
             m_descend = true;
+            m_currentDelay = m_WaitUp;
+        }
         else
+        {
             m_descend = false;
+            m_currentDelay = m_WaitDown;
+        }
     }
 
     #region TriggerEcrase

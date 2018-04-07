@@ -155,7 +155,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_DelayStart: 2
-  m_Wait: 3
+  m_WaitUp: 1.5
+  m_WaitDown: 2
   m_MultipleVitesse: 12
   m_dmg: 10
   dommageHit:

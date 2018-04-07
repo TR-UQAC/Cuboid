@@ -40,7 +40,10 @@ public class TriggerBossStage : MonoBehaviour {
             }
 
             if (m_Porte)
+            {
                 m_Porte.GetComponent<BoxCollider2D>().enabled = false;
+                m_Porte.GetComponent<Animator>().SetBool("DoClose", false);
+            }
             //  animation d'ouverture de porte
 
             //  faire pop l'upgrade
@@ -88,7 +91,10 @@ public class TriggerBossStage : MonoBehaviour {
             m_boss.GetComponent<boss>().ActiveBoss(collision.gameObject);
             m_bossActive = true;
             if(m_Porte)
+            {
                 m_Porte.GetComponent<BoxCollider2D>().enabled = true;
+                m_Porte.GetComponent<Animator>().SetBool("DoClose", true);
+            }
             //m_Porte.PlayAnimation()
         }
     }
@@ -108,7 +114,10 @@ public class TriggerBossStage : MonoBehaviour {
             m_boss.GetComponent<boss>().enabled = false;
             m_bossActive = false;
             if (m_Porte)
+            {
                 m_Porte.GetComponent<BoxCollider2D>().enabled = false;
+                m_Porte.GetComponent<Animator>().SetBool("DoClose", false);
+            }
         }
     }
 }
