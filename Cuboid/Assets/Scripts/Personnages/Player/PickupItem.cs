@@ -7,6 +7,11 @@ public class PickupItem : MonoBehaviour {
     public string PickupType = "Health";
     public int Valeur = 1;
 
+    void Awake()
+    {
+        Destroy(gameObject, 20f);
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
