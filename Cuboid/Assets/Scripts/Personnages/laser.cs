@@ -193,11 +193,6 @@ public class laser : Bullet {
         charge.Play();
     }
 
-    private void FullLaser()
-    {
-
-    }
-
     public void Disparait()
     {
         die = DOTween.Sequence();

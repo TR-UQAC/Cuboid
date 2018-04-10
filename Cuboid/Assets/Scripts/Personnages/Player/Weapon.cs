@@ -46,8 +46,8 @@ public class Weapon : MonoBehaviour
             missileUI.SetActive(false);
         }
 
-        if (GameObject.FindObjectOfType<LineRenderer>() != null)
-            viseur = GameObject.FindObjectOfType<LineRenderer>();
+        if (GetComponent<LineRenderer>() != null)
+            viseur = GetComponent<LineRenderer>();
 
 
         spriteR = gameObject.GetComponent<SpriteRenderer>();
