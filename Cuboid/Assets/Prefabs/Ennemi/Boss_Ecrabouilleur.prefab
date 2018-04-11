@@ -801,8 +801,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1498822815742042}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.349999, y: -52, z: -5}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.5, y: 9.12, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 4418494053184852}
@@ -1368,6 +1368,7 @@ MonoBehaviour:
     m_Bits: 256
   effetAttaquePrefab: {fileID: 4793239945891142, guid: 2f080beb01f61df4a86c8847a84e0313,
     type: 2}
+  SonDefaut: 1
   statAttaque:
     ePower: 30
     eRadius: 5
@@ -1497,6 +1498,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   effetAttaquePrefab: {fileID: 0}
+  SonDefaut: 0
   statAttaque:
     ePower: 0
     eRadius: 0
@@ -1525,6 +1527,7 @@ MonoBehaviour:
     m_Bits: 256
   effetAttaquePrefab: {fileID: 4793239945891142, guid: 2f080beb01f61df4a86c8847a84e0313,
     type: 2}
+  SonDefaut: 1
   statAttaque:
     ePower: 30
     eRadius: 5
@@ -1620,6 +1623,7 @@ MonoBehaviour:
     m_Bits: 256
   effetAttaquePrefab: {fileID: 4793239945891142, guid: 2f080beb01f61df4a86c8847a84e0313,
     type: 2}
+  SonDefaut: 1
   statAttaque:
     ePower: 30
     eRadius: 5
@@ -1648,6 +1652,7 @@ MonoBehaviour:
     m_Bits: 256
   effetAttaquePrefab: {fileID: 4793239945891142, guid: 2f080beb01f61df4a86c8847a84e0313,
     type: 2}
+  SonDefaut: 1
   statAttaque:
     ePower: 30
     eRadius: 5

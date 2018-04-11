@@ -15,6 +15,8 @@ public class WeaponEnnemi : MonoBehaviour {
 
     private float attaqueCooldown;
 
+    public bool SonDefaut = true;
+
     //Les parametres pour les explosion
     public DegatAttaque statAttaque;
 
@@ -72,7 +74,7 @@ public class WeaponEnnemi : MonoBehaviour {
 
             bul.statAttaque = statAttaque;
 
-            if (FindObjectOfType<AudioManager>() != null) {
+            if (FindObjectOfType<AudioManager>() != null && SonDefaut == true) {
                 FindObjectOfType<AudioManager>().Play("Shoot");
             }
         }

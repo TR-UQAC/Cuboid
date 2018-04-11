@@ -644,11 +644,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114969830128781862, guid: 08f5393c2b7c96649959a69852a652d5,
-        type: 2}
-      propertyPath: vise
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08f5393c2b7c96649959a69852a652d5, type: 2}
   m_IsPrefabParent: 0
@@ -12988,6 +12983,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   effetAttaquePrefab: {fileID: 0}
+  SonDefaut: 1
   statAttaque:
     ePower: 0
     eRadius: 0
@@ -13287,6 +13283,10 @@ Prefab:
       propertyPath: m_CurrentNode
       value: 
       objectReference: {fileID: 2033176023}
+    - target: {fileID: 1772866679855636, guid: 545acdd60927976478a32048ad0148a8, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1498822815742042, guid: 545acdd60927976478a32048ad0148a8, type: 2}
       propertyPath: m_IsActive
       value: 0
