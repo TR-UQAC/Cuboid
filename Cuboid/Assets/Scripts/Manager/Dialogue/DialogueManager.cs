@@ -12,6 +12,7 @@ public class DialogueManager : MonoBehaviour {
     public Animator animator;
 
     private Queue<string> sentences;
+    private bool dialogActive = false;
 
     //private IEnumerator coroutine;
 
@@ -22,14 +23,20 @@ public class DialogueManager : MonoBehaviour {
 
     void Update()
     {
-        if (Input.anyKeyDown)
+        if (dialogActive)
         {
-            EndDialogue();
+            //animator.GetCurrentAnimatorClipInfo()
+        }
+
+        if (Input.anyKeyDown && dialogActive)
+        {
+            Invoke("EndDialogue", 2f);
         }
     }
 
     public void StartDialogue(Dialogue dialogue) {
         //TODO: arrêter le temps au début du dialogue
+        dialogActive = true;
         animator.SetBool("IsOpen", true);
         nameText.text = dialogue.name;
 
