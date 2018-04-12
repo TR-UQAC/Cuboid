@@ -52,8 +52,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: Die
-    clip: {fileID: 8300000, guid: fcd539c4cdfd91640a5bccc9234767d6, type: 3}
+  - name: Musique_Jeu
+    clip: {fileID: 8300000, guid: 96468af9ff1b1e14da756071baaf9a9b, type: 3}
     output: {fileID: 24300002, guid: 68739206651769c479cf85faf1a0876d, type: 2}
     volume: 0.5
     pitch: 1
