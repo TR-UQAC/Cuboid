@@ -9,6 +9,8 @@ public class PickupItem : MonoBehaviour {
 
     void Awake()
     {
+        GetComponent<Animator>().Play(PickupType);
+
         Destroy(gameObject, 20f);
     }
 
