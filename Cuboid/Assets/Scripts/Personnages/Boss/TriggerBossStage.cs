@@ -39,15 +39,14 @@ public class TriggerBossStage : MonoBehaviour {
                 m_bossCam.SetActive(false);
             }
 
+            //  ouvrir la porte
             if (m_Porte)
             {
                 m_Porte.GetComponent<BoxCollider2D>().enabled = false;
                 m_Porte.GetComponent<Animator>().SetBool("DoClose", false);
             }
-            //  animation d'ouverture de porte
 
             //  faire pop l'upgrade
-
             if (m_upgrade)
             {
                 Sequence loot = DOTween.Sequence();
@@ -57,28 +56,12 @@ public class TriggerBossStage : MonoBehaviour {
                 loot.Play();
             }
 
-            
         }
 
         if(m_bossActive == true)
         {
             m_lastPosBoss = m_boss.transform.position;
         }
-
-        //  test de sequence pour l'apparition de l'upgrade
-
-        /*
-        if ( m_bossActive == false)
-        {
-            //  faire pop l'upgrade
-            Sequence loot = DOTween.Sequence();
-            GameObject trPl = GameObject.FindGameObjectWithTag("Player");
-            loot.Append(m_upgrade.transform.DOMove(trPl.transform.position + new Vector3(3.0f, 0.0f), 0.01f));
-            loot.Append(m_upgrade.transform.DOShakePosition(5.0f, new Vector3(0.0f, -0.05f, 0.0f), 2, 40.0f, false,false).SetLoops(1000));
-            loot.Play();
-
-            m_bossActive = true;
-        }*/
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

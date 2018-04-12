@@ -293,7 +293,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1524943404655796
 GameObject:
   m_ObjectHideFlags: 0
@@ -623,7 +623,7 @@ Transform:
   m_GameObject: {fileID: 1173350686424706}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.4, y: 1.4, z: 1}
+  m_LocalScale: {x: 0, y: 0.9, z: 1}
   m_Children: []
   m_Father: {fileID: 4212421102996500}
   m_RootOrder: 4
@@ -801,8 +801,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1498822815742042}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.349999, y: -52.179993, z: -5}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.5, y: 9.12, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 4418494053184852}
@@ -1237,7 +1237,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.28}
+    oldSize: {x: 0.73142856, y: 0.73142856}
     newSize: {x: 0.64, y: 0.64}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1310,6 +1310,8 @@ MonoBehaviour:
   ennemiStats:
     vie: 500
     vieMax: 500
+    nbMissile: 5
+    nbMissileMax: 5
     immortel: 0
     m_JumpForce: 1000
     speed: 250
@@ -1366,6 +1368,7 @@ MonoBehaviour:
     m_Bits: 256
   effetAttaquePrefab: {fileID: 4793239945891142, guid: 2f080beb01f61df4a86c8847a84e0313,
     type: 2}
+  SonDefaut: 1
   statAttaque:
     ePower: 30
     eRadius: 5
@@ -1387,6 +1390,8 @@ MonoBehaviour:
   ennemiStats:
     vie: 500
     vieMax: 500
+    nbMissile: 5
+    nbMissileMax: 5
     immortel: 0
     m_JumpForce: 1000
     speed: 250
@@ -1436,6 +1441,8 @@ MonoBehaviour:
   ennemiStats:
     vie: 500
     vieMax: 500
+    nbMissile: 5
+    nbMissileMax: 5
     immortel: 0
     m_JumpForce: 1000
     speed: 250
@@ -1491,6 +1498,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   effetAttaquePrefab: {fileID: 0}
+  SonDefaut: 0
   statAttaque:
     ePower: 0
     eRadius: 0
@@ -1519,6 +1527,7 @@ MonoBehaviour:
     m_Bits: 256
   effetAttaquePrefab: {fileID: 4793239945891142, guid: 2f080beb01f61df4a86c8847a84e0313,
     type: 2}
+  SonDefaut: 1
   statAttaque:
     ePower: 30
     eRadius: 5
@@ -1556,6 +1565,8 @@ MonoBehaviour:
   ennemiStats:
     vie: 200
     vieMax: 200
+    nbMissile: 5
+    nbMissileMax: 5
     immortel: 1
     m_JumpForce: 0
     speed: 1000
@@ -1612,6 +1623,7 @@ MonoBehaviour:
     m_Bits: 256
   effetAttaquePrefab: {fileID: 4793239945891142, guid: 2f080beb01f61df4a86c8847a84e0313,
     type: 2}
+  SonDefaut: 1
   statAttaque:
     ePower: 30
     eRadius: 5
@@ -1640,6 +1652,7 @@ MonoBehaviour:
     m_Bits: 256
   effetAttaquePrefab: {fileID: 4793239945891142, guid: 2f080beb01f61df4a86c8847a84e0313,
     type: 2}
+  SonDefaut: 1
   statAttaque:
     ePower: 30
     eRadius: 5
@@ -1661,6 +1674,8 @@ MonoBehaviour:
   ennemiStats:
     vie: 500
     vieMax: 500
+    nbMissile: 5
+    nbMissileMax: 5
     immortel: 0
     m_JumpForce: 1000
     speed: 250
@@ -18550,7 +18565,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -627212813
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 1
   m_RenderMode: 0
   m_SortMode: 0
@@ -18604,7 +18619,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -627212813
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 1
   m_RenderMode: 0
   m_SortMode: 0
@@ -18712,7 +18727,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -627212813
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 1
   m_RenderMode: 0
   m_SortMode: 0
@@ -18766,7 +18781,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -627212813
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 1
   m_RenderMode: 0
   m_SortMode: 0

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using EZCameraShake;
+using DG.Tweening;
 
 public class PlayerCharacter2D : Personnages {
 
@@ -22,6 +23,7 @@ public class PlayerCharacter2D : Personnages {
     public Transform m_GroundCheck;    // A position marking where to check if the player is grounded.
     public GameObject morphBombPrefab;
     public GameObject m_backSphere;     //  !*! Ajout pour animer le fond avec le transforme
+    public GameObject m_ExplosionEffect;
 
     public float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
     private bool m_Grounded;            // Whether or not the player is grounded.
@@ -468,7 +470,19 @@ public class PlayerCharacter2D : Personnages {
             UpdateHealthBar();
 
             if (joueurStats.vie <= 0)
+            {
+                GameObject ex = Instantiate(m_ExplosionEffect, transform.position, transform.rotation);
+                FindObjectOfType<AudioManager>().Play("ExplosionBoss");
+
+                Sequence bossKill = DOTween.Sequence();
+                bossKill.SetDelay(2.0f);
+                bossKill.AppendCallback(() =>
+                {
+                    Destroy(ex);
+                });
+
                 GameMaster.KillJoueur(this);
+            }
             else
                 CameraShaker.Instance.ShakeOnce(3f, 2f, .1f, dureeImmortel);
         }

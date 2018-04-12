@@ -180,7 +180,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1847836177881528}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -103.84, y: -174.11, z: 0}
+  m_LocalPosition: {x: -42.59, y: -3.53, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 4032282408151114}
@@ -198,7 +198,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1461352220587644}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.3, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4344034596531936}
@@ -412,6 +412,8 @@ MonoBehaviour:
   morphBombPrefab: {fileID: 1167378538659460, guid: a504fd6860ac2eb48bbcfffb8635b62b,
     type: 2}
   m_backSphere: {fileID: 1834673594550958}
+  m_ExplosionEffect: {fileID: 1000011797152326, guid: c2f5643034b0c7842aaa5e9ca398139e,
+    type: 2}
   k_GroundedRadius: 0.2
   IsRunning: 0
   fallMaxSpeed: 35

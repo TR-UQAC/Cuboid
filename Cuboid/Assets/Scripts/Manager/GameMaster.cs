@@ -39,6 +39,18 @@ public class GameMaster : MonoBehaviour {
         perso.gameObject.transform.position = spawnPoint.position;
         perso.gameObject.transform.rotation = spawnPoint.rotation;
         perso.SoinPerso(999999);
+
+        //  si le joueur à été écrasé avant de mourir, réactive les controles et remet le scale comme il faut;
+        if(perso.gameObject.transform.lossyScale.y < 1.5f)
+        {
+            Rigidbody2D rbp = perso.GetComponent<Rigidbody2D>() as Rigidbody2D;
+            rbp.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+
+            perso.setEnableInput(true);
+
+            perso.gameObject.transform.localScale = new Vector3(5.0f, 5.0f, 1.0f);
+        }
+
         perso.gameObject.SetActive(true);
 
         if (playerPrefab != null)
