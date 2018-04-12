@@ -13,6 +13,7 @@ public class laser : Bullet {
     private Transform m_impact;
     private Transform m_effet;
     private Transform m_corps;
+    private Transform m_forwardLaser;
     private bool m_charge = false;
     private Sequence die;
     private Sequence charge;
@@ -33,7 +34,10 @@ public class laser : Bullet {
     {
 
         //hit = Physics2D.Raycast(transform.position, direction, range, m_RayCastHit);
-        hit = Physics2D.CircleCast(transform.position, (m_LargeurLaser/2.0f), direction, range, m_RayCastHit);
+
+        Vector2 dir = m_forwardLaser.transform.position - transform.position;
+
+        hit = Physics2D.CircleCast(transform.position, (m_LargeurLaser/2.0f), dir, range, m_RayCastHit);
         if (hit)
         {
             float dist = hit.distance + 0.5f;
@@ -82,6 +86,12 @@ public class laser : Bullet {
             if(child.name == "LoadLaser")
             {
                 loadPS = child.GetComponent<ParticleSystem>() as ParticleSystem;
+                continue;
+            }
+
+            if (child.name == "forwardLaser")
+            {
+                m_forwardLaser = child;
                 continue;
             }
         }
@@ -211,6 +221,7 @@ public class laser : Bullet {
         {
             ps.Stop();
             loadPS.Stop();
+            m_charge = false;
 
             //m_effet.gameObject.SetActive(false);
         }));

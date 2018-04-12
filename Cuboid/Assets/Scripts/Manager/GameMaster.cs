@@ -118,4 +118,9 @@ public class GameMaster : MonoBehaviour {
     {
         Destroy(perso.gameObject);
     }
+
+    public static void KillBossTP(bossTeleport perso)
+    {
+        Destroy(perso.gameObject);
+    }
 }

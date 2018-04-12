@@ -9,6 +9,8 @@ public class TriggerBossStage : MonoBehaviour {
     public GameObject m_Porte;
     public GameObject m_upgrade;
     public GameObject m_bossCam;
+    [Tooltip("1 = boss finale / 2 = boss téléporteur / 3 = mini boss")]
+    public int m_NoBoss = 1;
 
     private bool m_bossActive = false;
     private bool m_bossFin = false;
@@ -21,7 +23,9 @@ public class TriggerBossStage : MonoBehaviour {
             enabled = false;
 
         m_boss.SetActive(false);
-        m_boss.GetComponent<boss>().enabled = false;
+
+        if(m_NoBoss == 1)
+            m_boss.GetComponent<boss>().enabled = false;
 	}
 	
 	// Update is called once per frame
@@ -70,8 +74,11 @@ public class TriggerBossStage : MonoBehaviour {
         {
             //  Le joueur entre dans la pièce
             m_boss.SetActive(true);
-            m_boss.GetComponent<boss>().enabled = true;
-            m_boss.GetComponent<boss>().ActiveBoss(collision.gameObject);
+            if (m_NoBoss == 1)
+            {
+                m_boss.GetComponent<boss>().enabled = true;
+                m_boss.GetComponent<boss>().ActiveBoss(collision.gameObject);
+            }
             m_bossActive = true;
             if(m_Porte)
             {
@@ -92,9 +99,12 @@ public class TriggerBossStage : MonoBehaviour {
 
             Debug.Log("le joueur est mouru");
 
-            m_boss.GetComponent<boss>().resetPV();
+            if(m_NoBoss == 1)
+            {
+                m_boss.GetComponent<boss>().resetPV();
+                m_boss.GetComponent<boss>().enabled = false;
+            }
 
-            m_boss.GetComponent<boss>().enabled = false;
             m_bossActive = false;
             if (m_Porte)
             {
