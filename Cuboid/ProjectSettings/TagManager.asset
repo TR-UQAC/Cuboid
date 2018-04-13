@@ -19,6 +19,7 @@ TagManager:
   - UpgradeDialogUI
   - Spawner_Ennemi
   - BulletUI
+  - Ancre
   layers:
   - Default
   - TransparentFX

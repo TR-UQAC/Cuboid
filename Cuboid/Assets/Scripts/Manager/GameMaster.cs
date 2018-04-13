@@ -18,7 +18,7 @@ public class GameMaster : MonoBehaviour {
     private GameObject tmpPlayer;
 
     void Awake() {
-        //Cursor.visible = false;
+        Cursor.visible = false;
         
         if (instance == null)
             instance = this;
@@ -65,6 +65,8 @@ public class GameMaster : MonoBehaviour {
             Transform clone = Instantiate(spawnPrefab, spawnPoint.position, spawnPoint.rotation) as Transform;
             Destroy(clone.gameObject, 3f);
         }
+
+        perso.joueurStats.immortel = false;
     }
 
     public void ItemDrop(Ennemis perso)
@@ -123,6 +125,11 @@ public class GameMaster : MonoBehaviour {
     }
 
     public static void KillBoss(boss perso)
+    {
+        Destroy(perso.gameObject);
+    }
+
+    public static void KillBossTP(bossTeleport perso)
     {
         Destroy(perso.gameObject);
     }

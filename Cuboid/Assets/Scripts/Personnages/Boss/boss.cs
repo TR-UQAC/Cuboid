@@ -15,11 +15,6 @@ public class boss : MonoBehaviour
     //  Le shield, repousse les projectiles et est desactiver à la 2e phase
     private Transform m_shield;
 
-    //  si le joueur est au dela de cette distance, Désactivation
-    static float distActivation = 100;
-
-    private Rigidbody2D rb;
-    //private SpriteRenderer sr;
     private Transform tr;
 
     [Tooltip("le noeud actuelle où ce trouve le boss")]
@@ -33,16 +28,12 @@ public class boss : MonoBehaviour
     [Tooltip("Temps en seconde entre 2 déplacement à la 2e phase")]
     public float m_MovingRate2;
 
-    private float m_currentWait;
-
     //  référence au joueur à poursuivre
     private GameObject m_Player;
     private float m_ScaleY = 1.0f;
     //  la box collider du boss pour l'écrasement
     private BoxCollider2D bc;
 
-    //  si le joueur meur, le chercher
-    private bool searchingForPlayer = false;
     private bool m_arreter = true;
 
     //  2e phase du boss, les 4 côté détruit, le core attack
@@ -55,10 +46,6 @@ public class boss : MonoBehaviour
     //  set les variable avant d'être actif
     private void Awake()
     {
-        //m_Player = GameObject.FindGameObjectWithTag("Player");
-
-        rb = GetComponent<Rigidbody2D>() as Rigidbody2D;
-        //sr = GetComponent<SpriteRenderer>() as SpriteRenderer;
         tr = GetComponent<Transform>() as Transform;
     }
 
@@ -383,7 +370,6 @@ public class boss : MonoBehaviour
         }
         //FindObjectOfType<AudioManager>().Mute("LaserBossMilieu");
 
-        searchingForPlayer = true;
         Sequence retour = DOTween.Sequence();
 
         retour.AppendCallback(() =>
@@ -402,27 +388,9 @@ public class boss : MonoBehaviour
     {
         m_Player = p;
         m_ScaleY = p.transform.lossyScale.y;
-        searchingForPlayer = false;
         m_arreter = false;
     }
 
 
-    IEnumerator SearchForPlayer()
-    {
-        GameObject sResult = GameObject.FindGameObjectWithTag("Player");
-        if (sResult == null)
-        {
-            yield return new WaitForSeconds(0.5f);
-            StartCoroutine(SearchForPlayer());
-        }
-        else
-        {
-            m_Player = sResult;
-            m_ScaleY = sResult.transform.lossyScale.y;
-            searchingForPlayer = false;
-            m_arreter = false;
-            yield break;
-        }
-    }
     #endregion
 }
