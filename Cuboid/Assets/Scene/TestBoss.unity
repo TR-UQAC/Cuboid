@@ -217,7 +217,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 28160837}
-  m_Layer: 14
+  m_Layer: 0
   m_Name: FirePoint (4)
   m_TagString: Ancre
   m_Icon: {fileID: -1577725955494882426, guid: 0000000000000000d000000000000000, type: 0}
@@ -273,7 +273,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 47110849}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.26, y: 14.81, z: 0}
+  m_LocalPosition: {x: -21.82, y: 35.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1616468910}
@@ -688,11 +688,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4409764083206524, guid: 08f5393c2b7c96649959a69852a652d5, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -34.24
+      value: -45.23
       objectReference: {fileID: 0}
     - target: {fileID: 4409764083206524, guid: 08f5393c2b7c96649959a69852a652d5, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 25.33
+      value: 24.84
       objectReference: {fileID: 0}
     - target: {fileID: 4409764083206524, guid: 08f5393c2b7c96649959a69852a652d5, type: 2}
       propertyPath: m_LocalPosition.z
@@ -717,6 +717,11 @@ Prefab:
     - target: {fileID: 4409764083206524, guid: 08f5393c2b7c96649959a69852a652d5, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114773171836316542, guid: 08f5393c2b7c96649959a69852a652d5,
+        type: 2}
+      propertyPath: joueurStats.immortel
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08f5393c2b7c96649959a69852a652d5, type: 2}
@@ -786,7 +791,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 144026808}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.24, y: 15.03, z: 0}
+  m_LocalPosition: {x: -16.98, y: 26.43, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1616468910}
@@ -3525,7 +3530,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1087096284}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.36, y: 3.33, z: 0}
+  m_LocalPosition: {x: -27.07, y: 38.21, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1616468910}
@@ -3878,7 +3883,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1248347944}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.87, y: 8.57, z: 0}
+  m_LocalPosition: {x: -19.08, y: 32.57, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1616468910}
@@ -14121,11 +14126,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4815316835524508, guid: 29dc41095eac0f948a8d7f2c71e466be, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -33.22
+      value: -38.24
       objectReference: {fileID: 0}
     - target: {fileID: 4815316835524508, guid: 29dc41095eac0f948a8d7f2c71e466be, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 4.1
+      value: 26.52
       objectReference: {fileID: 0}
     - target: {fileID: 4815316835524508, guid: 29dc41095eac0f948a8d7f2c71e466be, type: 2}
       propertyPath: m_LocalPosition.z
@@ -14299,7 +14304,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1328610259}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -25.46, y: 15.82, z: 0}
+  m_LocalPosition: {x: -37.38, y: 31.54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1616468910}
@@ -14748,7 +14753,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1565319363}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.16, y: 3.6200001, z: 0}
+  m_LocalPosition: {x: -17.42, y: 29.41, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1616468910}
@@ -14776,7 +14781,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1616468909}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 24.59, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1229025494}
@@ -15134,7 +15139,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1696486827}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -19.41, y: 10.409999, z: 0}
+  m_LocalPosition: {x: -35.23, y: 36.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1616468910}
@@ -15148,7 +15153,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1699340630}
-  m_Layer: 14
+  m_Layer: 0
   m_Name: FirePoint (1)
   m_TagString: Ancre
   m_Icon: {fileID: -1577725955494882426, guid: 0000000000000000d000000000000000, type: 0}
@@ -15275,7 +15280,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1849841856}
-  m_Layer: 14
+  m_Layer: 0
   m_Name: FirePoint (2)
   m_TagString: Ancre
   m_Icon: {fileID: -1577725955494882426, guid: 0000000000000000d000000000000000, type: 0}
@@ -15355,11 +15360,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4091939974047138, guid: 156b0a46637a80f48ae1811fe561f00d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 17.95
+      value: 11.8
       objectReference: {fileID: 0}
     - target: {fileID: 4091939974047138, guid: 156b0a46637a80f48ae1811fe561f00d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -4.94
+      value: -14.2
       objectReference: {fileID: 0}
     - target: {fileID: 4316654614227704, guid: 156b0a46637a80f48ae1811fe561f00d, type: 2}
       propertyPath: m_LocalPosition.x
@@ -15376,7 +15381,12 @@ Prefab:
       objectReference: {fileID: 1983445595}
     - target: {fileID: 1037595027239456, guid: 156b0a46637a80f48ae1811fe561f00d, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61032406156121382, guid: 156b0a46637a80f48ae1811fe561f00d,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 156b0a46637a80f48ae1811fe561f00d, type: 2}
@@ -15454,7 +15464,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1974391615}
-  m_Layer: 14
+  m_Layer: 0
   m_Name: FirePoint
   m_TagString: Ancre
   m_Icon: {fileID: -1577725955494882426, guid: 0000000000000000d000000000000000, type: 0}
@@ -15544,8 +15554,18 @@ Prefab:
       objectReference: {fileID: 1905063905}
     - target: {fileID: 1179973891478516, guid: 99df0a70e65675b4686c3ddc1fe0df5c, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114150505805839322, guid: 99df0a70e65675b4686c3ddc1fe0df5c,
+        type: 2}
+      propertyPath: m_NoBoss
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114150505805839322, guid: 99df0a70e65675b4686c3ddc1fe0df5c,
+        type: 2}
+      propertyPath: m_boss
+      value: 
+      objectReference: {fileID: 2000004564}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 99df0a70e65675b4686c3ddc1fe0df5c, type: 2}
   m_IsPrefabParent: 0
@@ -15615,7 +15635,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2000004564}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -34.79, y: -5.38, z: 0}
+  m_LocalPosition: {x: -34.53, y: -7.32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1189275304}
@@ -15737,11 +15757,13 @@ MonoBehaviour:
   - {fileID: 1248347945}
   - {fileID: 1565319364}
   - {fileID: 144026810}
-  m_MovingRate: 0
+  m_nbTP: 5
   m_ExplosionEffect: {fileID: 1000011797152326, guid: c2f5643034b0c7842aaa5e9ca398139e,
     type: 2}
+  m_TeleportEffect: {fileID: 0}
   m_Laser: {fileID: 1753250106531720, guid: ec6eba1ee496049468f44d232c057c9d, type: 2}
   m_AngleRotation: 540
+  m_rotationTP: 360
   m_dmgLaser: 30
 --- !u!1001 &2012042832
 Prefab:
@@ -15926,7 +15948,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 2103012098}
-  m_Layer: 14
+  m_Layer: 0
   m_Name: FirePoint (3)
   m_TagString: Ancre
   m_Icon: {fileID: -1577725955494882426, guid: 0000000000000000d000000000000000, type: 0}

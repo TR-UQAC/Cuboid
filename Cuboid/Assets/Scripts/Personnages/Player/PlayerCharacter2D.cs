@@ -466,6 +466,9 @@ public class PlayerCharacter2D : Personnages {
         //Debug.Log("Dommage");
         if (!joueurStats.immortel && joueurStats.vie > 0) {
 
+            GetComponent<Animator>().Play("PlayerDamage");
+            
+
             joueurStats.immortel = true;
             StartCoroutine(ChangeImmortel());
 
