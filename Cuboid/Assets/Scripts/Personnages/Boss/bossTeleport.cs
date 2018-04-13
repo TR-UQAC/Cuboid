@@ -233,4 +233,9 @@ public class bossTeleport : MonoBehaviour {
         bul.dommageHit = canon.dommageHit;
         bul.dmg = dmg;
     }
+
+    public void resetBoss()
+    {
+        
+    }
 }

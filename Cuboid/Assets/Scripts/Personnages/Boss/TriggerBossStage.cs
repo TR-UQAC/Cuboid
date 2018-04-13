@@ -31,6 +31,9 @@ public class TriggerBossStage : MonoBehaviour {
         if(m_NoBoss == 1)
             m_boss.GetComponent<boss>().enabled = false;
 
+        if (m_NoBoss == 2)
+            m_boss.GetComponent<bossTeleport>().enabled = false;
+
         if(m_NoBoss == 3)
             canons = GameObject.FindGameObjectsWithTag("Canon");
     }
@@ -103,6 +106,12 @@ public class TriggerBossStage : MonoBehaviour {
                 m_boss.GetComponent<boss>().enabled = true;
                 m_boss.GetComponent<boss>().ActiveBoss(collision.gameObject);
             }
+
+            if(m_NoBoss == 2)
+            {
+                m_boss.GetComponent<bossTeleport>().enabled = true;
+            }
+
             m_bossActive = true;
             if(m_Porte)
             {
@@ -127,7 +136,21 @@ public class TriggerBossStage : MonoBehaviour {
             {
                 m_boss.GetComponent<boss>().resetPV();
                 m_boss.GetComponent<boss>().enabled = false;
-            }else if(m_NoBoss == 3) {
+            }
+            else if(m_NoBoss == 2)
+            {
+                foreach (Transform tr in m_boss.transform)
+                {
+                    if(tr.tag == "Ennemi")
+                    {
+                        tr.GetComponent<Ennemis>().SoinPerso(1000);
+                        break;
+                    }
+                }
+
+                m_boss.GetComponent<bossTeleport>().enabled = false;
+            }
+            else if(m_NoBoss == 3) {
                 m_boss.GetComponent<Ennemis>().SoinPerso(1000);
                 m_boss.GetComponent<Ennemis>().enabled = false;
             }
