@@ -101,6 +101,11 @@ public class PlayerCharacter2D : Personnages {
         if (m_backSphere != null && (m_Rigidbody2D.velocity.x > 0.1f || m_Rigidbody2D.velocity.x < -0.1f))
             m_backSphere.transform.Rotate(0.0f, 0.0f, -m_Rigidbody2D.velocity.x / 2);
 
+
+        if (Input.GetKeyDown(KeyCode.F3))
+        {
+            GameMaster.StartEscapeSequence();
+        }
     }
 
     private void FixedUpdate()

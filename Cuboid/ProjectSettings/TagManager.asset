@@ -20,6 +20,7 @@ TagManager:
   - Spawner_Ennemi
   - BulletUI
   - Ancre
+  - EscapeTimerUI
   - Canon
   layers:
   - Default
