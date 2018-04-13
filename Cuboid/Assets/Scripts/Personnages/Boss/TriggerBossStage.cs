@@ -7,8 +7,12 @@ public class TriggerBossStage : MonoBehaviour {
 
     public GameObject m_boss;
     public GameObject m_Porte;
+    public GameObject m_Trape;
     public GameObject m_upgrade;
     public GameObject m_bossCam;
+
+    private GameObject[] canons;
+
     [Tooltip("1 = boss finale / 2 = boss téléporteur / 3 = mini boss")]
     public int m_NoBoss = 1;
 
@@ -26,7 +30,10 @@ public class TriggerBossStage : MonoBehaviour {
 
         if(m_NoBoss == 1)
             m_boss.GetComponent<boss>().enabled = false;
-	}
+
+        if(m_NoBoss == 3)
+            canons = GameObject.FindGameObjectsWithTag("Canon");
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -50,6 +57,11 @@ public class TriggerBossStage : MonoBehaviour {
                 m_Porte.GetComponent<Animator>().SetBool("DoClose", false);
             }
 
+            //  ouvrir la trape
+            if (m_Trape)
+                m_Trape.GetComponent<BoxCollider2D>().enabled = false;
+
+
             //  faire pop l'upgrade
             if (m_upgrade)
             {
@@ -60,6 +72,19 @@ public class TriggerBossStage : MonoBehaviour {
                 loot.Play();
             }
 
+            //Si boss 3 detruire Canon
+            if (m_NoBoss == 3) {
+                GameObject[] canons;
+
+                canons = GameObject.FindGameObjectsWithTag("Canon");
+
+                for (int i = canons.Length-1; i >=0; i--) {
+                    Ennemis canon = canons[i].GetComponent<Ennemis>();
+                    canon.ennemiStats.immortel = false;
+                    canon.DommagePerso(10);
+                }
+            }
+
         }
 
         if(m_bossActive == true)
@@ -67,7 +92,6 @@ public class TriggerBossStage : MonoBehaviour {
             m_lastPosBoss = m_boss.transform.position;
         }
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Player" && m_bossActive == false && m_bossFin == false)
@@ -103,6 +127,9 @@ public class TriggerBossStage : MonoBehaviour {
             {
                 m_boss.GetComponent<boss>().resetPV();
                 m_boss.GetComponent<boss>().enabled = false;
+            }else if(m_NoBoss == 3) {
+                m_boss.GetComponent<Ennemis>().SoinPerso(1000);
+                m_boss.GetComponent<Ennemis>().enabled = false;
             }
 
             m_bossActive = false;

@@ -20,6 +20,7 @@ TagManager:
   - Spawner_Ennemi
   - BulletUI
   - Ancre
+  - Canon
   layers:
   - Default
   - TransparentFX
@@ -37,8 +38,8 @@ TagManager:
   - collideTest
   - Boss
   - Shield
-  - 
-  - 
+  - Spawn
+  - Canon
   - 
   - 
   - 
