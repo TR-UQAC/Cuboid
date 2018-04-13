@@ -1,14 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
-
+using TMPro;
 using UnityEngine;
+using System;
+
 
 public class GameMaster : MonoBehaviour {
 
     public static GameMaster instance;
 
     public int spawnDelay = 2;
+
+    public float escapeSeconds = 150;
 
     public Transform spawnPoint;
     public Transform spawnPrefab;
@@ -17,9 +21,19 @@ public class GameMaster : MonoBehaviour {
 
     private GameObject tmpPlayer;
 
+    private GameObject escapeTimer;
+    private bool timerRunning = false;
+    private float currentTime = 0f;
+
     void Awake() {
         Cursor.visible = false;
-        
+
+        if (GameObject.FindGameObjectWithTag("EscapeTimerUI"))
+        {
+            escapeTimer = GameObject.FindGameObjectWithTag("EscapeTimerUI");
+        }
+        escapeTimer.SetActive(false);
+
         if (instance == null)
             instance = this;
         else {
@@ -30,6 +44,18 @@ public class GameMaster : MonoBehaviour {
         Physics2D.IgnoreLayerCollision(11, 11, true);
 
         DontDestroyOnLoad(gameObject);
+    }
+
+    void Update()
+    {
+        if (timerRunning)
+        {
+            HandleTimer();
+        }
+        else
+        {
+            currentTime = escapeSeconds;
+        }
     }
 
     public IEnumerator RespawnPlayer(PlayerCharacter2D perso) {
@@ -71,10 +97,10 @@ public class GameMaster : MonoBehaviour {
 
     public void ItemDrop(Ennemis perso)
     {
-        float result = Random.Range(1, 100);
+        float result = UnityEngine.Random.Range(1, 100);
         if (result/100 > 0.5f)
         {
-            result = Random.Range(1, 100);
+            result = UnityEngine.Random.Range(1, 100);
             if (result/100 > 0.5f)          //1-50: Missile, 51-100: Health
             {
                 PlayerCharacter2D pc = FindObjectOfType<PlayerCharacter2D>();
@@ -98,9 +124,32 @@ public class GameMaster : MonoBehaviour {
         }  
     }
 
+    public void HandleTimer()
+    {
+        currentTime -= Time.deltaTime;
+
+        if (currentTime <= 0)
+        {
+            escapeTimer.GetComponent<TextMeshProUGUI>().text = "00:00.00";
+            timerRunning = false;
+        }
+        else
+        {
+            TimeSpan ts = TimeSpan.FromSeconds(currentTime);
+            string txt = Math.Floor(ts.TotalMinutes).ToString("00") + ":" + (Math.Floor(ts.TotalSeconds) % 60).ToString("00") + "." + Math.Floor(ts.TotalMilliseconds) % 100;
+            escapeTimer.GetComponent<TextMeshProUGUI>().text = txt;
+        }
+    }
+
     private void DestroyPlayer(PlayerCharacter2D perso)
     {
         Destroy(perso.gameObject);
+    }
+
+    public static void StartEscapeSequence()
+    {
+        instance.timerRunning = true;
+        instance.escapeTimer.SetActive(true);
     }
 
     public static void KillJoueur(PlayerCharacter2D perso)
