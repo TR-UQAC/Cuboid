@@ -173,8 +173,13 @@ public class Ennemis : Personnages {
                 break;
         }
 
-        if (ia && !tirerSurJoueur)
-            DirectionTarget();
+        if (ia) {
+            if (!tirerSurJoueur)
+                DirectionTarget();
+            else
+                directionTir.x = 0;
+        }
+            
         else if (comp.deplacement != typeDeplac.Immobile) {
             direction = dir;
             directionTir = dir;
@@ -229,6 +234,7 @@ public class Ennemis : Personnages {
     #region Activation
     //**** Activation/ Desactivation par rapport à la distance ****//
     IEnumerator CheckDistance() {
+       
         if (en == null) {
             if (!searchingForPlayer) {
                 searchingForPlayer = true;

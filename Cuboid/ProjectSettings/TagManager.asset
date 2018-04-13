@@ -21,6 +21,7 @@ TagManager:
   - BulletUI
   - Ancre
   - EscapeTimerUI
+  - Canon
   layers:
   - Default
   - TransparentFX
@@ -38,8 +39,8 @@ TagManager:
   - collideTest
   - Boss
   - Shield
-  - 
-  - 
+  - Spawn
+  - Canon
   - 
   - 
   - 
