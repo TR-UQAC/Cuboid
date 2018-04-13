@@ -154,7 +154,7 @@ public class Weapon : MonoBehaviour
         }
         else
         {
-            missileUI.GetComponent<Image>().color = new Vector4(1, 1, 0, 0.098f);
+            missileUI.GetComponent<Image>().color = new Vector4(1, 1, 0, 0.392f);
         }
     }
 

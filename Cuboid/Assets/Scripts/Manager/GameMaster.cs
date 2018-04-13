@@ -40,6 +40,12 @@ public class GameMaster : MonoBehaviour {
         perso.gameObject.transform.rotation = spawnPoint.rotation;
         perso.SoinPerso(999999);
 
+        //Detache le grappin si on meurt en etant attache
+        if (perso.GetComponent<GrappleBeam>().isGrappleAttached)
+        {
+            perso.GetComponent<GrappleBeam>().UseGrapple();
+        }
+      
         //  si le joueur à été écrasé avant de mourir, réactive les controles et remet le scale comme il faut;
         if(perso.gameObject.transform.lossyScale.y < 1.5f)
         {
@@ -74,15 +80,17 @@ public class GameMaster : MonoBehaviour {
                 {
                     GameObject clone = Instantiate(itemPickupPrefab, perso.transform.position, perso.transform.rotation);
                     clone.GetComponent<PickupItem>().PickupType = "Missile";
+                    clone.GetComponent<Animator>().Play("Missile");
                     clone.GetComponent<PickupItem>().Valeur = 5;
-                    Debug.Log("missile drop");
+                    //Debug.Log("missile drop");
                 }
             }
             else
             {
-                Debug.Log("health drop");
+                //Debug.Log("health drop");
                 GameObject clone = Instantiate(itemPickupPrefab, perso.transform.position, perso.transform.rotation);
                 clone.GetComponent<PickupItem>().PickupType = "Health";
+                clone.GetComponent<Animator>().Play("Health");
                 clone.GetComponent<PickupItem>().Valeur = 10;
             }
         }  

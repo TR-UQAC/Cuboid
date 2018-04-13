@@ -66,7 +66,7 @@ public class GrappleBeam : MonoBehaviour
         }
         else
         {
-            grappleUI.GetComponent<Image>().color = new Vector4(1, 1, 0, 0.098f);
+            grappleUI.GetComponent<Image>().color = new Vector4(1, 1, 0, 0.392f);
         }
     }
 

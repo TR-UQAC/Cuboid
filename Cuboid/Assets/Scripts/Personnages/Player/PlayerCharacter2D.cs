@@ -74,6 +74,7 @@ public class PlayerCharacter2D : Personnages {
         if(GameObject.FindGameObjectWithTag("HealthUI"))
             bar = GameObject.FindGameObjectWithTag("HealthUI");
 
+        GameObject.FindGameObjectWithTag("BulletUI").GetComponent<Image>().color = new Vector4(1, 1, 1, 1);
 
         spriteR = gameObject.GetComponent<SpriteRenderer>();
 
@@ -320,6 +321,7 @@ public class PlayerCharacter2D : Personnages {
                     currentWeapon.UseMissile(false);
                     currentWeapon.UpdateGUI(false);
                 }
+                GameObject.FindGameObjectWithTag("BulletUI").GetComponent<Image>().color = new Vector4(1, 1, 1, 1);
             break;
             case "GrappleBeam":
                 if (previousWeapon == "Missile")
@@ -332,7 +334,8 @@ public class PlayerCharacter2D : Personnages {
             case "Missile":
                 currentWeapon.UseMissile(true);
                 currentWeapon.UpdateGUI(true);
-            break;
+                GameObject.FindGameObjectWithTag("BulletUI").GetComponent<Image>().color = new Vector4(1, 1, 1, 0.392f);
+                break;
             default:
                 gameObject.GetComponent<GrappleBeam>().UpdateGUI(false);
                 currentWeapon.UseMissile(false);

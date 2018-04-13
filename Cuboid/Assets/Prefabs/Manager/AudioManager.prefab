@@ -130,9 +130,9 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: PickupSound
-    clip: {fileID: 8300000, guid: 6ac84a821eb8a154cbf69d26292b72ad, type: 3}
+    clip: {fileID: 8300000, guid: 4b550ab53b398bf4cb6885d15f819aa1, type: 3}
     output: {fileID: 24300002, guid: 68739206651769c479cf85faf1a0876d, type: 2}
-    volume: 0.25
+    volume: 0.75
     pitch: 1
     loop: 0
     source: {fileID: 0}
