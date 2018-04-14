@@ -126,6 +126,12 @@ public class Platformer2DControls : MonoBehaviour
                 boss bo = GameObject.Find("Boss_Ecrabouilleur").GetComponent<boss>();
                 bo.CheatLifeBoss();
             }
+
+            if (GameObject.Find("BossTeleporteur") != null)
+            {
+                bossTeleport boTp = GameObject.Find("BossTeleporteur").GetComponent<bossTeleport>();
+                boTp.CheatLifeBoss();
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.R)) {

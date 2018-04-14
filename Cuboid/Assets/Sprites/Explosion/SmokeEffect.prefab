@@ -81,14 +81,14 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012560919920}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -5.48, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4000013243110618}
   - {fileID: 4000010012071442}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!4 &4000013243110618
 Transform:
   m_ObjectHideFlags: 1
@@ -112,7 +112,7 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 1, g: 0.5586207, b: 0, a: 1}
-  m_Intensity: 4.01
+  m_Intensity: 2
   m_Range: 4.4623055
   m_SpotAngle: 74.96589
   m_CookieSize: 10
@@ -3499,7 +3499,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1112701312
+  randomSeed: 381708079
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3963,7 +3963,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 3
+      scalar: 8
       minScalar: 10
       maxCurve:
         serializedVersion: 2

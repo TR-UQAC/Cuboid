@@ -136,3 +136,24 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: Teleport1
+    clip: {fileID: 8300000, guid: 2961cd72545f3e44d8738cbd5da42b6d, type: 3}
+    output: {fileID: 24300002, guid: 68739206651769c479cf85faf1a0876d, type: 2}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Teleport2
+    clip: {fileID: 8300000, guid: 80c9b6480eccdb64c929f026fb16cefa, type: 3}
+    output: {fileID: 24300002, guid: 68739206651769c479cf85faf1a0876d, type: 2}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: SmallExplosion
+    clip: {fileID: 8300000, guid: ba3ade054943bde41b18642c6acd15c3, type: 3}
+    output: {fileID: 24300002, guid: 68739206651769c479cf85faf1a0876d, type: 2}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}

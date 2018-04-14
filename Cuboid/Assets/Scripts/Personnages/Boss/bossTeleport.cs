@@ -15,7 +15,7 @@ public class bossTeleport : MonoBehaviour {
 
     private bool m_shootState = false;
     private bool m_TPState = true;
-
+    private bool m_TPOnGoing = false;
 
     [Tooltip("le noeud actuelle où ce trouve le boss")]
     public Node m_CurrentNode;
@@ -100,22 +100,46 @@ public class bossTeleport : MonoBehaviour {
             List<GameObject> lstLaser = new List<GameObject>(GameObject.FindGameObjectsWithTag("laserBoss"));
             foreach (GameObject las in lstLaser)
             {
-                las.transform.SetParent(null, true);
-
-                las.GetComponent<laser>().Disparait();
+                if (las)
+                {
+                    las.transform.SetParent(null, true);
+                    las.GetComponent<laser>().Disparait();
+                }
             }
-            //FindObjectOfType<AudioManager>().Mute("LaserBossMilieu");
+
+            List<GameObject> lstwarp = new List<GameObject>(GameObject.FindGameObjectsWithTag("TeleportEffect"));
+            foreach (GameObject telep in lstwarp)
+            {
+                if (telep)
+                {
+                    telep.GetComponent<ParticleSystem>().Stop(true);
+                }
+            }
 
             GameMaster.KillBossTP(this);
         }
 
+
+        //  choix du comportement
         if (m_shootState == true)
         {
             TirePartout();
         }
         else if(m_TPState == true)
         {
-            Direction();
+            if(m_TPOnGoing == false)
+            {
+                //  aucune TP en cours
+                m_currentTP--;
+                if (m_currentTP == 0)
+                {
+                    m_shootState = true;
+                    m_TPState = false;
+                    m_currentTP = m_nbTP;
+                }
+                else
+                    Direction();
+            }
         }
     }
 
@@ -123,6 +147,8 @@ public class bossTeleport : MonoBehaviour {
     private void Direction()
     {
         Node dir = m_CurrentNode;
+
+        m_TPOnGoing = true;
 
         do
         {
@@ -137,54 +163,54 @@ public class bossTeleport : MonoBehaviour {
     //  téléporte le boss au noeud passer en paramètre
     private void TeleportTo(Node n)
     {
+        GameObject tpeffect, destEffect;
         Vector3 angle = transform.rotation.eulerAngles;
         angle.z += m_rotationTP;
 
         float scale = transform.lossyScale.x;
 
-        if (m_TeleportEffect)
-        {
-            GameObject tpeffect = Instantiate(m_TeleportEffect, transform.position, transform.rotation);
-            GameObject destEffect = Instantiate(m_TeleportEffect, n.transform.position, n.transform.rotation);
-        }
-
         Sequence tp = DOTween.Sequence();
         tp.SetDelay(0.5f);
         tp.Append(transform.DORotate(angle, 3.0f, RotateMode.FastBeyond360)).SetEase(Ease.InBack);
         tp.Insert(0.0f, transform.DOScale(0.1f, 3.0f)).SetEase(Ease.InBack);
+        tp.InsertCallback(1.0f, () =>
+        {
+            if (FindObjectOfType<AudioManager>() != null)
+                FindObjectOfType<AudioManager>().Play("Teleport1");
+        });
+
         tp.AppendCallback(() =>
         {
-            Debug.Log("téléportation");
             transform.position = n.transform.position;
         });
 
         if (m_TeleportEffect)
         {
-            //tp.Insert(3.0f, tpeffect); fadeOut les 2 effect de TP à 0.5f
-            //tp.Insert(3.0f, destEffect
+            tpeffect = Instantiate(m_TeleportEffect, transform.position, transform.rotation);
+            destEffect = Instantiate(m_TeleportEffect, n.transform.position, n.transform.rotation);
+
+            //tp.Insert(3.0f, tpeffect.transform.DOScale(0.0f, 3.0f));
+            //tp.Insert(3.0f, destEffect.transform.DOScale(0.0f, 3.0f));
+
+            tp.InsertCallback(5.0f, () =>
+            {
+                tpeffect.GetComponent<ParticleSystem>().Stop(true);
+                destEffect.GetComponent<ParticleSystem>().Stop(true);
+
+                if (FindObjectOfType<AudioManager>() != null)
+                    FindObjectOfType<AudioManager>().Play("Teleport2");
+            });
+
         }
 
         tp.Append(transform.DOScale(scale, 3.0f)).SetEase(Ease.OutBack);
         tp.AppendCallback(() =>
         {
-            m_currentTP--;
-            if (m_currentTP == 0)
-            {
-                m_shootState = true;
-                m_currentTP = m_nbTP;
-            }
-            else
-                Direction();
+            m_TPOnGoing = false;
         });
 
         tp.Play();
         m_CurrentNode = n;
-
-        
-
-        m_TPState = false;
-
-        //Direction();
     }
 
     //  fait en sorte que le boss tire dans les 4 direction et tourne en même temps et rotation 
@@ -234,8 +260,30 @@ public class bossTeleport : MonoBehaviour {
         bul.dmg = dmg;
     }
 
+    // remet le boss à son état initiale full vie quand le joueur meurt
     public void resetBoss()
     {
-        
+        Ennemis pasFin = m_Core.GetComponent<Ennemis>() as Ennemis;
+        pasFin.SoinPerso(1000);
+        m_Core.GetComponent<SpriteMask>().alphaCutoff = 1.0f;
+
+        List<GameObject> lstLaser = new List<GameObject>(GameObject.FindGameObjectsWithTag("laserBoss"));
+        foreach (GameObject las in lstLaser)
+        {
+            las.GetComponent<laser>().Disparait();
+        }
+
+        transform.rotation = Quaternion.Euler(new Vector3(0.0f, 0.0f, 0.0f));
+
+        m_shootState = false;
+        m_TPState = false;
+        m_currentTP = m_nbTP;
+
+        enabled = false;
+    }
+
+    public void CheatLifeBoss()
+    {
+        m_Core.GetComponent<Ennemis>().ennemiStats.vie = 1;
     }
 }

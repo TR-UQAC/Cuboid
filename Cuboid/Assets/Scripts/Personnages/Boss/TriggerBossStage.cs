@@ -139,15 +139,7 @@ public class TriggerBossStage : MonoBehaviour {
             }
             else if(m_NoBoss == 2)
             {
-                foreach (Transform tr in m_boss.transform)
-                {
-                    if(tr.tag == "Ennemi")
-                    {
-                        tr.GetComponent<Ennemis>().SoinPerso(1000);
-                        break;
-                    }
-                }
-
+                m_boss.GetComponent<bossTeleport>().resetBoss();
                 m_boss.GetComponent<bossTeleport>().enabled = false;
             }
             else if(m_NoBoss == 3) {
