@@ -21,7 +21,8 @@ public class Bullet : MonoBehaviour {
     protected Transform myTransform;
 
     public Transform effetExplosion;
-#endregion
+    public Transform effetContact;
+    #endregion
     // Use this for initialization
 
     void Start () {
@@ -82,7 +83,10 @@ public class Bullet : MonoBehaviour {
                 }
             }
 
-            //TODO: Effet particule de contact
+            if (effetContact != null) {
+                Transform clone = Instantiate(effetContact, myTransform.position, myTransform.rotation) as Transform;
+                Destroy(clone.gameObject, 1f);
+            }
             Destroy(gameObject);
         }
     }

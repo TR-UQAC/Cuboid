@@ -293,6 +293,8 @@ MonoBehaviour:
     degFoudre: 0
   effetExplosion: {fileID: 4842071856983680, guid: b719e3c3977c4454f84f5b2c72992769,
     type: 2}
+  effetContact: {fileID: 4320062395189362, guid: 9f21d5bcc0f32504aae80e2114e437f3,
+    type: 2}
 --- !u!198 &198425235392192508
 ParticleSystem:
   m_ObjectHideFlags: 1

@@ -114,15 +114,14 @@ public class Ennemis : Personnages {
 
             if (ennemiStats.vie <= 0) {
 
-                if (smokeSet == true && m_fumer == true)
+                if (smokeSet == true)
                 {
                     foreach (Transform child in transform)
                     {
                         if (child.tag == "SmokeEffect")
                         {
-                            Debug.Log("défait le smoke");
                             child.GetComponent<ParticleSystem>().Stop();
-                            child.SetParent(null, true);
+                            child.SetParent(null, false);
                             break;
                         }
                     }
@@ -154,7 +153,7 @@ public class Ennemis : Personnages {
             else if(m_mask != null)
                 m_mask.alphaCutoff = ((float)ennemiStats.vie / (float)ennemiStats.vieMax);
 
-            if(ennemiStats.vie <= (ennemiStats.vieMax / 2.0f) && smokeSet == false && m_fumer == true)
+            if(ennemiStats.vie <= (ennemiStats.vieMax / 2.0f) && smokeSet == false)
             {
                 GameMaster gm = GameObject.Find("_GM").GetComponent<GameMaster>();
                 Instantiate(gm.m_smokeEffect, transform.position, Quaternion.Euler(-90.0f, 0.0f, 0.0f), transform);
@@ -177,7 +176,7 @@ public class Ennemis : Personnages {
         if (m_mask != null)
             m_mask.alphaCutoff = ((float)ennemiStats.vie / (float)ennemiStats.vieMax);
 
-        if (ennemiStats.vie > (ennemiStats.vieMax / 2.0f) && smokeSet == true && m_fumer == true)
+        if (ennemiStats.vie > (ennemiStats.vieMax / 2.0f) && smokeSet == true)
         {
             foreach (Transform child in transform)
             {
@@ -276,6 +275,19 @@ public class Ennemis : Personnages {
             
             if (comp.attaque == typeAttaque.Kamikaze) {
                 weapon.Explosion(comp.dmgAttaque, en, comp.fireRate);
+
+                GameMaster gm = GameObject.Find("_GM").GetComponent<GameMaster>();
+                GameObject ex = Instantiate(gm.m_explosionEnnemis, transform.position, transform.rotation);
+                FindObjectOfType<AudioManager>().Play("SmallExplosion");
+
+                Sequence explose = DOTween.Sequence();
+                explose.SetDelay(1.0f);
+                explose.AppendCallback(() =>
+                {
+                    Destroy(ex);
+                });
+
+                explose.Play();
                 GameMaster.KillEnnemi(this);
             }
         }

@@ -1,8 +1,0 @@
-bleu 	= presse (tuer)
-bleu B	= pic (tuer)
-orange 	= environnement usine
-orange B= plateforme usine
-vert	= plateforme mouvante
-vert B	= Accroche de grappin
-rouge	= bloc destructible
-jaune	= tourelle

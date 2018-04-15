@@ -206,4 +206,8 @@ public class GameMaster : MonoBehaviour {
     {
         Destroy(perso.gameObject);
     }
+
+    public static void KillCanon(Canon perso) {
+        Destroy(perso.gameObject);
+    }
 }
