@@ -121,7 +121,7 @@ public class Ennemis : Personnages {
                         if (child.tag == "SmokeEffect")
                         {
                             child.GetComponent<ParticleSystem>().Stop();
-                            child.SetParent(null, true);
+                            child.SetParent(null, false);
                             break;
                         }
                     }
@@ -275,6 +275,19 @@ public class Ennemis : Personnages {
             
             if (comp.attaque == typeAttaque.Kamikaze) {
                 weapon.Explosion(comp.dmgAttaque, en, comp.fireRate);
+
+                GameMaster gm = GameObject.Find("_GM").GetComponent<GameMaster>();
+                GameObject ex = Instantiate(gm.m_explosionEnnemis, transform.position, transform.rotation);
+                FindObjectOfType<AudioManager>().Play("SmallExplosion");
+
+                Sequence explose = DOTween.Sequence();
+                explose.SetDelay(1.0f);
+                explose.AppendCallback(() =>
+                {
+                    Destroy(ex);
+                });
+
+                explose.Play();
                 GameMaster.KillEnnemi(this);
             }
         }

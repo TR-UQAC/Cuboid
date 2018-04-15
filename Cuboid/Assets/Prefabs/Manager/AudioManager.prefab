@@ -132,21 +132,21 @@ MonoBehaviour:
   - name: PickupSound
     clip: {fileID: 8300000, guid: 4b550ab53b398bf4cb6885d15f819aa1, type: 3}
     output: {fileID: 243657678957942896, guid: 68739206651769c479cf85faf1a0876d, type: 2}
-    volume: 0.75
+    volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Teleport1
     clip: {fileID: 8300000, guid: 2961cd72545f3e44d8738cbd5da42b6d, type: 3}
     output: {fileID: 243657678957942896, guid: 68739206651769c479cf85faf1a0876d, type: 2}
-    volume: 0.5
+    volume: 0.1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Teleport2
     clip: {fileID: 8300000, guid: 80c9b6480eccdb64c929f026fb16cefa, type: 3}
     output: {fileID: 243657678957942896, guid: 68739206651769c479cf85faf1a0876d, type: 2}
-    volume: 0.5
+    volume: 0.1
     pitch: 1
     loop: 0
     source: {fileID: 0}
