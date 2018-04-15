@@ -64,7 +64,10 @@ public class bossTeleport : MonoBehaviour {
             if (child.tag == "Ennemi")
             {
                 if (child.name == "Core")
+                {
+                    child.GetComponent<Ennemis>().m_fumer = false;
                     m_Core = child;
+                }
             }
 
             if(child.tag == "Ancre")

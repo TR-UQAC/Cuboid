@@ -18,6 +18,8 @@ public class GameMaster : MonoBehaviour {
     public Transform spawnPrefab;
     public Transform playerPrefab;
     public GameObject itemPickupPrefab;
+    public GameObject m_smokeEffect;
+    public GameObject m_explosionEnnemis;
 
     private GameObject tmpPlayer;
 

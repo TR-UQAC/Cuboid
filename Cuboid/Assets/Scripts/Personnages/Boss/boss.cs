@@ -63,7 +63,10 @@ public class boss : MonoBehaviour
             if (child.tag == "Ennemi")
             {
                 if (child.name == "CoreEcrabouilleur")
+                {
                     m_Core = child;
+                    child.GetComponent<Ennemis>().m_fumer = false;
+                }
 
                 m_lstEnnemis.Add(child);
             }
@@ -88,6 +91,7 @@ public class boss : MonoBehaviour
         {
             if (m_lstEnnemis[i] == null)
                 m_lstEnnemis.RemoveAt(i);
+
         }
 
         //  Paramètrage pour la 2e phase

@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 //using UnityEditor;
 
 
@@ -37,6 +38,9 @@ public class Ennemis : Personnages {
     public bool tirerSurJoueur = false;
 
     public float decelleration = 2f;
+
+    private bool smokeSet = false;
+    public bool m_fumer = true;
 
     #endregion
     #region Corps
@@ -109,6 +113,38 @@ public class Ennemis : Personnages {
             ennemiStats.vie -= dommage;
 
             if (ennemiStats.vie <= 0) {
+
+                if (smokeSet == true && m_fumer == true)
+                {
+                    foreach (Transform child in transform)
+                    {
+                        if (child.tag == "SmokeEffect")
+                        {
+                            Debug.Log("défait le smoke");
+                            child.GetComponent<ParticleSystem>().Stop();
+                            child.SetParent(null, true);
+                            break;
+                        }
+                    }
+                }
+
+                //  m_fumer est false seulement pour les boss qui rotation, il explose déjà
+                if(m_fumer == true)
+                {
+                    GameMaster gm = GameObject.Find("_GM").GetComponent<GameMaster>();
+                    GameObject ex = Instantiate(gm.m_explosionEnnemis, transform.position, transform.rotation);
+                    FindObjectOfType<AudioManager>().Play("SmallExplosion");
+
+                    Sequence explose = DOTween.Sequence();
+                    explose.SetDelay(1.0f);
+                    explose.AppendCallback(() =>
+                    {
+                        Destroy(ex);
+                    });
+                    explose.Play();
+
+                }
+
                 GameMaster.KillEnnemi(this);
                 return;
             }
@@ -117,6 +153,13 @@ public class Ennemis : Personnages {
                 GetComponent<Dommage_Shader>().CouleurDommage();
             else if(m_mask != null)
                 m_mask.alphaCutoff = ((float)ennemiStats.vie / (float)ennemiStats.vieMax);
+
+            if(ennemiStats.vie <= (ennemiStats.vieMax / 2.0f) && smokeSet == false && m_fumer == true)
+            {
+                GameMaster gm = GameObject.Find("_GM").GetComponent<GameMaster>();
+                Instantiate(gm.m_smokeEffect, transform.position, Quaternion.Euler(-90.0f, 0.0f, 0.0f), transform);
+                smokeSet = true;
+            }
 
             //Debug.Log("pourcentage de vie restant = " + ((float)ennemiStats.vie / (float)ennemiStats.vieMax));
 
@@ -133,6 +176,19 @@ public class Ennemis : Personnages {
 
         if (m_mask != null)
             m_mask.alphaCutoff = ((float)ennemiStats.vie / (float)ennemiStats.vieMax);
+
+        if (ennemiStats.vie > (ennemiStats.vieMax / 2.0f) && smokeSet == true && m_fumer == true)
+        {
+            foreach (Transform child in transform)
+            {
+                if(child.tag == "SmokeEffect")
+                {
+                    child.GetComponent<ParticleSystem>().Stop();
+                    smokeSet = false;
+                    break;
+                }
+            }
+        }
         //throw new NotImplementedException();
     }
 

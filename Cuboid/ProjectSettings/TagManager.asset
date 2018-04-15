@@ -23,6 +23,7 @@ TagManager:
   - EscapeTimerUI
   - Canon
   - TeleportEffect
+  - SmokeEffect
   layers:
   - Default
   - TransparentFX
