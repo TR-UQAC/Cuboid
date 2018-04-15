@@ -83,7 +83,7 @@ public class Bullet : MonoBehaviour {
                 }
             }
 
-            if (effetContact != null) {
+            if (effetContact != null && myTransform != null) {
                 Transform clone = Instantiate(effetContact, myTransform.position, myTransform.rotation) as Transform;
                 Destroy(clone.gameObject, 1f);
             }

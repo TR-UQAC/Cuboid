@@ -22,7 +22,7 @@ public class EnnemiSpawner : MonoBehaviour {
         } else if (ennemi != null)
             thisEnnemi = Instantiate(ennemi, tr.position, tr.rotation).GetComponent<Ennemis>();
 
-        if (thisEnnemi.enabled)
+        if (thisEnnemi!= null && thisEnnemi.enabled)
             SpawnParticule();
     }
 

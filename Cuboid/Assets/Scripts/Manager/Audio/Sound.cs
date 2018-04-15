@@ -20,4 +20,9 @@ public class Sound {
 
     [HideInInspector]
     public AudioSource source;
+
+    public void Stop()
+    {
+        source.Stop();
+    }
 }

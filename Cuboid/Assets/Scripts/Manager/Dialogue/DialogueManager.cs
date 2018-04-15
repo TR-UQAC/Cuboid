@@ -30,7 +30,9 @@ public class DialogueManager : MonoBehaviour {
 
         if (Input.anyKeyDown && dialogActive)
         {
-            Invoke("EndDialogue", 2f);
+            EndDialogue();
+            //Time.timeScale = 1f;
+            //Invoke("EndDialogue", 2f);
         }
     }
 
@@ -40,6 +42,7 @@ public class DialogueManager : MonoBehaviour {
         animator.SetBool("IsOpen", true);
         nameText.text = dialogue.name;
 
+        Time.timeScale = 0f;
         if (sentences == null)
         {
             sentences = new Queue<string>();
@@ -77,6 +80,7 @@ public class DialogueManager : MonoBehaviour {
     }
 
     void EndDialogue() {
+        Time.timeScale = 1f;
         //TODO: Reprendre le temps quand le dialogue est terminer
         animator.SetBool("IsOpen", false);
 

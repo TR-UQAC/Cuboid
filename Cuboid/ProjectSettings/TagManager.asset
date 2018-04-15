@@ -24,6 +24,7 @@ TagManager:
   - Canon
   - TeleportEffect
   - SmokeEffect
+  - EndGameTrigger
   layers:
   - Default
   - TransparentFX
