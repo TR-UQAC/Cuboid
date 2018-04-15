@@ -120,7 +120,6 @@ public class Ennemis : Personnages {
                     {
                         if (child.tag == "SmokeEffect")
                         {
-                            Debug.Log("défait le smoke");
                             child.GetComponent<ParticleSystem>().Stop();
                             child.SetParent(null, true);
                             break;
