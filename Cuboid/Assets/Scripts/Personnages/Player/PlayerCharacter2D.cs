@@ -130,9 +130,9 @@ public class PlayerCharacter2D : Personnages {
         BetterJumpPhysic();
         shootTimer += Time.deltaTime;
 
-        if (currentWeapon.M_viser)
+       /* if (currentWeapon.M_viser)
             m_speed = 5f;
-        else if (IsRunning)
+        else */if (IsRunning)
             m_speed = joueurStats.maxSpeed*1.5f;
         else
             m_speed = joueurStats.maxSpeed;

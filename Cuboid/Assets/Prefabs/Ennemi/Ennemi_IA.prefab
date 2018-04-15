@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 61904881881171692}
   - component: {fileID: 114423212518679096}
   - component: {fileID: 114947482930623302}
-  - component: {fileID: 331137256817418722}
+  - component: {fileID: 114070873119804360}
   m_Layer: 11
   m_Name: Ennemi_IA
   m_TagString: Ennemi
@@ -55,9 +55,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1121619541646682}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -23, y: -167, z: -7.74}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_Children:
   - {fileID: 4572969732751852}
   m_Father: {fileID: 0}
@@ -87,14 +87,14 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 2
+  m_Mass: 10
+  m_LinearDrag: 1
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 1
   m_SleepingMode: 2
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &61904881881171692
 BoxCollider2D:
@@ -121,6 +121,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.64, y: 0.64}
   m_EdgeRadius: 0
+--- !u!114 &114070873119804360
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1121619541646682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b217ba67d1c5304b9da261701c6609d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duree: 2
+  dommageLightColor: {r: 0.93725497, g: 0, b: 0, a: 1}
 --- !u!114 &114423212518679096
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -133,14 +146,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ennemiStats:
-    vie: 100
-    vieMax: 100
+    vie: 250
+    vieMax: 250
     nbMissile: 5
     nbMissileMax: 5
     immortel: 0
     m_JumpForce: 1000
-    speed: 1000
-    maxSpeed: 10
+    speed: 15000
+    maxSpeed: 10000
     fMode: 0
     resitGlace: 0
     resitPoison: 0
@@ -152,7 +165,7 @@ MonoBehaviour:
     contact: 1
     dmgContact: 10
     statAttaque:
-      ePower: 0
+      ePower: 92.26
       eRadius: 0
       upwardsModifier: 0
       degGlace: 0
@@ -160,17 +173,18 @@ MonoBehaviour:
       degFoudre: 0
     attaque: 1
     dmgAttaque: 10
-    fireRate: 0.5
+    fireRate: 1
     deplacement: 1
   direction: {x: 0, y: 0}
   directionTir: {x: 0, y: 0}
   facingRight: 0
-  tirerSurJoueur: 0
+  tirerSurJoueur: 1
   decelleration: 2
+  m_fumer: 1
   showVie: 0
   showDommage: 1
-  showContactDommage: 0
-  showMouvement: 0
+  showContactDommage: 1
+  showMouvement: 1
   showElements: 0
 --- !u!114 &114553822365292442
 MonoBehaviour:
@@ -187,7 +201,7 @@ MonoBehaviour:
   updateRate: 2
   pathIsEnded: 0
   nextWaypointDistance: 3
-  distFollow: 20
+  distFollow: 100
 --- !u!114 &114598886800425420
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -233,10 +247,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   effetAttaquePrefab: {fileID: 0}
+  SonDefaut: 1
   statAttaque:
-    ePower: 0
-    eRadius: 0
-    upwardsModifier: 0
+    ePower: 5
+    eRadius: 5
+    upwardsModifier: 1
     degGlace: 0
     degPoison: 0
     degFoudre: 0
@@ -284,46 +299,3 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 2
---- !u!331 &331137256817418722
-SpriteMask:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1121619541646682}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 10758, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: aa4b83ad9fcf52d4ca881aee65e3ebe3, type: 3}
-  m_MaskAlphaCutoff: 1
-  m_FrontSortingLayerID: 0
-  m_BackSortingLayerID: 0
-  m_FrontSortingLayer: 0
-  m_BackSortingLayer: 0
-  m_FrontSortingOrder: 2
-  m_BackSortingOrder: 1
-  m_IsCustomRangeActive: 1

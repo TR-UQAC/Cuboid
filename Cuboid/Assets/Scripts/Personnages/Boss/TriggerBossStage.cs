@@ -82,9 +82,12 @@ public class TriggerBossStage : MonoBehaviour {
                 canons = GameObject.FindGameObjectsWithTag("Canon");
 
                 for (int i = canons.Length-1; i >=0; i--) {
-                    Ennemis canon = canons[i].GetComponent<Ennemis>();
+                    Canon canon = canons[i].GetComponent<Canon>();
+                    canon.Detruire();
+                    /*
                     canon.ennemiStats.immortel = false;
                     canon.DommagePerso(10);
+                    */
                 }
             }
 
@@ -107,11 +110,20 @@ public class TriggerBossStage : MonoBehaviour {
                 m_boss.GetComponent<boss>().ActiveBoss(collision.gameObject);
             }
 
-            if(m_NoBoss == 2)
+            else if(m_NoBoss == 2)
             {
                 m_boss.GetComponent<bossTeleport>().enabled = true;
             }
+            else if (m_NoBoss == 3) {
+                GameObject[] canons;
 
+                canons = GameObject.FindGameObjectsWithTag("Canon");
+
+                for (int i = canons.Length - 1; i >= 0; i--) {
+                    Canon canon = canons[i].GetComponent<Canon>();
+                    canon.Entrer();
+                }
+            }
             m_bossActive = true;
             if(m_Porte)
             {
@@ -145,6 +157,16 @@ public class TriggerBossStage : MonoBehaviour {
             else if(m_NoBoss == 3) {
                 m_boss.GetComponent<Ennemis>().SoinPerso(1000);
                 m_boss.GetComponent<Ennemis>().enabled = false;
+            }
+            if (m_NoBoss == 3) {
+                GameObject[] canons;
+
+                canons = GameObject.FindGameObjectsWithTag("Canon");
+
+                for (int i = canons.Length - 1; i >= 0; i--) {
+                    Canon canon = canons[i].GetComponent<Canon>();
+                    canon.Sortir();
+                }
             }
 
             m_bossActive = false;
