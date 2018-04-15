@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine;
 using System;
+using EZCameraShake;
 
 
 public class GameMaster : MonoBehaviour {
@@ -152,6 +153,27 @@ public class GameMaster : MonoBehaviour {
     {
         instance.timerRunning = true;
         instance.escapeTimer.SetActive(true);
+
+        GameObject egt = GameObject.FindGameObjectWithTag("EndGameTrigger");
+        egt.GetComponent<EndGame>().Enable();
+
+        FindObjectOfType<AudioManager>().Stop("Musique_Jeu");
+        FindObjectOfType<AudioManager>().Play("EscapeMusic");
+        CameraShaker.Instance.StartShake(2f, 1f, 5f);
+        instance.StartCoroutine(instance.TypeSentence("Planet destruction imminent. Evacuate immediately!"));
+    }
+
+    IEnumerator TypeSentence(string sentence)
+    {
+        string tmp = "";
+        foreach (char letter in sentence.ToCharArray())
+        {
+            tmp += letter;
+            instance.escapeTimer.transform.Find("EscapeTxt").GetComponent<TextMeshProUGUI>().text = tmp;
+            yield return new WaitForSecondsRealtime(0.01f);
+        }
+        yield return new WaitForSecondsRealtime(8f);
+        instance.escapeTimer.transform.Find("EscapeTxt").GetComponent<TextMeshProUGUI>().text = "";
     }
 
     public static void KillJoueur(PlayerCharacter2D perso)
