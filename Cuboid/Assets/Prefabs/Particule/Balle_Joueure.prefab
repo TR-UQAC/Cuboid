@@ -202,7 +202,7 @@ TrailRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2048899763
-  m_SortingLayer: 1
+  m_SortingLayer: 3
   m_SortingOrder: 2
   m_Time: 0.5
   m_Parameters:
@@ -298,6 +298,8 @@ MonoBehaviour:
     degPoison: 0
     degFoudre: 0
   effetExplosion: {fileID: 4793239945891142, guid: 2f080beb01f61df4a86c8847a84e0313,
+    type: 2}
+  effetContact: {fileID: 4712918859393978, guid: aebba09e86890e74f9e953fbc9a2b6de,
     type: 2}
 --- !u!198 &198425235392192508
 ParticleSystem:
