@@ -54,35 +54,35 @@ MonoBehaviour:
   sounds:
   - name: Musique_Jeu
     clip: {fileID: 8300000, guid: 96468af9ff1b1e14da756071baaf9a9b, type: 3}
-    output: {fileID: 24300002, guid: 68739206651769c479cf85faf1a0876d, type: 2}
-    volume: 0.5
+    output: {fileID: 243462448325884134, guid: 68739206651769c479cf85faf1a0876d, type: 2}
+    volume: 0.15
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Shoot
     clip: {fileID: 8300000, guid: 8c5f354d8f78b0b43a7f4c8020c1f6f1, type: 3}
-    output: {fileID: 24300002, guid: 68739206651769c479cf85faf1a0876d, type: 2}
+    output: {fileID: 243657678957942896, guid: 68739206651769c479cf85faf1a0876d, type: 2}
     volume: 0.2
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: ItemPickup
     clip: {fileID: 8300000, guid: 1843ffcd84e5d3243966505cfc0fd8de, type: 3}
-    output: {fileID: 24300002, guid: 68739206651769c479cf85faf1a0876d, type: 2}
+    output: {fileID: 243657678957942896, guid: 68739206651769c479cf85faf1a0876d, type: 2}
     volume: 0.25
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: temp_UseItem
     clip: {fileID: 8300000, guid: 55a95a5ccda45f14c814ddc87477ec9b, type: 3}
-    output: {fileID: 24300002, guid: 68739206651769c479cf85faf1a0876d, type: 2}
+    output: {fileID: 243657678957942896, guid: 68739206651769c479cf85faf1a0876d, type: 2}
     volume: 0.25
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: StompBoss
     clip: {fileID: 8300000, guid: 12e07761c898e3e439fcdc2478bd0dbe, type: 3}
-    output: {fileID: 24300002, guid: 68739206651769c479cf85faf1a0876d, type: 2}
+    output: {fileID: 243657678957942896, guid: 68739206651769c479cf85faf1a0876d, type: 2}
     volume: 0.25
     pitch: 1
     loop: 0
@@ -110,50 +110,50 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: ShieldBossDown
     clip: {fileID: 8300000, guid: c069ffee81038514d93164afa69f4853, type: 3}
-    output: {fileID: 24300002, guid: 68739206651769c479cf85faf1a0876d, type: 2}
+    output: {fileID: 243657678957942896, guid: 68739206651769c479cf85faf1a0876d, type: 2}
     volume: 0.25
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: ExplosionBoss
     clip: {fileID: 8300000, guid: 6308d0381fb105b45afa8852b4855455, type: 3}
-    output: {fileID: 24300002, guid: 68739206651769c479cf85faf1a0876d, type: 2}
+    output: {fileID: 243657678957942896, guid: 68739206651769c479cf85faf1a0876d, type: 2}
     volume: 0.25
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: BombExplosion
     clip: {fileID: 8300000, guid: df1080c13703c684ab21abed5088b8c7, type: 3}
-    output: {fileID: 24300002, guid: 68739206651769c479cf85faf1a0876d, type: 2}
+    output: {fileID: 243657678957942896, guid: 68739206651769c479cf85faf1a0876d, type: 2}
     volume: 0.25
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: PickupSound
     clip: {fileID: 8300000, guid: 4b550ab53b398bf4cb6885d15f819aa1, type: 3}
-    output: {fileID: 24300002, guid: 68739206651769c479cf85faf1a0876d, type: 2}
+    output: {fileID: 243657678957942896, guid: 68739206651769c479cf85faf1a0876d, type: 2}
     volume: 0.75
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Teleport1
     clip: {fileID: 8300000, guid: 2961cd72545f3e44d8738cbd5da42b6d, type: 3}
-    output: {fileID: 24300002, guid: 68739206651769c479cf85faf1a0876d, type: 2}
+    output: {fileID: 243657678957942896, guid: 68739206651769c479cf85faf1a0876d, type: 2}
     volume: 0.5
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Teleport2
     clip: {fileID: 8300000, guid: 80c9b6480eccdb64c929f026fb16cefa, type: 3}
-    output: {fileID: 24300002, guid: 68739206651769c479cf85faf1a0876d, type: 2}
+    output: {fileID: 243657678957942896, guid: 68739206651769c479cf85faf1a0876d, type: 2}
     volume: 0.5
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: SmallExplosion
     clip: {fileID: 8300000, guid: ba3ade054943bde41b18642c6acd15c3, type: 3}
-    output: {fileID: 24300002, guid: 68739206651769c479cf85faf1a0876d, type: 2}
-    volume: 0.5
+    output: {fileID: 243657678957942896, guid: 68739206651769c479cf85faf1a0876d, type: 2}
+    volume: 0.3
     pitch: 1
     loop: 0
     source: {fileID: 0}
