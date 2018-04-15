@@ -174,9 +174,9 @@ public class bossTeleport : MonoBehaviour {
 
         Sequence tp = DOTween.Sequence();
         tp.SetDelay(0.5f);
-        tp.Append(transform.DORotate(angle, 3.0f, RotateMode.FastBeyond360)).SetEase(Ease.InBack);
-        tp.Insert(0.0f, transform.DOScale(0.1f, 3.0f)).SetEase(Ease.InBack);
-        tp.InsertCallback(1.0f, () =>
+        tp.Append(transform.DORotate(angle, 1.0f, RotateMode.FastBeyond360)).SetEase(Ease.InBack);
+        tp.Insert(0.0f, transform.DOScale(0.1f, 1.0f)).SetEase(Ease.InBack);
+        tp.InsertCallback(0.0f, () =>
         {
             if (FindObjectOfType<AudioManager>() != null)
                 FindObjectOfType<AudioManager>().Play("Teleport1");
@@ -195,7 +195,7 @@ public class bossTeleport : MonoBehaviour {
             //tp.Insert(3.0f, tpeffect.transform.DOScale(0.0f, 3.0f));
             //tp.Insert(3.0f, destEffect.transform.DOScale(0.0f, 3.0f));
 
-            tp.InsertCallback(5.0f, () =>
+            tp.InsertCallback(2.0f, () =>
             {
                 tpeffect.GetComponent<ParticleSystem>().Stop(true);
                 destEffect.GetComponent<ParticleSystem>().Stop(true);
@@ -206,7 +206,7 @@ public class bossTeleport : MonoBehaviour {
 
         }
 
-        tp.Append(transform.DOScale(scale, 3.0f)).SetEase(Ease.OutBack);
+        tp.Append(transform.DOScale(scale, 1.0f)).SetEase(Ease.OutBack);
         tp.AppendCallback(() =>
         {
             m_TPOnGoing = false;
