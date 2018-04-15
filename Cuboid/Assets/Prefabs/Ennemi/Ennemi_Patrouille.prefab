@@ -237,7 +237,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1171337023374186}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 3626fe8e008014f6bbd19bb72937b311, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -274,6 +274,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   effetAttaquePrefab: {fileID: 0}
+  SonDefaut: 1
   statAttaque:
     ePower: 10
     eRadius: 1
@@ -327,6 +328,7 @@ MonoBehaviour:
   facingRight: 0
   tirerSurJoueur: 0
   decelleration: 2
+  m_fumer: 1
   showVie: 0
   showDommage: 1
   showContactDommage: 0
@@ -361,7 +363,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   lEC: {fileID: 4354862634213932}
-  edgeCheckRadius: 0.02
+  edgeCheckRadius: 0.25
   sightStart: {fileID: 4428273870213594}
   sightEnd: {fileID: 4614105502142198}
 --- !u!212 &212210370922209052
