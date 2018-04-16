@@ -37,6 +37,8 @@ public class MorphBomb : MonoBehaviour {
             {
                 if (col.gameObject.CompareTag("Destructible"))
                 {
+                    if (FindObjectOfType<AudioManager>() != null)
+                        FindObjectOfType<AudioManager>().Play("BlocDetruit");
                     Destroy(col.gameObject);
                 }            
             }
@@ -45,7 +47,8 @@ public class MorphBomb : MonoBehaviour {
             clone.GetComponent<ShockWaveForce>().radius = 2f;
             Destroy(clone.gameObject, 1f);
 
-            FindObjectOfType<AudioManager>().Play("BombExplosion");
+            if (FindObjectOfType<AudioManager>() != null)
+                FindObjectOfType<AudioManager>().Play("BombExplosion");
 
             Destroy(gameObject);
         }

@@ -55,12 +55,12 @@ MonoBehaviour:
   - name: Musique_Jeu
     clip: {fileID: 8300000, guid: 96468af9ff1b1e14da756071baaf9a9b, type: 3}
     output: {fileID: 243462448325884134, guid: 68739206651769c479cf85faf1a0876d, type: 2}
-    volume: 0.15
+    volume: 0.2
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Shoot
-    clip: {fileID: 8300000, guid: 8c5f354d8f78b0b43a7f4c8020c1f6f1, type: 3}
+    clip: {fileID: 8300000, guid: 01c57818a9ff3464abf57314868e7d18, type: 3}
     output: {fileID: 243657678957942896, guid: 68739206651769c479cf85faf1a0876d, type: 2}
     volume: 0.2
     pitch: 1
@@ -161,6 +161,41 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: f3973dcc07da85a48931e171a69e3574, type: 3}
     output: {fileID: 243657678957942896, guid: 68739206651769c479cf85faf1a0876d, type: 2}
     volume: 0.05
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: BlocDetruit
+    clip: {fileID: 8300000, guid: b556be117c3f2f6408eccc485a379007, type: 3}
+    output: {fileID: 243657678957942896, guid: 68739206651769c479cf85faf1a0876d, type: 2}
+    volume: 0.25
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ChangeGun
+    clip: {fileID: 8300000, guid: f1f3330fb0c18f94cb093dd667a83265, type: 3}
+    output: {fileID: 243657678957942896, guid: 68739206651769c479cf85faf1a0876d, type: 2}
+    volume: 0.25
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: LaunchMissile
+    clip: {fileID: 8300000, guid: 2734b9330aa92884e823af79589e9707, type: 3}
+    output: {fileID: 243657678957942896, guid: 68739206651769c479cf85faf1a0876d, type: 2}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: NavMenu
+    clip: {fileID: 8300000, guid: 8c5f354d8f78b0b43a7f4c8020c1f6f1, type: 3}
+    output: {fileID: 243657678957942896, guid: 68739206651769c479cf85faf1a0876d, type: 2}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: HurtPlayer
+    clip: {fileID: 8300000, guid: 516fb09eb12051a46b35408b0b984885, type: 3}
+    output: {fileID: 243657678957942896, guid: 68739206651769c479cf85faf1a0876d, type: 2}
+    volume: 0.3
     pitch: 1
     loop: 0
     source: {fileID: 0}

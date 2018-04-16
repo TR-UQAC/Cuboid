@@ -186,7 +186,12 @@ public class Weapon : MonoBehaviour
         bul.statAttaque = statAttaque;
 
         if (FindObjectOfType<AudioManager>() != null)
-            FindObjectOfType<AudioManager>().Play("Shoot");
+        {
+            if(activeBullet.name == "Missile")
+                FindObjectOfType<AudioManager>().Play("LaunchMissile");
+            else
+                FindObjectOfType<AudioManager>().Play("Shoot");
+        }
     }
 }
 

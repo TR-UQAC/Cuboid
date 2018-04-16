@@ -312,6 +312,12 @@ public class PlayerCharacter2D : Personnages {
             selectedWeaponIndex = 0;
         }
 
+        if(weaponList.Count > 1)
+        {
+            if (FindObjectOfType<AudioManager>() != null)
+                FindObjectOfType<AudioManager>().Play("ChangeGun");
+        }
+
         Weapon currentWeapon = (Weapon)transform.Find("Weapon").gameObject.GetComponent(typeof(Weapon));
 
         switch (weaponList[selectedWeaponIndex])
@@ -495,7 +501,11 @@ public class PlayerCharacter2D : Personnages {
                 GameMaster.KillJoueur(this);
             }
             else
+            {
                 CameraShaker.Instance.ShakeOnce(3f, 2f, .1f, dureeImmortel);
+                if (FindObjectOfType<AudioManager>() != null)
+                    FindObjectOfType<AudioManager>().Play("HurtPlayer");
+            }
         }
     }
 
