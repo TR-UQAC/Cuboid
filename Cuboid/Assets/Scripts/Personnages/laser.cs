@@ -69,12 +69,12 @@ public class laser : Bullet {
                 continue;
             }
 
-            /*if(child.name == "Corps")
+            if(child.name == "Corps")
             {
-                m_corps = child;
+                //m_corps = child;
                 m_sCorps = child.GetComponent<SpriteRenderer>() as SpriteRenderer;
                 continue;
-            }*/
+            }
 
             if(child.name == "Impact")
             {

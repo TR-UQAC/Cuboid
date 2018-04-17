@@ -77,9 +77,9 @@ public class TriggerBossStage : MonoBehaviour {
 
             //Si boss 3 detruire Canon
             if (m_NoBoss == 3) {
-                GameObject[] canons;
+                //GameObject[] canons;
 
-                canons = GameObject.FindGameObjectsWithTag("Canon");
+                //canons = GameObject.FindGameObjectsWithTag("Canon");
 
                 for (int i = canons.Length-1; i >=0; i--) {
                     Canon canon = canons[i].GetComponent<Canon>();
@@ -115,9 +115,9 @@ public class TriggerBossStage : MonoBehaviour {
                 m_boss.GetComponent<bossTeleport>().enabled = true;
             }
             else if (m_NoBoss == 3) {
-                GameObject[] canons;
+                //GameObject[] canons;
 
-                canons = GameObject.FindGameObjectsWithTag("Canon");
+                //canons = GameObject.FindGameObjectsWithTag("Canon");
 
                 for (int i = canons.Length - 1; i >= 0; i--) {
                     Canon canon = canons[i].GetComponent<Canon>();
@@ -159,9 +159,9 @@ public class TriggerBossStage : MonoBehaviour {
                 m_boss.GetComponent<Ennemis>().enabled = false;
             }
             if (m_NoBoss == 3) {
-                GameObject[] canons;
+                //GameObject[] canons;
 
-                canons = GameObject.FindGameObjectsWithTag("Canon");
+                //canons = GameObject.FindGameObjectsWithTag("Canon");
 
                 for (int i = canons.Length - 1; i >= 0; i--) {
                     Canon canon = canons[i].GetComponent<Canon>();
