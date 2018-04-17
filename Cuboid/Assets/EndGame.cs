@@ -33,8 +33,6 @@ public class EndGame : MonoBehaviour {
         takingOff = true;    
         transform.parent.position = Vector3.MoveTowards(transform.parent.position, endPos, Time.deltaTime);
 
-        
-
         if (transform.parent.position == endPos)
         {
             CancelInvoke();

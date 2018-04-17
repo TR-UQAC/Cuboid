@@ -352,8 +352,10 @@ public class PlayerCharacter2D : Personnages {
                     currentWeapon.UpdateGUI(false);
                 }
                 gameObject.GetComponent<GrappleBeam>().UpdateGUI(true);
-            break;
+                GameObject.FindGameObjectWithTag("BulletUI").GetComponent<Image>().color = new Vector4(1, 1, 1, 0.392f);
+                break;
             case "Missile":
+                gameObject.GetComponent<GrappleBeam>().UpdateGUI(false);
                 currentWeapon.UseMissile(true);
                 currentWeapon.UpdateGUI(true);
                 GameObject.FindGameObjectWithTag("BulletUI").GetComponent<Image>().color = new Vector4(1, 1, 1, 0.392f);
