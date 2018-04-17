@@ -20,6 +20,8 @@ public class EndGame : MonoBehaviour {
         GameObject go = other.gameObject;
         if (go.tag == "Player")
         {
+            GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>().timerRunning = false;
+
             go.SetActive(false);
             transform.parent.GetComponent<Animator>().Play("ShipEnter");
             InvokeRepeating("TakeOff", 3f, 0.001f);     

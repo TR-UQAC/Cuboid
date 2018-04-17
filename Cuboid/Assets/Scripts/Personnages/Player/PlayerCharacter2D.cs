@@ -301,15 +301,26 @@ public class PlayerCharacter2D : Personnages {
         return m_Grounded;
     }
 
-    public void WeaponSwitch()
+    public void WeaponSwitch(bool avance)
     {
         string previousWeapon = weaponList[selectedWeaponIndex];
 
-        selectedWeaponIndex++;
-
+        if (avance)
+        {
+            selectedWeaponIndex++;
+        }
+        else
+        {
+            selectedWeaponIndex--;
+        }
+        
         if (selectedWeaponIndex == weaponList.Count)
         {
             selectedWeaponIndex = 0;
+        }
+        else if (selectedWeaponIndex < 0)
+        {
+            selectedWeaponIndex = weaponList.Count - 1;
         }
 
         if(weaponList.Count > 1)
@@ -341,8 +352,10 @@ public class PlayerCharacter2D : Personnages {
                     currentWeapon.UpdateGUI(false);
                 }
                 gameObject.GetComponent<GrappleBeam>().UpdateGUI(true);
-            break;
+                GameObject.FindGameObjectWithTag("BulletUI").GetComponent<Image>().color = new Vector4(1, 1, 1, 0.392f);
+                break;
             case "Missile":
+                gameObject.GetComponent<GrappleBeam>().UpdateGUI(false);
                 currentWeapon.UseMissile(true);
                 currentWeapon.UpdateGUI(true);
                 GameObject.FindGameObjectWithTag("BulletUI").GetComponent<Image>().color = new Vector4(1, 1, 1, 0.392f);

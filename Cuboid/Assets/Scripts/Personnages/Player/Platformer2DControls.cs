@@ -50,9 +50,14 @@ public class Platformer2DControls : MonoBehaviour
             m_isAxisInUse = false;
         }
 
-        if (CrossPlatformInputManager.GetButtonDown("WeaponSelect"))
+        if (CrossPlatformInputManager.GetButtonDown("WeaponSelectUp"))
         {
-            m_Character.WeaponSwitch();
+            m_Character.WeaponSwitch(true);
+        }
+
+        if (CrossPlatformInputManager.GetButtonDown("WeaponSelectDown"))
+        {
+            m_Character.WeaponSwitch(false);
         }
 
         //Rappel pour le grappin

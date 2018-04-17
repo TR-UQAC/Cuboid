@@ -49,7 +49,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1929337750307272}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.6, y: -1.88, z: 0}
+  m_LocalPosition: {x: -0.13, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4894449936569418}
@@ -62,7 +62,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1496256033675492}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -30.65, y: -0.64, z: 0}
+  m_LocalPosition: {x: 0, y: -3.64, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4417390762397422}
@@ -81,7 +81,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnDelay: 2
-  escapeSeconds: 150
+  escapeSeconds: 30
   spawnPoint: {fileID: 4417390762397422}
   spawnPrefab: {fileID: 4947641083449498, guid: baaa42c1e8acd1d4ebeb978b66a2adf4,
     type: 2}
@@ -93,3 +93,4 @@ MonoBehaviour:
     type: 2}
   m_explosionEnnemis: {fileID: 1000013462590818, guid: 2e32ea3e3f66300498e02a68d1c0677c,
     type: 2}
+  timerRunning: 0

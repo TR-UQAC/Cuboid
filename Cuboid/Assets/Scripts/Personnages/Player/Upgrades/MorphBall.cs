@@ -7,14 +7,13 @@ public class MorphBall : MonoBehaviour {
 
     public Sprite morphSprite;
     public Sprite standardSprite;
+    public LayerMask preventUnmorph;
 
     private bool ismorphed = false;
 
 	void Start ()
     {
-        //morphSprite = Resources.Load("morph01", typeof(Sprite)) as Sprite;
-
-
+        preventUnmorph = LayerMask.GetMask("Obstacle");
     }
 	
     void Update()
@@ -65,8 +64,17 @@ public class MorphBall : MonoBehaviour {
                 //Utilise le ceiling check pour voir si on peux unmorph
                 if (!playergo.GetComponent<PlayerCharacter2D>().IsUnderCeiling())
                 {
-                    //playergo.GetComponent<SpriteRenderer>().sprite = standardSprite;
-                    //playergo.GetComponent<Animator>().enabled = true;
+                    //Check sur la gauche et droite (tunnel vertical)
+                    Debug.DrawRay(playergo.transform.position, playergo.transform.right, Color.green, 2f);
+                    Debug.DrawRay(playergo.transform.position, playergo.transform.right * -1, Color.green, 2f);
+                    var hitGauche = Physics2D.Raycast(playergo.transform.position, playergo.transform.right, 2f, preventUnmorph);
+                    var hitDroite = Physics2D.Raycast(playergo.transform.position, playergo.transform.right * -1, 2f, preventUnmorph);
+
+                    if (hitGauche.collider != null)
+                    {
+                        Debug.Log("gauche");
+                    }
+
                     playergo.GetComponent<PlayerCharacter2D>().m_backSphere.transform.localScale = new Vector2(1.0f, 1.0f);
                     playergo.transform.Find("Weapon").gameObject.SetActive(true);
 
