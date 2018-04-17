@@ -77,6 +77,7 @@ public class PauseMenu : MonoBehaviour {
         settingMenuUI.SetActive(false);
 
         Time.timeScale = 1f;
+        Debug.Log("Resume");
     }
 
     void Pause() {
@@ -85,6 +86,7 @@ public class PauseMenu : MonoBehaviour {
         pauseMenuUI.SetActive(true);
 
         Time.timeScale = 0f;
+        Debug.Log("Pause");
         ES.SetSelectedGameObject(firstMenuButton);
     }
 

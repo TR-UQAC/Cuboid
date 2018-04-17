@@ -42,7 +42,9 @@ public class DialogueManager : MonoBehaviour {
         animator.SetBool("IsOpen", true);
         nameText.text = dialogue.name;
 
+        Debug.Log("StartDialogue");
         Time.timeScale = 0f;
+        PauseMenu.GameIsPaused = true;
         if (sentences == null)
         {
             sentences = new Queue<string>();
@@ -80,7 +82,10 @@ public class DialogueManager : MonoBehaviour {
     }
 
     void EndDialogue() {
+        Debug.Log("EndDialogue");
         Time.timeScale = 1f;
+        PauseMenu.GameIsPaused = false;
+        dialogActive = false;
         //TODO: Reprendre le temps quand le dialogue est terminer
         animator.SetBool("IsOpen", false);
 
