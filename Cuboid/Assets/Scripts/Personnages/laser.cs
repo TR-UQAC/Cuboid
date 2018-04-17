@@ -12,7 +12,7 @@ public class laser : Bullet {
     private ParticleSystem loadPS;
     private Transform m_impact;
     private Transform m_effet;
-    private Transform m_corps;
+    //private Transform m_corps;
     private Transform m_forwardLaser;
     private bool m_charge = false;
     private Sequence die;
@@ -69,12 +69,12 @@ public class laser : Bullet {
                 continue;
             }
 
-            if(child.name == "Corps")
+            /*if(child.name == "Corps")
             {
                 m_corps = child;
                 m_sCorps = child.GetComponent<SpriteRenderer>() as SpriteRenderer;
                 continue;
-            }
+            }*/
 
             if(child.name == "Impact")
             {

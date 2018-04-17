@@ -199,3 +199,10 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: HurtEnnemi
+    clip: {fileID: 8300000, guid: 8ff5762df7c5a354a8cd67baf10fe0f1, type: 3}
+    output: {fileID: 243657678957942896, guid: 68739206651769c479cf85faf1a0876d, type: 2}
+    volume: 0.07
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}

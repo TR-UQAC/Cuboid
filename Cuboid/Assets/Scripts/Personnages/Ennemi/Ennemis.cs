@@ -132,7 +132,8 @@ public class Ennemis : Personnages {
                 {
                     GameMaster gm = GameObject.Find("_GM").GetComponent<GameMaster>();
                     GameObject ex = Instantiate(gm.m_explosionEnnemis, transform.position, transform.rotation);
-                    FindObjectOfType<AudioManager>().Play("SmallExplosion");
+                    if (FindObjectOfType<AudioManager>() != null)
+                        FindObjectOfType<AudioManager>().Play("SmallExplosion");
 
                     Sequence explose = DOTween.Sequence();
                     explose.SetDelay(1.0f);
@@ -147,6 +148,9 @@ public class Ennemis : Personnages {
                 GameMaster.KillEnnemi(this);
                 return;
             }
+
+            if (FindObjectOfType<AudioManager>() != null)
+                FindObjectOfType<AudioManager>().Play("HurtEnnemi");
 
             if (GetComponent<Dommage_Shader>() != null)
                 GetComponent<Dommage_Shader>().CouleurDommage();
