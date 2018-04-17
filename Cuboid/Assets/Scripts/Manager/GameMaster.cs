@@ -13,7 +13,7 @@ public class GameMaster : MonoBehaviour {
 
     public int spawnDelay = 2;
 
-    public float escapeSeconds = 150;
+    public float escapeSeconds = 10;
 
     public Transform spawnPoint;
     public Transform spawnPrefab;
@@ -25,7 +25,7 @@ public class GameMaster : MonoBehaviour {
     private GameObject tmpPlayer;
 
     private GameObject escapeTimer;
-    private bool timerRunning = false;
+    public bool timerRunning = false;
     private float currentTime = 0f;
 
     void Awake() {
@@ -128,20 +128,30 @@ public class GameMaster : MonoBehaviour {
     }
 
     public void HandleTimer()
-    {
-        currentTime -= Time.deltaTime;
+    {   
+        if (timerRunning)
+        {
+            currentTime -= Time.deltaTime;
+            if (currentTime <= 0)
+            {
+                escapeTimer.GetComponent<TextMeshProUGUI>().text = "00:00.00";
+                timerRunning = false;
+                GameObject.FindWithTag("Player").GetComponent<PlayerCharacter2D>().DommagePerso(10000);
+                Invoke("RestartTimer", 2f);
+            }
+            else
+            {
+                TimeSpan ts = TimeSpan.FromSeconds(currentTime);
+                string txt = Math.Floor(ts.TotalMinutes).ToString("00") + ":" + (Math.Floor(ts.TotalSeconds) % 60).ToString("00") + "." + Math.Floor(ts.TotalMilliseconds) % 100;
+                escapeTimer.GetComponent<TextMeshProUGUI>().text = txt;
+            }
+        }     
+    }
 
-        if (currentTime <= 0)
-        {
-            escapeTimer.GetComponent<TextMeshProUGUI>().text = "00:00.00";
-            timerRunning = false;
-        }
-        else
-        {
-            TimeSpan ts = TimeSpan.FromSeconds(currentTime);
-            string txt = Math.Floor(ts.TotalMinutes).ToString("00") + ":" + (Math.Floor(ts.TotalSeconds) % 60).ToString("00") + "." + Math.Floor(ts.TotalMilliseconds) % 100;
-            escapeTimer.GetComponent<TextMeshProUGUI>().text = txt;
-        }
+    public void RestartTimer()
+    {
+        instance.currentTime = instance.escapeSeconds;
+        timerRunning = true;
     }
 
     private void DestroyPlayer(PlayerCharacter2D perso)
@@ -153,6 +163,8 @@ public class GameMaster : MonoBehaviour {
     {
         instance.timerRunning = true;
         instance.escapeTimer.SetActive(true);
+
+        instance.transform.position = new Vector3(-265, 4, 0);
 
         GameObject egt = GameObject.FindGameObjectWithTag("EndGameTrigger");
         egt.GetComponent<EndGame>().Enable();
@@ -178,8 +190,6 @@ public class GameMaster : MonoBehaviour {
 
     public static void KillJoueur(PlayerCharacter2D perso)
     {
-        //instance.DestroyPlayer(perso);
-        //Destroy(perso.gameObject);
         perso.gameObject.SetActive(false);
         //instance.RespawnPlayer(perso);
         instance.StartCoroutine(instance.RespawnPlayer(perso));
