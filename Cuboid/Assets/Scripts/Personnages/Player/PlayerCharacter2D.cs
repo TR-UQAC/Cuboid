@@ -301,15 +301,26 @@ public class PlayerCharacter2D : Personnages {
         return m_Grounded;
     }
 
-    public void WeaponSwitch()
+    public void WeaponSwitch(bool avance)
     {
         string previousWeapon = weaponList[selectedWeaponIndex];
 
-        selectedWeaponIndex++;
-
+        if (avance)
+        {
+            selectedWeaponIndex++;
+        }
+        else
+        {
+            selectedWeaponIndex--;
+        }
+        
         if (selectedWeaponIndex == weaponList.Count)
         {
             selectedWeaponIndex = 0;
+        }
+        else if (selectedWeaponIndex < 0)
+        {
+            selectedWeaponIndex = weaponList.Count - 1;
         }
 
         if(weaponList.Count > 1)
