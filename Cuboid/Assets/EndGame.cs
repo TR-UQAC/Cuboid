@@ -5,11 +5,14 @@ using UnityEngine;
 public class EndGame : MonoBehaviour {
 
     private BoxCollider2D trigger;
+    private bool takingOff = false;
+    Vector3 endPos;
 
-	void Awake()
+    void Awake()
     {
         trigger = GetComponent<BoxCollider2D>();
         trigger.enabled = false;
+        endPos = transform.parent.position + new Vector3(transform.parent.position.x, transform.parent.position.y + 25f, transform.parent.position.z);
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -17,7 +20,20 @@ public class EndGame : MonoBehaviour {
         GameObject go = other.gameObject;
         if (go.tag == "Player")
         {
-            Debug.Log("Fin du jeu");
+            go.SetActive(false);
+            transform.parent.GetComponent<Animator>().Play("ShipEnter");
+            InvokeRepeating("TakeOff", 3f, 0.001f);     
+        }
+    }
+
+    private void TakeOff()
+    {
+        takingOff = true;    
+        transform.parent.position = Vector3.MoveTowards(transform.parent.position, endPos, Time.deltaTime);
+
+        if (transform.parent.position == endPos)
+        {
+            CancelInvoke();
         }
     }
 
