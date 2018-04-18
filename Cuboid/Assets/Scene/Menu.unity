@@ -1471,6 +1471,7 @@ RectTransform:
   - {fileID: 1360206178}
   - {fileID: 1050371818}
   - {fileID: 1256103137}
+  - {fileID: 935103677}
   - {fileID: 1043596763}
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -3038,12 +3039,12 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 935103676}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1043596763}
-  m_RootOrder: 3
+  m_Father: {fileID: 587793542}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3787,13 +3788,12 @@ RectTransform:
   - {fileID: 363165745}
   - {fileID: 765756429}
   - {fileID: 1254321363}
-  - {fileID: 935103677}
   m_Father: {fileID: 587793542}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 266.02576, y: -231}
   m_SizeDelta: {x: 648, y: 81}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1050371817
@@ -4087,6 +4087,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loadingSlider: {fileID: 1043596762}
+  imageTuto: {fileID: 935103678}
   progressText: {fileID: 1254321361}
 --- !u!4 &1094615311
 Transform:
@@ -5269,11 +5270,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:

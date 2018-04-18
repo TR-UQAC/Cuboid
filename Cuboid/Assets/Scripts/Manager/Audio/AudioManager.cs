@@ -66,4 +66,11 @@ public class AudioManager : MonoBehaviour {
             s.Stop();
         }    
     }
+
+    public void ChangeMusique(string nameStop, string namePlay) {
+
+        Stop(nameStop);
+
+        Play(namePlay);
+    }
 }

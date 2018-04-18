@@ -37,6 +37,8 @@ public class EndGame : MonoBehaviour {
         {
             CancelInvoke();
         }
+
+        //TODO: mettre les crédits et changer la musique et retourner au menu principale.
     }
 
     public void Enable()
