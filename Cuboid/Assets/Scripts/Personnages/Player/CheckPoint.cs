@@ -12,7 +12,6 @@ public class CheckPoint : MonoBehaviour {
 	void Start () {
         m_anim = GetComponent<Animator>() as Animator;
         m_anim.GetComponent<Animator>().SetBool("CurrentSpawner", false);
-        
     }
 	
 	// Update is called once per frame
@@ -30,7 +29,6 @@ public class CheckPoint : MonoBehaviour {
                 {
                     if(check != transform)
                     {
-                        Debug.Log(check.name);
                         check.GetComponent<Animator>().SetBool("CurrentSpawner", false);
                         check.GetComponent<CheckPoint>().m_currentState = false;
                     }
