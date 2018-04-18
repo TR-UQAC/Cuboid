@@ -25,6 +25,7 @@ TagManager:
   - TeleportEffect
   - SmokeEffect
   - EndGameTrigger
+  - CheckPoint
   layers:
   - Default
   - TransparentFX
