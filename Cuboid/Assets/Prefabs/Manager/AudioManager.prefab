@@ -206,3 +206,10 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: RespawnPlayer
+    clip: {fileID: 8300000, guid: 67063b2c2ae145d4fabbc177f5e477e2, type: 3}
+    output: {fileID: 243657678957942896, guid: 68739206651769c479cf85faf1a0876d, type: 2}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}

@@ -62,8 +62,11 @@ public class GameMaster : MonoBehaviour {
     }
 
     public IEnumerator RespawnPlayer(PlayerCharacter2D perso) {
-        //TODO: Ajout d'un son pour l'attente
+        //TODO: Ajout d'un son pour l'attente  
         yield return new WaitForSeconds(spawnDelay);
+
+        if (FindObjectOfType<AudioManager>() != null)
+            FindObjectOfType<AudioManager>().Play("RespawnPlayer");
 
         perso.gameObject.transform.position = spawnPoint.position;
         perso.gameObject.transform.rotation = spawnPoint.rotation;
