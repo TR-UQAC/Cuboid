@@ -91,6 +91,11 @@ public class TriggerBossStage : MonoBehaviour {
                 }
             }
 
+            if(m_NoBoss == 1)
+            {
+                GameMaster.StartEscapeSequence();
+            }
+
         }
 
         if(m_bossActive == true)

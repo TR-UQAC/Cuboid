@@ -31,11 +31,14 @@ public class GameMaster : MonoBehaviour {
     void Awake() {
         Cursor.visible = false;
 
-        if (GameObject.FindGameObjectWithTag("EscapeTimerUI"))
+        //  ça marche pu quand on load la scene depuis le menu, il est setter dans boss.cs
+        //  la méthode qui le set est ResetEscapeObject
+
+        /*if (GameObject.FindGameObjectWithTag("EscapeTimerUI"))
         {
             escapeTimer = GameObject.FindGameObjectWithTag("EscapeTimerUI");
         }
-        escapeTimer.SetActive(false);
+        escapeTimer.SetActive(false);*/
 
         if (instance == null)
             instance = this;
@@ -157,6 +160,12 @@ public class GameMaster : MonoBehaviour {
         timerRunning = true;
     }
 
+    public void ResetEscapeObject(GameObject timer)
+    {
+        escapeTimer = timer;
+        escapeTimer.SetActive(false);
+    }
+
     private void DestroyPlayer(PlayerCharacter2D perso)
     {
         Destroy(perso.gameObject);
@@ -165,9 +174,19 @@ public class GameMaster : MonoBehaviour {
     public static void StartEscapeSequence()
     {
         instance.timerRunning = true;
+
+        if(instance.escapeTimer == null)
+            instance.escapeTimer = GameObject.FindGameObjectWithTag("EscapeTimerUI");
+
         instance.escapeTimer.SetActive(true);
 
-        instance.transform.position = new Vector3(-265, 4, 0);
+        instance.spawnPoint.position = new Vector3(-265, 4, 0);
+
+        List<GameObject> lstCheck = new List<GameObject>(GameObject.FindGameObjectsWithTag("CheckPoint"));
+        foreach (GameObject check in lstCheck)
+        {
+            check.GetComponent<CheckPoint>().EndGameState();
+        }
 
         GameObject egt = GameObject.FindGameObjectWithTag("EndGameTrigger");
         egt.GetComponent<EndGame>().Enable();

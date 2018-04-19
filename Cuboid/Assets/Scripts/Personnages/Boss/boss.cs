@@ -78,7 +78,11 @@ public class boss : MonoBehaviour
         }
 
         // !*!  lancé l'intro du boss
-
+        if (GameObject.FindGameObjectWithTag("EscapeTimerUI"))
+        {
+            GameObject escapeTimer = GameObject.FindGameObjectWithTag("EscapeTimerUI");
+            GameMaster.instance.ResetEscapeObject(escapeTimer);
+        }
 
         Invoke("directionBoss", m_MovingRate);
     }
