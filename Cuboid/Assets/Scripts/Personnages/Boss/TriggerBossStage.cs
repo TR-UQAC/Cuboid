@@ -167,6 +167,12 @@ public class TriggerBossStage : MonoBehaviour {
                     Canon canon = canons[i].GetComponent<Canon>();
                     canon.Sortir();
                 }
+
+                List<GameObject> lstLaser = new List<GameObject>(GameObject.FindGameObjectsWithTag("laserBoss"));
+                foreach (GameObject las in lstLaser)
+                {
+                    las.GetComponent<laser>().Disparait();
+                }
             }
 
             m_bossActive = false;
