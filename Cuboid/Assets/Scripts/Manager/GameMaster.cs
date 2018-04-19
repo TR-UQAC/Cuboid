@@ -164,6 +164,7 @@ public class GameMaster : MonoBehaviour {
     {
         escapeTimer = timer;
         escapeTimer.SetActive(false);
+        Cursor.visible = false;
     }
 
     private void DestroyPlayer(PlayerCharacter2D perso)

@@ -81,6 +81,7 @@ public class boss : MonoBehaviour
         if (GameObject.FindGameObjectWithTag("EscapeTimerUI"))
         {
             GameObject escapeTimer = GameObject.FindGameObjectWithTag("EscapeTimerUI");
+            escapeTimer.SetActive(false);
             GameMaster.instance.ResetEscapeObject(escapeTimer);
         }
 
