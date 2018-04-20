@@ -42,6 +42,8 @@ public class Ennemis : Personnages {
     private bool smokeSet = false;
     public bool m_fumer = true;
 
+    [HideInInspector]
+    public bool activer = true;
     #endregion
     #region Corps
     private void Start() {
@@ -94,8 +96,8 @@ public class Ennemis : Personnages {
             }
             return;
         }
-
-        Deplacement(direction);
+        if(activer)
+            Deplacement(direction);
 
         if (rb.velocity.x > ennemiStats.maxSpeed)
             rb.velocity = Vector2.right * ennemiStats.maxSpeed;
