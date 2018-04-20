@@ -61,8 +61,14 @@ public class UpgradeItem : MonoBehaviour {
                     pc.gameObject.GetComponent<GrappleBeam>().UpdateGUI(false);
                     break;
                 case "Missile":
-                    pc.ToggleUpgrade(UpgradeName);
-                    pc.AddWeapon("Missile");                 
+                    if (pc.HasUpgrade("Missile")){ 
+                        pc.joueurStats.nbMissileMax += 5;
+                        pc.joueurStats.nbMissile = pc.joueurStats.nbMissileMax;
+                        pc.UpdateMissileUI();
+                    } else {
+                        pc.ToggleUpgrade(UpgradeName);
+                        pc.AddWeapon("Missile");
+                    }
                     break;
                 case "MissileExpansion":
                     pc.joueurStats.nbMissileMax += 5;
