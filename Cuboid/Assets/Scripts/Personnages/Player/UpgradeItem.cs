@@ -17,20 +17,28 @@ public class UpgradeItem : MonoBehaviour {
     {
         if (other.CompareTag("Player"))
         {
+            //Desactive le collider pour empêcher le double pickup
+            gameObject.GetComponent<CircleCollider2D>().enabled = false;
+
             if (FindObjectOfType<AudioManager>() != null)
             {
                 FindObjectOfType<AudioManager>().Play("ItemPickup");
             }
 
-            Pickup(other);
+            PlayerCharacter2D pc = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCharacter2D>();
+
+            if (!pc.upgrading)
+            {
+                Debug.Log("entre ici");
+                //pc.upgrading = true;
+                Pickup(other);
+                pc.upgrading = false;
+            }
         }
     }
 
     void Pickup(Collider2D player)
     {
-        //Desactive le collider pour empêcher le double pickup
-        gameObject.GetComponent<CircleCollider2D>().enabled = false;
-
         //fait de quoi sur le player
         GameObject monjoueur = GameObject.FindGameObjectWithTag("Player");
         PlayerCharacter2D pc = (PlayerCharacter2D) monjoueur.GetComponent(typeof(PlayerCharacter2D));
@@ -41,9 +49,18 @@ public class UpgradeItem : MonoBehaviour {
             return;
         }
 
+        if (pc.upgrading)
+        {
+            return;
+        }
+        else
+        {
+            pc.upgrading = true;
+        }
+
         //pc.ToggleUpgrade(UpgradeName);
 
-        if (!pc.HasUpgrade(UpgradeName))
+        if (!pc.HasUpgrade(UpgradeName) || (UpgradeName == "Missile" && pc.HasUpgrade("Missile")))
         {
             switch (UpgradeName)
             {
@@ -61,14 +78,17 @@ public class UpgradeItem : MonoBehaviour {
                     pc.gameObject.GetComponent<GrappleBeam>().UpdateGUI(false);
                     break;
                 case "Missile":
-                    if (pc.HasUpgrade("Missile")){ 
+                    if (pc.HasUpgrade("Missile")){
                         pc.joueurStats.nbMissileMax += 5;
                         pc.joueurStats.nbMissile = pc.joueurStats.nbMissileMax;
                         pc.UpdateMissileUI();
                     } else {
+                        pc.joueurStats.nbMissileMax += 10;
+                        pc.joueurStats.nbMissile = pc.joueurStats.nbMissileMax;
                         pc.ToggleUpgrade(UpgradeName);
                         pc.AddWeapon("Missile");
                     }
+                    Debug.Log("missile max 1: " + pc.joueurStats.nbMissileMax);
                     break;
                 case "MissileExpansion":
                     pc.joueurStats.nbMissileMax += 5;

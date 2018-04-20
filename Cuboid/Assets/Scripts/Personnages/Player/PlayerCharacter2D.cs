@@ -24,6 +24,7 @@ public class PlayerCharacter2D : Personnages {
     public GameObject morphBombPrefab;
     public GameObject m_backSphere;     //  !*! Ajout pour animer le fond avec le transforme
     public GameObject m_ExplosionEffect;
+    public bool upgrading = false;
 
     public float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
     private bool m_Grounded;            // Whether or not the player is grounded.

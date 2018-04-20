@@ -82,14 +82,18 @@ public class Platformer2DControls : MonoBehaviour
                 m_Character.ToggleUpgrade("Missile");
                 m_Character.AddWeapon("Missile");
 
+                Debug.Log("missile max 1: " + m_Character.joueurStats.nbMissileMax);
+
                 m_Character.ToggleUpgrade("GrappleBeam");
                 m_Character.AddWeapon("GrappleBeam");
                 m_Character.gameObject.GetComponent<GrappleBeam>().enabled = true;
                 m_Character.gameObject.GetComponent<GrappleBeam>().UpdateGUI(false);
-
+            
                 m_Character.joueurStats.nbMissileMax += 5;
                 m_Character.joueurStats.nbMissile = m_Character.joueurStats.nbMissileMax;
                 m_Character.UpdateMissileUI();
+
+                Debug.Log("missile max 2: " + m_Character.joueurStats.nbMissileMax);
 
                 m_Character.joueurStats.vieMax += 100;
                 m_Character.joueurStats.vie = m_Character.joueurStats.vieMax;
