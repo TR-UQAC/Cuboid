@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using EZCameraShake;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class PlanetExplosion : MonoBehaviour {
 
@@ -11,6 +13,8 @@ public class PlanetExplosion : MonoBehaviour {
 
     public float elapsedTime = 0f;
     public GameObject m_ExplosionEffect;
+    public Animator animatorCredit;
+    private bool goMenu = false;
 
     void Awake()
     {
@@ -18,7 +22,11 @@ public class PlanetExplosion : MonoBehaviour {
         ship = GameObject.Find("PlayerShip");
         ship.GetComponent<Animator>().Play("ShipTakeOff");
         InvokeRepeating("ShipAnim", 4f, Time.deltaTime);
-        InvokeRepeating("PlanetExplo", 0.5f, 0.75f); 
+        InvokeRepeating("PlanetExplo", 0.5f, 0.75f);
+        if (FindObjectOfType<AudioManager>() != null)
+        {
+            FindObjectOfType<AudioManager>().ChangeMusique("EscapeMusic", "MusiqueFin");
+        }
     }
 	
 	void FixedUpdate()
@@ -26,8 +34,23 @@ public class PlanetExplosion : MonoBehaviour {
         elapsedTime += Time.deltaTime;
     }
 
+    void Update() {
+        if (Input.anyKey && goMenu)
+        {
+            if (FindObjectOfType<AudioManager>() != null)
+            {
+                FindObjectOfType<AudioManager>().ChangeMusique("MusiqueFin", "Musique_Jeu");
+            }
+            Cursor.visible = true;
+            SceneManager.LoadScene(0);
+        }
+    }
     void PlanetExplo()
     {
+        if (FindObjectOfType<AudioManager>() != null)
+        {
+            FindObjectOfType<AudioManager>().Play("ExplosionP");
+        }
         GameObject ex = Instantiate(m_ExplosionEffect, new Vector3(0, 0, 1), new Quaternion());
         ex.transform.localScale = new Vector3(0.5f, 0.5f, 1f);
         Destroy(ex, 10f);
@@ -45,10 +68,12 @@ public class PlanetExplosion : MonoBehaviour {
             Fadego.GetComponent<Image>().color = new Color(c.r - 0.01f, c.g - 0.01f, c.b - 0.01f, 1);
         }
 
-        if (elapsedTime > 20f)
-        {
+        if (elapsedTime > 20f){
+            animatorCredit.enabled = true;
+        }
+        if (elapsedTime > 80f) {
+            goMenu = true;
             CancelInvoke();
-            GameObject.Find("Canvas").transform.Find("Credit").GetComponent<Animator>().enabled = true;
         }
     }
 
@@ -77,6 +102,10 @@ public class PlanetExplosion : MonoBehaviour {
         ship.transform.localScale += new Vector3(0.3f, 0.3f);
         if (elapsedTime > 9.5f)
         {
+            if (FindObjectOfType<AudioManager>() != null)
+            {
+                FindObjectOfType<AudioManager>().Play("ExplosionPlanet");
+            }
             ship.SetActive(false);
             CancelInvoke();
             InvokeRepeating("Fade", 0f, 0.04f);

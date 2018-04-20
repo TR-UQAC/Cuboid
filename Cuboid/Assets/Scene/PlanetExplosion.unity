@@ -118,6 +118,11 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224661016105969928, guid: 7491b8f5e3bad8943921d444900f100d,
     type: 2}
   m_PrefabInternal: {fileID: 1697073449}
+--- !u!95 &55736610 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95744549430986336, guid: 7491b8f5e3bad8943921d444900f100d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1697073449}
 --- !u!1 &219861969
 GameObject:
   m_ObjectHideFlags: 0
@@ -320,6 +325,7 @@ MonoBehaviour:
   elapsedTime: 0
   m_ExplosionEffect: {fileID: 1000011128802252, guid: 664d41453ea208c42a9aefbc42c98a9c,
     type: 2}
+  animatorCredit: {fileID: 55736610}
 --- !u!4 &492732951
 Transform:
   m_ObjectHideFlags: 0
@@ -679,7 +685,7 @@ Prefab:
     - target: {fileID: 224661016105969928, guid: 7491b8f5e3bad8943921d444900f100d,
         type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224661016105969928, guid: 7491b8f5e3bad8943921d444900f100d,
         type: 2}
@@ -689,7 +695,7 @@ Prefab:
     - target: {fileID: 224661016105969928, guid: 7491b8f5e3bad8943921d444900f100d,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -550
+      value: -903
       objectReference: {fileID: 0}
     - target: {fileID: 224661016105969928, guid: 7491b8f5e3bad8943921d444900f100d,
         type: 2}
