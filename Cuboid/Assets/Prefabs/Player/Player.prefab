@@ -180,7 +180,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1847836177881528}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.26, y: -3.66, z: 0}
+  m_LocalPosition: {x: -65.8, y: -107.6, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 4032282408151114}
@@ -389,8 +389,8 @@ MonoBehaviour:
   joueurStats:
     vie: 100
     vieMax: 100
-    nbMissile: 5
-    nbMissileMax: 5
+    nbMissile: 0
+    nbMissileMax: 0
     immortel: 0
     m_JumpForce: 38
     speed: 300
@@ -414,6 +414,7 @@ MonoBehaviour:
   m_backSphere: {fileID: 1834673594550958}
   m_ExplosionEffect: {fileID: 1000011797152326, guid: c2f5643034b0c7842aaa5e9ca398139e,
     type: 2}
+  upgrading: 0
   k_GroundedRadius: 0.2
   IsRunning: 0
   fallMaxSpeed: 35

@@ -6,6 +6,7 @@ using UnityStandardAssets._2D;
 public class UpgradeItem : MonoBehaviour {
 
     public string UpgradeName;
+    private bool pris = false;
 
     void Awake()
     {
@@ -17,9 +18,15 @@ public class UpgradeItem : MonoBehaviour {
     {
         if (other.CompareTag("Player"))
         {
+            if (pris)
+                return;
+
+            pris = true;
+
             //Desactive le collider pour empêcher le double pickup
             gameObject.GetComponent<CircleCollider2D>().enabled = false;
 
+            Debug.Log("Get Upgrade");
             if (FindObjectOfType<AudioManager>() != null)
             {
                 FindObjectOfType<AudioManager>().Play("ItemPickup");
@@ -78,13 +85,11 @@ public class UpgradeItem : MonoBehaviour {
                     pc.gameObject.GetComponent<GrappleBeam>().UpdateGUI(false);
                     break;
                 case "Missile":
+                    pc.joueurStats.nbMissileMax += 5;
+                    pc.joueurStats.nbMissile = pc.joueurStats.nbMissileMax;
                     if (pc.HasUpgrade("Missile")){
-                        pc.joueurStats.nbMissileMax += 5;
-                        pc.joueurStats.nbMissile = pc.joueurStats.nbMissileMax;
                         pc.UpdateMissileUI();
                     } else {
-                        pc.joueurStats.nbMissileMax += 10;
-                        pc.joueurStats.nbMissile = pc.joueurStats.nbMissileMax;
                         pc.ToggleUpgrade(UpgradeName);
                         pc.AddWeapon("Missile");
                     }

@@ -264,6 +264,7 @@ public class PlayerCharacter2D : Personnages {
             Weapon currentWeapon = (Weapon)transform.Find("Weapon").gameObject.GetComponent(typeof(Weapon));
             currentWeapon.UpdateGUI(false);
         }
+        
     }
 
     public void SetMorph(bool morph)
