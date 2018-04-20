@@ -896,12 +896,12 @@ Prefab:
     - target: {fileID: 114902338008596062, guid: 7491b8f5e3bad8943921d444900f100d,
         type: 2}
       propertyPath: m_havePropertiesChanged
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114902338008596062, guid: 7491b8f5e3bad8943921d444900f100d,
         type: 2}
       propertyPath: m_isInputParsingRequired
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 95744549430986336, guid: 7491b8f5e3bad8943921d444900f100d,
         type: 2}
@@ -920,7 +920,7 @@ Prefab:
     - target: {fileID: 114902338008596062, guid: 7491b8f5e3bad8943921d444900f100d,
         type: 2}
       propertyPath: m_textInfo.lineCount
-      value: 87
+      value: 86
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7491b8f5e3bad8943921d444900f100d, type: 2}

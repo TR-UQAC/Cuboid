@@ -55,7 +55,7 @@ MonoBehaviour:
   - name: Musique_Jeu
     clip: {fileID: 8300000, guid: 96468af9ff1b1e14da756071baaf9a9b, type: 3}
     output: {fileID: 243462448325884134, guid: 68739206651769c479cf85faf1a0876d, type: 2}
-    volume: 0.2
+    volume: 0.25
     pitch: 1
     loop: 1
     source: {fileID: 0}
