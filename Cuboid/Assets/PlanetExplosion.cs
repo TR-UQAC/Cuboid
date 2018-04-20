@@ -13,6 +13,7 @@ public class PlanetExplosion : MonoBehaviour {
 
     public float elapsedTime = 0f;
     public GameObject m_ExplosionEffect;
+    public GameObject text;
     public Animator animatorCredit;
     private bool goMenu = false;
 
@@ -23,10 +24,12 @@ public class PlanetExplosion : MonoBehaviour {
         ship.GetComponent<Animator>().Play("ShipTakeOff");
         InvokeRepeating("ShipAnim", 4f, Time.deltaTime);
         InvokeRepeating("PlanetExplo", 0.5f, 0.75f);
+        /*
         if (FindObjectOfType<AudioManager>() != null)
         {
             FindObjectOfType<AudioManager>().ChangeMusique("EscapeMusic", "MusiqueFin");
         }
+        */
     }
 	
 	void FixedUpdate()
@@ -63,7 +66,7 @@ public class PlanetExplosion : MonoBehaviour {
         {
             Fadego.GetComponent<Image>().color = new Color(c.r, c.g, c.b, c.a + 0.01f);
         }
-        else
+        else if(elapsedTime < 17.5f)
         {
             Fadego.GetComponent<Image>().color = new Color(c.r - 0.01f, c.g - 0.01f, c.b - 0.01f, 1);
         }
@@ -73,6 +76,7 @@ public class PlanetExplosion : MonoBehaviour {
         }
         if (elapsedTime > 80f) {
             goMenu = true;
+            text.SetActive(true);
             CancelInvoke();
         }
     }

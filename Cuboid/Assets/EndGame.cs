@@ -36,7 +36,10 @@ public class EndGame : MonoBehaviour {
         if (transform.parent.position == endPos)
         {
             CancelInvoke();
-            FindObjectOfType<AudioManager>().Stop("EscapeMusic");
+            //FindObjectOfType<AudioManager>().Stop("EscapeMusic");
+            if (FindObjectOfType<AudioManager>() != null) {
+                FindObjectOfType<AudioManager>().ChangeMusique("EscapeMusic", "MusiqueFin");
+            }
             Application.LoadLevelAsync(4);
         }
 

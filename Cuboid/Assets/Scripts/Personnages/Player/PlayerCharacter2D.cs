@@ -37,6 +37,7 @@ public class PlayerCharacter2D : Personnages {
     private SpriteRenderer spriteR;
     private GameObject bar;
     private Weapon currentWeapon;
+    private GrappleBeam grappleBeam;
 
     //private bool m_FacingRight = true;  // For determining which way the player is currently facing.
     private float shootTimer = 0;
@@ -82,6 +83,7 @@ public class PlayerCharacter2D : Personnages {
         StartCoroutine(LateStart(0.1f));
         
         currentWeapon = (Weapon)transform.Find("Weapon").gameObject.GetComponent(typeof(Weapon));
+        grappleBeam = gameObject.GetComponent<GrappleBeam>();
 
         if (m_backSphere != null)
             m_backSphere.GetComponent<SpriteRenderer>().flipX = spriteR.flipX;
@@ -146,6 +148,13 @@ public class PlayerCharacter2D : Personnages {
         m_Rigidbody2D.velocity = clampVel;
     }
 
+    public bool GrapinActive() {
+        if (activeUpgradeTable.ContainsKey("GrappleBeam") && weaponList[selectedWeaponIndex] == "GrappleBeam")
+            return true;
+
+        return false;
+
+    }
     public void UseWeapon()
     {
         if (m_enableInput == false)
@@ -170,9 +179,9 @@ public class PlayerCharacter2D : Personnages {
             {
                 if (shootTimer > currentWeapon.fireCooldown)
                 {
-                    if (activeUpgradeTable.ContainsKey("GrappleBeam") && weaponList[selectedWeaponIndex] == "GrappleBeam")
+                    if (GrapinActive())
                     {
-                        gameObject.GetComponent<GrappleBeam>().UseGrapple();
+                        grappleBeam.UseGrapple();
                     }
                     else
                     {
@@ -337,7 +346,8 @@ public class PlayerCharacter2D : Personnages {
             case "BasicBeam":
                 if (previousWeapon == "GrappleBeam")
                 {
-                    gameObject.GetComponent<GrappleBeam>().UpdateGUI(false);
+                    if (activeUpgradeTable.ContainsKey("GrappleBeam"))
+                        grappleBeam.UpdateGUI(false);
                 }
                 else if(previousWeapon == "Missile")
                 {
@@ -352,17 +362,19 @@ public class PlayerCharacter2D : Personnages {
                     currentWeapon.UseMissile(false);
                     currentWeapon.UpdateGUI(false);
                 }
-                gameObject.GetComponent<GrappleBeam>().UpdateGUI(true);
+                grappleBeam.UpdateGUI(true);
                 GameObject.FindGameObjectWithTag("BulletUI").GetComponent<Image>().color = new Vector4(1, 1, 1, 0.392f);
                 break;
             case "Missile":
-                gameObject.GetComponent<GrappleBeam>().UpdateGUI(false);
+                if(activeUpgradeTable.ContainsKey("GrappleBeam"))
+                    grappleBeam.UpdateGUI(false);
                 currentWeapon.UseMissile(true);
                 currentWeapon.UpdateGUI(true);
                 GameObject.FindGameObjectWithTag("BulletUI").GetComponent<Image>().color = new Vector4(1, 1, 1, 0.392f);
                 break;
             default:
-                gameObject.GetComponent<GrappleBeam>().UpdateGUI(false);
+                if (activeUpgradeTable.ContainsKey("GrappleBeam"))
+                    grappleBeam.UpdateGUI(false);
                 currentWeapon.UseMissile(false);
                 currentWeapon.UpdateGUI(false);
             break;
@@ -398,7 +410,7 @@ public class PlayerCharacter2D : Personnages {
             move = (crouch ? move * m_CrouchSpeed : move);
 
             //Ajuste la décélération selon l'emplitude du mouvement du joueur
-            if (!GetComponent<GrappleBeam>().isGrappleAttached)
+            if (!grappleBeam.isGrappleAttached)
             {
                 if (Mathf.Abs(move) < 0.5f)
                     decelleration = 30f;
@@ -435,17 +447,24 @@ public class PlayerCharacter2D : Personnages {
                 Flip(move);
 
         }
-               
+
         // If the player should jump...
+
         if (!isPlayerMorphed && m_Grounded && jump && m_Anim.GetBool("Ground"))
         {
+            if (grappleBeam.isGrappleAttached)
+                grappleBeam.UseGrapple();
+
             // Add a vertical force to the player.
             m_Grounded = false;
             m_Anim.SetBool("Ground", false);
             m_Rigidbody2D.AddForce(Vector2.up * joueurStats.m_JumpForce, ForceMode2D.Impulse);
         }
-        else if (!isPlayerMorphed && m_DoubleJump && jump)
+        else if (!isPlayerMorphed && m_DoubleJump && jump || jump && grappleBeam.isGrappleAttached)
         {
+            if (grappleBeam.isGrappleAttached)
+                grappleBeam.UseGrapple();
+
             m_DoubleJump = false;
             Vector2 d_jump;
             if (m_Rigidbody2D.velocity.y >= 0)
