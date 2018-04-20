@@ -41,6 +41,7 @@ public class PlanetExplosion : MonoBehaviour {
             {
                 FindObjectOfType<AudioManager>().ChangeMusique("MusiqueFin", "Musique_Jeu");
             }
+            Cursor.visible = true;
             SceneManager.LoadScene(0);
         }
     }
@@ -67,13 +68,12 @@ public class PlanetExplosion : MonoBehaviour {
             Fadego.GetComponent<Image>().color = new Color(c.r - 0.01f, c.g - 0.01f, c.b - 0.01f, 1);
         }
 
-        if (elapsedTime > 20f)
-        {
-            CancelInvoke();
+        if (elapsedTime > 20f){
             animatorCredit.enabled = true;
         }
         if (elapsedTime > 80f) {
             goMenu = true;
+            CancelInvoke();
         }
     }
 
