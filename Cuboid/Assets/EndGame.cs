@@ -12,7 +12,7 @@ public class EndGame : MonoBehaviour {
     {
         trigger = GetComponent<BoxCollider2D>();
         trigger.enabled = false;
-        endPos = transform.parent.position + new Vector3(transform.parent.position.x, transform.parent.position.y + 25f, transform.parent.position.z);
+        endPos = transform.parent.position + new Vector3(transform.parent.position.x, transform.parent.position.y + 18f, transform.parent.position.z);
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -36,9 +36,12 @@ public class EndGame : MonoBehaviour {
         if (transform.parent.position == endPos)
         {
             CancelInvoke();
+            FindObjectOfType<AudioManager>().Stop("EscapeMusic");
+            Application.LoadLevelAsync(4);
         }
 
         //TODO: mettre les crédits et changer la musique et retourner au menu principale.
+        
     }
 
     public void Enable()

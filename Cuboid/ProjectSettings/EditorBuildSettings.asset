@@ -17,3 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scene/UpgradesTestRoom.unity
     guid: 0c0180a2c99b21d41b0fd5c30357f2c0
+  - enabled: 1
+    path: Assets/Scene/PlanetExplosion.unity
+    guid: a8b08fdcd7cdd244ea5ef992e7b91095

@@ -60,7 +60,7 @@ public class PlanetExplosion : MonoBehaviour {
         {
             ship.transform.Rotate(new Vector3(0, 0, 1), 3f);
             
-            if (elapsedTime > 7.25f)
+            if (elapsedTime > 7.0f)
             {
                 CancelInvoke();
                 InvokeRepeating("ShipExit", 1f, Time.deltaTime);
