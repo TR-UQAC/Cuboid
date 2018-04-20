@@ -74,8 +74,6 @@ public class GrappleBeam : MonoBehaviour
     {
         if (!isGrappleAttached)
         {
-            //Debug.Log("Tir le grappin");
-
             //Empeche d'utiliser le grappin si on est deja attaché
             if (isGrappleAttached)
             {
@@ -90,6 +88,7 @@ public class GrappleBeam : MonoBehaviour
             if (hit.collider != null)
             {
                 //Debug.Log("Raycast touche terrain");
+                FindObjectOfType<AudioManager>().Play("GrappleSound");
 
                 isGrappleAttached = true;
 

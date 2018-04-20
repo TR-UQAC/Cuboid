@@ -213,3 +213,10 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: GrappleSound
+    clip: {fileID: 8300000, guid: 7a63bee4e1b8ba244b02196e74d18a4f, type: 3}
+    output: {fileID: 243657678957942896, guid: 68739206651769c479cf85faf1a0876d, type: 2}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
