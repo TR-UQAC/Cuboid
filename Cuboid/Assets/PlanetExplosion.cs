@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using EZCameraShake;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class PlanetExplosion : MonoBehaviour {
 
@@ -11,6 +13,8 @@ public class PlanetExplosion : MonoBehaviour {
 
     public float elapsedTime = 0f;
     public GameObject m_ExplosionEffect;
+    public Animator animatorCredit;
+    private bool goMenu = false;
 
     void Awake()
     {
@@ -26,6 +30,10 @@ public class PlanetExplosion : MonoBehaviour {
         elapsedTime += Time.deltaTime;
     }
 
+    void Update() {
+            if (Input.anyKey && goMenu)
+                SceneManager.LoadScene(0);
+    }
     void PlanetExplo()
     {
         GameObject ex = Instantiate(m_ExplosionEffect, new Vector3(0, 0, 1), new Quaternion());
@@ -48,7 +56,11 @@ public class PlanetExplosion : MonoBehaviour {
         if (elapsedTime > 20f)
         {
             CancelInvoke();
-            GameObject.Find("Canvas").transform.Find("Credit").GetComponent<Animator>().enabled = true;
+            animatorCredit.enabled = true;
+            goMenu = true;
+        }
+        if (elapsedTime > 80f) {
+            goMenu = true;
         }
     }
 
