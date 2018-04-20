@@ -28,7 +28,7 @@ public class PlanetExplosion : MonoBehaviour {
 
     void PlanetExplo()
     {
-        GameObject ex = Instantiate(m_ExplosionEffect, new Vector3(999, 637, 1), new Quaternion());
+        GameObject ex = Instantiate(m_ExplosionEffect, new Vector3(0, 0, 1), new Quaternion());
         ex.transform.localScale = new Vector3(0.5f, 0.5f, 1f);
         Destroy(ex, 10f);
     }
