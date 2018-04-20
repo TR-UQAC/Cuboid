@@ -2914,6 +2914,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86adf4a2e4d54da4fb1a68a4bb92a9c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_firstSpawn: 0
 --- !u!95 &913092516
 Animator:
   serializedVersion: 3
@@ -21686,6 +21687,7 @@ MonoBehaviour:
   tirerSurJoueur: 0
   decelleration: 2
   m_fumer: 1
+  activer: 1
   showVie: 1
   showDommage: 1
   showContactDommage: 0
@@ -22115,6 +22117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86adf4a2e4d54da4fb1a68a4bb92a9c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_firstSpawn: 0
 --- !u!95 &1784754065
 Animator:
   serializedVersion: 3

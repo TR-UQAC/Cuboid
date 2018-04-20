@@ -21,7 +21,6 @@ public class CheckPoint : MonoBehaviour {
             if (GameObject.FindGameObjectWithTag("EscapeTimerUI"))
             {
                 GameObject escapeTimer = GameObject.FindGameObjectWithTag("EscapeTimerUI");
-                Debug.Log("dans le fucking shit");
                 escapeTimer.SetActive(false);
                 GameMaster.instance.ResetEscapeObject(escapeTimer);
             }
