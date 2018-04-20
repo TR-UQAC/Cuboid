@@ -180,7 +180,7 @@ public class GameMaster : MonoBehaviour {
             instance.escapeTimer = GameObject.FindGameObjectWithTag("EscapeTimerUI");
 
         instance.escapeTimer.SetActive(true);
-
+        SetSpawnPlayer(GameObject.Find("Node (2)").transform);
         instance.spawnPoint.position = new Vector3(-265, 4, 0);
 
         List<GameObject> lstCheck = new List<GameObject>(GameObject.FindGameObjectsWithTag("CheckPoint"));
