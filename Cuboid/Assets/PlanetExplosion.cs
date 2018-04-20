@@ -22,7 +22,11 @@ public class PlanetExplosion : MonoBehaviour {
         ship = GameObject.Find("PlayerShip");
         ship.GetComponent<Animator>().Play("ShipTakeOff");
         InvokeRepeating("ShipAnim", 4f, Time.deltaTime);
-        InvokeRepeating("PlanetExplo", 0.5f, 0.75f); 
+        InvokeRepeating("PlanetExplo", 0.5f, 0.75f);
+        if (FindObjectOfType<AudioManager>() != null)
+        {
+            FindObjectOfType<AudioManager>().ChangeMusique("EscapeMusic", "MusiqueFin");
+        }
     }
 	
 	void FixedUpdate()
@@ -31,11 +35,21 @@ public class PlanetExplosion : MonoBehaviour {
     }
 
     void Update() {
-            if (Input.anyKey && goMenu)
-                SceneManager.LoadScene(0);
+        if (Input.anyKey && goMenu)
+        {
+            if (FindObjectOfType<AudioManager>() != null)
+            {
+                FindObjectOfType<AudioManager>().ChangeMusique("MusiqueFin", "Musique_Jeu");
+            }
+            SceneManager.LoadScene(0);
+        }
     }
     void PlanetExplo()
     {
+        if (FindObjectOfType<AudioManager>() != null)
+        {
+            FindObjectOfType<AudioManager>().Play("ExplosionP");
+        }
         GameObject ex = Instantiate(m_ExplosionEffect, new Vector3(0, 0, 1), new Quaternion());
         ex.transform.localScale = new Vector3(0.5f, 0.5f, 1f);
         Destroy(ex, 10f);
@@ -57,7 +71,6 @@ public class PlanetExplosion : MonoBehaviour {
         {
             CancelInvoke();
             animatorCredit.enabled = true;
-            goMenu = true;
         }
         if (elapsedTime > 80f) {
             goMenu = true;
@@ -89,6 +102,10 @@ public class PlanetExplosion : MonoBehaviour {
         ship.transform.localScale += new Vector3(0.3f, 0.3f);
         if (elapsedTime > 9.5f)
         {
+            if (FindObjectOfType<AudioManager>() != null)
+            {
+                FindObjectOfType<AudioManager>().Play("ExplosionPlanet");
+            }
             ship.SetActive(false);
             CancelInvoke();
             InvokeRepeating("Fade", 0f, 0.04f);

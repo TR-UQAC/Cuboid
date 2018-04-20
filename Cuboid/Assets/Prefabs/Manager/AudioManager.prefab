@@ -159,7 +159,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: EscapeMusic
     clip: {fileID: 8300000, guid: f3973dcc07da85a48931e171a69e3574, type: 3}
-    output: {fileID: 243657678957942896, guid: 68739206651769c479cf85faf1a0876d, type: 2}
+    output: {fileID: 243462448325884134, guid: 68739206651769c479cf85faf1a0876d, type: 2}
     volume: 0.05
     pitch: 1
     loop: 0
@@ -224,6 +224,20 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: a6e7832ffce7efd418027ddd3c5cfdb0, type: 3}
     output: {fileID: 243657678957942896, guid: 68739206651769c479cf85faf1a0876d, type: 2}
     volume: 0.75
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: MusiqueFin
+    clip: {fileID: 8300000, guid: 4917b9f6b556c014b9be7f001ce53fb3, type: 3}
+    output: {fileID: 243462448325884134, guid: 68739206651769c479cf85faf1a0876d, type: 2}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ExplosionP
+    clip: {fileID: 8300000, guid: 6308d0381fb105b45afa8852b4855455, type: 3}
+    output: {fileID: 243657678957942896, guid: 68739206651769c479cf85faf1a0876d, type: 2}
+    volume: 0.1
     pitch: 1
     loop: 0
     source: {fileID: 0}
