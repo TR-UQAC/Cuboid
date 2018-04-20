@@ -85,7 +85,6 @@ public class PlayerCharacter2D : Personnages {
         if (m_backSphere != null)
             m_backSphere.GetComponent<SpriteRenderer>().flipX = spriteR.flipX;
 
-
         UpdateHealthBar();
     }
 
@@ -490,7 +489,8 @@ public class PlayerCharacter2D : Personnages {
         //Debug.Log("Dommage");
         if (!joueurStats.immortel && joueurStats.vie > 0) {
 
-            GetComponent<Animator>().Play("PlayerDamage");
+            if(isPlayerMorphed == false)
+                GetComponent<Animator>().Play("PlayerDamage");
             
 
             joueurStats.immortel = true;
