@@ -79,7 +79,6 @@ public class boss : MonoBehaviour
 
         // !*!  lancé l'intro du boss
 
-
         Invoke("directionBoss", m_MovingRate);
     }
 	

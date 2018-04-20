@@ -79,6 +79,8 @@ public class bossTeleport : MonoBehaviour {
             }
         }
 
+
+
         //TirePartout();
         //Direction();
     }

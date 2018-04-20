@@ -8,10 +8,24 @@ public class CheckPoint : MonoBehaviour {
     private bool m_currentState = false;
     private bool m_endGameState = false;
 
+    public bool m_firstSpawn = false;
+
 	// Use this for initialization
 	void Start () {
         m_anim = GetComponent<Animator>() as Animator;
         m_anim.GetComponent<Animator>().SetBool("CurrentSpawner", false);
+
+        if(m_firstSpawn == true)
+        {
+            GameMaster.SetSpawnPlayer(transform);
+            if (GameObject.FindGameObjectWithTag("EscapeTimerUI"))
+            {
+                GameObject escapeTimer = GameObject.FindGameObjectWithTag("EscapeTimerUI");
+                Debug.Log("dans le fucking shit");
+                escapeTimer.SetActive(false);
+                GameMaster.instance.ResetEscapeObject(escapeTimer);
+            }
+        }
     }
 	
 	// Update is called once per frame
@@ -38,7 +52,6 @@ public class CheckPoint : MonoBehaviour {
                 m_anim.GetComponent<Animator>().SetBool("CurrentSpawner", true);
                 m_currentState = true;
                 GameMaster.SetSpawnPlayer(transform);
-
             }
         }
     }
