@@ -134,7 +134,7 @@ public class AudioManager : MonoBehaviour {
             yield return new WaitForSeconds(0.1f);
         }
 
-        sounds[nb].source.Pause();
+        sounds[nb].source.Stop();
         keepFadingOut = false;
 
         instance.StartCoroutine(FadeIn(name, speed, maxVolume));
