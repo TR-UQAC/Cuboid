@@ -241,3 +241,24 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: mort
+    clip: {fileID: 8300000, guid: 8413d32fa4b69b64cb38d06425a56d77, type: 3}
+    output: {fileID: 243462448325884134, guid: 68739206651769c479cf85faf1a0876d, type: 2}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: MusiqueJeu2
+    clip: {fileID: 8300000, guid: 5eccd7ec3a8bc8b4c950350aef59326e, type: 3}
+    output: {fileID: 243462448325884134, guid: 68739206651769c479cf85faf1a0876d, type: 2}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Boss
+    clip: {fileID: 8300000, guid: 3dece8dfdca902747a7460ca49ae30be, type: 3}
+    output: {fileID: 243462448325884134, guid: 68739206651769c479cf85faf1a0876d, type: 2}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
