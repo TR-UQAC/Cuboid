@@ -23,7 +23,7 @@ public class Canon : MonoBehaviour {
     private float attaqueCooldown;
 
 
-    private bool estActif = false;
+    public bool estActif = false;
 
 
     public bool CanAttack {
