@@ -48,6 +48,13 @@ public class MainMenu : MonoBehaviour {
                 ChangeMenu(levelSelecUI);
         }
     }
+
+    public void StartEnd() {
+        if (FindObjectOfType<AudioManager>() != null)
+            FindObjectOfType<AudioManager>().ChangeMusique("MusiqueFin");
+        SceneManager.LoadSceneAsync(4);
+    }
+
     public void QuitGame() {
         Debug.Log("Quit");
         Application.Quit();

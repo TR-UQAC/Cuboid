@@ -12,6 +12,7 @@ public class TriggerBossStage : MonoBehaviour {
     public GameObject m_bossCam;
 
     private GameObject[] canons;
+    private AudioManager audioManager;
 
     [Tooltip("1 = boss finale / 2 = boss téléporteur / 3 = mini boss")]
     public int m_NoBoss = 1;
@@ -43,6 +44,8 @@ public class TriggerBossStage : MonoBehaviour {
             // m_boss.GetComponent<EnnemiAI>().enabled = false;
             canons = GameObject.FindGameObjectsWithTag("Canon");
         }
+
+        audioManager = FindObjectOfType<AudioManager>();
     }
 	
 	// Update is called once per frame
@@ -83,23 +86,18 @@ public class TriggerBossStage : MonoBehaviour {
             }
 
             //Si boss 3 detruire Canon
-            if (m_NoBoss == 3) {
-                //GameObject[] canons;
-
-                //canons = GameObject.FindGameObjectsWithTag("Canon");
+            if (m_NoBoss == 1) {
+                GameMaster.StartEscapeSequence();
+            }
+            else if (m_NoBoss == 2) {
+                audioManager.ChangeMusique("Musique_Jeu");
+            } else if (m_NoBoss == 3) {
                 for (int i = canons.Length-1; i >=0; i--) {
                     Canon canon = canons[i].GetComponent<Canon>();
                     canon.Detruire();
-                    /*
-                    canon.ennemiStats.immortel = false;
-                    canon.DommagePerso(10);
-                    */
                 }
-            }
 
-            if(m_NoBoss == 1)
-            {
-                GameMaster.StartEscapeSequence();
+                audioManager.ChangeMusique("MusiqueJeu2");
             }
 
         }
@@ -141,6 +139,9 @@ public class TriggerBossStage : MonoBehaviour {
                 m_Porte.GetComponent<BoxCollider2D>().enabled = true;
                 m_Porte.GetComponent<Animator>().SetBool("DoClose", true);
             }
+
+            audioManager.ChangeMusique("Boss");
+
             //m_Porte.PlayAnimation()
         }
     }

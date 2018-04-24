@@ -192,23 +192,30 @@ public class GameMaster : MonoBehaviour {
         GameObject egt = GameObject.FindGameObjectWithTag("EndGameTrigger");
         egt.GetComponent<EndGame>().Enable();
 
-        FindObjectOfType<AudioManager>().Stop("Musique_Jeu");
-        FindObjectOfType<AudioManager>().Play("EscapeMusic");
+        //FindObjectOfType<AudioManager>().Stop("Musique_Jeu");
+        // FindObjectOfType<AudioManager>().Play("EscapeMusic");
+
+        if (FindObjectOfType<AudioManager>() != null) {
+            FindObjectOfType<AudioManager>().ChangeMusique("EscapeMusic", 0.1f, 0.05f);
+        }
+
         CameraShaker.Instance.StartShake(2f, 1f, 5f);
         instance.StartCoroutine(instance.TypeSentence("Planet destruction imminent. Evacuate immediately!"));
     }
 
     IEnumerator TypeSentence(string sentence)
     {
+        TextMeshProUGUI txt = instance.escapeTimer.transform.Find("EscapeTxt").GetComponent<TextMeshProUGUI>();
         string tmp = "";
         foreach (char letter in sentence.ToCharArray())
         {
             tmp += letter;
-            instance.escapeTimer.transform.Find("EscapeTxt").GetComponent<TextMeshProUGUI>().text = tmp;
+            txt.text = tmp;
             yield return new WaitForSecondsRealtime(0.01f);
         }
         yield return new WaitForSecondsRealtime(8f);
-        instance.escapeTimer.transform.Find("EscapeTxt").GetComponent<TextMeshProUGUI>().text = "";
+        if(txt != null)
+            txt.text = "";
     }
 
     public static void KillJoueur(PlayerCharacter2D perso)

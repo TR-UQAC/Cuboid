@@ -24,12 +24,6 @@ public class PlanetExplosion : MonoBehaviour {
         ship.GetComponent<Animator>().Play("ShipTakeOff");
         InvokeRepeating("ShipAnim", 4f, Time.deltaTime);
         InvokeRepeating("PlanetExplo", 0.5f, 0.75f);
-        /*
-        if (FindObjectOfType<AudioManager>() != null)
-        {
-            FindObjectOfType<AudioManager>().ChangeMusique("EscapeMusic", "MusiqueFin");
-        }
-        */
     }
 	
 	void FixedUpdate()
@@ -42,7 +36,7 @@ public class PlanetExplosion : MonoBehaviour {
         {
             if (FindObjectOfType<AudioManager>() != null)
             {
-                FindObjectOfType<AudioManager>().ChangeMusique("MusiqueFin", "Musique_Jeu");
+                FindObjectOfType<AudioManager>().ChangeMusique("Musique_Jeu", .5f, .25f);
             }
             Cursor.visible = true;
             SceneManager.LoadScene(0);
@@ -72,10 +66,10 @@ public class PlanetExplosion : MonoBehaviour {
         }
 
         if (elapsedTime > 20f){
+            goMenu = true;
             animatorCredit.enabled = true;
         }
         if (elapsedTime > 80f) {
-            goMenu = true;
             text.SetActive(true);
             CancelInvoke();
         }

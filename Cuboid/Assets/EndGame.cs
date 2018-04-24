@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EndGame : MonoBehaviour {
 
@@ -35,12 +36,13 @@ public class EndGame : MonoBehaviour {
 
         if (transform.parent.position == endPos)
         {
-            CancelInvoke();
             //FindObjectOfType<AudioManager>().Stop("EscapeMusic");
             if (FindObjectOfType<AudioManager>() != null) {
-                FindObjectOfType<AudioManager>().ChangeMusique("EscapeMusic", "MusiqueFin");
+                FindObjectOfType<AudioManager>().ChangeMusique("MusiqueFin");
             }
-            Application.LoadLevelAsync(4);
+            CancelInvoke();
+            //Application.LoadLevelAsync(4);
+            SceneManager.LoadSceneAsync(4);
         }
 
         //TODO: mettre les crédits et changer la musique et retourner au menu principale.
