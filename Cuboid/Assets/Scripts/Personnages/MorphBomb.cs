@@ -7,6 +7,7 @@ public class MorphBomb : MonoBehaviour {
     public float explosionTimer = 1.5f;
     public int explosionForce = 5000;
     public float destroyRadius = 1.0f;
+    public int m_dmg = 50;
     public GameObject explosionEffect;
     
     private float spawnTime = 0f;
@@ -40,11 +41,16 @@ public class MorphBomb : MonoBehaviour {
                     if (FindObjectOfType<AudioManager>() != null)
                         FindObjectOfType<AudioManager>().Play("BlocDetruit");
                     Destroy(col.gameObject);
-                }            
+                }
+                /*else if(col.gameObject.CompareTag("Ennemi"))      // décommenter si on veux que les bombe fasse du DMG
+                {
+                    Personnages en = col.gameObject.GetComponent<Personnages>() as Personnages;
+                    en.DommagePerso(m_dmg);
+                } */           
             }
 
             GameObject clone = Instantiate(explosionEffect, transform.position, transform.rotation);
-            clone.GetComponent<ShockWaveForce>().radius = 2f;
+            //clone.GetComponent<ShockWaveForce>().radius = 2f;
             Destroy(clone.gameObject, 1f);
 
             if (FindObjectOfType<AudioManager>() != null)

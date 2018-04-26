@@ -123,7 +123,7 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: BombExplosion
-    clip: {fileID: 8300000, guid: df1080c13703c684ab21abed5088b8c7, type: 3}
+    clip: {fileID: 8300000, guid: 7f06613d8edea474bb136fdac9b32d67, type: 3}
     output: {fileID: 243657678957942896, guid: 68739206651769c479cf85faf1a0876d, type: 2}
     volume: 0.25
     pitch: 1
@@ -249,7 +249,7 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: MusiqueJeu2
-    clip: {fileID: 8300000, guid: 5eccd7ec3a8bc8b4c950350aef59326e, type: 3}
+    clip: {fileID: 8300000, guid: ea27e518f9ffac14aa624df9bd2b2187, type: 3}
     output: {fileID: 243462448325884134, guid: 68739206651769c479cf85faf1a0876d, type: 2}
     volume: 0.5
     pitch: 1

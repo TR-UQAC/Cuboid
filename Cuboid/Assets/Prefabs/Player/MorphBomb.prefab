@@ -89,7 +89,8 @@ MonoBehaviour:
   explosionTimer: 1
   explosionForce: 2750
   destroyRadius: 1
-  explosionEffect: {fileID: 1365787813463560, guid: 2f080beb01f61df4a86c8847a84e0313,
+  m_dmg: 10
+  explosionEffect: {fileID: 1000011128802252, guid: 664d41453ea208c42a9aefbc42c98a9c,
     type: 2}
 --- !u!212 &212517953732643974
 SpriteRenderer:
@@ -123,7 +124,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -627212813
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300412, guid: 2472653e2a869a84c8c3108b1e395c2b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
